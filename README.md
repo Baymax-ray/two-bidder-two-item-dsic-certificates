@@ -9,11 +9,11 @@ individually rational, and ex-post feasible.
 
 The main result is the exact global upper bound
 
-\[
-\operatorname{OPT}\le
+$$
+\mathrm{OPT}\le
 \frac{930318295428931}{1048576000000000}
 =0.88722066443341350555419921875.
-\]
+$$
 
 It is certified by an explicit 32-parameter rational continuous stream-dual
 witness and a deterministic adaptive tensor-Bernstein verifier with base
@@ -22,13 +22,25 @@ implemented full replay obtains the same integer accumulator and box counts.
 As a secondary result, an explicit deterministic menu mechanism has exact
 revenue
 
-\[
+$$
 \frac{26232788323031183}{30000000000000000}
 =0.8744262774343727\ldots .
-\]
+$$
 
 These endpoints do **not** meet. The unrestricted continuous DSIC optimum
 remains open.
+
+## Improvement over prior bounds
+
+The closest directly comparable result located in our
+[bounded literature audit](audit/literature_novelty_audit.md) is the
+continuous DSIC certificate `0.8919` reported by Jiang, Parkes, and Wang.
+The present exact bound `0.88722066443341350555419921875` lowers that
+reported decimal by `0.00467933556658649444580078125`.
+
+Within this project, it also improves the previous frozen exact stream bound
+`0.887946896608135700225830078125` by
+`0.000726232174722194671630859375`.
 
 ## Repository layout
 
