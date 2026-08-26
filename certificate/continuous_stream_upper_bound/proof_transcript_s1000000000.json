@@ -1,0 +1,1170 @@
+{
+  "status": "EXACT_ADAPTIVE_FIXED_POINT_UPPER",
+  "candidate": "candidate_degree4_exact.json",
+  "base_depth": 20,
+  "adaptive_extra_depth": 1,
+  "common_final_depth": 21,
+  "scale": 1000000000,
+  "maximum_initial_absolute_control": 1475346733,
+  "accumulator": "930318295428931",
+  "upper_fraction": "930318295428931/1048576000000000",
+  "upper_float": 0.8872206644334135,
+  "target_fraction": "372431922023109/419430400000000",
+  "target_float": 0.8879468966081357,
+  "strictly_below_target": true,
+  "strictly_below_incumbent": true,
+  "adaptive_improvement_fraction": "52331847893/41943040000000",
+  "adaptive_improvement_float": 0.0012476884816408158,
+  "statistics": {
+    "base_fixed": 235487,
+    "base_unresolved": 277676,
+    "base_refined": 233184,
+    "base_held": 44492,
+    "adaptive_splits": 233184,
+    "adaptive_axis_counts": [
+      58611,
+      58729,
+      57689,
+      58155
+    ],
+    "adaptive_terminal_kinds": {
+      "unresolved": 363695,
+      "zero": 46361,
+      "second": 28166,
+      "first": 28146
+    },
+    "gain_units": 1308296197325
+  },
+  "chart_decomposition": {
+    "00": {
+      "unresolved": 40608,
+      "refined": 40510,
+      "gain_units": 390596434610
+    },
+    "01": {
+      "unresolved": 59853,
+      "refined": 52869,
+      "gain_units": 295250818800
+    },
+    "10": {
+      "unresolved": 59848,
+      "refined": 52876,
+      "gain_units": 295305721446
+    },
+    "11": {
+      "unresolved": 117367,
+      "refined": 86929,
+      "gain_units": 327143222469
+    }
+  },
+  "gain_histogram": {
+    "zero": 44492,
+    "lt_1e5": 32521,
+    "lt_1e6": 62104,
+    "lt_1e7": 97881,
+    "lt_1e8": 40678,
+    "ge_1e8": 0
+  },
+  "top_gain_boxes": [
+    {
+      "gain_units": 91289635,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 486921814,
+      "lo": [
+        "7/8",
+        "19/32",
+        "47/64",
+        "0"
+      ],
+      "hi": [
+        "29/32",
+        "5/8",
+        "3/4",
+        "1/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 91289635,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 486921814,
+      "lo": [
+        "47/64",
+        "0",
+        "7/8",
+        "19/32"
+      ],
+      "hi": [
+        "3/4",
+        "1/16",
+        "29/32",
+        "5/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 87036130,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 742216983,
+      "lo": [
+        "15/16",
+        "13/16",
+        "63/64",
+        "27/32"
+      ],
+      "hi": [
+        "31/32",
+        "7/8",
+        "1",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 87036129,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 742216983,
+      "lo": [
+        "63/64",
+        "27/32",
+        "15/16",
+        "13/16"
+      ],
+      "hi": [
+        "1",
+        "7/8",
+        "31/32",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 87034443,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 507082019,
+      "lo": [
+        "15/16",
+        "35/64",
+        "23/32",
+        "1/16"
+      ],
+      "hi": [
+        "31/32",
+        "9/16",
+        "3/4",
+        "1/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 2
+    },
+    {
+      "gain_units": 87034443,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 507082019,
+      "lo": [
+        "23/32",
+        "1/16",
+        "15/16",
+        "35/64"
+      ],
+      "hi": [
+        "3/4",
+        "1/8",
+        "31/32",
+        "9/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 0
+    },
+    {
+      "gain_units": 82930211,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 708194374,
+      "lo": [
+        "29/32",
+        "11/16",
+        "53/64",
+        "0"
+      ],
+      "hi": [
+        "15/16",
+        "3/4",
+        "27/32",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 82930211,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 708194374,
+      "lo": [
+        "53/64",
+        "0",
+        "29/32",
+        "11/16"
+      ],
+      "hi": [
+        "27/32",
+        "1/32",
+        "15/16",
+        "3/4"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 82314779,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 809448294,
+      "lo": [
+        "15/16",
+        "11/16",
+        "55/64",
+        "0"
+      ],
+      "hi": [
+        "31/32",
+        "3/4",
+        "7/8",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 82314779,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 809448294,
+      "lo": [
+        "55/64",
+        "0",
+        "15/16",
+        "11/16"
+      ],
+      "hi": [
+        "7/8",
+        "1/32",
+        "31/32",
+        "3/4"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 81045547,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 716599916,
+      "lo": [
+        "31/32",
+        "9/16",
+        "25/32",
+        "0"
+      ],
+      "hi": [
+        "1",
+        "5/8",
+        "51/64",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 81045547,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 716599916,
+      "lo": [
+        "25/32",
+        "0",
+        "31/32",
+        "9/16"
+      ],
+      "hi": [
+        "51/64",
+        "1/32",
+        "1",
+        "5/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 80739875,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 667919758,
+      "lo": [
+        "15/16",
+        "27/32",
+        "55/64",
+        "15/16"
+      ],
+      "hi": [
+        "31/32",
+        "7/8",
+        "7/8",
+        "1"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 0
+    },
+    {
+      "gain_units": 80739874,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 667919758,
+      "lo": [
+        "55/64",
+        "15/16",
+        "15/16",
+        "27/32"
+      ],
+      "hi": [
+        "7/8",
+        "1",
+        "31/32",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 2
+    },
+    {
+      "gain_units": 80700535,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 878747198,
+      "lo": [
+        "63/64",
+        "29/32",
+        "15/16",
+        "7/8"
+      ],
+      "hi": [
+        "1",
+        "15/16",
+        "31/32",
+        "15/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 80700535,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 878747198,
+      "lo": [
+        "15/16",
+        "7/8",
+        "63/64",
+        "29/32"
+      ],
+      "hi": [
+        "31/32",
+        "15/16",
+        "1",
+        "15/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 80506091,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 670917719,
+      "lo": [
+        "7/8",
+        "1/16",
+        "57/64",
+        "0"
+      ],
+      "hi": [
+        "29/32",
+        "1/8",
+        "29/32",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 80506091,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 670917719,
+      "lo": [
+        "57/64",
+        "0",
+        "7/8",
+        "1/16"
+      ],
+      "hi": [
+        "29/32",
+        "1/32",
+        "29/32",
+        "1/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 80452323,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 555223904,
+      "lo": [
+        "55/64",
+        "0",
+        "27/32",
+        "1/16"
+      ],
+      "hi": [
+        "7/8",
+        "1/32",
+        "7/8",
+        "1/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 80452322,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 555223904,
+      "lo": [
+        "27/32",
+        "1/16",
+        "55/64",
+        "0"
+      ],
+      "hi": [
+        "7/8",
+        "1/8",
+        "7/8",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 80356771,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 845230140,
+      "lo": [
+        "61/64",
+        "15/16",
+        "31/32",
+        "13/16"
+      ],
+      "hi": [
+        "31/32",
+        "31/32",
+        "1",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 80356771,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 845230140,
+      "lo": [
+        "31/32",
+        "13/16",
+        "61/64",
+        "15/16"
+      ],
+      "hi": [
+        "1",
+        "7/8",
+        "31/32",
+        "31/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 80134045,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 638113921,
+      "lo": [
+        "7/8",
+        "11/16",
+        "13/16",
+        "0"
+      ],
+      "hi": [
+        "29/32",
+        "3/4",
+        "53/64",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 80134045,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 638113921,
+      "lo": [
+        "13/16",
+        "0",
+        "7/8",
+        "11/16"
+      ],
+      "hi": [
+        "53/64",
+        "1/32",
+        "29/32",
+        "3/4"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 79918905,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 825141080,
+      "lo": [
+        "63/64",
+        "7/8",
+        "31/32",
+        "13/16"
+      ],
+      "hi": [
+        "1",
+        "29/32",
+        "1",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 79918904,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 825141080,
+      "lo": [
+        "31/32",
+        "13/16",
+        "63/64",
+        "7/8"
+      ],
+      "hi": [
+        "1",
+        "7/8",
+        "1",
+        "29/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 79772569,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 622785213,
+      "lo": [
+        "29/32",
+        "5/8",
+        "25/32",
+        "0"
+      ],
+      "hi": [
+        "15/16",
+        "11/16",
+        "51/64",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 79772569,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 622785213,
+      "lo": [
+        "25/32",
+        "0",
+        "29/32",
+        "5/8"
+      ],
+      "hi": [
+        "51/64",
+        "1/32",
+        "15/16",
+        "11/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 79280603,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 623371158,
+      "lo": [
+        "15/16",
+        "19/32",
+        "51/64",
+        "1/16"
+      ],
+      "hi": [
+        "31/32",
+        "5/8",
+        "13/16",
+        "1/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 79280603,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 623371158,
+      "lo": [
+        "51/64",
+        "1/16",
+        "15/16",
+        "19/32"
+      ],
+      "hi": [
+        "13/16",
+        "1/8",
+        "31/32",
+        "5/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 78896241,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 730431068,
+      "lo": [
+        "15/16",
+        "5/8",
+        "13/16",
+        "0"
+      ],
+      "hi": [
+        "31/32",
+        "3/4",
+        "53/64",
+        "1/64"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 78896241,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 730431068,
+      "lo": [
+        "13/16",
+        "0",
+        "15/16",
+        "5/8"
+      ],
+      "hi": [
+        "53/64",
+        "1/64",
+        "31/32",
+        "3/4"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 77737006,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 834249089,
+      "lo": [
+        "31/32",
+        "5/8",
+        "27/32",
+        "0"
+      ],
+      "hi": [
+        "1",
+        "3/4",
+        "55/64",
+        "1/64"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 77737006,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 834249089,
+      "lo": [
+        "27/32",
+        "0",
+        "31/32",
+        "5/8"
+      ],
+      "hi": [
+        "55/64",
+        "1/64",
+        "1",
+        "3/4"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 77596308,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 669284098,
+      "lo": [
+        "27/32",
+        "13/16",
+        "55/64",
+        "0"
+      ],
+      "hi": [
+        "7/8",
+        "7/8",
+        "7/8",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 77596308,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 669284098,
+      "lo": [
+        "55/64",
+        "0",
+        "27/32",
+        "13/16"
+      ],
+      "hi": [
+        "7/8",
+        "1/32",
+        "7/8",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 76636941,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 121855294,
+      "lo": [
+        "31/32",
+        "39/64",
+        "31/32",
+        "3/8"
+      ],
+      "hi": [
+        "1",
+        "5/8",
+        "1",
+        "7/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 0
+    },
+    {
+      "gain_units": 76636941,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 121855294,
+      "lo": [
+        "31/32",
+        "3/8",
+        "31/32",
+        "39/64"
+      ],
+      "hi": [
+        "1",
+        "7/16",
+        "1",
+        "5/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 2
+    },
+    {
+      "gain_units": 76534332,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 763794009,
+      "lo": [
+        "29/32",
+        "7/8",
+        "31/32",
+        "7/8"
+      ],
+      "hi": [
+        "15/16",
+        "15/16",
+        "63/64",
+        "29/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 76534330,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 763794008,
+      "lo": [
+        "31/32",
+        "7/8",
+        "29/32",
+        "7/8"
+      ],
+      "hi": [
+        "63/64",
+        "29/32",
+        "15/16",
+        "15/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 76309222,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 123308862,
+      "lo": [
+        "31/32",
+        "19/32",
+        "31/32",
+        "5/16"
+      ],
+      "hi": [
+        "1",
+        "39/64",
+        "1",
+        "3/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 0
+    },
+    {
+      "gain_units": 76309222,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 123308862,
+      "lo": [
+        "31/32",
+        "5/16",
+        "31/32",
+        "19/32"
+      ],
+      "hi": [
+        "1",
+        "3/8",
+        "1",
+        "39/64"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 2
+    },
+    {
+      "gain_units": 76226375,
+      "chart": [
+        1,
+        0
+      ],
+      "base_bound_units": 605325644,
+      "lo": [
+        "15/16",
+        "9/16",
+        "3/4",
+        "0"
+      ],
+      "hi": [
+        "31/32",
+        "5/8",
+        "49/64",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 76226375,
+      "chart": [
+        0,
+        1
+      ],
+      "base_bound_units": 605325644,
+      "lo": [
+        "3/4",
+        "0",
+        "15/16",
+        "9/16"
+      ],
+      "hi": [
+        "49/64",
+        "1/32",
+        "31/32",
+        "5/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 76224415,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 656026023,
+      "lo": [
+        "57/64",
+        "0",
+        "27/32",
+        "0"
+      ],
+      "hi": [
+        "29/32",
+        "1/32",
+        "7/8",
+        "1/16"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 76224413,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 656026023,
+      "lo": [
+        "27/32",
+        "0",
+        "57/64",
+        "0"
+      ],
+      "hi": [
+        "7/8",
+        "1/16",
+        "29/32",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 76182736,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 443735692,
+      "lo": [
+        "13/16",
+        "1/16",
+        "53/64",
+        "0"
+      ],
+      "hi": [
+        "27/32",
+        "1/8",
+        "27/32",
+        "1/32"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 3
+    },
+    {
+      "gain_units": 76182736,
+      "chart": [
+        0,
+        0
+      ],
+      "base_bound_units": 443735692,
+      "lo": [
+        "53/64",
+        "0",
+        "13/16",
+        "1/16"
+      ],
+      "hi": [
+        "27/32",
+        "1/32",
+        "27/32",
+        "1/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 1
+    },
+    {
+      "gain_units": 76180210,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 843095322,
+      "lo": [
+        "15/16",
+        "31/32",
+        "31/32",
+        "13/16"
+      ],
+      "hi": [
+        "61/64",
+        "1",
+        "1",
+        "7/8"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 0
+    },
+    {
+      "gain_units": 76180210,
+      "chart": [
+        1,
+        1
+      ],
+      "base_bound_units": 843095322,
+      "lo": [
+        "31/32",
+        "13/16",
+        "15/16",
+        "31/32"
+      ],
+      "hi": [
+        "1",
+        "7/8",
+        "61/64",
+        "1"
+      ],
+      "root_plan_kind": "split",
+      "root_axis": 2
+    }
+  ]
+}

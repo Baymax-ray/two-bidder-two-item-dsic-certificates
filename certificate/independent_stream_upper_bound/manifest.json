@@ -1,0 +1,18 @@
+{
+  "scope": "independent degree-4 adaptive Bernstein replay",
+  "only_mathematical_input": "candidate_degree4_exact.json",
+  "independence": "independent_audit.py imports no project verifier or polynomial module",
+  "shallow": {"base_depth": 5, "extra_depth": 1, "coverage_units": 256},
+  "full": {
+    "base_depth": 20,
+    "extra_depth": 1,
+    "scale": 1000000000,
+    "accumulator": "930318295428931",
+    "upper_fraction": "930318295428931/1048576000000000",
+    "coverage_units": 8388608,
+    "base_fixed": 235487,
+    "base_unresolved": 277676,
+    "base_refined": 233184,
+    "base_held": 44492
+  }
+}

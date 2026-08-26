@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "mode": "full_independent_replay",
+  "python": "3.10.16",
+  "numpy": "2.0.1",
+  "basis_dimension": 32,
+  "base_depth": 20,
+  "adaptive_extra_depth": 1,
+  "common_final_depth": 21,
+  "scale": 1000000000,
+  "maximum_initial_absolute_control": 1475346733,
+  "maximum_axis_degree": 8,
+  "maximum_propagated_error_units": 169,
+  "maximum_stored_absolute_control_bound": 1475346901,
+  "maximum_int64_pair_sum_bound": 2950693802,
+  "maximum_single_box_common_depth_numerator_bound": 3094026706223104,
+  "signed_int64_limit": 9223372036854775807,
+  "coverage_units": 8388608,
+  "expected_coverage_units": 8388608,
+  "accumulator": "930318295428931",
+  "upper_fraction": "930318295428931/1048576000000000",
+  "comparison_target": "372431922023109/419430400000000",
+  "strict_margin": "1523019257683/2097152000000000",
+  "statistics": {
+    "base_fixed": 235487,
+    "base_unresolved": 277676,
+    "base_refined": 233184,
+    "base_held": 44492,
+    "adaptive_splits": 233184,
+    "adaptive_axis_counts": [58611, 58729, 57689, 58155],
+    "adaptive_terminal_kinds": {
+      "unresolved": 363695,
+      "zero": 46361,
+      "second": 28166,
+      "first": 28146
+    },
+    "gain_units": 1308296197325
+  },
+  "chart_decomposition": {
+    "00": {"unresolved": 40608, "refined": 40510, "gain_units": 390596434610},
+    "01": {"unresolved": 59853, "refined": 52869, "gain_units": 295250818800},
+    "10": {"unresolved": 59848, "refined": 52876, "gain_units": 295305721446},
+    "11": {"unresolved": 117367, "refined": 86929, "gain_units": 327143222469}
+  }
+}

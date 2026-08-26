@@ -1,0 +1,43 @@
+{
+  "certificate": "opponent_dependent_common_entry_surcharge_lower_bound",
+  "scope": "primal_lower_bound_only",
+  "distribution": "four mutually independent U[0,1] coordinates",
+  "base_certificate": {
+    "directory": "../ama_lower_bound",
+    "expected_revenue": "26232089810531183/30000000000000000",
+    "manifest_sha256": "F3B7790ADCEC61087D3C080F3D4EE89BBF9AD5E0BD1D41EF825970A258998EE9",
+    "verifier_sha256": "A8EBDFE42030879F0E8B500B9D772002E09C3AF07BFD046203323AD471FFB334",
+    "output_sha256": "7DC15841ED465D9974DCAD560348FC07B47D05551DA45198E780E44F02B114A9"
+  },
+  "surcharge": {
+    "amount": "1/40",
+    "opponent_region": "([0,3/10] x [23/40,3/5]) union ([23/40,3/5] x [0,3/10])",
+    "canonical_rectangle": {
+      "free_coordinate_interval": ["0", "3/10"],
+      "varying_coordinate_interval": ["23/40", "3/5"]
+    },
+    "transposed_rectangle_count": 2,
+    "symmetric_bidder_count": 2,
+    "applies_to": "all nonempty options",
+    "zero_utility_rule": "opt out",
+    "nonempty_tie_rule": "inherit the base smallest-outcome-id bundle"
+  },
+  "expected": {
+    "delta_coefficients_low_to_high": [
+      "-2167/1000000",
+      "-681/40000",
+      "3/80"
+    ],
+    "delta_at_varying_lo": "7073/16000000",
+    "delta_at_varying_hi": "559/500000",
+    "one_strip_integral": "6209/320000000",
+    "total_revenue_gain": "18627/800000000",
+    "final_expected_revenue": "26232788323031183/30000000000000000"
+  },
+  "verifier": {
+    "entrypoint": "verify_surcharge.py",
+    "runtime": "Python 3 standard library only",
+    "arithmetic": "fractions.Fraction throughout",
+    "method": "read all rational obligations from this manifest, reconstruct the conditional menu-revenue polynomial, check the exact price regime, integrate the exact quadratic, and bind the base certificate by SHA-256"
+  }
+}

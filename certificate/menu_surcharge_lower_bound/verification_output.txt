@@ -1,0 +1,14 @@
+MENU-SURCHARGE LOWER-BOUND CERTIFICATE: PASS
+manifest obligations: PASS
+base certificate hashes: PASS
+parameters: a=159/250, b=91/100, s=1137/1000, e=1/40
+surcharge t-interval: [23/40, 3/5]
+delta(t) coefficients low-to-high: -2167/1000000, -681/40000, 3/80
+delta(lo): 7073/16000000
+delta(hi): 559/500000
+one-strip exact integral: 6209/320000000
+total exact surcharge gain: 18627/800000000
+base exact revenue: 26232089810531183/30000000000000000
+final exact revenue: 26232788323031183/30000000000000000
+decimal final revenue: 0.874426277434373
+scope: exact feasible/DSIC/ex-post-IR primal lower bound only; no global upper bound

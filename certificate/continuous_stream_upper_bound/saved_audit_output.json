@@ -1,0 +1,10 @@
+{
+  "status": "PASS_SAVED_AUDIT",
+  "candidate_sha256": "155c03bb455a8fc5f313df785b0d8eb3ed8bc1820c6383e588dff04897ef7893",
+  "upper_fraction": "930318295428931/1048576000000000",
+  "target": "372431922023109/419430400000000",
+  "strict_margin": "1523019257683/2097152000000000",
+  "precision_replay_upper": "18606431629403/20971520000000",
+  "self_contained_source_check": true,
+  "int64_and_error_bounds_check": true
+}

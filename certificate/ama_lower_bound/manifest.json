@@ -1,0 +1,22 @@
+{
+  "certificate": "symmetric_rational_affine_maximizer_lower_bound",
+  "scope": "primal_lower_bound_only",
+  "distribution": "four mutually independent U[0,1] coordinates",
+  "parameters": {
+    "single_item_cost_a": "159/250",
+    "same_bidder_bundle_cost_b": "91/100",
+    "split_allocation_cost_s": "1137/1000"
+  },
+  "tie_rule": "choose the smallest outcome_id among all affine-score maximizers",
+  "expected": {
+    "total_cell_volume": "1",
+    "expected_revenue": "26232089810531183/30000000000000000",
+    "full_dimensional_refined_cells": 39
+  },
+  "verifier": {
+    "entrypoint": "verify_ama.py",
+    "runtime": "Python 3 standard library only",
+    "arithmetic": "fractions.Fraction throughout; no floating point",
+    "method": "reconstruct 144 max-affine cells, enumerate exact vertices, reconstruct face lattices, and integrate linear revenue by barycentric subdivision"
+  }
+}

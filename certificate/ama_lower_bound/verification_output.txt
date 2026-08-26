@@ -1,0 +1,18 @@
+AMA LOWER-BOUND CERTIFICATE: PASS
+parameters: a=159/250, b=91/100, s=1137/1000
+refined full-dimensional cells: 39 / 144
+enumerated cell vertices (with repetition across cells): 671
+exact barycentric 4-simplices: 16336
+outcome 0: cells=1, volume=452232019429/4000000000000, revenue=0
+outcome 1: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000
+outcome 2: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000
+outcome 3: cells=4, volume=599092954853/2000000000000, revenue=18435139321645253/60000000000000000
+outcome 4: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000
+outcome 5: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000
+outcome 6: cells=4, volume=599092954853/2000000000000, revenue=18435139321645253/60000000000000000
+outcome 7: cells=9, volume=538532803143/8000000000000, revenue=158039392272283/2000000000000000
+outcome 8: cells=9, volume=538532803143/8000000000000, revenue=158039392272283/2000000000000000
+total volume: 1
+exact expected revenue: 26232089810531183/30000000000000000
+decimal expected revenue: 0.874402993684373
+scope: exact feasible/DSIC/ex-post-IR primal lower bound only; no global upper bound

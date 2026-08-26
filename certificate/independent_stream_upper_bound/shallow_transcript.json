@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "mode": "shallow_paired_fraction",
+  "base_depth": 5,
+  "adaptive_extra_depth": 1,
+  "scale": 1000000000,
+  "basis_dimension": 32,
+  "coverage_units": 256,
+  "expected_coverage_units": 256,
+  "accumulator": "48845512956",
+  "control_enclosures": 3087315,
+  "charge_checks": 444,
+  "terminal_boxes": 224
+}

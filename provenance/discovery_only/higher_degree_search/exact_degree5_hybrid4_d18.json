@@ -1,0 +1,98 @@
+{
+  "status": "EXACT_FIXED_POINT_UPPER",
+  "degree": 5,
+  "basis_dimension": 60,
+  "depth": 18,
+  "scale": 1000000000,
+  "partition_strategy": "hybrid4",
+  "maximum_initial_absolute_control": 2170602293,
+  "control_shapes": [
+    [
+      [
+        10,
+        7,
+        7,
+        6
+      ],
+      [
+        7,
+        6,
+        10,
+        7
+      ],
+      [
+        10,
+        7,
+        10,
+        7
+      ]
+    ],
+    [
+      [
+        10,
+        7,
+        7,
+        6
+      ],
+      [
+        7,
+        6,
+        10,
+        8
+      ],
+      [
+        10,
+        7,
+        10,
+        8
+      ]
+    ],
+    [
+      [
+        10,
+        8,
+        7,
+        6
+      ],
+      [
+        7,
+        6,
+        10,
+        7
+      ],
+      [
+        10,
+        8,
+        10,
+        7
+      ]
+    ],
+    [
+      [
+        10,
+        8,
+        7,
+        6
+      ],
+      [
+        7,
+        6,
+        10,
+        8
+      ],
+      [
+        10,
+        8,
+        10,
+        8
+      ]
+    ]
+  ],
+  "accumulator": "117061492760611",
+  "upper_fraction": "117061492760611/131072000000000",
+  "upper_float": 0.893108312687767,
+  "fixed": 83864,
+  "leaves": 103773,
+  "below_0.8879469": false,
+  "below_formal_depth22": false
+}
