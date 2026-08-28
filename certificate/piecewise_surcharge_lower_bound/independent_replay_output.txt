@@ -1,0 +1,20 @@
+INDEPENDENT PIECEWISE-SURCHARGE REPLAY: PASS
+method: scalar exact arithmetic + fifth-difference degree checks + exact Boole quadrature
+base certificate hashes: PASS
+Z1: exact symmetric gain=2036829/1250000000000
+Z2: exact symmetric gain=86099/12500000000
+Z3: exact symmetric gain=4926369/312500000000
+Z4: exact symmetric gain=8783607/312500000000
+Z5: exact symmetric gain=7506764473/125000000000000
+S1: exact symmetric gain=4223283519/125000000000000
+S2: exact symmetric gain=2307433323/100000000000000
+S3: exact symmetric gain=1270757337/100000000000000
+S4: exact symmetric gain=109661787/20000000000000
+S5: exact symmetric gain=128409141/100000000000000
+zero-pivot exact gain: 14055427773/125000000000000
+singleton-pivot exact gain: 9541919439/125000000000000
+total exact gain over affine base: 5899336803/31250000000000
+exact expected revenue: 26237753173862063/30000000000000000
+strict improvement over previous lower: 10343439231/62500000000000
+scope: independent exact replay of a primal lower mechanism only
+

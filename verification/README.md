@@ -1,9 +1,10 @@
 # Publication verification
 
-`reproduce_all.py` is the release orchestrator. It reruns the two exact lower
-certificates, the formal adaptive upper certificate, the independent shallow
-Fraction audit and full replay, theorem/README consistency checks, a clean
-temporary-directory LaTeX build, and the root SHA-256 verification.
+`reproduce_all.py` is the release orchestrator. It reruns the exact affine
+base and retained predecessor lower certificates, both active ten-band lower
+checks, the formal nonuniform upper certificate, the non-importing full upper
+replay, theorem/README consistency checks, a clean temporary-directory LaTeX
+build, and the root SHA-256 verification.
 
 `make_hashes.py` creates `../SHA256SUMS`; `verify_hashes.py` requires exact
 coverage of every stable file. Generated clean-run transcripts under

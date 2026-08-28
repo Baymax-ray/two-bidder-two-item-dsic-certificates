@@ -1,9 +1,9 @@
 PASS exact base lower certificate
-PASS exact surcharge lower certificate
-PASS formal saved-artifact audit
-PASS formal adaptive upper certificate
-PASS independent shallow Fraction audit
-PASS independent full adaptive replay
+PASS predecessor surcharge lower certificate
+PASS active piecewise-surcharge lower certificate
+PASS independent piecewise-surcharge replay
+PASS formal nonuniform upper certificate
+PASS independent nonuniform upper replay
 PASS theorem, README, manifest, and declaration consistency
 PASS LaTeX pass 1
 PASS BibTeX
@@ -11,4 +11,4 @@ PASS LaTeX pass 2
 PASS LaTeX pass 3
 PASS clean temporary-directory manuscript compilation
 PASS root SHA-256 manifest
-PUBLICATION_REPRODUCTION_PASS lower=26232788323031183/30000000000000000 upper=930318295428931/1048576000000000 formal=PASS independent=PASS paper=compiled hashes=verified
+PUBLICATION_REPRODUCTION_PASS lower=26237753173862063/30000000000000000 upper=18588262788621/20971520000000 formal=PASS independent=PASS paper=compiled hashes=verified

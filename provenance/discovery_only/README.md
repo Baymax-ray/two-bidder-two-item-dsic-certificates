@@ -13,7 +13,10 @@ the release theorem. The exact degree-4 candidate that entered the theorem is
 defined independently in the trusted upper-bound manifest.
 
 The principal discovery lesson was that objective quality and certificate
-quality separated near winner-switching surfaces. A one-step, strictly
-improving adaptive partition of the unresolved depth-20 boxes bridged enough of
-that gap to produce the release bound. See `../final_sprint_report.md` for the
-bounded route comparison and freeze decision.
+quality separated near winner-switching surfaces. The first release used a
+one-step, strictly improving adaptive partition of unresolved depth-20 boxes.
+The active certificate keeps the same frozen degree-four coefficients, deepens
+the base tree to 21, and applies exact one-step nonuniform refinement only
+where it saves at least one accumulator unit. See
+`../final_sprint_report.md` for the bounded route comparison and freeze
+decision.

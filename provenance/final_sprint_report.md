@@ -1,73 +1,95 @@
-# Bounded final research sprint and freeze decision
+# Bounded continuation sprint and freeze decision
 
-Date: 26 August 2026.
+Date: 27 August 2026.
 
-The sprint began from the exact degree-3 depth-22 upper bound
-
-`372431922023109/419430400000000 = 0.887946896608135700225830078125`.
-
-Three independent routes were bounded in advance and then frozen.
-
-## Route A: higher-degree witness plus certificate-aware refinement
-
-The degree-4 rational stream has 32 antisymmetric coefficients. Its sampled
-objective was promising, but a uniform finite Bernstein certificate left too
-much slack at winner-switching surfaces. The successful change was to optimize
-the final partition decision rather than deepen every box blindly.
-
-The verifier builds a hybrid depth-20 tree. For each unresolved base box it
-compares the common-depth hold charge with all four one-step axis-split charges
-and accepts a split only on a strict certified decrease. Of 277,676 unresolved
-base boxes, 233,184 split and 44,492 remain held. The resulting exact bound is
-
-`930318295428931/1048576000000000 = 0.88722066443341350555419921875`.
-
-This improves the starting bound by
-
-`1523019257683/2097152000000000 = 0.000726232174722194671630859375`.
-
-A same-code precision stress replay at scale `10^8` yields
-`18606431629403/20971520000000 = 0.8872237982465268...`, still strictly below
-the starting bound. A clean-room implementation then independently
-reconstructed the basis, chart polynomials, Bernstein arithmetic, base rule,
-and adaptive rule. Its sole full run matched the exact accumulator and every
-recorded count, with coverage `8388608/8388608`. Its shallow Fraction mode made
-3,087,315 exact enclosure checks and 444 charge checks.
-
-This route is the frozen theorem path.
-
-## Route B: certificate-aware witness redesign
-
-A localized degree-3 coefficient redesign produced one complete exact
-candidate at parameter `47/50`, but its bound was
-`0.8879981743147969...`, worse than the starting certificate. Other Sobol-local
-candidates improved shallow discovery objectives and then deteriorated at
-deeper exact certification. This route supplied useful negative evidence that
-sampled/local gains do not predict certification near switching surfaces; it
-did not enter the theorem path.
-
-## Route C: stronger convexity-sensitive dual constraints
-
-The sprint derived two valid extensions of the weak-duality family: a
-positive-semidefinite matrix-field correction paired with the Hessian measure
-of convex utility, and a symmetric nonlocal monotonicity kernel. Low-degree
-smooth bases had no sampled descent direction, although adversarial slice
-tests found substantial pairwise/cyclic violations in the allocation selected
-by the older pointwise envelope. Localized rational kernels showed only
-approximately `2e-7` to `5e-7` sampled improvements, far below existing
-Bernstein slack, and were not exactly certified. These structural results are
-promising future directions but are not claims of the release theorem.
-
-## Freeze decision
-
-No route produced a stronger rigorously verified endpoint than Route A. The
-release therefore freezes
+The continuation began from the preceding closed-release endpoints
 
 - lower bound: `26232788323031183/30000000000000000`;
 - upper bound: `930318295428931/1048576000000000`.
 
-The unrestricted optimum remains open. Floating-point values near `0.88325`,
-all sampled kernel improvements, and every optimizer trace are discovery-only.
-The trusted proof inputs are the rational candidate manifests, analytic proof,
-directed-rounding verifier, independent replay, and exact lower-bound
-certificates.
+Three bounded routes were pursued and then frozen.
+
+## Route A: stronger exact nonuniform upper certificate
+
+This route did not change the 32 rational degree-four stream coefficients in
+the preceding release. The improvement is therefore not another numerical
+optimizer draw. It changes the exact certification geometry: the base tree is
+deepened from 20 to 21, exact child-bound lookahead is retained in the final
+four base levels, and each unresolved depth-21 leaf is refined once along the
+best exact axis only if that split saves at least one integer accumulator unit.
+
+The formal verifier reports 404,804 fixed-winner-or-zero boxes, 462,796
+unresolved depth-21 leaves, 391,618 refined leaves, 71,178 retained leaves,
+1,735,196 visited boxes, accumulator `1858826278862100`, and complete coverage
+`16777216/16777216`. The resulting exact global upper bound is
+
+`18588262788621/20971520000000 = 0.8863574404058933258056640625`.
+
+It improves the preceding active exact upper bound by
+
+`905155997881/1048576000000000 = 0.0008632240275201797...`,
+
+and improves the external strict `0.8919` benchmark reported by Jiang, Parkes,
+and Wang by
+
+`116235899379/20971520000000 = 0.005542559594106674...`.
+
+A non-importing iterative replay independently reconstructs the polynomial,
+Bernstein, traversal, refinement, and coverage arithmetic and matches every
+reported count and the exact accumulator.
+
+## Route B: stronger exact lower mechanism
+
+This route keeps the same exactly verified affine-maximizer base but changes
+the surcharge construction structurally. The preceding mechanism used one fee
+on two symmetric rectangles. The active mechanism uses ten rational bands:
+five zero-pivot triangular bands and five additional singleton-pivot
+rectangular bands, always adding a common fee to all nonempty menu entries.
+
+The common-fee deletion argument preserves pointwise DSIC, ex-post IR, and
+ex-post feasibility. Exact symbolic integration gives gains
+
+`G_Z=14055427773/125000000000000` and
+`G_S=9541919439/125000000000000`,
+
+hence the active exact lower endpoint
+
+`26237753173862063/30000000000000000
+=0.8745917724620687...`.
+
+This improves the preceding exact lower by
+
+`10343439231/62500000000000 = 0.000165495027696`.
+
+A second verifier imports no symbolic-verifier code and independently checks
+the polynomial degree and exact integral using scalar rational arithmetic and
+Boole quadrature. Numerical chamber probes were discovery evidence only.
+
+## Route C: certificate replay, hashes, and claim boundary
+
+The upper and lower active packages each contain a primary verifier, a
+non-importing replay, captured outputs, and a local SHA-256 manifest. The root
+orchestrator binds the active manifest fractions to the manuscript and README,
+rebuilds the paper, and checks complete root-hash coverage.
+
+Jiang--Parkes--Wang's strict continuous upper bound `0.8919` and their reported
+fully strategyproof GemNet revenue approximately `0.876` are external
+benchmarks. The former is improved by our new exact upper certificate. The
+latter is not improved by our exact lower endpoint; our lower contribution is
+instead its explicit rational mechanism and exact reproducibility. Neither
+external artifact is part of the local proof path.
+
+## Freeze decision
+
+The release freezes
+
+- lower bound: `26237753173862063/30000000000000000`;
+- upper bound: `18588262788621/20971520000000`;
+- remaining exact gap:
+  `1445765276937161827/122880000000000000000
+  =0.011765667943824559...`.
+
+The unrestricted optimum remains open. Floating-point candidates, optimizer
+traces, and unconverted chamber probes are discovery-only. The trusted proof
+inputs are the rational manifests, analytic arguments, directed-rounding
+verifier, independent replays, and complete SHA-256 bindings.

@@ -1,0 +1,22 @@
+PIECEWISE-SURCHARGE LOWER-BOUND CERTIFICATE: PASS
+base certificate hashes: PASS
+base conditional menus reconstructed at every band vertex: PASS
+parameters: a=159/250, b=91/100, s=1137/1000, d=s-a=501/1000, c=b-a=137/500
+Z1: t=[53/100,11/20], fee=3/500, exact symmetric gain=2036829/1250000000000
+Z2: t=[11/20,57/100], fee=13/1000, exact symmetric gain=86099/12500000000
+Z3: t=[57/100,59/100], fee=21/1000, exact symmetric gain=4926369/312500000000
+Z4: t=[59/100,61/100], fee=29/1000, exact symmetric gain=8783607/312500000000
+Z5: t=[61/100,159/250], fee=19/500, exact symmetric gain=7506764473/125000000000000
+S1: t=[159/250,13/20], fee=39/1000, exact symmetric gain=4223283519/125000000000000
+S2: t=[13/20,133/200], fee=31/1000, exact symmetric gain=2307433323/100000000000000
+S3: t=[133/200,17/25], fee=23/1000, exact symmetric gain=1270757337/100000000000000
+S4: t=[17/25,139/200], fee=3/200, exact symmetric gain=109661787/20000000000000
+S5: t=[139/200,71/100], fee=7/1000, exact symmetric gain=128409141/100000000000000
+zero-pivot exact gain: 14055427773/125000000000000
+singleton-pivot exact gain: 9541919439/125000000000000
+total exact gain over affine base: 5899336803/31250000000000
+exact expected revenue: 26237753173862063/30000000000000000
+strict improvement over previous lower: 10343439231/62500000000000
+decimal expected revenue: 0.874591772462069
+scope: exact feasible/DSIC/ex-post-IR primal lower bound only; no optimality claim
+

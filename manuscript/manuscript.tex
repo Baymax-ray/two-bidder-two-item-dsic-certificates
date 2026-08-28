@@ -17,9 +17,9 @@
 \newcommand{\OPT}{\operatorname{OPT}}
 \newcommand{\Li}{\operatorname{Li}_2}
 \newcommand{\Ustream}{U_{\rm stream}}
-\newcommand{\LowerBound}{\frac{26232788323031183}{30000000000000000}}
-\newcommand{\UpperBound}{\frac{930318295428931}{1048576000000000}}
-\newcommand{\UpperDecimal}{0.88722066443341350555419921875}
+\newcommand{\LowerBound}{\frac{26237753173862063}{30000000000000000}}
+\newcommand{\UpperBound}{\frac{18588262788621}{20971520000000}}
+\newcommand{\UpperDecimal}{0.8863574404058933258056640625}
 
 \title{Exact Rational Stream-Dual Certificates for a\\
 Two-Bidder, Two-Item Auction}
@@ -27,7 +27,7 @@ Two-Bidder, Two-Item Auction}
 Boston University, Boston, Massachusetts, USA\\
 \texttt{baymin@bu.edu}\\
 ORCID: \href{https://orcid.org/0009-0006-9100-0445}{0009-0006-9100-0445}}
-\date{26 August 2026}
+\date{27 August 2026}
 
 \begin{document}
 \maketitle
@@ -47,16 +47,23 @@ fixed-point rounding and exact integer accumulation.  The resulting bound is
 \[
 \operatorname{OPT}\leq \UpperBound=\UpperDecimal.
 \]
-This is strictly below the previously reported continuous DSIC certificate
-$0.8919$.  We also give an explicit deterministic mechanism with exact
-revenue
+This is strictly below the rigorous continuous DSIC upper certificate
+$0.8919$ reported by Jiang, Parkes, and Wang.  Their paper also reports
+approximately $0.876$ revenue for a fully strategyproof GemNet mechanism;
+both numbers are external benchmarks.  We also give an explicit deterministic
+mechanism with exact revenue
 \[
-\LowerBound=0.8744262774343727\ldots .
+\LowerBound=0.8745917724620687\ldots .
 \]
-The endpoints do not match, so the unrestricted optimum remains open.  The contribution is the
-instance-specific rational witness and its independently reproducible exact
-continuous certification, not a new general theory of continuous auction
-duality.
+The remaining exact gap is
+\[
+\frac{1445765276937161827}{122880000000000000000}
+=0.011765667943824559\ldots .
+\]
+The endpoints do not match, so the
+unrestricted optimum remains open.  The contribution is the instance-specific
+rational witness and explicit lower mechanism with independently reproducible
+exact certificates, not a new general theory of continuous auction duality.
 \end{abstract}
 
 \begin{center}
@@ -79,13 +86,16 @@ resisted an exact characterization~\citep{sandholm2015,jiang2026duality}.
 
 Computational work has produced strong feasible mechanisms and rigorous upper
 bounds.  Affine-maximizer searches provide transparent deterministic
-benchmarks~\citep{sandholm2015}, while GemNet constructs exactly
-strategy-proof menu mechanisms after a compatibility transformation
-\citep{wang2024gemnet}.  On the dual side, Jiang, Parkes, and Wang developed
-flow-conserving DSIC kernels and a continuous lifting theorem; their reported
-$50\times50$ uniform certificate is $0.8919$ for the present instance
-\citep{jiang2026duality}.  These results leave room for a smaller certificate
-whose arithmetic and continuous integration can be replayed exactly.
+benchmarks~\citep{sandholm2015}, while GemNet constructs fully
+strategyproof menu mechanisms after a compatibility transformation
+\citep{wang2024gemnet}.  Jiang, Parkes, and Wang report approximately $0.876$
+revenue for that GemNet benchmark on the present instance.  On the dual side,
+the same paper develops flow-conserving DSIC kernels and a continuous lifting
+theorem; its strict $50\times50$ uniform continuous certificate is $0.8919$
+\citep{jiang2026duality}.  These are external benchmarks.  The GemNet value is
+a reported computational revenue, whereas $0.8919$ is a rigorous upper
+certificate.  They leave room for smaller exact endpoints whose arithmetic
+and continuous integration can be replayed independently.
 
 We pursue a target-specific continuous witness rather than another grid
 lift.  Pointwise DSIC represents each bidder's truthful utility as a convex
@@ -100,13 +110,13 @@ field components.
 The remaining problem is a four-dimensional continuous polynomial-envelope
 integral.  We certify it using tensor Bernstein control coefficients, exact
 rational construction, directed fixed-point rounding, and a certificate-aware
-adaptive dyadic traversal concentrated near unresolved winner-switching boxes.
-The certificate proves the exact upper bound $\UpperBound$.  A separate
-implementation reconstructs the polynomial charts and repeats the complete
-base-depth-20 plus adaptive-depth-one traversal without importing the formal
-verifier.  As a secondary result, exact rational polytope integration
-and a menu-surcharge calculation certify the lower endpoint
-$\LowerBound$.
+nonuniform dyadic traversal concentrated near unresolved winner-switching
+boxes.  The certificate proves the exact upper bound $\UpperBound$.  A
+separate implementation reconstructs the polynomial charts and repeats the
+complete depth-21 base traversal plus selective depth-22 refinement without
+importing the formal verifier.  As a secondary result, exact rational polytope
+integration and a ten-band menu-surcharge calculation certify the lower
+endpoint $\LowerBound$.
 
 \paragraph{Contributions.}
 The paper makes three bounded contributions:
@@ -127,6 +137,8 @@ full-depth replay; and
 We do not claim a general new continuous duality theorem, a one-to-one
 identification with every flow kernel, or global optimality of the lower
 mechanism.
+The reported Jiang--Parkes--Wang upper certificate and GemNet revenue are
+comparison values from the cited papers, not contributions of this work.
 
 \section{Relation to prior dual formulations}
 
@@ -199,20 +211,23 @@ U_{\rm rad}={}&
 \]
 The lower endpoint is
 \[
-0.8744262774343727\ldots .
+0.8745917724620687\ldots .
 \]
 \end{theorem}
 
 The lower bound is proved in Sections~\ref{sec:base}--\ref{sec:revenue};
-the two upper bounds are proved in Section~\ref{sec:upper}.  The stream bound
-strictly improves the printed \(0.8919\) decimal reported in a 2026 preprint,
-by the exact rational difference
+the two upper bounds are proved in Section~\ref{sec:upper}.  As an external
+comparison, Jiang, Parkes, and Wang report a strict continuous upper
+certificate \(0.8919\) and fully strategyproof GemNet revenue approximately
+\(0.876\) for this instance~\citep{jiang2026duality}.  Our stream bound
+strictly improves their printed upper decimal by the exact rational difference
 \[
 \frac{8919}{10000}-\Ustream
-=\frac{4906638971069}{1048576000000000}>0.
+=\frac{116235899379}{20971520000000}>0.
 \]
-This comparison is to the reported decimal, not a reconstruction of the
-unreleased underlying certificate.
+This comparison is to their reported decimal, not a reconstruction of their
+underlying dual array.  The \(0.876\) GemNet revenue is likewise a reported
+computational benchmark, not an exact rational certificate replayed here.
 
 \section{An exact base affine maximizer}\label{sec:base}
 
@@ -291,21 +306,29 @@ opponent's value among outcomes assigning the indicated bundle.
 
 \section{The entry-surcharge mechanism}\label{sec:surcharge}
 
-Define two disjoint closed rectangles
+For an opponent report \(q=(q_1,q_2)\), set
 \[
-D=
-\left([0,\tfrac3{10}]\times[\tfrac{23}{40},\tfrac35]\right)
-\cup
-\left([\tfrac{23}{40},\tfrac35]\times[0,\tfrac3{10}]\right)
+t=\max\{q_1,q_2\},\qquad \rho=\min\{q_1,q_2\}.
 \]
-and the measurable surcharge
+Define the surcharge \(E(q)\) by reading the following closed-condition rows
+from top to bottom and taking the fee in the first matching row:
 \[
-E(q)=
-\begin{cases}
-\frac1{40},&q\in D,\\
-0,&q\notin D.
-\end{cases}
+\begin{array}{c|c|c|c}
+ &\text{condition on }t&\text{condition on }\rho&E(q)\\ \hline
+Z_1&53/100\leq t\leq11/20&0\leq\rho\leq b-t&3/500\\
+Z_2&11/20\leq t\leq57/100&0\leq\rho\leq b-t&13/1000\\
+Z_3&57/100\leq t\leq59/100&0\leq\rho\leq b-t&21/1000\\
+Z_4&59/100\leq t\leq61/100&0\leq\rho\leq b-t&29/1000\\
+Z_5&61/100\leq t\leq159/250&0\leq\rho\leq b-t&19/500\\
+S_1&159/250\leq t\leq13/20&0\leq\rho\leq b-a&39/1000\\
+S_2&13/20\leq t\leq133/200&0\leq\rho\leq b-a&31/1000\\
+S_3&133/200\leq t\leq17/25&0\leq\rho\leq b-a&23/1000\\
+S_4&17/25\leq t\leq139/200&0\leq\rho\leq b-a&3/200\\
+S_5&139/200\leq t\leq71/100&0\leq\rho\leq b-a&7/1000
+\end{array}
 \]
+If no row matches, set \(E(q)=0\).  The ordered rule resolves every shared
+endpoint literally and makes \(E\) measurable.
 Against opponent report \(q\), offer the four options
 \[
 (\varnothing,0),\quad
@@ -326,7 +349,7 @@ smallest-outcome-id rule.
 \begin{proposition}\label{prop:surcharge-valid}
 The entry-surcharge mechanism is deterministic, measurable, ex-post feasible,
 pointwise DSIC, and pointwise ex-post IR on the entire cube, including all
-menu and rectangle boundaries.
+menu and surcharge-band boundaries.
 \end{proposition}
 
 \begin{proof}
@@ -342,8 +365,8 @@ and is chosen at utility zero, proving ex-post IR.
 Relative to \(A^0(v)\), each bidder either keeps exactly the same bundle or
 switches to opt-out.  The new allocation is consequently obtained only by
 deleting bundles from a feasible base allocation, so it is feasible.  All
-maxima, comparisons, and the indicator of the closed set \(D\) are Borel
-measurable.  The boundary rules above are literal pointwise rules, not
+maxima, comparisons, and the finite ordered list of closed band conditions are
+Borel measurable.  The boundary rules above are literal pointwise rules, not
 almost-everywhere conventions.
 \end{proof}
 
@@ -386,32 +409,52 @@ G={}&(C-A)(1-2A)+(C-B)(1-2B)
 &-\frac{(A+B-C)^2}{2}-C(A+B-C).
 \end{split}
 \]
-On the first rectangle write \(q=(\rho,t)\).  Since
-\(\rho\in[0,3/10]\) and \(t\in[23/40,3/5]\), one has
+For a \(Z\)-band orientation \(q=(\rho,t)\), its inequalities give
 \[
-H(q)=0,\qquad (A,B,C)=(s-t,a,b).
+H(q)=0,\qquad (A,B,C)=(s-t,a,b),\qquad 0\leq\rho\leq b-t.
 \]
-All hypotheses of Lemma~\ref{lem:menu-revenue} hold before and after
-\(e=1/40\).  Substitution into \eqref{eq:delta-general} yields
+For an \(S\)-band orientation \(q=(t,\rho)\), they give
 \[
-\Delta(t)
-=-\frac{2167}{10^6}-\frac{681}{40000}t+\frac{3}{80}t^2.
+H(q)=t-a,\qquad
+(A,B,C)=(t,s-a,t+b-a),\qquad 0\leq\rho\leq b-a.
 \]
-In particular,
+The transposed orientations swap \(A\) and \(B\), which leaves
+\(r(A,B,C)\) unchanged.  At every interval endpoint, before and after its
+listed fee, one has
 \[
-\Delta(\tfrac{23}{40})=\frac{7073}{16000000}>0,\qquad
-\Delta(\tfrac35)=\frac{559}{500000}>0,
+0\leq A,B\leq C\leq1,\qquad C\leq A+B.
+\]
+
+For a band with endpoints \(\ell,u\) and fee \(e\), write
+\(\Delta_e(t)=r(A+e,B+e,C+e)-r(A,B,C)\), with the appropriate affine
+prices above.  Including both orientations and both bidders, its exact gain is
+\[
+4\int_\ell^u(b-t)\Delta_e(t)\,dt
+\quad\text{for a \(Z\)-band},
 \]
 and
 \[
-\int_{23/40}^{3/5}\Delta(t)\,dt
-=\frac{6209}{320000000}.
+4(b-a)\int_\ell^u\Delta_e(t)\,dt
+\quad\text{for an \(S\)-band}.
 \]
-There are two transposed rectangles, each has free-coordinate length \(3/10\),
-and the same calculation applies to both bidders.  The total surcharge gain is
+Expanding \eqref{eq:delta-general} and integrating gives
 \[
-4\cdot\frac3{10}\cdot\frac{6209}{320000000}
-=\frac{18627}{800000000}.
+\begin{array}{c|c@{\qquad}c|c}
+Z_1&2036829/1250000000000&S_1&4223283519/125000000000000\\
+Z_2&86099/12500000000&S_2&2307433323/100000000000000\\
+Z_3&4926369/312500000000&S_3&1270757337/100000000000000\\
+Z_4&8783607/312500000000&S_4&109661787/20000000000000\\
+Z_5&7506764473/125000000000000&S_5&128409141/100000000000000
+\end{array}
+\]
+for the ten symmetric band gains.  Hence
+\[
+G_Z=\frac{14055427773}{125000000000000},\qquad
+G_S=\frac{9541919439}{125000000000000},
+\]
+and the total surcharge gain is
+\[
+G_Z+G_S=\frac{5899336803}{31250000000000}.
 \]
 
 The base mechanism's exact expected revenue is
@@ -421,15 +464,26 @@ R_0=\frac{26232089810531183}{30000000000000000}.
 The exact verifier in \texttt{certificate/ama\_lower\_bound} reconstructs the
 \(9\cdot4\cdot4=144\) affine/pivot cells using rational arithmetic, finds 39
 full-dimensional cells, triangulates them into 16,336 rational four-simplices,
-checks total volume one, and integrates the affine payments.  The separate
-surcharge verifier reconstructs the polynomial calculation above using
-\texttt{fractions.Fraction}.  Therefore
+checks total volume one, and integrates the affine payments.  The primary
+checker in \texttt{certificate/piecewise\_surcharge\_lower\_bound}
+reconstructs \(H\) and both oriented menus at every band vertex, checks the
+price regime, and integrates the symbolic polynomials using
+\texttt{fractions.Fraction}.  Its non-importing replay evaluates the scalar
+menu formula, verifies the degree by exact forward differences, and applies
+exact Boole quadrature.  Therefore
 \[
-R_0+\frac{18627}{800000000}
+R_0+\frac{5899336803}{31250000000000}
 =
-\boxed{\frac{26232788323031183}{30000000000000000}},
+\boxed{\frac{26237753173862063}{30000000000000000}},
 \]
 proving the lower half of Theorem~\ref{thm:bracket}.
+
+The former two-rectangle \(1/40\)-fee certificate is retained as a reproducible
+predecessor at
+\[
+\texttt{certificate/menu\_surcharge\_lower\_bound/}.
+\]
+It is not the active lower endpoint.
 
 \section{Exact upper bounds for all randomized mechanisms}\label{sec:upper}
 
@@ -681,75 +735,66 @@ bounds for a competitor and for the exact competitor difference certify a
 fixed winner; otherwise the maximum upper control gives a valid supremum
 charge.
 
-The base tree has depth 20.  Until its final four levels, it splits on the axis
-of largest adjacent-control variation.  In the final four levels it chooses
-the axis with smallest immediate certified two-child charge.  For every box
-still unresolved at depth 20, the adaptive step compares the hold charge
-\(2b\), expressed at common depth 21, with the sum of the two valid child
-charges for each of the four possible axes.  It splits only when one child sum
-is strictly smaller.  Taking the minimum of several valid upper bounds is
-valid.  Moreover, a fixed box at level \(\ell\) is multiplied by
-\(2^{21-\ell}\), exactly the number of common-depth descendants, so every
-charge has the correct dyadic volume normalization.
+The tree uses the maximum-variation axis above the final four levels of a
+depth-21 base partition and exact one-step child-bound lookahead in those final
+four levels.  Each unresolved depth-21 leaf is split once along the best exact
+child-bound axis if and only if that split saves at least one integer
+accumulator unit; otherwise its depth-21 charge is retained.  Taking the
+minimum of several valid upper bounds is valid.  All contributions are
+accumulated over the common depth-22 dyadic denominator.
 
 The manifest-driven verifier reconstructs the polynomials and reports
 \[
 \begin{array}{rl}
-\text{fixed-winner or zero base boxes}:&235487,\\
-\text{unresolved depth-20 boxes}:&277676,\\
-\text{adaptively split / held boxes}:&233184\,/\,44492,\\
-\text{integer accumulator}:&930318295428931.
+\text{fixed-winner or zero boxes}:&404804,\\
+\text{unresolved depth-21 leaves}:&462796,\\
+\text{leaves refined to depth 22}:&391618,\\
+\text{depth-21 leaves retained}:&71178,\\
+\text{integer accumulator}:&1858826278862100.
 \end{array}
 \]
 After the four chart pairs and the item-symmetry factor two, this gives
 \[
 \int\sum_j\max\{0,F_{1j},F_{2j}\}
 \leq
-\frac{2\cdot930318295428931}{10^9\,2^{21}}
+\frac{2\cdot1858826278862100}{10^9\,2^{22}}
 =\boxed{\UpperBound}.
 \]
 This proves the upper half of Theorem~\ref{thm:bracket}.  The verifier and its
 clean transcript are in the following certificate directory:
 \begin{center}
-\path{certificate/continuous_stream_upper_bound/}
+\path{certificate/continuous_stream_degree4_nonuniform_upper_bound/}
 \end{center}
 
 \subsection{Reproducibility and independent replay}
 
 The publication archive separates the proof inputs from the numerical search
 that found them.  The trusted upper-bound directory contains the rational
-coefficient manifest, polynomial constructor, exact verifier, arithmetic
-audit, and a captured clean-run transcript; the root SHA-256 manifest covers
-these files.  The verifier checks all
-manifest expectations and fails closed on any mismatch.  Before fixed-point
-conversion, every polynomial and Bernstein coefficient is constructed with
-\texttt{fractions.Fraction}.  The largest axis degree is eight, so the initial
-one-unit rounding enclosure grows to at most
-\(1+8\cdot21=169\) fixed-point units.  The maximum initial absolute control is
-\(1475346733\); the conservative pair-operation bound
-\(2950693802<2^{63}-1\) covers every signed 64-bit sum and difference used by
-subdivision.  Control means, shifts, child-charge sums, and the global
-accumulator use arbitrary-precision Python integers.
+coefficient manifest, polynomial constructor, exact verifier, non-importing
+replay, and captured transcripts; the root SHA-256 manifest covers these
+files.  The verifier checks all manifest expectations and fails closed on any
+mismatch.  Before fixed-point conversion, every polynomial and Bernstein
+coefficient is constructed with \texttt{fractions.Fraction}.  The largest axis
+degree is eight, the maximum initial absolute control is \(1475346733\), and
+the maximum observed directed-rounding radius is 165 fixed-point units.
+Signed array operations are checked against \(2^{63}-1\); child charges and
+the global accumulator use arbitrary-precision Python integers.
 
-A second program in
-\path{certificate/independent_stream_upper_bound/} reimplements the basis,
-chart maps, Bernstein conversion, subdivision, winner tests, and coverage
-accounting without importing the formal verifier or its polynomial module.
-Its complete adaptive replay gives the same accumulator, all refinement
-counts, and complete coverage \(8388608/8388608\).  A separate shallow mode
-carries the exact scaled rational controls alongside the integer controls and
-performs 3,087,315 enclosure checks and 444 charge checks.  A same-code replay
-at fixed-point scale \(10^8\) gives the still-smaller-than-incumbent bound
-\(18606431629403/20971520000000\), checking that the improvement is not a
-\(10^9\)-scale rounding artifact.  These replays audit the finite arithmetic;
-the surrounding continuous weak-duality argument is the analytic proof above.
+The non-importing iterative replay independently reconstructs the basis, chart
+maps, polynomial arithmetic, Bernstein conversion, subdivision, winner tests,
+selective-refinement rule, and coverage accounting.  Both implementations
+visit 1,735,196 boxes and reproduce accumulator
+\(1858826278862100\), all refinement counts, and complete coverage
+\(16777216/16777216\).  These replays audit the finite arithmetic; the
+surrounding continuous weak-duality argument is the analytic proof above.
 
 The lower-bound directories similarly reconstruct the 144 affine/pivot cells
-and the surcharge polynomial from rational manifests.  The root reproduction
-command reruns all publication-facing checks, compares their structured
-outputs with the theorem endpoints, and
-verifies the archive hash manifest.  No optimizer output is read anywhere on
-the trusted proof path.
+and all ten surcharge-band polynomials from rational manifests.  A second
+lower replay imports no code from the symbolic verifier and uses exact scalar
+arithmetic, degree checks, and exact quadrature.  The root reproduction command
+reruns all publication-facing checks, compares their structured outputs with
+the theorem endpoints, and verifies the archive hash manifest.  No optimizer
+output is read anywhere on the trusted proof path.
 
 \section{Discussion and open problem}
 
@@ -763,14 +808,19 @@ nor its revenue is asserted to be globally optimal.
 
 The stream certificate is an exact continuous weak-duality witness and narrows
 the previously reported rigorous bracket, but it is not complementary to the
-present primal mechanism.  Still higher-degree numerical witnesses have
-sampled envelope values near \(0.88325\), yet their finite Bernstein bounds
-deteriorate near winner-switching surfaces.  Those values are discovery
-evidence, not theorem endpoints.  A useful next step is therefore to couple
-witness design to a partition or certificate whose local geometry resolves
-those surfaces, or to retain more of the convex-gradient restrictions
-discarded by the itemwise pointwise maximum.  Closing the exact primal--dual
-equality remains open.
+present primal mechanism.  Its improvement came from combining the same frozen
+degree-four rational witness with deeper, nonuniform, certificate-aware local
+Bernstein refinement; sampled objectives were discovery evidence only.  The
+exact residual width is
+\[
+\Ustream-\LowerBound
+=\frac{1445765276937161827}{122880000000000000000}
+=0.011765667943824559\ldots .
+\]
+A useful next step is to improve the witness jointly with its local certificate
+geometry, or to retain more of the convex-gradient restrictions discarded by
+the itemwise pointwise maximum.  Closing the exact primal--dual equality
+remains open.
 
 \section*{Data, code, and materials availability}
 

@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "python": "3.10.16",
+  "numpy": "2.0.1",
+  "degree": 4,
+  "basis_dimension": 32,
+  "base_depth": 21,
+  "maximum_depth": 22,
+  "fixed_point_scale": 1000000000,
+  "control_shapes": [
+    [
+      [
+        9,
+        6,
+        6,
+        5
+      ],
+      [
+        6,
+        5,
+        9,
+        6
+      ],
+      [
+        9,
+        6,
+        9,
+        6
+      ]
+    ],
+    [
+      [
+        9,
+        6,
+        6,
+        5
+      ],
+      [
+        6,
+        5,
+        9,
+        7
+      ],
+      [
+        9,
+        6,
+        9,
+        7
+      ]
+    ],
+    [
+      [
+        9,
+        7,
+        6,
+        5
+      ],
+      [
+        6,
+        5,
+        9,
+        6
+      ],
+      [
+        9,
+        7,
+        9,
+        6
+      ]
+    ],
+    [
+      [
+        9,
+        7,
+        6,
+        5
+      ],
+      [
+        6,
+        5,
+        9,
+        7
+      ],
+      [
+        9,
+        7,
+        9,
+        7
+      ]
+    ]
+  ],
+  "maximum_initial_absolute_control": 1475346733,
+  "maximum_axis_degree": 8,
+  "maximum_error_seen": 165,
+  "nodes": 1735196,
+  "coverage_units": 16777216,
+  "expected_coverage_units": 16777216,
+  "accumulator": "1858826278862100",
+  "upper_fraction": "18588262788621/20971520000000",
+  "comparison_target": "93021212643519/104857600000000",
+  "strict_margin": "39949350207/52428800000000",
+  "base_fixed_winner_or_zero_boxes": 404804,
+  "base_unresolved_leaves": 462796,
+  "refined_leaves": 391618,
+  "retained_leaves": 71178,
+  "refined_fixed_children": 173198,
+  "refined_unresolved_children": 610038,
+  "savings_units": "1833502629492",
+  "certified_primal_lower_bound": "26237753173862063/30000000000000000",
+  "remaining_exact_gap": "1445765276937161827/122880000000000000000"
+}
+

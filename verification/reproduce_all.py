@@ -14,8 +14,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-UPPER = Fraction(930318295428931, 1048576000000000)
-LOWER = Fraction(26232788323031183, 30000000000000000)
+UPPER = Fraction(18588262788621, 20971520000000)
+LOWER = Fraction(26237753173862063, 30000000000000000)
 AI_DECLARATION = "This manuscript was completed with the assistance of OpenAI GPT-5.6 Sol."
 AUTHOR_EMAIL = "baymin@bu.edu"
 AUTHOR_ORCID = "0009-0006-9100-0445"
@@ -65,9 +65,9 @@ def run_checked(label: str, command: list[str], cwd: Path, recorder: Recorder) -
 def check_certificates(recorder: Recorder) -> None:
     python = sys.executable
     ama = ROOT / "certificate" / "ama_lower_bound"
-    surcharge = ROOT / "certificate" / "menu_surcharge_lower_bound"
-    formal = ROOT / "certificate" / "continuous_stream_upper_bound"
-    independent = ROOT / "certificate" / "independent_stream_upper_bound"
+    predecessor_surcharge = ROOT / "certificate" / "menu_surcharge_lower_bound"
+    surcharge = ROOT / "certificate" / "piecewise_surcharge_lower_bound"
+    stream = ROOT / "certificate" / "continuous_stream_degree4_nonuniform_upper_bound"
 
     output = run_checked(
         "exact base lower certificate",
@@ -79,49 +79,52 @@ def check_certificates(recorder: Recorder) -> None:
             "base lower endpoint missing from verifier output")
 
     output = run_checked(
-        "exact surcharge lower certificate",
+        "predecessor surcharge lower certificate",
         [python, "-B", "verify_surcharge.py"],
+        predecessor_surcharge,
+        recorder,
+    )
+    require("26232788323031183/30000000000000000" in output,
+            "predecessor lower endpoint missing from verifier output")
+
+    output = run_checked(
+        "active piecewise-surcharge lower certificate",
+        [python, "-B", "verify_piecewise_surcharge.py"],
         surcharge,
         recorder,
     )
-    require(str(LOWER) in output, "final lower endpoint missing from verifier output")
+    require("PIECEWISE-SURCHARGE LOWER-BOUND CERTIFICATE: PASS" in output
+            and str(LOWER) in output,
+            "active lower verifier did not report the release endpoint")
 
     output = run_checked(
-        "formal saved-artifact audit",
-        [python, "-B", "audit_saved.py"],
-        formal,
+        "independent piecewise-surcharge replay",
+        [python, "-B", "independent_replay.py"],
+        surcharge,
         recorder,
     )
-    require("PASS_SAVED_AUDIT" in output and str(UPPER) in output,
-            "formal saved audit did not report the release endpoint")
+    require("INDEPENDENT PIECEWISE-SURCHARGE REPLAY: PASS" in output
+            and str(LOWER) in output,
+            "independent lower replay did not report the release endpoint")
 
     output = run_checked(
-        "formal adaptive upper certificate",
-        [python, "-B", "verify_manifest.py"],
-        formal,
+        "formal nonuniform upper certificate",
+        [python, "-B", "verify_stream_dual.py"],
+        stream,
         recorder,
     )
     require('"status": "PASS"' in output and str(UPPER) in output,
-            "formal full replay did not report the release endpoint")
+            "formal upper replay did not report the release endpoint")
 
     output = run_checked(
-        "independent shallow Fraction audit",
-        [python, "-B", "independent_audit.py", "shallow"],
-        independent,
-        recorder,
-    )
-    require('"status": "PASS"' in output and "3087315" in output and "444" in output,
-            "independent shallow obligations mismatch")
-
-    output = run_checked(
-        "independent full adaptive replay",
-        [python, "-B", "independent_audit.py", "full"],
-        independent,
+        "independent nonuniform upper replay",
+        [python, "-B", "independent_replay.py"],
+        stream,
         recorder,
     )
     require('"status": "PASS"' in output and str(UPPER) in output,
             "independent full replay did not report the release endpoint")
-    require('"coverage_units": 8388608' in output,
+    require('"coverage_units": 16777216' in output,
             "independent full coverage mismatch")
 
 
@@ -129,28 +132,30 @@ def check_text_consistency(recorder: Recorder) -> None:
     manuscript = (ROOT / "manuscript" / "manuscript.tex").read_text(encoding="utf-8")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     upper_manifest = json.loads(
-        (ROOT / "certificate" / "continuous_stream_upper_bound" / "manifest.json")
+        (ROOT / "certificate" / "continuous_stream_degree4_nonuniform_upper_bound" / "manifest.json")
         .read_text(encoding="utf-8")
     )
     lower_manifest = json.loads(
-        (ROOT / "certificate" / "menu_surcharge_lower_bound" / "manifest.json")
+        (ROOT / "certificate" / "piecewise_surcharge_lower_bound" / "manifest.json")
         .read_text(encoding="utf-8")
     )
-    require(Fraction(upper_manifest["expected"]["upper_fraction"]) == UPPER,
+    require(Fraction(upper_manifest["expected"]["upper_bound"]) == UPPER,
             "upper manifest differs from release theorem")
     require(Fraction(lower_manifest["expected"]["final_expected_revenue"]) == LOWER,
             "lower manifest differs from release theorem")
     for text, label in ((manuscript, "manuscript"), (readme, "README")):
-        require("930318295428931" in text and "1048576000000000" in text,
+        require("18588262788621" in text and "20971520000000" in text,
                 f"upper endpoint missing from {label}")
-        require("26232788323031183" in text and "30000000000000000" in text,
+        require("26237753173862063" in text and "30000000000000000" in text,
                 f"lower endpoint missing from {label}")
         require(text.count(AI_DECLARATION) == 1,
                 f"AI declaration must occur exactly once in {label}")
         require(AUTHOR_EMAIL in text and AUTHOR_ORCID in text,
                 f"author metadata missing from {label}")
-    require("0.887946896608135700225830078125" not in manuscript,
-            "obsolete degree-3 decimal remains in manuscript")
+    require("0.88722066443341350555419921875" not in manuscript,
+            "superseded active upper decimal remains in manuscript")
+    require("0.8919" in manuscript and "0.876" in manuscript,
+            "external benchmark values missing from manuscript")
     recorder.say("PASS theorem, README, manifest, and declaration consistency")
 
 

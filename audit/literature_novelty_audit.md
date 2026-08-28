@@ -1,26 +1,28 @@
 # Final targeted literature and novelty audit
 
-Audit date: 26 August 2026. Scope: the exact two-bidder, two-item additive
+Audit date: 27 August 2026. Scope: the exact two-bidder, two-item additive
 auction with four independent `U[0,1]` coordinates, pointwise DSIC, ex-post IR,
 ex-post item feasibility, and arbitrary internal randomization.
 
 This was a bounded, claim-driven audit performed after the mathematical
 candidate was complete. It asked whether the release may accurately claim an
-improved rigorous upper bound and how the signed stream witness should be
-related to existing continuous flow, transport, and Beckmann formulations. It
-was not an attempt to survey all of mechanism design.
+improved rigorous upper bound, how to report the best directly comparable
+primal benchmark, and how the signed stream witness should be related to
+existing continuous flow, transport, and Beckmann formulations. It was not an
+attempt to survey all of mechanism design.
 
 ## Primary-source findings
 
 1. [Jiang, Parkes, and Wang, arXiv:2606.10112v1](https://arxiv.org/abs/2606.10112)
    develops continuous weak duality for DSIC multi-item, multi-bidder auctions
    through nonnegative flow-conserving deviation kernels and gives a lifting
-   construction from uniform grids. Its two-bidder, two-item uniform table
-   reports a `50 x 50` continuous certificate of `0.8919` (also rounded to
-   approximately `0.892` in the discussion). This is the closest directly
-   comparable prior upper bound located. The paper is a 2026 preprint. Its
-   released source did not expose an exact target dual array that could be
-   replayed here.
+   construction from uniform grids. Its two-bidder, two-item uniform results
+   report a strict `50 x 50` continuous certificate of `0.8919`, rounded to
+   `0.892` in the comparison table. The same table reports GemNet revenue
+   approximately `0.876` and describes GemNet as DSIC/fully strategyproof.
+   These are the two external benchmarks used in this archive. The paper's
+   released source did not expose an exact target dual array or the GemNet
+   mechanism data needed for an independent exact replay here.
 2. [Kolesnikov, Sandomirskiy, Tsyvinski, and Zimin,
    arXiv:2203.06837v2](https://arxiv.org/abs/2203.06837) proves a continuous
    Beckmann optimal-transport formulation and strong duality for multi-item,
@@ -43,17 +45,20 @@ was not an attempt to survey all of mechanism design.
    target-specific rational continuous certificate.
 5. [Wang, Jiang, and Parkes,
    arXiv:2406.07428v3](https://arxiv.org/abs/2406.07428) constructs exactly
-   strategy-proof menu mechanisms after a compatibility transformation, but
-   its reported target revenues are computational experiments rather than an
-   exact globally optimal mechanism. [Sandholm and Likhodedov
+   strategyproof menu mechanisms after a compatibility transformation.
+   Revenue is evaluated computationally rather than as an exact symbolic
+   integral. Accordingly, the `0.876` figure in this release is attributed
+   specifically to Jiang--Parkes--Wang's 2026 comparison and is not treated as
+   a locally certified rational endpoint.
+6. [Sandholm and Likhodedov
    (2015)](https://doi.org/10.1287/opre.2015.1398) studies automated design in
    restricted families such as affine maximizers; such a restriction is not
    known to be without loss for the present problem.
 
-No later or stronger directly comparable continuous DSIC certificate for this
-canonical instance was located in the bounded audit. That is evidence for the
-positioning below, not a universal priority theorem over unpublished or
-unindexed work.
+No later or stronger directly comparable strict continuous DSIC certificate
+for this canonical instance was located in the bounded audit. That is evidence
+for the positioning below, not a universal priority theorem over unpublished
+or unindexed work.
 
 ## Approved novelty boundary
 
@@ -61,13 +66,17 @@ The release may claim:
 
 - an explicit 32-parameter rational, instance-specific signed stream witness;
 - a direct weak-duality proof against Lipschitz convex truthful utilities;
-- an exact directed-rounding tensor-Bernstein certificate with
+- an exact directed-rounding tensor-Bernstein certificate with nonuniform
   certificate-aware refinement near winner-switching boxes;
-- an independent clean-room arithmetic replay; and
-- the rigorous bound
-  `930318295428931/1048576000000000`, which is strictly below the previously
-  printed `0.8919` benchmark by the exact difference
-  `4906638971069/1048576000000000`.
+- an independent non-importing arithmetic replay;
+- the rigorous upper bound `18588262788621/20971520000000`, which is strictly
+  below the external printed `0.8919` benchmark by
+  `116235899379/20971520000000`;
+- the explicit ten-band deterministic mechanism with exact revenue
+  `26237753173862063/30000000000000000`, improving this archive's predecessor
+  by `10343439231/62500000000000`; and
+- the remaining exact gap
+  `1445765276937161827/122880000000000000000`.
 
 The release must not claim:
 
@@ -77,6 +86,9 @@ The release must not claim:
   deviation kernel, or conversely;
 - that the exact difference from the printed decimal reconstructs Jiang et
   al.'s unreleased underlying certificate;
+- that the `0.876` GemNet figure was independently replayed or is our exact
+  lower endpoint;
+- that our exact lower mechanism improves GemNet's reported revenue;
 - global optimality of the deterministic lower-bound mechanism; or
 - solution of the unrestricted optimum, because the exact lower and upper
   endpoints remain unequal.
@@ -95,6 +107,6 @@ The Beckmann formulation is closer in continuous variational language but
 lives in interim BIC space and proves a different strong-duality statement.
 The one-bidder transport papers supply important integration-by-parts
 precedents without resolving multi-bidder ex-post supply. The conservative
-publication claim is therefore the explicit rational witness, exact
-Bernstein/adaptive certification machinery, and improved target-specific
-upper bound—not a new general duality theory.
+publication claim is therefore the explicit rational witness, the stronger
+exact local-certification geometry, the explicit exact lower mechanism, and
+the tightened target-specific bracket—not a new general duality theory.

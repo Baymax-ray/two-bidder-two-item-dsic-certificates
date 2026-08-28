@@ -11,48 +11,64 @@ The main result is the exact global upper bound
 
 $$
 \mathrm{OPT}\le
-\frac{930318295428931}{1048576000000000}
-=0.88722066443341350555419921875.
+\frac{18588262788621}{20971520000000}
+=0.8863574404058933258056640625.
 $$
 
 It is certified by an explicit 32-parameter rational continuous stream-dual
-witness and a deterministic adaptive tensor-Bernstein verifier with base
-depth 20 and common final depth 21. A separately
-implemented full replay obtains the same integer accumulator and box counts.
-As a secondary result, an explicit deterministic menu mechanism has exact
-revenue
+witness and a deterministic nonuniform tensor-Bernstein verifier with a
+depth-21 base tree and one selective local refinement level. A separately
+implemented non-importing replay obtains the same integer accumulator, box
+counts, and complete dyadic coverage. As a secondary result, an explicit
+deterministic ten-band menu mechanism has exact revenue
 
 $$
-\frac{26232788323031183}{30000000000000000}
-=0.8744262774343727\ldots .
+\frac{26237753173862063}{30000000000000000}
+=0.8745917724620687\ldots .
 $$
 
-These endpoints do **not** meet. The unrestricted continuous DSIC optimum
-remains open.
+The remaining exact gap is
+`1445765276937161827/122880000000000000000`, approximately
+`0.011765667943824559`. These endpoints do **not** meet. The unrestricted
+continuous DSIC optimum remains open.
 
-## Improvement over prior bounds
+## External benchmarks and our improvements
 
-The closest directly comparable result located in our
-[bounded literature audit](audit/literature_novelty_audit.md) is the
-continuous DSIC certificate `0.8919` reported by Jiang, Parkes, and Wang.
-The present exact bound `0.88722066443341350555419921875` lowers that
-reported decimal by `0.00467933556658649444580078125`.
+The closest directly comparable external result located in our
+[bounded literature audit](audit/literature_novelty_audit.md) is the strict
+continuous DSIC upper certificate `0.8919` reported by Jiang, Parkes, and
+Wang for this instance. The same paper reports revenue approximately `0.876`
+for GemNet's fully strategyproof mechanism. Both numbers are **external
+benchmarks**: `0.8919` is their rigorous continuous upper bound, while
+`0.876` is their reported computational revenue for an exactly strategyproof
+primal mechanism, not an exact rational certificate produced or replayed here.
 
-Within this project, it also improves the previous frozen exact stream bound
-`0.887946896608135700225830078125` by
-`0.000726232174722194671630859375`.
+Our improvements are the two exact, independently replayed endpoints above.
+The new upper bound lowers the external `0.8919` benchmark by the exact amount
+`116235899379/20971520000000`, approximately `0.005542559594106674`, and
+lowers this archive's preceding active exact upper bound
+`930318295428931/1048576000000000` by
+`905155997881/1048576000000000`, approximately `0.000863224027520180`.
+The new lower mechanism improves this archive's preceding exact lower bound
+by `10343439231/62500000000000 = 0.000165495027696`. It does not improve on
+the reported GemNet revenue `0.876`; its distinct contribution is a compact
+explicit mechanism with exact symbolic revenue and two independent replays.
 
 ## Repository layout
 
 - `manuscript/`: self-contained LaTeX source, bibliography, and release PDF.
-- `certificate/continuous_stream_upper_bound/`: trusted rational upper-bound
-  manifest, polynomial construction, formal verifier, and deterministic
-  transcript; all stable files are covered by the root release hashes.
-- `certificate/independent_stream_upper_bound/`: independent arithmetic replay
-  and exact shallow enclosure audit.
+- `certificate/continuous_stream_degree4_nonuniform_upper_bound/`: active
+  rational upper-bound manifest, polynomial construction, formal verifier,
+  non-importing replay, and deterministic transcripts.
+- `certificate/continuous_stream_upper_bound/` and
+  `certificate/independent_stream_upper_bound/`: superseded but retained
+  degree-four predecessor certificate and independent audit.
 - `certificate/ama_lower_bound/`: exact rational base-mechanism verifier.
-- `certificate/menu_surcharge_lower_bound/`: exact surcharge improvement and
-  hash binding to the base certificate.
+- `certificate/piecewise_surcharge_lower_bound/`: active exact ten-band
+  surcharge certificate, non-importing replay, and hash binding to the base
+  certificate.
+- `certificate/menu_surcharge_lower_bound/`: superseded two-rectangle lower
+  certificate, retained as a reproducible predecessor.
 - `verification/`: publication-level orchestrator, hash tools, release
   transcript, and theorem-to-certificate consistency checks.
 - `audit/`: final literature/novelty audit and proof-artifact ledger.
@@ -80,12 +96,11 @@ From the archive root, run the complete publication-facing replay:
 python -B verification\reproduce_all.py
 ```
 
-The command reruns both lower-bound verifiers, the formal adaptive upper-bound
-verifier, the independent shallow Fraction audit, the independent full
-adaptive replay, a clean temporary-directory manuscript compilation, exact
-theorem-value consistency checks, and release-hash verification. On the
-recorded machine, the two full traversals together took about 22 minutes;
-wall time is machine-dependent.
+The command reruns the base and both active lower-bound verifiers, the formal
+nonuniform upper-bound verifier, the non-importing full replay, a clean
+temporary-directory manuscript compilation, exact theorem-value consistency
+checks, and release-hash verification. The two upper traversals are the
+runtime-dominant steps; wall time is machine-dependent.
 
 Individual proof checks can be run from their certificate directories using
 the commands documented in their local `README.md` files. To compile only the

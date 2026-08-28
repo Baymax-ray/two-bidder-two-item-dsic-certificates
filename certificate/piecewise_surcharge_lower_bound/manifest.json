@@ -1,0 +1,117 @@
+{
+  "certificate": "piecewise_opponent_dependent_common_entry_surcharge_lower_bound",
+  "scope": "primal_lower_bound_only",
+  "distribution": "four mutually independent U[0,1] coordinates",
+  "base_certificate": {
+    "directory": "../ama_lower_bound",
+    "expected_revenue": "26232089810531183/30000000000000000",
+    "manifest_sha256": "F3B7790ADCEC61087D3C080F3D4EE89BBF9AD5E0BD1D41EF825970A258998EE9",
+    "verifier_sha256": "A8EBDFE42030879F0E8B500B9D772002E09C3AF07BFD046203323AD471FFB334",
+    "output_sha256": "7DC15841ED465D9974DCAD560348FC07B47D05551DA45198E780E44F02B114A9"
+  },
+  "mechanism": {
+    "applies_to": "all nonempty options",
+    "zero_utility_rule": "opt out",
+    "nonempty_tie_rule": "inherit the base smallest-outcome-id bundle",
+    "region_boundary_rule": "test bands in listed order; the first matching closed band supplies the fee; otherwise the fee is zero",
+    "orientation_count": 2,
+    "symmetric_bidder_count": 2,
+    "bands": [
+      {
+        "id": "Z1",
+        "chamber": "zero_pivot_one_high_triangle",
+        "high_interval": ["53/100", "11/20"],
+        "low_interval": "0 <= rho <= b-t",
+        "fee": "3/500",
+        "expected_total_gain": "2036829/1250000000000"
+      },
+      {
+        "id": "Z2",
+        "chamber": "zero_pivot_one_high_triangle",
+        "high_interval": ["11/20", "57/100"],
+        "low_interval": "0 <= rho <= b-t",
+        "fee": "13/1000",
+        "expected_total_gain": "86099/12500000000"
+      },
+      {
+        "id": "Z3",
+        "chamber": "zero_pivot_one_high_triangle",
+        "high_interval": ["57/100", "59/100"],
+        "low_interval": "0 <= rho <= b-t",
+        "fee": "21/1000",
+        "expected_total_gain": "4926369/312500000000"
+      },
+      {
+        "id": "Z4",
+        "chamber": "zero_pivot_one_high_triangle",
+        "high_interval": ["59/100", "61/100"],
+        "low_interval": "0 <= rho <= b-t",
+        "fee": "29/1000",
+        "expected_total_gain": "8783607/312500000000"
+      },
+      {
+        "id": "Z5",
+        "chamber": "zero_pivot_one_high_triangle",
+        "high_interval": ["61/100", "159/250"],
+        "low_interval": "0 <= rho <= b-t",
+        "fee": "19/500",
+        "expected_total_gain": "7506764473/125000000000000"
+      },
+      {
+        "id": "S1",
+        "chamber": "singleton_pivot_rectangle",
+        "high_interval": ["159/250", "13/20"],
+        "low_interval": "0 <= rho <= b-a",
+        "fee": "39/1000",
+        "expected_total_gain": "4223283519/125000000000000"
+      },
+      {
+        "id": "S2",
+        "chamber": "singleton_pivot_rectangle",
+        "high_interval": ["13/20", "133/200"],
+        "low_interval": "0 <= rho <= b-a",
+        "fee": "31/1000",
+        "expected_total_gain": "2307433323/100000000000000"
+      },
+      {
+        "id": "S3",
+        "chamber": "singleton_pivot_rectangle",
+        "high_interval": ["133/200", "17/25"],
+        "low_interval": "0 <= rho <= b-a",
+        "fee": "23/1000",
+        "expected_total_gain": "1270757337/100000000000000"
+      },
+      {
+        "id": "S4",
+        "chamber": "singleton_pivot_rectangle",
+        "high_interval": ["17/25", "139/200"],
+        "low_interval": "0 <= rho <= b-a",
+        "fee": "3/200",
+        "expected_total_gain": "109661787/20000000000000"
+      },
+      {
+        "id": "S5",
+        "chamber": "singleton_pivot_rectangle",
+        "high_interval": ["139/200", "71/100"],
+        "low_interval": "0 <= rho <= b-a",
+        "fee": "7/1000",
+        "expected_total_gain": "128409141/100000000000000"
+      }
+    ]
+  },
+  "expected": {
+    "zero_pivot_total_gain": "14055427773/125000000000000",
+    "singleton_pivot_total_gain": "9541919439/125000000000000",
+    "total_revenue_gain_over_base": "5899336803/31250000000000",
+    "previous_certified_lower_bound": "26232788323031183/30000000000000000",
+    "strict_improvement_over_previous": "10343439231/62500000000000",
+    "final_expected_revenue": "26237753173862063/30000000000000000"
+  },
+  "verifiers": {
+    "primary": "verify_piecewise_surcharge.py",
+    "independent_replay": "independent_replay.py",
+    "runtime": "Python 3 standard library only",
+    "arithmetic": "fractions.Fraction throughout"
+  }
+}
+

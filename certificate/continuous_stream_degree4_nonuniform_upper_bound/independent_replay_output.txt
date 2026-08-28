@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "implementation": "non_importing_iterative_replay",
+  "python": "3.10.16",
+  "numpy": "2.0.1",
+  "basis_dimension": 32,
+  "accumulator": "1858826278862100",
+  "upper_fraction": "18588262788621/20971520000000",
+  "comparison_target": "93021212643519/104857600000000",
+  "strict_margin": "39949350207/52428800000000",
+  "fixed": 404804,
+  "base_leaves": 462796,
+  "refined_leaves": 391618,
+  "retained_leaves": 71178,
+  "refined_fixed_children": 173198,
+  "refined_unresolved_children": 610038,
+  "savings_units": "1833502629492",
+  "nodes": 1735196,
+  "coverage_units": 16777216,
+  "expected_coverage_units": 16777216,
+  "maximum_error_seen": 165,
+  "remaining_exact_gap": "1445765276937161827/122880000000000000000",
+  "chart_reports": [
+    {
+      "charts": [
+        0,
+        0
+      ],
+      "accumulator": "626046884836531",
+      "fixed": 54761,
+      "base_leaves": 67335,
+      "control_shapes": [
+        [
+          9,
+          6,
+          6,
+          5
+        ],
+        [
+          6,
+          5,
+          9,
+          6
+        ],
+        [
+          9,
+          6,
+          9,
+          6
+        ]
+      ]
+    },
+    {
+      "charts": [
+        0,
+        1
+      ],
+      "accumulator": "503064791809253",
+      "fixed": 96587,
+      "base_leaves": 96666,
+      "control_shapes": [
+        [
+          9,
+          6,
+          6,
+          5
+        ],
+        [
+          6,
+          5,
+          9,
+          7
+        ],
+        [
+          9,
+          6,
+          9,
+          7
+        ]
+      ]
+    },
+    {
+      "charts": [
+        1,
+        0
+      ],
+      "accumulator": "503064791556556",
+      "fixed": 96605,
+      "base_leaves": 96664,
+      "control_shapes": [
+        [
+          9,
+          7,
+          6,
+          5
+        ],
+        [
+          6,
+          5,
+          9,
+          6
+        ],
+        [
+          9,
+          7,
+          9,
+          6
+        ]
+      ]
+    },
+    {
+      "charts": [
+        1,
+        1
+      ],
+      "accumulator": "226649810659760",
+      "fixed": 156851,
+      "base_leaves": 202131,
+      "control_shapes": [
+        [
+          9,
+          7,
+          6,
+          5
+        ],
+        [
+          6,
+          5,
+          9,
+          7
+        ],
+        [
+          9,
+          7,
+          9,
+          7
+        ]
+      ]
+    }
+  ]
+}
