@@ -1,0 +1,86 @@
+{
+  "certificate": "bundle_pivot_plus_refined_item_containment_surcharge_lower_bound",
+  "scope": "primal_lower_bound_only",
+  "status": "SEALED",
+  "distribution": "four mutually independent U[0,1] coordinates",
+  "immediate_predecessor": {
+    "directory": "../piecewise_surcharge_bundle_pivot_lower_bound",
+    "expected_revenue": "83961603016753854879913/96000000000000000000000",
+    "manifest_sha256": "275BE74A579C4A255A91108F720CC4E95BDF51884E17C5AD548FD83ACAB76AD2",
+    "readme_sha256": "CD3FAFC7848AF99950D3056C61F8EC7D0A73858239BE37BF5242D41B998F3CC1",
+    "verifier_sha256": "591AD28A1C99D1B526A4C3A8A4109AA9087CEF75FAC44C5D3A74ABF6683B8710",
+    "verification_output_sha256": "6341DC02E9EB36972B5E6EB89AF6ED5AF80FA9F16988F756817BD9BE89BF3B76",
+    "independent_replay_sha256": "4A09DE07ED138A57B5DF60741A6ADBA5D35F43BDEA84CC45E227A00D5BC0774D",
+    "independent_replay_output_sha256": "012657748672233B791F24B7E76F5D3B4A8112A01E4DE9BF6913C1F03D6E07D1",
+    "sha256s_sha256": "D240BAD47D3004B5DC4F27F6381D2C45E0FBDDED0D60B87A61DB9F170D055D8D"
+  },
+  "common_predecessor": {
+    "directory": "../piecewise_surcharge_twenty_band_lower_bound",
+    "expected_revenue": "2623779309282875420759/3000000000000000000000",
+    "manifest_sha256": "B20184B422DB67A3A5995781A0466B4C9D0ED42A85FE4102789F18C3E2C752EF",
+    "readme_sha256": "1AA22A532876192993EFE7BE930EF192F94999F60803AB2F0E0DCCB6AC09F4F1",
+    "verifier_sha256": "23F313D159D8F51DE83B2EB55E52F6BE87A5CC74864B69213B3A4A71A5CA8630",
+    "verification_output_sha256": "FAA8D417F235D6AF6D771B700147CF93D0019CBC95C420BE1579639F92694A5E",
+    "independent_replay_sha256": "9BEEE0832DF061EA9CF9B984D508EF6230F85F1F17D9CFC7BD1A8EF3BE047049",
+    "independent_replay_output_sha256": "36009E080E3EEA1230F61B5AEE99433DE6B52B147CFEA07C48411E28D6830FA3",
+    "sha256s_sha256": "37B48E07B098A3595D7696AD4F83972717D4B68BD949A3B1B2CFEAFFAFA45892"
+  },
+  "upper_reference": {
+    "directory": "../continuous_stream_degree4_two_level_nonuniform_upper_bound",
+    "expected_upper_bound": "3715139591287203/4194304000000000",
+    "manifest_sha256": "65040D3569530E81C2C026A351C6B9FAB84C4F556EBE95425EC6ABF433D287A4",
+    "readme_sha256": "2B908D0AF3927FB72611E29EF3C5529458369956192464015C3AE18350F82805",
+    "dual_polynomials_sha256": "4B5665490F70576EFD0E93DC8FBFCBAB084362CFABFC6ED035DB5A65F7822481",
+    "verifier_sha256": "7E6CDC6834BC28C7E9878EA76077FC62DBD3B9743A79B676A19AA441D1557E29",
+    "verification_output_sha256": "16E919393ABCEC9AE624F0587A4314CD35566E0CC952B2BA558C898F28E7080C",
+    "independent_replay_sha256": "0EF2377A11FE0A490E925BB9F0AF28B90CF24110239BECBB4467F5E3B7E17FBE",
+    "independent_replay_output_sha256": "16E919393ABCEC9AE624F0587A4314CD35566E0CC952B2BA558C898F28E7080C",
+    "sha256s_sha256": "7D6D958A13C5F7B010EE200FA7FD12C78D5B5E976F240A052A28BE92571B0C4C"
+  },
+  "mechanism": {
+    "ordered_rule": "evaluate the hash-bound immediate predecessor first; if its first matching twenty-band row is S5.1 or S5.2, then apply the unique listed item row with t in (lower,upper]; otherwise retain the predecessor menu unchanged",
+    "shared_boundary_rule": "the predecessor tests all twenty-band rows before bundle-pivot rows, so rho=c belongs to the S row (and its item surcharge when applicable); bundle-pivot positive-measure support has rho>c",
+    "zero_utility_rule": "if the maximum utility is zero, choose the empty outcome",
+    "tie_rule": "at positive maximum utility, retain the predecessor-selected outcome whenever it remains maximizing; otherwise choose the maximizing itemwise subset of that predecessor outcome with smallest outcome id under the predecessor's fixed outcome order",
+    "item_containment": {
+      "description": "after the predecessor common fee, add delta to the singleton corresponding to the opponent-low coordinate and to the grand bundle; leave the other singleton unchanged",
+      "ordered_coordinates": "t=max(q1,q2), rho=min(q1,q2)",
+      "low_interval": "0 <= rho <= 137/500",
+      "constants": {
+        "c": "137/500",
+        "d": "501/1000"
+      },
+      "pre_item_prices": "(A,B,C)=(d+f,t+f,t+c+f)",
+      "post_item_prices": "(A+delta,B,C+delta)",
+      "orientation_count": 2,
+      "symmetric_bidder_count": 2,
+      "row_endpoint_rule": "each listed high interval is (lower,upper]; no item surcharge is applied at t=139/200",
+      "rows": [
+        {"id":"I1.1","parent":"S5.1","high_interval":["139/200","223/320"],"left_endpoint_open":true,"common_fee":"923/100000","item_surcharge":"899/50000","expected_gain":"265762556618439/400000000000000000000"},
+        {"id":"I1.2","parent":"S5.1","high_interval":["223/320","559/800"],"left_endpoint_open":true,"common_fee":"923/100000","item_surcharge":"433/25000","expected_gain":"123242723382363/200000000000000000000"},
+        {"id":"I1.3","parent":"S5.1","high_interval":["559/800","1121/1600"],"left_endpoint_open":true,"common_fee":"923/100000","item_surcharge":"807/50000","expected_gain":"227718499774527/400000000000000000000"},
+        {"id":"I1.4","parent":"S5.1","high_interval":["1121/1600","281/400"],"left_endpoint_open":true,"common_fee":"923/100000","item_surcharge":"1427/100000","expected_gain":"415366149390597/800000000000000000000"},
+        {"id":"I2.1","parent":"S5.2","high_interval":["281/400","1127/1600"],"left_endpoint_open":true,"common_fee":"67/12500","item_surcharge":"813/50000","expected_gain":"75643937570133/100000000000000000000"},
+        {"id":"I2.2","parent":"S5.2","high_interval":["1127/1600","113/160"],"left_endpoint_open":true,"common_fee":"67/12500","item_surcharge":"1439/100000","expected_gain":"137218436482149/200000000000000000000"},
+        {"id":"I2.3","parent":"S5.2","high_interval":["113/160","1133/1600"],"left_endpoint_open":true,"common_fee":"67/12500","item_surcharge":"1251/100000","expected_gain":"122237371904391/200000000000000000000"},
+        {"id":"I2.4","parent":"S5.2","high_interval":["1133/1600","71/100"],"left_endpoint_open":true,"common_fee":"67/12500","item_surcharge":"133/12500","expected_gain":"13303398867003/25000000000000000000"}
+      ]
+    }
+  },
+  "expected": {
+    "predecessor_revenue": "83961603016753854879913/96000000000000000000000",
+    "item_containment_gain": "3963982653557301/800000000000000000000",
+    "strict_improvement_over_predecessor": "3963982653557301/800000000000000000000",
+    "combined_extension_gain_over_twenty_band": "76053174684552783/6400000000000000000000",
+    "final_expected_revenue": "83962078694672281756033/96000000000000000000000",
+    "current_exact_upper": "3715139591287203/4194304000000000",
+    "remaining_exact_gap": "34262987107793868572569/3072000000000000000000000"
+  },
+  "verifiers": {
+    "primary": "verify_final_combined.py",
+    "independent_replay": "independent_replay.py",
+    "runtime": "Python 3 standard library only; do not run with -O",
+    "arithmetic": "fractions.Fraction throughout",
+    "numerical_discovery_inputs_used": false
+  }
+}

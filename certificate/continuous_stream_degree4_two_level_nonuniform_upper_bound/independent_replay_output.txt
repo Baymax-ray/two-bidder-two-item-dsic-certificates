@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "python": "3.10.16",
+  "numpy": "2.0.1",
+  "degree": 4,
+  "basis_dimension": 32,
+  "base_depth": 21,
+  "maximum_depth": 23,
+  "fixed_point_scale": 1000000000,
+  "control_shapes": [
+    [
+      [9, 6, 6, 5],
+      [6, 5, 9, 6],
+      [9, 6, 9, 6]
+    ],
+    [
+      [9, 6, 6, 5],
+      [6, 5, 9, 7],
+      [9, 6, 9, 7]
+    ],
+    [
+      [9, 7, 6, 5],
+      [6, 5, 9, 6],
+      [9, 7, 9, 6]
+    ],
+    [
+      [9, 7, 6, 5],
+      [6, 5, 9, 7],
+      [9, 7, 9, 7]
+    ]
+  ],
+  "maximum_initial_absolute_control": 1475346733,
+  "maximum_axis_degree": 8,
+  "maximum_error_seen": 181,
+  "nodes": 3738334,
+  "coverage_units": 33554432,
+  "expected_coverage_units": 33554432,
+  "accumulator": "3715139591287203",
+  "upper_fraction": "3715139591287203/4194304000000000",
+  "active_depth22_accumulator": "1858826278862100",
+  "active_depth22_upper_fraction": "18588262788621/20971520000000",
+  "strict_improvement": "2512966436997/4194304000000000",
+  "certified_primal_lower_bound": "26237753173862063/30000000000000000",
+  "remaining_exact_gap": "10977145706826122741/983040000000000000000",
+  "statistics": {
+    "nodes": 3738334,
+    "fixed_before_base": 404804,
+    "base_unresolved": 462796,
+    "base_refined": 391618,
+    "base_retained": 71178,
+    "first_level_fixed": 173198,
+    "first_level_unresolved": 610038,
+    "first_level_refined": 609951,
+    "first_level_retained": 87,
+    "second_level_fixed": 249438,
+    "second_level_unresolved": 970464,
+    "first_savings_units": "1833502629492",
+    "second_savings_units": "2512966436997",
+    "coverage_units": 33554432,
+    "maximum_error_seen": 181
+  }
+}

@@ -124,15 +124,15 @@ triangular extensions reached only about `0.8745022`; the exact improvement here
 comes from five fees in that chamber plus five fees in the new singleton-pivot
 chamber.
 
-Against the active exact global upper bound
+Against the concurrently tightened exact global upper bound
 
 \[
-\frac{18588262788621}{20971520000000},
+\frac{93021212643519}{104857600000000},
 \]
 
 the remaining exact gap is
 
 \[
-\frac{1445765276937161827}{122880000000000000000}
-=0.011765667943824559\ldots.
+\frac{1539396566484818077}{122880000000000000000}
+=0.012527641328815252\ldots.
 \]

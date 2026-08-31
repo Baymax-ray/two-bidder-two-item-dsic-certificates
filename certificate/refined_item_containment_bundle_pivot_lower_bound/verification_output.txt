@@ -1,0 +1,18 @@
+FINAL BUNDLE-PIVOT + ITEM-CONTAINMENT LOWER CERTIFICATE: PASS
+sealed bundle predecessor, twenty-band predecessor, and upper hashes: PASS
+deterministic zero/tie rules and rho=c predecessor priority: PASS
+eight item rows, price regimes, deletion slack, and coverage: PASS
+I1.1: t=(139/200,223/320], common=923/100000, item=899/50000, deletion_margin=873/4000, cap_margin=383/200000, gain=265762556618439/400000000000000000000
+I1.2: t=(223/320,559/800], common=923/100000, item=433/25000, deletion_margin=21891/100000, cap_margin=7/10000, gain=123242723382363/200000000000000000000
+I1.3: t=(559/800,1121/1600], common=923/100000, item=807/50000, deletion_margin=22009/100000, cap_margin=1/200000, gain=227718499774527/400000000000000000000
+I1.4: t=(1121/1600,281/400], common=923/100000, item=1427/100000, deletion_margin=5549/25000, cap_margin=0, gain=415366149390597/800000000000000000000
+I2.1: t=(281/400,1127/1600], common=67/12500, item=813/50000, deletion_margin=2161/10000, cap_margin=1/200000, gain=75643937570133/100000000000000000000
+I2.2: t=(1127/1600,113/160], common=67/12500, item=1439/100000, deletion_margin=21797/100000, cap_margin=0, gain=137218436482149/200000000000000000000
+I2.3: t=(113/160,1133/1600], common=67/12500, item=1251/100000, deletion_margin=4397/20000, cap_margin=1/200000, gain=122237371904391/200000000000000000000
+I2.4: t=(1133/1600,71/100], common=67/12500, item=133/12500, deletion_margin=5543/25000, cap_margin=0, gain=13303398867003/25000000000000000000
+item-containment exact gain: 3963982653557301/800000000000000000000
+predecessor exact revenue: 83961603016753854879913/96000000000000000000000
+certified exact expected revenue: 83962078694672281756033/96000000000000000000000
+strict improvement over predecessor: 3963982653557301/800000000000000000000
+remaining exact gap to current upper: 34262987107793868572569/3072000000000000000000000
+scope: exact deterministic DSIC/ex-post-IR primal lower bound; no optimality claim

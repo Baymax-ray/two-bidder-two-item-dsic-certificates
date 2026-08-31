@@ -11,25 +11,25 @@ The main result is the exact global upper bound
 
 $$
 \mathrm{OPT}\le
-\frac{18588262788621}{20971520000000}
-=0.8863574404058933258056640625.
+\frac{3715139591287203}{4194304000000000}
+=0.8857583025186545848846435546875.
 $$
 
 It is certified by an explicit 32-parameter rational continuous stream-dual
 witness and a deterministic nonuniform tensor-Bernstein verifier with a
-depth-21 base tree and one selective local refinement level. A separately
+depth-21 base tree and two selective local refinement levels. A separately
 implemented non-importing replay obtains the same integer accumulator, box
 counts, and complete dyadic coverage. As a secondary result, an explicit
-deterministic ten-band menu mechanism has exact revenue
+deterministic layered menu mechanism has exact revenue
 
 $$
-\frac{26237753173862063}{30000000000000000}
-=0.8745917724620687\ldots .
+\frac{83962078694672281756033}{96000000000000000000000}
+=0.8746049864028362682920104166\ldots .
 $$
 
 The remaining exact gap is
-`1445765276937161827/122880000000000000000`, approximately
-`0.011765667943824559`. These endpoints do **not** meet. The unrestricted
+`34262987107793868572569/3072000000000000000000000`, approximately
+`0.01115331611581831659`. These endpoints do **not** meet. The unrestricted
 continuous DSIC optimum remains open.
 
 ## External benchmarks and our improvements
@@ -45,28 +45,36 @@ primal mechanism, not an exact rational certificate produced or replayed here.
 
 Our improvements are the two exact, independently replayed endpoints above.
 The new upper bound lowers the external `0.8919` benchmark by the exact amount
-`116235899379/20971520000000`, approximately `0.005542559594106674`, and
+`25760146312797/4194304000000000`, approximately `0.006141697481345415`, and
 lowers this archive's preceding active exact upper bound
-`930318295428931/1048576000000000` by
-`905155997881/1048576000000000`, approximately `0.000863224027520180`.
+`18588262788621/20971520000000` by
+`2512966436997/4194304000000000`, approximately `0.000599137887238741`.
 The new lower mechanism improves this archive's preceding exact lower bound
-by `10343439231/62500000000000 = 0.000165495027696`. It does not improve on
-the reported GemNet revenue `0.876`; its distinct contribution is a compact
-explicit mechanism with exact symbolic revenue and two independent replays.
+`26237753173862063/30000000000000000` by
+`422846104560052011/32000000000000000000000`, approximately
+`0.000013213940767501625`. It does not improve on the reported GemNet revenue
+`0.876`; its distinct contribution is an explicit layered mechanism with exact
+symbolic revenue, pointwise boundary rules, and independent exact replays.
 
 ## Repository layout
 
 - `manuscript/`: self-contained LaTeX source, bibliography, and release PDF.
-- `certificate/continuous_stream_degree4_nonuniform_upper_bound/`: active
-  rational upper-bound manifest, polynomial construction, formal verifier,
-  non-importing replay, and deterministic transcripts.
-- `certificate/continuous_stream_upper_bound/` and
-  `certificate/independent_stream_upper_bound/`: superseded but retained
-  degree-four predecessor certificate and independent audit.
+- `certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/`:
+  active rational upper-bound manifest, polynomial construction, formal
+  verifier, non-importing replay, and deterministic transcripts.
+- `certificate/continuous_stream_degree4_nonuniform_upper_bound/`,
+  `certificate/continuous_stream_upper_bound/`, and
+  `certificate/independent_stream_upper_bound/`: superseded but retained upper
+  certificates and independent audit.
 - `certificate/ama_lower_bound/`: exact rational base-mechanism verifier.
-- `certificate/piecewise_surcharge_lower_bound/`: active exact ten-band
-  surcharge certificate, non-importing replay, and hash binding to the base
-  certificate.
+- `certificate/refined_item_containment_bundle_pivot_lower_bound/`: active
+  exact lower certificate with eight item-containment cells and complete
+  SHA-256 bindings to its predecessor chain.
+- `certificate/piecewise_surcharge_bundle_pivot_lower_bound/` and
+  `certificate/piecewise_surcharge_twenty_band_lower_bound/`: independently
+  replayed 41-cell bundle-pivot and twenty-band predecessors.
+- `certificate/piecewise_surcharge_lower_bound/`: retained exact ten-band
+  predecessor, non-importing replay, and hash binding to the base certificate.
 - `certificate/menu_surcharge_lower_bound/`: superseded two-rectangle lower
   certificate, retained as a reproducible predecessor.
 - `verification/`: publication-level orchestrator, hash tools, release
@@ -96,11 +104,12 @@ From the archive root, run the complete publication-facing replay:
 python -B verification\reproduce_all.py
 ```
 
-The command reruns the base and both active lower-bound verifiers, the formal
-nonuniform upper-bound verifier, the non-importing full replay, a clean
-temporary-directory manuscript compilation, exact theorem-value consistency
-checks, and release-hash verification. The two upper traversals are the
-runtime-dominant steps; wall time is machine-dependent.
+The command reruns the base and complete lower-certificate dependency chain,
+the formal two-level nonuniform upper-bound verifier, every non-importing
+active replay, a clean temporary-directory manuscript compilation, exact
+theorem-value consistency checks, and release-hash verification. The two
+upper traversals are the runtime-dominant steps; wall time is
+machine-dependent.
 
 Individual proof checks can be run from their certificate directories using
 the commands documented in their local `README.md` files. To compile only the

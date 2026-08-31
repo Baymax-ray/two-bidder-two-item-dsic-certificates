@@ -236,4 +236,3 @@ if __name__ == "__main__":
     except (AssertionError, KeyError, ValueError, OSError) as exc:
         print(f"PIECEWISE-SURCHARGE LOWER-BOUND CERTIFICATE: FAIL: {exc}", file=sys.stderr)
         raise SystemExit(1)
-

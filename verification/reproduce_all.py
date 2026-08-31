@@ -14,8 +14,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-UPPER = Fraction(18588262788621, 20971520000000)
-LOWER = Fraction(26237753173862063, 30000000000000000)
+UPPER = Fraction(3715139591287203, 4194304000000000)
+LOWER = Fraction(83962078694672281756033, 96000000000000000000000)
+TEN_BAND_LOWER = Fraction(26237753173862063, 30000000000000000)
+TWENTY_BAND_LOWER = Fraction(2623779309282875420759, 3000000000000000000000)
+BUNDLE_PIVOT_LOWER = Fraction(83961603016753854879913, 96000000000000000000000)
 AI_DECLARATION = "This manuscript was completed with the assistance of OpenAI GPT-5.6 Sol."
 AUTHOR_EMAIL = "baymin@bu.edu"
 AUTHOR_ORCID = "0009-0006-9100-0445"
@@ -67,7 +70,10 @@ def check_certificates(recorder: Recorder) -> None:
     ama = ROOT / "certificate" / "ama_lower_bound"
     predecessor_surcharge = ROOT / "certificate" / "menu_surcharge_lower_bound"
     surcharge = ROOT / "certificate" / "piecewise_surcharge_lower_bound"
-    stream = ROOT / "certificate" / "continuous_stream_degree4_nonuniform_upper_bound"
+    twenty_band = ROOT / "certificate" / "piecewise_surcharge_twenty_band_lower_bound"
+    bundle_pivot = ROOT / "certificate" / "piecewise_surcharge_bundle_pivot_lower_bound"
+    final_lower = ROOT / "certificate" / "refined_item_containment_bundle_pivot_lower_bound"
+    stream = ROOT / "certificate" / "continuous_stream_degree4_two_level_nonuniform_upper_bound"
 
     output = run_checked(
         "exact base lower certificate",
@@ -94,8 +100,8 @@ def check_certificates(recorder: Recorder) -> None:
         recorder,
     )
     require("PIECEWISE-SURCHARGE LOWER-BOUND CERTIFICATE: PASS" in output
-            and str(LOWER) in output,
-            "active lower verifier did not report the release endpoint")
+            and str(TEN_BAND_LOWER) in output,
+            "ten-band lower verifier did not report its sealed endpoint")
 
     output = run_checked(
         "independent piecewise-surcharge replay",
@@ -104,8 +110,68 @@ def check_certificates(recorder: Recorder) -> None:
         recorder,
     )
     require("INDEPENDENT PIECEWISE-SURCHARGE REPLAY: PASS" in output
+            and str(TEN_BAND_LOWER) in output,
+            "independent ten-band replay did not report its sealed endpoint")
+
+    output = run_checked(
+        "twenty-band lower certificate",
+        [python, "-B", "-X", "utf8", "verify_twenty_band_surcharge.py"],
+        twenty_band,
+        recorder,
+    )
+    require("TWENTY-BAND RATIONAL SURCHARGE LOWER CERTIFICATE: PASS" in output
+            and str(TWENTY_BAND_LOWER) in output,
+            "twenty-band lower verifier did not report its sealed endpoint")
+
+    output = run_checked(
+        "independent twenty-band lower replay",
+        [python, "-B", "-X", "utf8", "independent_replay.py"],
+        twenty_band,
+        recorder,
+    )
+    require("INDEPENDENT TWENTY-BAND LOWER-CERTIFICATE REPLAY: PASS" in output
+            and str(TWENTY_BAND_LOWER) in output,
+            "independent twenty-band replay did not report its sealed endpoint")
+
+    output = run_checked(
+        "bundle-pivot lower certificate",
+        [python, "-B", "-X", "utf8", "verify_combined_surcharge.py"],
+        bundle_pivot,
+        recorder,
+    )
+    require("COMBINED TWENTY-BAND + BUNDLE-PIVOT LOWER CERTIFICATE: PASS" in output
+            and str(BUNDLE_PIVOT_LOWER) in output,
+            "bundle-pivot lower verifier did not report its sealed endpoint")
+
+    output = run_checked(
+        "independent bundle-pivot lower replay",
+        [python, "-B", "-X", "utf8", "independent_replay.py"],
+        bundle_pivot,
+        recorder,
+    )
+    require("INDEPENDENT COMBINED SURCHARGE LOWER-CERTIFICATE REPLAY: PASS" in output
+            and str(BUNDLE_PIVOT_LOWER) in output,
+            "independent bundle-pivot replay did not report its sealed endpoint")
+
+    output = run_checked(
+        "active bundle-pivot plus item-containment lower certificate",
+        [python, "-B", "-X", "utf8", "-I", "verify_final_combined.py"],
+        final_lower,
+        recorder,
+    )
+    require("FINAL BUNDLE-PIVOT + ITEM-CONTAINMENT LOWER CERTIFICATE: PASS" in output
             and str(LOWER) in output,
-            "independent lower replay did not report the release endpoint")
+            "active lower verifier did not report the release endpoint")
+
+    output = run_checked(
+        "independent active lower replay",
+        [python, "-B", "-X", "utf8", "-I", "independent_replay.py"],
+        final_lower,
+        recorder,
+    )
+    require("FINAL COMBINED NON-IMPORTING DEMAND-POLYGON REPLAY: PASS" in output
+            and str(LOWER) in output,
+            "independent active lower replay did not report the release endpoint")
 
     output = run_checked(
         "formal nonuniform upper certificate",
@@ -124,7 +190,7 @@ def check_certificates(recorder: Recorder) -> None:
     )
     require('"status": "PASS"' in output and str(UPPER) in output,
             "independent full replay did not report the release endpoint")
-    require('"coverage_units": 16777216' in output,
+    require('"coverage_units": 33554432' in output,
             "independent full coverage mismatch")
 
 
@@ -132,28 +198,37 @@ def check_text_consistency(recorder: Recorder) -> None:
     manuscript = (ROOT / "manuscript" / "manuscript.tex").read_text(encoding="utf-8")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     upper_manifest = json.loads(
-        (ROOT / "certificate" / "continuous_stream_degree4_nonuniform_upper_bound" / "manifest.json")
+        (ROOT / "certificate" / "continuous_stream_degree4_two_level_nonuniform_upper_bound" / "manifest.json")
         .read_text(encoding="utf-8")
     )
     lower_manifest = json.loads(
-        (ROOT / "certificate" / "piecewise_surcharge_lower_bound" / "manifest.json")
+        (ROOT / "certificate" / "refined_item_containment_bundle_pivot_lower_bound" / "manifest.json")
         .read_text(encoding="utf-8")
     )
-    require(Fraction(upper_manifest["expected"]["upper_bound"]) == UPPER,
+    require(Fraction(upper_manifest["expected"]["promoted"]["upper_fraction"]) == UPPER,
             "upper manifest differs from release theorem")
     require(Fraction(lower_manifest["expected"]["final_expected_revenue"]) == LOWER,
             "lower manifest differs from release theorem")
     for text, label in ((manuscript, "manuscript"), (readme, "README")):
-        require("18588262788621" in text and "20971520000000" in text,
+        require("3715139591287203" in text and "4194304000000000" in text,
                 f"upper endpoint missing from {label}")
-        require("26237753173862063" in text and "30000000000000000" in text,
+        require("83962078694672281756033" in text
+                and "96000000000000000000000" in text,
                 f"lower endpoint missing from {label}")
+        require("34262987107793868572569" in text
+                and "3072000000000000000000000" in text,
+                f"remaining exact gap missing from {label}")
         require(text.count(AI_DECLARATION) == 1,
                 f"AI declaration must occur exactly once in {label}")
         require(AUTHOR_EMAIL in text and AUTHOR_ORCID in text,
                 f"author metadata missing from {label}")
-    require("0.88722066443341350555419921875" not in manuscript,
-            "superseded active upper decimal remains in manuscript")
+    require("certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound" in readme,
+            "active upper certificate path missing from README")
+    require("certificate/refined_item_containment_bundle_pivot_lower_bound" in readme,
+            "active lower certificate path missing from README")
+    require("1445765276937161827" not in manuscript
+            and "1445765276937161827" not in readme,
+            "superseded exact gap remains active in publication text")
     require("0.8919" in manuscript and "0.876" in manuscript,
             "external benchmark values missing from manuscript")
     recorder.say("PASS theorem, README, manifest, and declaration consistency")

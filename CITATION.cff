@@ -8,15 +8,15 @@ authors:
     affiliation: Boston University
     email: baymin@bu.edu
     orcid: "https://orcid.org/0009-0006-9100-0445"
-version: 1.1.0
-date-released: 2026-08-27
+version: 1.2.0
+date-released: 2026-08-30
 license: CC-BY-4.0
 abstract: >-
   An explicit rational continuous DSIC stream-dual witness and exact
   Bernstein certificate give a global upper bound for the canonical
-  two-bidder, two-item independent-uniform auction; an exact deterministic
-  mechanism supplies a separate lower bound, and the unrestricted optimum
-  remains open.
+  two-bidder, two-item independent-uniform auction; an exact layered
+  deterministic mechanism supplies a separate lower bound, both endpoints
+  have independent exact replays, and the unrestricted optimum remains open.
 preferred-citation:
   type: article
   title: "Exact Rational Stream-Dual Certificates for a Two-Bidder, Two-Item Auction"

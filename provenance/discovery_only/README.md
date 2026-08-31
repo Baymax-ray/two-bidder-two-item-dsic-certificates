@@ -16,7 +16,8 @@ The principal discovery lesson was that objective quality and certificate
 quality separated near winner-switching surfaces. The first release used a
 one-step, strictly improving adaptive partition of unresolved depth-20 boxes.
 The active certificate keeps the same frozen degree-four coefficients, deepens
-the base tree to 21, and applies exact one-step nonuniform refinement only
-where it saves at least one accumulator unit. See
+the base tree to 21, and applies two exact selective nonuniform refinement
+levels, accepting each split only where it saves at least one accumulator
+unit. See
 `../final_sprint_report.md` for the bounded route comparison and freeze
 decision.

@@ -1,0 +1,86 @@
+{
+  "certificate": "twenty_band_piecewise_opponent_dependent_common_entry_surcharge_lower_bound",
+  "scope": "primal_lower_bound_only",
+  "status": "SEALED",
+  "distribution": "four mutually independent U[0,1] coordinates",
+  "construction": "split each predecessor surcharge band at its rational midpoint and freeze one rational common fee on each half",
+  "base_certificate": {
+    "directory": "../ama_lower_bound",
+    "expected_revenue": "26232089810531183/30000000000000000",
+    "manifest_sha256": "F3B7790ADCEC61087D3C080F3D4EE89BBF9AD5E0BD1D41EF825970A258998EE9",
+    "verifier_sha256": "A8EBDFE42030879F0E8B500B9D772002E09C3AF07BFD046203323AD471FFB334",
+    "output_sha256": "7DC15841ED465D9974DCAD560348FC07B47D05551DA45198E780E44F02B114A9"
+  },
+  "predecessor_certificate": {
+    "directory": "../piecewise_surcharge_lower_bound",
+    "expected_revenue": "26237753173862063/30000000000000000",
+    "manifest_sha256": "0CA74B8978D6FC496021478AF22202956799EE2906CF00F02AD6C51FA4DA4DB0",
+    "verifier_sha256": "3957098370FA0CDCD3DFBA321103C3ED3F2795B33F583483487767C1B3AA5F27",
+    "verification_output_sha256": "9FC873C7552B057760B7785E49DD1EBB3922D903ADA5DE5D3E70665D6371A8D6",
+    "independent_replay_sha256": "BB5067B5E0D43B9A8CA1A7B27BBA98B0BE1057B8755DC49F23ECAAE25950DF15",
+    "independent_replay_output_sha256": "10386777706653A1C857A60665AEBD390CA26FB6463AB33C46383248593B7FDD",
+    "sha256s_sha256": "BBA33ADA36BCF1BAAE4E59C57B14C5F1F41AF6CE90D2E5BAD9332B16DC279EEA"
+  },
+  "upper_reference": {
+    "directory": "../continuous_stream_degree4_two_level_nonuniform_upper_bound",
+    "expected_upper_bound": "3715139591287203/4194304000000000",
+    "manifest_sha256": "65040D3569530E81C2C026A351C6B9FAB84C4F556EBE95425EC6ABF433D287A4",
+    "verifier_sha256": "7E6CDC6834BC28C7E9878EA76077FC62DBD3B9743A79B676A19AA441D1557E29",
+    "verification_output_sha256": "16E919393ABCEC9AE624F0587A4314CD35566E0CC952B2BA558C898F28E7080C",
+    "independent_replay_sha256": "0EF2377A11FE0A490E925BB9F0AF28B90CF24110239BECBB4467F5E3B7E17FBE",
+    "independent_replay_output_sha256": "16E919393ABCEC9AE624F0587A4314CD35566E0CC952B2BA558C898F28E7080C",
+    "sha256s_sha256": "7D6D958A13C5F7B010EE200FA7FD12C78D5B5E976F240A052A28BE92571B0C4C"
+  },
+  "mechanism": {
+    "applies_to": "all nonempty options",
+    "zero_utility_rule": "opt out",
+    "nonempty_tie_rule": "inherit the base smallest-outcome-id bundle",
+    "region_boundary_rule": "test rows in listed order; the first matching closed row supplies the fee; otherwise the fee is zero",
+    "orientation_count": 2,
+    "symmetric_bidder_count": 2,
+    "chambers": {
+      "zero_pivot_one_high_triangle": "0 <= rho <= b-t",
+      "singleton_pivot_rectangle": "0 <= rho <= b-a"
+    },
+    "rows": [
+      {"id":"Z1.1","parent":"Z1","chamber":"zero_pivot_one_high_triangle","high_interval":["53/100","27/50"],"fee":"233/50000","expected_gain":"22298829989/50000000000000000"},
+      {"id":"Z1.2","parent":"Z1","chamber":"zero_pivot_one_high_triangle","high_interval":["27/50","11/20"],"fee":"807/100000","expected_gain":"13069531099161/10000000000000000000"},
+      {"id":"Z2.1","parent":"Z2","chamber":"zero_pivot_one_high_triangle","high_interval":["11/20","14/25"],"fee":"1159/100000","expected_gain":"26236839376791/10000000000000000000"},
+      {"id":"Z2.2","parent":"Z2","chamber":"zero_pivot_one_high_triangle","high_interval":["14/25","57/100"],"fee":"1519/100000","expected_gain":"43954147179229/10000000000000000000"},
+      {"id":"Z3.1","parent":"Z3","chamber":"zero_pivot_one_high_triangle","high_interval":["57/100","29/50"],"fee":"1889/100000","expected_gain":"66175397928277/10000000000000000000"},
+      {"id":"Z3.2","parent":"Z3","chamber":"zero_pivot_one_high_triangle","high_interval":["29/50","59/100"],"fee":"567/25000","expected_gain":"145022445603/15625000000000000"},
+      {"id":"Z4.1","parent":"Z4","chamber":"zero_pivot_one_high_triangle","high_interval":["59/100","3/5"],"fee":"2657/100000","expected_gain":"123742997293241/10000000000000000000"},
+      {"id":"Z4.2","parent":"Z4","chamber":"zero_pivot_one_high_triangle","high_interval":["3/5","61/100"],"fee":"1527/50000","expected_gain":"19848727107837/1250000000000000000"},
+      {"id":"Z5.1","parent":"Z5","chamber":"zero_pivot_one_high_triangle","high_interval":["61/100","623/1000"],"fee":"3521/100000","expected_gain":"26499525207145809/1000000000000000000000"},
+      {"id":"Z5.2","parent":"Z5","chamber":"zero_pivot_one_high_triangle","high_interval":["623/1000","159/250"],"fee":"127/3125","expected_gain":"132296434366343/3906250000000000000"},
+      {"id":"S1.1","parent":"S1","chamber":"singleton_pivot_rectangle","high_interval":["159/250","643/1000"],"fee":"4143/100000","expected_gain":"4648357333829937/250000000000000000000"},
+      {"id":"S1.2","parent":"S1","chamber":"singleton_pivot_rectangle","high_interval":["643/1000","13/20"],"fee":"937/25000","expected_gain":"119401720475821/7812500000000000000"},
+      {"id":"S2.1","parent":"S2","chamber":"singleton_pivot_rectangle","high_interval":["13/20","263/400"],"fee":"3343/100000","expected_gain":"327187239336087/25000000000000000000"},
+      {"id":"S2.2","parent":"S2","chamber":"singleton_pivot_rectangle","high_interval":["263/400","133/200"],"fee":"183/6250","expected_gain":"7884185952501/781250000000000000"},
+      {"id":"S3.1","parent":"S3","chamber":"singleton_pivot_rectangle","high_interval":["133/200","269/400"],"fee":"1259/50000","expected_gain":"187510924443687/25000000000000000000"},
+      {"id":"S3.2","parent":"S3","chamber":"singleton_pivot_rectangle","high_interval":["269/400","17/25"],"fee":"66/3125","expected_gain":"1036308235941/195312500000000000"},
+      {"id":"S4.1","parent":"S4","chamber":"singleton_pivot_rectangle","high_interval":["17/25","11/16"],"fee":"107/6250","expected_gain":"2734894756239/781250000000000000"},
+      {"id":"S4.2","parent":"S4","chamber":"singleton_pivot_rectangle","high_interval":["11/16","139/200"],"fee":"263/20000","expected_gain":"830964180849/400000000000000000"},
+      {"id":"S5.1","parent":"S5","chamber":"singleton_pivot_rectangle","high_interval":["139/200","281/400"],"fee":"923/100000","expected_gain":"25723793777097/25000000000000000000"},
+      {"id":"S5.2","parent":"S5","chamber":"singleton_pivot_rectangle","high_interval":["281/400","71/100"],"fee":"67/12500","expected_gain":"272071590603/781250000000000000"}
+    ]
+  },
+  "expected": {
+    "base_revenue": "26232089810531183/30000000000000000",
+    "predecessor_surcharge_gain": "5899336803/31250000000000",
+    "zero_pivot_total_gain": "113291698497241117/1000000000000000000000",
+    "singleton_pivot_total_gain": "2400553481931223/31250000000000000000",
+    "total_revenue_gain_over_base": "190109409919040253/1000000000000000000000",
+    "strict_improvement_over_predecessor": "1330632223040253/1000000000000000000000",
+    "final_expected_revenue": "2623779309282875420759/3000000000000000000000",
+    "current_exact_upper": "3715139591287203/4194304000000000",
+    "remaining_exact_gap": "34299492631642453908409/3072000000000000000000000"
+  },
+  "verifiers": {
+    "primary": "verify_twenty_band_surcharge.py",
+    "independent_replay": "independent_replay.py",
+    "runtime": "Python 3 standard library only; do not run with -O",
+    "arithmetic": "fractions.Fraction throughout",
+    "numerical_discovery_inputs_used": false
+  }
+}

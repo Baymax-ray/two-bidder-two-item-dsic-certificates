@@ -124,4 +124,3 @@ if __name__ == "__main__":
     except (AssertionError, KeyError, ValueError, OSError) as exc:
         print(f"INDEPENDENT PIECEWISE-SURCHARGE REPLAY: FAIL: {exc}", file=sys.stderr)
         raise SystemExit(1)
-
