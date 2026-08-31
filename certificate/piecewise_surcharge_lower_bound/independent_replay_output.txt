@@ -17,4 +17,3 @@ total exact gain over affine base: 5899336803/31250000000000
 exact expected revenue: 26237753173862063/30000000000000000
 strict improvement over previous lower: 10343439231/62500000000000
 scope: independent exact replay of a primal lower mechanism only
-

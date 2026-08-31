@@ -1,0 +1,86 @@
+{
+  "degree": 4,
+  "basis_order": [
+    [0, 0, 0, 1], [0, 0, 0, 2], [0, 0, 0, 3], [0, 0, 0, 4],
+    [0, 0, 1, 2], [0, 0, 1, 3], [0, 1, 0, 0], [0, 1, 0, 1],
+    [0, 1, 0, 2], [0, 1, 0, 3], [0, 1, 1, 0], [0, 1, 1, 1],
+    [0, 1, 1, 2], [0, 1, 2, 0], [0, 1, 2, 1], [0, 1, 3, 0],
+    [0, 2, 0, 0], [0, 2, 0, 1], [0, 2, 0, 2], [0, 2, 1, 0],
+    [0, 2, 1, 1], [0, 2, 2, 0], [0, 3, 0, 0], [0, 3, 0, 1],
+    [0, 3, 1, 0], [0, 4, 0, 0], [1, 1, 0, 1], [1, 1, 0, 2],
+    [1, 2, 0, 0], [1, 2, 0, 1], [1, 2, 1, 0], [1, 3, 0, 0]
+  ],
+  "swap_rule": "(e0,e1,e2,e3)->(e1,e0,e3,e2)",
+  "theta": [
+    "-2995385/993184", "2337131/676164", "5724621/964727",
+    "-4591777/714341", "-834567/846478", "6291553/970203",
+    "2762675/446201", "206964/961681", "-6090207/979156",
+    "6862090/913753", "-5206994/854575", "515889/117356",
+    "-3346363/843816", "-125263/465506", "3005651/895053",
+    "-1043238/468269", "1660919/994155", "1276309/943222",
+    "-2075136/255347", "404816/59269", "250988/352269",
+    "3825425/994154", "-5383501/354845", "3312081/940771",
+    "-4885471/759831", "7648954/974695", "-603823/508896",
+    "417332/188831", "17884893/955196", "992961/785407",
+    "2761171/712822", "-3841999/611370"
+  ],
+  "maximum_denominator": 1000000,
+  "source": {
+    "description": "frozen rational degree-four witness copied verbatim from the active certificate",
+    "active_manifest_sha256": "e800b2805e7f734c63bee70a0ff2e6c6fc92521c47fca0cdee5fb3c23f79359b",
+    "numerical_inputs_used_by_verifier": false
+  },
+  "certificate": {
+    "claim": "global upper bound for all measurable integrable randomized DSIC ex-post-IR mechanisms",
+    "fixed_point_scale": 1000000000,
+    "item_symmetry_factor": 2,
+    "base_depth": 21,
+    "maximum_depth": 23,
+    "first_level_minimum_savings_units": 1,
+    "second_level_minimum_savings_units": 1,
+    "partition_strategy": "active depth-21 prefix; refine a base leaf to depth 22 iff its best exact fixed-point child sum saves at least one unit; independently refine each unresolved depth-22 child to depth 23 iff its own best child sum saves at least one unit"
+  },
+  "expected": {
+    "status": "SEALED",
+    "maximum_initial_absolute_control": 1475346733,
+    "maximum_axis_degree": 8,
+    "active_depth22_accumulator": "1858826278862100",
+    "active_depth22_upper_bound": "18588262788621/20971520000000",
+    "active_depth22_statistics": {
+      "fixed_before_base": 404804,
+      "base_unresolved": 462796,
+      "base_refined": 391618,
+      "base_retained": 71178,
+      "first_level_fixed": 173198,
+      "first_level_unresolved": 610038,
+      "first_savings_units": "1833502629492"
+    },
+    "certified_primal_lower_bound": "26237753173862063/30000000000000000",
+    "promoted": {
+      "accumulator": "3715139591287203",
+      "upper_fraction": "3715139591287203/4194304000000000",
+      "strict_improvement": "2512966436997/4194304000000000",
+      "remaining_exact_gap": "10977145706826122741/983040000000000000000",
+      "maximum_error_seen": 181,
+      "nodes": 3738334,
+      "coverage_units": 33554432,
+      "statistics": {
+        "nodes": 3738334,
+        "fixed_before_base": 404804,
+        "base_unresolved": 462796,
+        "base_refined": 391618,
+        "base_retained": 71178,
+        "first_level_fixed": 173198,
+        "first_level_unresolved": 610038,
+        "first_level_refined": 609951,
+        "first_level_retained": 87,
+        "second_level_fixed": 249438,
+        "second_level_unresolved": 970464,
+        "first_savings_units": "1833502629492",
+        "second_savings_units": "2512966436997",
+        "coverage_units": 33554432,
+        "maximum_error_seen": 181
+      }
+    }
+  }
+}

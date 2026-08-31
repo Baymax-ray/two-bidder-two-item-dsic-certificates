@@ -1,6 +1,7 @@
 # Final targeted literature and novelty audit
 
-Audit date: 27 August 2026. Scope: the exact two-bidder, two-item additive
+Literature-search date: 27 August 2026; certified-endpoint revision:
+30 August 2026. Scope: the exact two-bidder, two-item additive
 auction with four independent `U[0,1]` coordinates, pointwise DSIC, ex-post IR,
 ex-post item feasibility, and arbitrary internal randomization.
 
@@ -66,17 +67,20 @@ The release may claim:
 
 - an explicit 32-parameter rational, instance-specific signed stream witness;
 - a direct weak-duality proof against Lipschitz convex truthful utilities;
-- an exact directed-rounding tensor-Bernstein certificate with nonuniform
-  certificate-aware refinement near winner-switching boxes;
+- an exact directed-rounding tensor-Bernstein certificate with two selective
+  nonuniform certificate-aware refinement levels near winner-switching boxes;
 - an independent non-importing arithmetic replay;
-- the rigorous upper bound `18588262788621/20971520000000`, which is strictly
+- the rigorous upper bound `3715139591287203/4194304000000000`, which is strictly
   below the external printed `0.8919` benchmark by
-  `116235899379/20971520000000`;
-- the explicit ten-band deterministic mechanism with exact revenue
-  `26237753173862063/30000000000000000`, improving this archive's predecessor
-  by `10343439231/62500000000000`; and
+  `25760146312797/4194304000000000`;
+- the explicit layered deterministic mechanism with twenty common-fee rows,
+  41 positive bundle-pivot cells, and eight item-containment rows, with exact
+  revenue
+  `83962078694672281756033/96000000000000000000000`, improving this archive's
+  preceding active exact lower by
+  `422846104560052011/32000000000000000000000`; and
 - the remaining exact gap
-  `1445765276937161827/122880000000000000000`.
+  `34262987107793868572569/3072000000000000000000000`.
 
 The release must not claim:
 
@@ -108,5 +112,6 @@ lives in interim BIC space and proves a different strong-duality statement.
 The one-bidder transport papers supply important integration-by-parts
 precedents without resolving multi-bidder ex-post supply. The conservative
 publication claim is therefore the explicit rational witness, the stronger
-exact local-certification geometry, the explicit exact lower mechanism, and
-the tightened target-specific bracket—not a new general duality theory.
+two-level exact local-certification geometry, the explicit layered exact lower
+mechanism, and the tightened target-specific bracket---not a new general
+duality theory.

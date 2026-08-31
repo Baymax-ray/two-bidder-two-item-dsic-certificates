@@ -1,8 +1,8 @@
-# Bounded continuation sprint and freeze decision
+# Bounded continuation sprints and freeze decisions
 
-Date: 27 August 2026.
+Dates: 27 and 30 August 2026.
 
-The continuation began from the preceding closed-release endpoints
+The 27 August continuation began from the preceding closed-release endpoints
 
 - lower bound: `26232788323031183/30000000000000000`;
 - upper bound: `930318295428931/1048576000000000`.
@@ -79,7 +79,7 @@ latter is not improved by our exact lower endpoint; our lower contribution is
 instead its explicit rational mechanism and exact reproducibility. Neither
 external artifact is part of the local proof path.
 
-## Freeze decision
+## 27 August freeze decision
 
 The release freezes
 
@@ -93,3 +93,42 @@ The unrestricted optimum remains open. Floating-point candidates, optimizer
 traces, and unconverted chamber probes are discovery-only. The trusted proof
 inputs are the rational manifests, analytic arguments, directed-rounding
 verifier, independent replays, and complete SHA-256 bindings.
+
+## 30 August certified continuation
+
+The next bounded continuation retained the same 32 rational degree-four stream
+witness but added a second exact selective refinement level. Every unresolved
+depth-22 child was split to depth 23 only when its best exact child sum saved
+at least one fixed-point accumulator unit. The primary and non-importing
+implementations both reproduced accumulator `3715139591287203`, 3,738,334
+visited nodes, maximum propagated error radius 181, and complete coverage
+`33554432/33554432`. The promoted exact global upper bound is
+
+`3715139591287203/4194304000000000
+=0.8857583025186545848846435546875`.
+
+The lower continuation preserved the exactly verified affine base and built a
+hash-bound chain with three additions: twenty refined common-fee rows, 41
+positive bundle-pivot cells, and eight non-common item-containment rows. The
+common-fee layers preserve every ranking among nonempty options. The final
+item rows change prices from `(A,B,C)` to `(A+delta,B,C+delta)` and verify
+`0<delta<A+B-C`, forcing every new allocation to be an itemwise deletion from
+its feasible predecessor. Primary symbolic integration and a non-importing
+exact demand-polygon replay both give
+
+`83962078694672281756033/96000000000000000000000
+=0.8746049864028362682920104166...`.
+
+The 30 August release therefore freezes
+
+- lower bound:
+  `83962078694672281756033/96000000000000000000000`;
+- upper bound: `3715139591287203/4194304000000000`;
+- remaining exact gap:
+  `34262987107793868572569/3072000000000000000000000
+  =0.0111533161158183165926331380...`.
+
+These endpoints remain unequal. Numerical searches selected rational
+partitions and fees but are not trusted proof inputs; the publication-facing
+claims use only sealed rational manifests, analytic arguments, independent
+exact replays, and complete SHA-256 bindings.

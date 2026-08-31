@@ -19,4 +19,3 @@ exact expected revenue: 26237753173862063/30000000000000000
 strict improvement over previous lower: 10343439231/62500000000000
 decimal expected revenue: 0.874591772462069
 scope: exact feasible/DSIC/ex-post-IR primal lower bound only; no optimality claim
-
