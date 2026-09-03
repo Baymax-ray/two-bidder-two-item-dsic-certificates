@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Non-importing exact demand-polygon replay of the final lower bound."""
+"""Replay the eight-row gain, sharing the sealed predecessor revenue."""
 from __future__ import annotations
 
 import hashlib
@@ -87,13 +87,15 @@ def differences(values):
 
 
 def exact_boole(function, lower, upper, degree, label):
+    # Polynomiality follows from the menu formula and whole-row price regime.
+    # Finite differences only test consistency with the stated degree.
     fine_step = (upper - lower) / 8
     fine_values = [function(lower + index * fine_step) for index in range(9)]
     remainder = fine_values
     for _ in range(degree + 1):
         remainder = differences(remainder)
     need(all(value == 0 for value in remainder),
-         f"independent degree check failed: {label}")
+         f"finite-difference consistency check failed: {label}")
     values = fine_values[::2]
     step = (upper - lower) / 4
     return (Q(2) * step / 45
@@ -229,6 +231,9 @@ def main():
         slack = d - c + fee
         need(Q(0) < delta < slack, f"deletion margin: {row['id']}")
 
+        # The sampled endpoints check all affine price inequalities over the
+        # entire row. The analytic menu formula is then cubic in t, within
+        # Boole's exactness range; the stronger degree-one test is diagnostic.
         def integrand(t):
             before = (d + fee, t + fee, t + c + fee)
             after = (before[0] + delta, before[1], before[2] + delta)
@@ -266,7 +271,7 @@ def main():
          "remaining gap mismatch")
 
     print("FINAL COMBINED NON-IMPORTING DEMAND-POLYGON REPLAY: PASS")
-    print("implementation: exact rational polygon clipping plus finite-difference Boole")
+    print("implementation: exact rational polygon clipping and Boole quadrature; finite differences are consistency checks")
     print("sealed bundle predecessor, twenty-band predecessor, and upper hashes: PASS")
     print("deterministic tie rule, half-open item rows, and rho=c priority: PASS")
     for row_id, gain in reports:
@@ -275,7 +280,7 @@ def main():
     print(f"predecessor exact revenue: {predecessor}")
     print(f"certified exact expected revenue: {final}")
     print(f"remaining exact gap to current upper: {exact_upper - final}")
-    print("scope: independent exact primal replay; no global-optimality claim")
+    print("scope: independent eight-row gain replay with shared predecessor revenue; no global-optimality claim")
 
 
 if __name__ == "__main__":

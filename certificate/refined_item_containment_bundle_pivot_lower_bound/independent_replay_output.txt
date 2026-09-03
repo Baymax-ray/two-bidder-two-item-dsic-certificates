@@ -1,5 +1,5 @@
 FINAL COMBINED NON-IMPORTING DEMAND-POLYGON REPLAY: PASS
-implementation: exact rational polygon clipping plus finite-difference Boole
+implementation: exact rational polygon clipping and Boole quadrature; finite differences are consistency checks
 sealed bundle predecessor, twenty-band predecessor, and upper hashes: PASS
 deterministic tie rule, half-open item rows, and rho=c priority: PASS
 I1.1: exact polygon gain=265762556618439/400000000000000000000
@@ -14,4 +14,4 @@ item-containment exact gain: 3963982653557301/800000000000000000000
 predecessor exact revenue: 83961603016753854879913/96000000000000000000000
 certified exact expected revenue: 83962078694672281756033/96000000000000000000000
 remaining exact gap to current upper: 34262987107793868572569/3072000000000000000000000
-scope: independent exact primal replay; no global-optimality claim
+scope: independent eight-row gain replay with shared predecessor revenue; no global-optimality claim

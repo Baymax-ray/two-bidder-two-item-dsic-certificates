@@ -29,8 +29,15 @@ $$
 
 The remaining exact gap is
 `34262987107793868572569/3072000000000000000000000`, approximately
-`0.01115331611581831659`. These endpoints do **not** meet. The unrestricted
-continuous DSIC optimum remains open.
+`0.01115331611581831659`. The deterministic mechanism therefore earns at least
+**98.7408% of the unrestricted optimal revenue**, because its exact revenue
+divided by the exact upper certificate exceeds `0.987408`. The unrestricted
+optimum remains open.
+
+The upper proof separates analytic weak duality, rational witness feasibility,
+and finite exact envelope certification. The lower construction uses
+deletion containment to preserve simultaneous feasibility as menus change;
+opponent-conditioned taxation alone supplies each bidder's DSIC.
 
 ## External benchmarks and our improvements
 
@@ -43,7 +50,13 @@ benchmarks**: `0.8919` is their rigorous continuous upper bound, while
 `0.876` is their reported computational revenue for an exactly strategyproof
 primal mechanism, not an exact rational certificate produced or replayed here.
 
-Our improvements are the two exact, independently replayed endpoints above.
+Both endpoints improve this archive's preceding release. The quantitative
+improvement over the external benchmark is the upper bound. Its certificate
+has a separate full implementation replay, sharing the rational manifest and
+Bernstein enclosure principle. For the lower mechanism, one exact polytope
+verifier certifies the base revenue, and separate replays recompute the added
+revenue layers while sharing that base value; there is no second from-scratch
+integration of the complete base mechanism.
 The new upper bound lowers the external `0.8919` benchmark by the exact amount
 `25760146312797/4194304000000000`, approximately `0.006141697481345415`, and
 lowers this archive's preceding active exact upper bound
@@ -54,7 +67,8 @@ The new lower mechanism improves this archive's preceding exact lower bound
 `422846104560052011/32000000000000000000000`, approximately
 `0.000013213940767501625`. It does not improve on the reported GemNet revenue
 `0.876`; its distinct contribution is an explicit layered mechanism with exact
-symbolic revenue, pointwise boundary rules, and independent exact replays.
+symbolic revenue, pointwise boundary rules, and independent replays of the
+additional revenue layers.
 
 ## Repository layout
 
@@ -111,6 +125,11 @@ theorem-value consistency checks, and release-hash verification. The two
 upper traversals are the runtime-dominant steps; wall time is
 machine-dependent.
 
+The entry point explicitly rejects optimized Python execution. Do not use
+`-O`, `-OO`, or `PYTHONOPTIMIZE` for direct certificate commands: retained
+proof kernels use executable assertions. The supported entry point fails with
+a nonzero exit status before launching those kernels in optimized mode.
+
 Individual proof checks can be run from their certificate directories using
 the commands documented in their local `README.md` files. To compile only the
 paper:
@@ -129,9 +148,24 @@ The archive proves a rigorous interval, not an exact solution of the open
 optimization problem. Until a DOI or arXiv identifier is assigned, use the
 provisional citation in `CITATION.cff`.
 
+## Data, code, and materials availability
+
+The public project repository is
+[Baymax-ray/two-bidder-two-item-dsic-certificates](https://github.com/Baymax-ray/two-bidder-two-item-dsic-certificates).
+The accompanying release archive contains the exact certificate data,
+verification code, transcripts, environment information, and SHA-256 manifests.
+Discovery-only experiments are separate from the trusted proof artifacts.
+
 ## AI-assisted tools declaration
 
 This manuscript was completed with the assistance of OpenAI GPT-5.6 Sol.
+The tool assisted with mathematical exploration, numerical candidate
+generation, implementation and debugging of certificate and verification
+code, and drafting and revision of the manuscript. AI-generated suggestions
+and numerical search outputs were not treated as proofs; the stated results
+are supported by the analytic arguments and exact certificates described
+here. The author retains responsibility for the content, correctness, and
+final presentation of this work.
 
 ## License
 

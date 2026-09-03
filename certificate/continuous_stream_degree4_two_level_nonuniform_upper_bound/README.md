@@ -10,11 +10,16 @@ problem.  It improves the preceding degree-four nonuniform upper bound
 `18588262788621/20971520000000` by the exact positive margin
 `2512966436997/4194304000000000`, approximately `0.000599137887238741`.
 
-Against the certified primal lower bound
-`26237753173862063/30000000000000000`, the remaining exact global gap is
+Against the historical ten-band certified primal lower bound
+`26237753173862063/30000000000000000`, the frozen historical gap is
 `10977145706826122741/983040000000000000000`, approximately
 `0.011166530056585818`.  The endpoints still do not match, so the unrestricted
-optimum remains open.
+optimum remains open. This is the comparison sealed in this subpackage's
+manifest and transcripts, not the current release interval width. Against
+the active layered lower bound
+`83962078694672281756033/96000000000000000000000`, the current exact gap is
+`34262987107793868572569/3072000000000000000000000`, approximately
+`0.01115331611581831659`.
 
 ## Frozen witness and partition
 
@@ -60,4 +65,4 @@ Both implementations reproduce the active depth-22 accumulator
 of `610038` unresolved depth-22 children, observe maximum propagated error
 radius `181`, and cover exactly `4 * 2^23 = 33554432` chart-volume units.  The
 manifest seals these counts, both selective-level savings, the exact strict
-improvement, and the remaining gap.
+improvement, and the historical ten-band gap.

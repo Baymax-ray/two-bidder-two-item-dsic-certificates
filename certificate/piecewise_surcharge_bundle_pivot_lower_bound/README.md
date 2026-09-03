@@ -143,9 +143,10 @@ G_B=\frac{70946101529751}{10240000000000000000}.
 
 The independent replay imports neither the primary verifier nor any discovery
 code.  It uses the scalar menu formula in $(u,r)$; the displayed polynomial
-composition has degree at most four in $u$ and three in $r$, which the replay
-also checks by exact forward differences before applying tensor exact Boole
-quadrature.  Both implementations
+composition has degree at most four in $u$ and three in $r$ on the verified
+price region. Exact forward differences serve only as consistency checks;
+the analytic composition supplies the degree bounds needed for tensor exact
+Boole quadrature. Both implementations
 reproduce every one of the 41 positive-cell gains and their sum.
 
 Run from this directory:

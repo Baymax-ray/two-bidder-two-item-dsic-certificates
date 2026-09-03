@@ -99,9 +99,16 @@ independent uniform bidder.  On an item row the exact incremental revenue is
 The factor four is two ordered-coordinate orientations times two symmetric
 bidders; `c` is the exact length of the `rho` interval.  The primary verifier
 uses a closed symbolic polynomial for `R`.  The non-importing replay instead
-constructs every demand region by exact rational polygon clipping, verifies
-the integrand degree by forward differences, and integrates it by exact Boole
-quadrature.  It imports no code from the primary verifier.
+constructs every demand region by exact rational polygon clipping and
+integrates it by exact Boole quadrature. The menu formula is cubic in the
+prices, which are affine in `t` on each row. Exact endpoint checks of the
+affine price inequalities ensure the formula holds on the whole interval,
+so the degree is at most three and Boole quadrature is exact. Forward
+differences are consistency checks only, not a proof of the degree bound.
+The replay imports no code from the primary verifier, but reads the sealed
+predecessor revenue and independently adds only the eight-row gain. The base
+revenue ultimately comes from the single `ama_lower_bound` polytope verifier;
+hash binding does not provide a second independent base integration.
 
 Run from this directory:
 

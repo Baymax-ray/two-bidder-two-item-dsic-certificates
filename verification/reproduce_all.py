@@ -22,6 +22,7 @@ BUNDLE_PIVOT_LOWER = Fraction(83961603016753854879913, 96000000000000000000000)
 AI_DECLARATION = "This manuscript was completed with the assistance of OpenAI GPT-5.6 Sol."
 AUTHOR_EMAIL = "baymin@bu.edu"
 AUTHOR_ORCID = "0009-0006-9100-0445"
+REPOSITORY_URL = "https://github.com/Baymax-ray/two-bidder-two-item-dsic-certificates"
 
 
 def require(condition: bool, message: str) -> None:
@@ -209,7 +210,11 @@ def check_text_consistency(recorder: Recorder) -> None:
             "upper manifest differs from release theorem")
     require(Fraction(lower_manifest["expected"]["final_expected_revenue"]) == LOWER,
             "lower manifest differs from release theorem")
+    require(LOWER / UPPER > Fraction(987408, 1000000),
+            "exact endpoints do not certify the stated 98.7408% guarantee")
     for text, label in ((manuscript, "manuscript"), (readme, "README")):
+        require("98.7408" in text,
+                f"certified revenue guarantee missing from {label}")
         require("3715139591287203" in text and "4194304000000000" in text,
                 f"upper endpoint missing from {label}")
         require("83962078694672281756033" in text
@@ -220,6 +225,11 @@ def check_text_consistency(recorder: Recorder) -> None:
                 f"remaining exact gap missing from {label}")
         require(text.count(AI_DECLARATION) == 1,
                 f"AI declaration must occur exactly once in {label}")
+        require("The author retains responsibility" in text
+                and "numerical search outputs were not treated as proofs" in text,
+                f"expanded AI-use scope and responsibility missing from {label}")
+        require(REPOSITORY_URL in text,
+                f"public repository URL missing from {label}")
         require(AUTHOR_EMAIL in text and AUTHOR_ORCID in text,
                 f"author metadata missing from {label}")
     require("certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound" in readme,
