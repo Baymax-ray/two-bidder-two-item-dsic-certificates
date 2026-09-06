@@ -1,88 +1,139 @@
-# Exact rational stream-dual bounds for a two-bidder, two-item auction
+# Exact primal-dual certificates for a two-bidder, two-item auction
 
 **Research preprint; not yet peer reviewed.**
 
-This archive studies two additive bidders and two heterogeneous items with all
-four values independent and uniform on `[0,1]`. Mechanisms may be randomized
-and must be pointwise dominant-strategy incentive compatible (DSIC), ex-post
-individually rational, and ex-post feasible.
-
-The main result is the exact global upper bound
+For two additive bidders, two items and four independent uniform values on
+`[0,1]`, the selected V4.6.1.1 mechanism is pointwise DSIC, ex-post IR,
+measurable and jointly feasible, with exact revenue
 
 $$
-\mathrm{OPT}\le
-\frac{3715139591287203}{4194304000000000}
-=0.8857583025186545848846435546875.
+R_*=
+\frac{35791404252341621852527735747861637}{42525000000000000000000000000000000}
++\frac{31}{1215}\sqrt2
+-\frac{15059524650320123}{8305664062500000000000}\sqrt{493894}.
 $$
 
-It is certified by an explicit 32-parameter rational continuous stream-dual
-witness and a deterministic nonuniform tensor-Bernstein verifier with a
-depth-21 base tree and two selective local refinement levels. A separately
-implemented non-importing replay obtains the same integer accumulator, box
-counts, and complete dyadic coverage. As a secondary result, an explicit
-deterministic layered menu mechanism has exact revenue
+The independently certified interval is
 
 $$
-\frac{83962078694672281756033}{96000000000000000000000}
-=0.8746049864028362682920104166\ldots .
+0.876464164471798049944906113027<R_*
+<0.876464164471798049944906113028.
 $$
 
-The remaining exact gap is
-`34262987107793868572569/3072000000000000000000000`, approximately
-`0.01115331611581831659`. The deterministic mechanism therefore earns at least
-**98.7408% of the unrestricted optimal revenue**, because its exact revenue
-divided by the exact upper certificate exceeds `0.987408`. The unrestricted
-optimum remains open.
+The V4.6.2 upper covers the **unrestricted randomized DSIC class**:
 
-The upper proof separates analytic weak duality, rational witness feasibility,
-and finite exact envelope certification. The lower construction uses
-deletion containment to preserve simultaneous feasibility as menus change;
-opponent-conditioned taxation alone supplies each bidder's DSIC.
+$$
+R_*\le\mathrm{OPT}\le U_*<0.882923053259,
+$$
+
+where the explicit rational certificate is
+
+$$
+U_*=
+\frac{231831916327659047}{262144000000000000}
+-\Delta_{1024}-\frac{81}{10^{10}}.
+$$
+
+The full exact rational subtraction and endpoint are in
+[the active manifest](certificate/coordinated_primal_dual/manifest.json).
+The certified gap is **below 0.006459, hence below 0.01**:
+
+$$
+0.006458888786918919315720686827<U_*-R_*
+<0.006458888786918919315720686828.
+$$
+
+The mechanism earns **more than 99.2684% of unrestricted optimal revenue**.
+The optimal auction and a matching certificate remain open. A fresh exact
+lottery-box test proves that the present common price does not match the
+selected mechanism.
+
+The theoretical advances are:
+
+- **Complete joint exchange.** A monotone threshold with a jump and its
+  generalized-inverse plateau change ownership on a positive-volume region.
+  The mechanism specifies both menus and joint selection for every report,
+  including ties. Three continuous revenue integrations recover the same
+  algebraic coefficients; alternative experiments are not added together.
+- **Incentive restrictions implied by occupied regions.** Utility traces
+  yield full randomized conditional screening certificates on Q, E and an
+  occupied wing. Their union covers 64.1627% of opponent-report space.
+  This is a map of conditional problems solved at actual residual capacity,
+  not a percentage of the global gap closed. The E/W rent elimination does
+  not supply a support for arbitrary capacity changes.
+- **Strictly less total common capacity price.** A
+  universal conditional identity, an opposing virtual-value sign certificate
+  and four sparse long-range IC cycles decrease its total mass while
+  preserving both unrestricted charged inequalities. The original stream
+  maximum already gives zero charged values; their existence alone is not
+  the advance. An exact gap identity separates screening,
+  unused capacity, virtual allocation and IC/IR slack from numerical
+  enclosure remainders. Solving the charged values alone does not establish
+  an equality auction.
+
+These are explicit instance-specific constructions and identities. Convex
+utility, transport duality and complementary slackness are prior foundations;
+we make no first-in-literature or general convergence claim.
 
 ## External benchmarks and our improvements
 
-The closest directly comparable external result located in our
-[bounded literature audit](audit/literature_novelty_audit.md) is the strict
-continuous DSIC upper certificate `0.8919` reported by Jiang, Parkes, and
-Wang for this instance. The same paper reports revenue approximately `0.876`
-for GemNet's fully strategyproof mechanism. Both numbers are **external
-benchmarks**: `0.8919` is their rigorous continuous upper bound, while
-`0.876` is their reported computational revenue for an exactly strategyproof
-primal mechanism, not an exact rational certificate produced or replayed here.
+Jiang, Parkes and Wang report a continuous upper bound `0.8919` in Table 2
+and GemNet revenue approximately `0.876` in Table 3. We rechecked these
+printed values in [their source](https://arxiv.org/html/2606.10112v1#S5).
+The new local upper improves the printed external upper by more than
+`0.008976946741`. The new exact revenue exceeds the printed `0.876`, but
+that rounded report alone cannot establish superiority to GemNet's
+unrounded revenue. We did not replay its mechanism or underlying dual array.
 
-Both endpoints improve this archive's preceding release. The quantitative
-improvement over the external benchmark is the upper bound. Its certificate
-has a separate full implementation replay, sharing the rational manifest and
-Bernstein enclosure principle. For the lower mechanism, one exact polytope
-verifier certifies the base revenue, and separate replays recompute the added
-revenue layers while sharing that base value; there is no second from-scratch
-integration of the complete base mechanism.
-The new upper bound lowers the external `0.8919` benchmark by the exact amount
-`25760146312797/4194304000000000`, approximately `0.006141697481345415`, and
-lowers this archive's preceding active exact upper bound
-`18588262788621/20971520000000` by
-`2512966436997/4194304000000000`, approximately `0.000599137887238741`.
-The new lower mechanism improves this archive's preceding exact lower bound
-`26237753173862063/30000000000000000` by
-`422846104560052011/32000000000000000000000`, approximately
-`0.000013213940767501625`. It does not improve on the reported GemNet revenue
-`0.876`; its distinct contribution is an explicit layered mechanism with exact
-symbolic revenue, pointwise boundary rules, and independent replays of the
-additional revenue layers.
+The retained stream endpoint is
+`3715139591287203/4194304000000000 = 0.8857583025186545848846435546875`.
+The new upper improves it by approximately `0.002835249259937616`.
+Of this decrease, approximately `0.00138972521893` tightens the enclosure
+of the same stream integral, `0.00144551594101` comes from conditional
+support replacement, and exactly `0.0000000081` comes from the four IC
+cycles. The cycles demonstrate additional admissible incentive directions;
+their current numerical contribution is small.
+The previous V4.6 lower was in
+`(0.8758198541484224553460, 0.8758198541484224553461)` and the retained
+fully deterministic lower is
+`83962078694672281756033/96000000000000000000000`.
+These remain reproducible historical results. The active lower exceeds
+V4.6.1 by more than `0.0000085`.
+
+The new [independent audit](audit/V4611_V462_RELEASE_AUDIT.md) reconstructs
+all-real compatibility arguments, the full algebraic revenue and the common
+support, and repeats both complete upper traversals. Source identity checks
+are reported separately from mathematical replays. The new lower does not
+rely on merely adding an audited increment to an unevaluated historical
+reference integral.
+
+A [three-report internal self-review and revision](audit/nature_review_v4611_v462/README.md)
+corrected a temporary-path metadata defect, calibrated the theoretical
+contribution and clarified componentwise replay independence. Both complete
+corrected portable runs passed from distinct temporary roots; frozen
+pre-revision reports remain available alongside the author corrections.
 
 ## Repository layout
 
-- `manuscript/`: self-contained LaTeX source, bibliography, and release PDF.
+- `certificate/coordinated_primal_dual/`: active paired endpoints, portable
+  source closure, both complete new upper traversals and fresh independent
+  structure, full-revenue and support audits.
+- `manuscript/`: LaTeX source, the residual-screening theory and stable
+  mechanism/revenue specification,
+  bibliography and release PDF.
 - `certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/`:
-  active rational upper-bound manifest, polynomial construction, formal
+  retained rational upper-bound manifest, polynomial construction, formal
   verifier, non-importing replay, and deterministic transcripts.
 - `certificate/continuous_stream_degree4_nonuniform_upper_bound/`,
   `certificate/continuous_stream_upper_bound/`, and
   `certificate/independent_stream_upper_bound/`: superseded but retained upper
   certificates and independent audit.
 - `certificate/ama_lower_bound/`: exact rational base-mechanism verifier.
-- `certificate/refined_item_containment_bundle_pivot_lower_bound/`: active
-  exact lower certificate with eight item-containment cells and complete
+- `certificate/joint_residual_screening_lower_bound/`: retained V4.6 randomized lower
+  mechanism, portable source closure, exact revenue and conditional supports,
+  fresh independent audits and source bindings.
+- `certificate/refined_item_containment_bundle_pivot_lower_bound/`: retained
+  deterministic lower certificate with eight item-containment cells and complete
   SHA-256 bindings to its predecessor chain.
 - `certificate/piecewise_surcharge_bundle_pivot_lower_bound/` and
   `certificate/piecewise_surcharge_twenty_band_lower_bound/`: independently
@@ -93,19 +144,24 @@ additional revenue layers.
   certificate, retained as a reproducible predecessor.
 - `verification/`: publication-level orchestrator, hash tools, release
   transcript, and theorem-to-certificate consistency checks.
-- `audit/`: final literature/novelty audit and proof-artifact ledger.
+- `audit/`: independent proof/revenue audits, fresh full upper replays,
+  claim-to-evidence ledger and the three-report internal Nature-style
+  self-assessment with post-review synthesis and revision record.
 - `provenance/`: bounded final-sprint report and clearly segregated
   discovery-only numerical experiments.
 
-Only `certificate/` and the analytic arguments in `manuscript/` belong to the
-trusted proof path. Files under `provenance/discovery_only/` record how
+The proof path consists of the analytic arguments in `manuscript/`, the
+exact kernels in `certificate/`, and the explicitly invoked supplementary
+audit checks in `audit/`. Files under `provenance/discovery_only/` record how
 witnesses were found or why alternatives stalled; sampled or floating-point
 values there are not theorem claims.
 
 ## Reproduction
 
-Requirements are Python 3.10 or newer, NumPy, `pdflatex`, and `bibtex`. The
-recorded release used Python 3.10.16 and NumPy 2.0.1. Install the pinned Python
+Requirements are Python 3.10 or newer, NumPy for the upper traversal,
+`pdflatex`, and `bibtex`. The new lower package uses Python standard-library
+exact arithmetic; the original upper release environment is retained in
+ENVIRONMENT.md. Install the pinned Python
 dependency if needed:
 
 ```powershell
@@ -119,11 +175,19 @@ python -B verification\reproduce_all.py
 ```
 
 The command reruns the base and complete lower-certificate dependency chain,
-the formal two-level nonuniform upper-bound verifier, every non-importing
-active replay, a clean temporary-directory manuscript compilation, exact
+the retained V4.6 lower, the active coordinated certificate with both new
+complete upper traversals and independent audits, a clean manuscript build, exact
 theorem-value consistency checks, and release-hash verification. The two
 upper traversals are the runtime-dominant steps; wall time is
 machine-dependent.
+
+The two complete upper traversals independently implement the stream
+majorant `B20`. The conditional subtraction has one complete `1024`
+partition accumulation, plus an independent reconstruction of all averaged
+coefficients, classification cross-checks through size `64` and selected
+cell integrals. That second check reuses the primary classifier and
+integral tables; it is not a second full subtraction accumulation. The IC
+cycles have separate whole-box sign and exact decrement checks.
 
 The entry point explicitly rejects optimized Python execution. Do not use
 `-O`, `-OO`, or `PYTHONOPTIMIZE` for direct certificate commands: retained
@@ -158,10 +222,12 @@ Discovery-only experiments are separate from the trusted proof artifacts.
 
 ## AI-assisted tools declaration
 
-This manuscript was completed with the assistance of OpenAI GPT-5.6 Sol.
+This manuscript was developed with the assistance of OpenAI GPT-5.6 Sol and OpenAI Codex.
 The tool assisted with mathematical exploration, numerical candidate
 generation, implementation and debugging of certificate and verification
-code, and drafting and revision of the manuscript. AI-generated suggestions
+code, and drafting and revision of the manuscript. Separately scoped
+AI-assisted audits checked the new proofs, source implementations and exact
+arithmetic. These are internal checks, not external peer review. AI-generated suggestions
 and numerical search outputs were not treated as proofs; the stated results
 are supported by the analytic arguments and exact certificates described
 here. The author retains responsibility for the content, correctness, and

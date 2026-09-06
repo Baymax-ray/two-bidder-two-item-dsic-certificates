@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 763.6467573642731,
+  "command": [
+    "D:\\Anaconda\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "verify_coordinated.py"
+  ],
+  "scope": "Fresh isolated portable replay of all 46 active mathematical entrypoints, including both complete upper traversals."
+}

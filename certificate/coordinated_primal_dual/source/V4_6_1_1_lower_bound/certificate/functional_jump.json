@@ -1,0 +1,45 @@
+{
+  "status": "FUNCTIONAL_JUMP_POINTWISE_PASS",
+  "scope": "All-real mechanism specified in functional_jump.md; rational regression is additional evidence",
+  "bounded_profile_checks": 7061,
+  "support": [
+    "47/150",
+    "43/125"
+  ],
+  "jump_height": "23/1000",
+  "plateau_t_interval": [
+    "1/2",
+    "523/1000"
+  ],
+  "slope_of_h_after_jump": "1/4",
+  "tie_rule": "empty at zero; lexicographically first jointly feasible complete-menu argmax pair",
+  "closed_c_face": "base safe and bundle fees include g(c)>0",
+  "strict_transfer_witness": {
+    "profile": [
+      "103/200",
+      "1/10",
+      "943/3000",
+      "1"
+    ],
+    "old_allocation": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "new_allocation": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ]
+  }
+}

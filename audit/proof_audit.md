@@ -1,3 +1,57 @@
+# Current V4.6.1.1 / V4.6.2 update
+
+See [the new independent release audit](V4611_V462_RELEASE_AUDIT.md) for the active endpoints, fresh evidence and theoretical scope. The earlier audit below is retained as historical evidence.
+
+# V4.6 archive promotion and independent audit, 5 September 2026
+
+The current lower mechanism is the randomized joint residual-screening
+construction with exact revenue in
+[0.8758198541484224553460, 0.8758198541484224553461]. The unrestricted upper
+remains 3715139591287203/4194304000000000. Their difference is strictly below
+1/100. Historical endpoint sections below retain their original release scope.
+
+Three separately scoped independent audits found no blocking mathematical
+issue in the new primal, conditional dual or exact-revenue claims. They
+checked the full report geometry and inherited menu definitions, derived the
+measure identities for arbitrary convex utilities, and independently rebuilt
+the radical/logarithmic additions. Exact evidence includes 2,939 rational
+profiles plus 258 tariff endpoints, 12 smooth randomized competitors with an
+infinite allocation range, and a fresh strict rational gap certificate.
+These bounded regressions supplement the all-real proofs; they do not replace
+them. The historical reference integral remains an explicit dependency.
+
+Two nonblocking wording clarifications are adopted in the new manuscript:
+retained tie rules may depend on the shared base allocation while still
+maximizing a fixed opponent menu; and the strict-envelope complement has zero
+candidate utility almost everywhere, not on every null face. Historical
+source notes remain byte-bound, with ERRATA.md alongside the portable package.
+
+Both unchanged full upper implementations were freshly rerun during this
+audit. Each visited 3,738,334 nodes, recovered accumulator 3715139591287203
+and coverage 33554432/33554432, and exited successfully. Their source
+identities match the pre-update archive. See v46_verify_stream_dual_output.txt,
+v46_independent_replay_output.txt and the corresponding run records here.
+The old lower number inside those frozen outputs is historical.
+
+Detailed audit reports and fresh scripts are under
+certificate/joint_residual_screening_lower_bound/audit and its source snapshot.
+The new lower runner is independent of the original research workspace.
+No conditional support is promoted to a matching common auction support.
+The final F/Q certificate preservation and conservative Eplus exclusions are
+stated explicitly in the manuscript.
+
+After promotion, three fresh mutually blind Nature-style self-assessments
+were frozen before synthesis. None identified a Blocking Yes concern.
+The final 25-page manuscript adds a stable mechanism/revenue specification,
+explicit Borel residual domains, a common-support sufficient interface,
+report-role and final-scope tables, and the independently checked trace-slack
+and C-greater-than-one fee derivations. The reports, synthesis and implemented
+revision ledger are in nature_review_v46/. They are internal assessments,
+not external peer review or an editorial decision. Broad significance beyond
+the demonstrated instance remains a positioning limitation.
+
+---
+
 # Final proof and artifact audit
 
 Release audit date: 30 August 2026. Internal-review clarifications updated

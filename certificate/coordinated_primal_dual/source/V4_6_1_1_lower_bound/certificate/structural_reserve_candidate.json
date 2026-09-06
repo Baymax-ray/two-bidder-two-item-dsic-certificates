@@ -1,0 +1,35 @@
+{
+  "status": "STRUCTURAL_RESERVE_ABOVE_A_EXACT_PASS",
+  "scope": "alternative complete feasible mechanism; no full conditional or outer optimizer claim",
+  "parameters": {
+    "A": "2/3",
+    "a": "3848/5625",
+    "c": "47/150",
+    "b": "11221/11250",
+    "d": "1/2",
+    "q": "14/75",
+    "s": "13321/11250",
+    "nu": "98/5625"
+  },
+  "revenue_coefficients": [
+    "113243195036216349670753/134551757812500000000000",
+    "31/1215",
+    "-50325149888/18687744140625"
+  ],
+  "basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(3692/16875)"
+  ],
+  "revenue_interval": [
+    "876456168324744236873688693189/1000000000000000000000000000000",
+    "87645616832474423687368869319/100000000000000000000000000000"
+  ],
+  "gain_over_V4_6_1_interval": [
+    "554488418384727535993189/1000000000000000000000000000000",
+    "55448841838472753609319/100000000000000000000000000000"
+  ],
+  "pointwise_cases": 189,
+  "proof": "research_log/structural_compatibility.md",
+  "missing_optimality": "E junction support can fail when a>A; actual full-inner optimization not certified"
+}

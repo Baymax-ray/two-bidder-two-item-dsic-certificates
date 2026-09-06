@@ -1,3 +1,31 @@
+# Current V4.6.1.1 / V4.6.2 update
+
+See [the new independent release audit](V4611_V462_RELEASE_AUDIT.md) for the active endpoints, fresh evidence and theoretical scope. The earlier audit below is retained as historical evidence.
+
+# V4.6 theoretical contribution update, 5 September 2026
+
+The bounded literature search below remains dated as recorded; no new exhaustive
+priority search is implied. Its earlier lower endpoint and gap are historical.
+The current release has 0.8758198541484224553460 < R_J <
+0.8758198541484224553461 and U-R_J < 0.0099384483702321295386 < 0.01.
+
+The supported new contribution is the explicit residual-specific capacity-price
+measures and their full randomized screening inequalities in manuscript
+Section 6.2 and 6.3, together with the complete joint changes in Section 6.4.
+The measures retain report-line charges and non-normalized information rents.
+A profitable joint release shows why a one-sided optimal menu need not be part
+of a globally optimal auction. These are mathematical results with stated
+hypotheses, not priority claims about inventing convex potentials, continuous
+duality, convex-mixture concavity or complementary slackness.
+
+The new exact lower mechanism improves this archive's deterministic predecessor;
+it does not exceed the external reported GemNet revenue approximately 0.876.
+Neither a global matching certificate nor an exact auction optimizer has been
+established. Novelty beyond the directly cited formulations remains bounded by
+the source coverage below.
+
+---
+
 # Final targeted literature and novelty audit
 
 Literature-search date: 27 August 2026; certified-endpoint revision:

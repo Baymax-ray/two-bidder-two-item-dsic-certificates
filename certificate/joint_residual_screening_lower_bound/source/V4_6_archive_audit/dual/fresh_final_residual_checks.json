@@ -1,0 +1,10 @@
+{
+  "status": "FRESH_FINAL_RESIDUAL_COVERAGE_REGRESSIONS_PASS",
+  "counts": {
+    "retained_Eplus_fibers": 109,
+    "Eplus_occupied_traces": 545,
+    "Eplus_candidate_report_choices": 436,
+    "Q_occupied_traces": 44
+  },
+  "scope": "Exact boundary regressions against final source mechanism; not exhaustive continuum proof"
+}

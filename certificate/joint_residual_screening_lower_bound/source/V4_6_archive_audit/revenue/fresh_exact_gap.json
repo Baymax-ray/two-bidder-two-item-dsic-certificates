@@ -1,0 +1,128 @@
+{
+  "status": "FRESH_V46_REVENUE_RECONSTRUCTION_AND_STRICT_GAP_PASS",
+  "boundary": "Fresh reconstruction of all V4.6 algebraic and logarithmic additions; V4.5 baseline interval retained. Mechanism all-real proof and inherited upper proof are separate dependencies.",
+  "source_sha256": {
+    "V4_5/certificate/independent_lottery.json": "2f3adf5ee77e858be029e5a35ec6119712ff0ae9b2855edc96ababeff45bd12c",
+    "V4_6/certificate/consolidated_bounds.json": "b1f1ea198be1d0fa8d3a61ff1f5b0fd9c0ee4024d1c2bf89d886bb41600f0e47",
+    "V4_6/certificate/price_joint_revenue.json": "9d870c8a641515145edef1b1695304b7cb8079d04b9635ddca8fe793b2cd822a",
+    "V3/certificate/baseline_mechanism.json": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5"
+  },
+  "algebraic_coefficients": [
+    "-1609541379668231661249547038251/159173905464000000000000000000000",
+    "57567793/7593750000",
+    "-12167/1328906250"
+  ],
+  "algebraic_details": {
+    "strip": "305193169586616381246083/101062797120000000000000000000",
+    "free": [
+      "1925713777/243000000000",
+      "-11719583/2250000000"
+    ],
+    "G": [
+      "-1464759568693/81000000000000",
+      "155394217/12150000000"
+    ],
+    "final_Q": [
+      "6214545829445349343/141750000000000000000000",
+      "-12167/1328906250"
+    ]
+  },
+  "joint_rational": "6578986777818169914603/10652675687500000000000000000000",
+  "joint_logs": {
+    "161/176": "6248637/282500000000000",
+    "613/628": "-61575471/282500000000000",
+    "13/10": "-9308601/5000000000000000000"
+  },
+  "joint_details": {
+    "second_rational": "1110803432734877157/1363542488000000000000000000",
+    "fee": "-24631898853429/125000000000000000000000",
+    "below": "-92624010033429/125000000000000000000000",
+    "above_pieces": [
+      "3161434941/25000000000000000000",
+      "15610239/62500000000000000",
+      "838578339/5000000000000000000"
+    ],
+    "partial_fractions_r2": [
+      {
+        "pole": "613/750",
+        "power": 1,
+        "coefficient": "-113/750"
+      },
+      {
+        "pole": "839/750",
+        "power": 1,
+        "coefficient": "339/250"
+      }
+    ],
+    "partial_fractions_r3": [
+      {
+        "pole": "2/3",
+        "power": 1,
+        "coefficient": "12769/1000000"
+      },
+      {
+        "pole": "613/750",
+        "power": 2,
+        "coefficient": "8/9"
+      },
+      {
+        "pole": "613/750",
+        "power": 1,
+        "coefficient": "1774/113"
+      },
+      {
+        "pole": "839/750",
+        "power": 2,
+        "coefficient": "8"
+      },
+      {
+        "pole": "839/750",
+        "power": 1,
+        "coefficient": "-1322/113"
+      }
+    ]
+  },
+  "tariff_source_audit": {
+    "all_bundle_rows": 41,
+    "active_zero_rho_rows": [
+      "B13.1",
+      "B14.1"
+    ],
+    "strict_rho_upper": "18/977",
+    "other_intersecting_rows_excluded": true
+  },
+  "log_terms": 80,
+  "radical_digits": 70,
+  "joint_decimal_enclosure": [
+    "0.00000000391612794214225366689702614233062113051276",
+    "0.00000000391612794214225366689702614233062113051277"
+  ],
+  "revenue_decimal_enclosure": [
+    "0.87581985414842245534607651887213333",
+    "0.87581985414842245534608051887213334"
+  ],
+  "upper": "3715139591287203/4194304000000000",
+  "gap_decimal_enclosure": [
+    "0.00993844837023212953856303581536666",
+    "0.00993844837023212953856703581536667"
+  ],
+  "strict_certificate": {
+    "lower": "437909927074211227673/500000000000000000000",
+    "lower_decimal": "0.8758198541484224553460",
+    "upper_minus_lower": "10176971131117700647571/1024000000000000000000000",
+    "one_hundredth_minus_gap_upper": "63028868882299352429/1024000000000000000000000",
+    "positive_integer_numerator": 63028868882299352429,
+    "denominator": 1024000000000000000000000,
+    "conclusion": "0 < U-R <= U-L < 1/100"
+  },
+  "methods": [
+    "direct final Q-menu integral in one step",
+    "binomial quadratic-field endpoint evaluation",
+    "no-sale polygon vertical slices",
+    "direct before/after three-price menu integrals",
+    "local pole Taylor coefficients and full polynomial identity",
+    "one-sided positive log series with reciprocal reduction",
+    "integer-square-root radical enclosures",
+    "exact rational strict threshold comparison"
+  ]
+}

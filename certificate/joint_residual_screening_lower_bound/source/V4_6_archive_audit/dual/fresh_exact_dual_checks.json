@@ -1,0 +1,148 @@
+{
+  "status": "FRESH_INDEPENDENT_DUAL_ALGEBRA_PASS",
+  "source_hashes": {
+    "research_log/inner_lottery_certificate.md": "c3a35ef09fc4d28146df876f867d72686cc176060700ca2202b4770721ec3fa2",
+    "research_log/inner_diagonal_capacity.md": "fe3876ba8bd20203c1f35dff816ac1fbe5fab99d494b7ee610e6e5116b691365",
+    "research_log/conditional_coverage.md": "f07e553ab60a5e6e10bf489f587b3620764ae4cdc73fc6db17fb9aaa6226dd9c",
+    "verifier/price_joint_reallocation.py": "d597ff806e54f7e6c01c739f946d02ed3dc0dfdac02f6e26451c9fb4a3e5f72c"
+  },
+  "symbolic_identities": [
+    "lottery delta factorization",
+    "lottery zero top mass",
+    "C-Y=j",
+    "lottery uniform sink margin",
+    "diagonal area equals (m+1)/3"
+  ],
+  "exact_smooth_competitor_checks": [
+    {
+      "family": "smooth_full_range_randomized",
+      "kind": "lottery",
+      "t": "67/100",
+      "revenue": "7/24",
+      "gap": "72129921319460824877/768000000000000000000",
+      "trace_slack": "136386063743763488837/614400000000000000000000",
+      "monotonicity_slack": "67/600",
+      "sink_slack": "19124109933594965470921/204800000000000000000000"
+    },
+    {
+      "family": "smooth_full_range_randomized",
+      "kind": "lottery",
+      "t": "7/10",
+      "revenue": "7/24",
+      "gap": "1223650227861047/11718750000000000",
+      "trace_slack": "32522965254263/14648437500000000",
+      "monotonicity_slack": "7/60",
+      "sink_slack": "1929195801096061/19531250000000000"
+    },
+    {
+      "family": "smooth_full_range_randomized",
+      "kind": "lottery",
+      "t": "3/4",
+      "revenue": "7/24",
+      "gap": "95729326590006886717/768000000000000000000",
+      "trace_slack": "136553003099064635477/24576000000000000000000",
+      "monotonicity_slack": "1/8",
+      "sink_slack": "896557501260385246489/8192000000000000000000"
+    },
+    {
+      "family": "smooth_full_range_randomized",
+      "kind": "lottery",
+      "t": "4/5",
+      "revenue": "7/24",
+      "gap": "148649379247884819/1000000000000000000",
+      "trace_slack": "2139335846062666043/240000000000000000000",
+      "monotonicity_slack": "2/15",
+      "sink_slack": "9793124257809896839/80000000000000000000"
+    },
+    {
+      "family": "smooth_full_range_randomized",
+      "kind": "diagonal_symmetric",
+      "B": "2/3",
+      "C": "9/10",
+      "mass": "31/600",
+      "revenue": "7/24",
+      "gap": "1234957/12960000",
+      "sink": "1234957/12960000"
+    },
+    {
+      "family": "smooth_full_range_randomized",
+      "kind": "diagonal_constrained",
+      "B": "149/250",
+      "C": "91/100",
+      "mass": "8159/1500000",
+      "revenue": "7/24",
+      "gap": "7214456513429/81000000000000",
+      "sink": "7214456513429/81000000000000"
+    },
+    {
+      "family": "smooth_interior_randomized_with_positive_origin_rent",
+      "kind": "lottery",
+      "t": "67/100",
+      "revenue": "-103/120",
+      "gap": "4354599950933646470833/3840000000000000000000",
+      "trace_slack": "78727695743763488837/768000000000000000000000",
+      "monotonicity_slack": "67/1000",
+      "sink_slack": "290231615532568510225921/256000000000000000000000"
+    },
+    {
+      "family": "smooth_interior_randomized_with_positive_origin_rent",
+      "kind": "lottery",
+      "t": "7/10",
+      "revenue": "-103/120",
+      "gap": "66979041417555313/58593750000000000",
+      "trace_slack": "4694034770597/4577636718750000",
+      "monotonicity_slack": "7/100",
+      "sink_slack": "111331024412486119/97656250000000000"
+    },
+    {
+      "family": "smooth_interior_randomized_with_positive_origin_rent",
+      "kind": "lottery",
+      "t": "3/4",
+      "revenue": "-103/120",
+      "gap": "4456654027422044692993/3840000000000000000000",
+      "trace_slack": "78894635099064635477/30720000000000000000000",
+      "monotonicity_slack": "3/40",
+      "sink_slack": "11798834292092430969489/10240000000000000000000"
+    },
+    {
+      "family": "smooth_interior_randomized_with_positive_origin_rent",
+      "kind": "lottery",
+      "t": "4/5",
+      "revenue": "-103/120",
+      "gap": "2214739875366741041/1875000000000000000",
+      "trace_slack": "1238423846062666043/300000000000000000000",
+      "monotonicity_slack": "2/25",
+      "sink_slack": "116667366470871966839/100000000000000000000"
+    },
+    {
+      "family": "smooth_interior_randomized_with_positive_origin_rent",
+      "kind": "diagonal_symmetric",
+      "B": "2/3",
+      "C": "9/10",
+      "mass": "31/600",
+      "revenue": "-103/120",
+      "gap": "4607717/4050000",
+      "sink": "4607717/4050000"
+    },
+    {
+      "family": "smooth_interior_randomized_with_positive_origin_rent",
+      "kind": "diagonal_constrained",
+      "B": "149/250",
+      "C": "91/100",
+      "mass": "8159/1500000",
+      "revenue": "-103/120",
+      "gap": "14299843253989/12656250000000",
+      "sink": "14299843253989/12656250000000"
+    }
+  ],
+  "nonblocking_boundary_wording": {
+    "t": "7/10",
+    "point": [
+      "2/3",
+      "1"
+    ],
+    "candidate_utility": "62347/93750",
+    "reason": "x=A lies in neither G nor H; positive utility on a two-dimensional null boundary"
+  },
+  "scope": "Exact algebra and smooth arbitrary-range randomized regressions; analytic proof audit is separate"
+}

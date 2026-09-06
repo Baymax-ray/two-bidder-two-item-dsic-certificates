@@ -1,0 +1,44 @@
+{
+  "scope": "affine-base term only; per-bidder revenue derivative, not the full changed mechanism",
+  "interval": [
+    "142/125",
+    "1137/1000"
+  ],
+  "per_bidder_derivative_coefficients": [
+    "39760023849/3906250000",
+    "-48411347/1953125",
+    "221343/10000",
+    "-216/25",
+    "5/4"
+  ],
+  "per_bidder_change_theta_coefficients": [
+    "0",
+    "173733429/4000000000000",
+    "-612392179/2000000000",
+    "314537/400000",
+    "-591/800",
+    "1/4"
+  ],
+  "total_change_theta_coefficients": [
+    "0",
+    "173733429/2000000000000",
+    "-612392179/1000000000",
+    "314537/200000",
+    "-591/400",
+    "1/2"
+  ],
+  "per_bidder_derivative_bounds": [
+    "173733429/4000000000000",
+    "514209/781250000"
+  ],
+  "derivative_decreasing_Bernstein": [
+    "-4821243/7812500",
+    "-76942563/125000000",
+    "-9593201/15625000",
+    "-612392179/1000000000"
+  ],
+  "total_base_revenue_at_s0": "26232089810531183/30000000000000000",
+  "calibration_input_sha256": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+  "total_base_change_at_lower_endpoint": "-1401666113/2000000000000000",
+  "conclusion": "the base term loses for every s in [1.136,1.137); other correction terms must be included separately"
+}

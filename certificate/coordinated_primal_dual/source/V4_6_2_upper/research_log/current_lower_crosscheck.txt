@@ -1,0 +1,35 @@
+COMMAND: python -B -X utf8 output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_lower_bound/verifier/parameter_revenue.py
+RESULT: fulfilled; exit_code=0
+PARAMETER_REBUILT_EXACT_REVENUE_PASS
+revenue ['2191138245679028739161677917/2500000000000000000000000000', '8764552982716114956646711669/10000000000000000000000000000'] [0.8764552982716115, 0.8764552982716115]
+base 0.8715105519065021
+
+
+COMMAND: python -B -X utf8 output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_lower_bound/verifier/independent_family_revenue.py
+RESULT: fulfilled; exit_code=0
+INDEPENDENT_FAMILY_CONTINUUM_REVENUE_PASS
+full_Q_display 0.8764552982716115
+with_H_display 0.8764552982716115
+base_cells 9
+
+
+COMMAND: python -B -X utf8 output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_lower_bound/verifier/functional_exchange.py
+RESULT: fulfilled; exit_code=0
+FUNCTIONAL_EXCHANGE_EXACT_PASS
+gain 68161978301/216000000000000000 3.155647143564815e-07
+revenue [0.8764556138363259, 0.8764556138363259]
+checks 7201
+
+
+COMMAND: python -B -X utf8 output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_lower_bound/verifier/independent_functional.py
+RESULT: fulfilled; exit_code=0
+INDEPENDENT_FUNCTIONAL_REVENUE_PASS
+gain 68161978301/216000000000000000
+
+
+COMMAND: python -B -X utf8 output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_lower_bound/verifier/branch_summary.py
+RESULT: fulfilled; exit_code=0
+V4_6_1_LOWER_BOUND_CERTIFIED
+revenue ['0.8764556138363258521461526', '0.8764556138363258521461527']
+gain ['0.0006357596879033968000721', '0.0006357596879033968000762']
+

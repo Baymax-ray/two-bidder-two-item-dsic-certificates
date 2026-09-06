@@ -1,0 +1,105 @@
+{
+  "status": "FULL_DEPTH20_INDEPENDENT_MAJORANT_REPLAY_PASS",
+  "arithmetic": "Exact Fraction root controls, one-sided int64 subdivision with overflow checks, Python integer accumulation",
+  "scale": 1000000000000,
+  "amplitude": "1",
+  "results": [
+    {
+      "depth": 12,
+      "accumulator": "1813563158120057",
+      "coverage": 16384,
+      "upper_bound": "1813563158120057/2048000000000000"
+    },
+    {
+      "depth": 14,
+      "accumulator": "7248706577293113",
+      "coverage": 65536,
+      "upper_bound": "7248706577293113/8192000000000000"
+    },
+    {
+      "depth": 16,
+      "accumulator": "28985686275235047",
+      "coverage": 262144,
+      "upper_bound": "28985686275235047/32768000000000000"
+    },
+    {
+      "depth": 18,
+      "accumulator": "115924891811347673",
+      "coverage": 1048576,
+      "upper_bound": "115924891811347673/131072000000000000"
+    },
+    {
+      "depth": 20,
+      "accumulator": "463663832655318094",
+      "coverage": 4194304,
+      "upper_bound": "231831916327659047/262144000000000000"
+    }
+  ],
+  "statistics": {
+    "nodes": 1351220,
+    "fixed": 200355,
+    "leaves": 475257,
+    "max_error": 157
+  },
+  "charts": [
+    {
+      "chart": [
+        0,
+        0
+      ],
+      "common_degree": [
+        8,
+        5,
+        8,
+        5
+      ],
+      "nodes": 173293
+    },
+    {
+      "chart": [
+        0,
+        1
+      ],
+      "common_degree": [
+        8,
+        5,
+        8,
+        6
+      ],
+      "nodes": 311757
+    },
+    {
+      "chart": [
+        1,
+        0
+      ],
+      "common_degree": [
+        8,
+        6,
+        8,
+        5
+      ],
+      "nodes": 311759
+    },
+    {
+      "chart": [
+        1,
+        1
+      ],
+      "common_degree": [
+        8,
+        6,
+        8,
+        6
+      ],
+      "nodes": 554411
+    }
+  ],
+  "dependencies": {
+    "manifest.json": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
+    "independent_replay.py": "0ef2377a11fe0a490e925bb9f0af28b90cf24110239becbb4467f5e3b7e17fbe"
+  },
+  "primary_certificate_sha256": "27a4f3209256ab8208214f8f677197ed562b4a1e02faa84742a42e9938c3d86b",
+  "import_boundary": "Imports neither flow_majorant.py nor archive verify_stream_dual.py; uses archive independent polynomial builder and midpoint subdivision only.",
+  "scope": "Full replay of all four continuous chart trees through depth 20; compares every saved accumulator, coverage, and tree statistic."
+}

@@ -1,0 +1,165 @@
+REPLAY inherited V4.5 mathematical dependencies
+REPLAY V4_02/joint_geometry_verify.py
+JOINT_GEOMETRY_EXACT_PASS
+REPLAY V4_02/independent_affine_transform.py
+INDEPENDENT_AFFINE_TRANSFORM_EXACT_PASS
+strict_transfer_box_volume 1/50000000
+bounded_profile_checks 40
+scope no total revenue improvement certified
+REPLAY V4_02/compression_boundary_sign.py
+S2 5509643569103/12000000000000
+S1_base 3453946410567/2000000000000
+S_edge_gain 2064375095897180100457/735480000000000000000000
+S1_lower 1272218628117805760100457/735480000000000000000000
+derivative_lower 10162433525363281121773373/9193500000000000000000000000
+PASS exact boundary-payment sign; no finite-type approximation
+REPLAY V4_02/localized_trial_independent.py
+LOCALIZED_TRIAL_INDEPENDENT_EXACT_PASS
+bounded_checks 66
+scope no total revenue assertion
+REPLAY V4_02/base_split_cost.py
+D1(s0) 173733429/4000000000000
+per-bidder theta coefficients ['0', '173733429/4000000000000', '-612392179/2000000000', '314537/400000', '-591/800', '1/4']
+PASS exact full affine-base split-cost derivative and change polynomial
+REPLAY V4_02/split_cost_candidate.py
+SPLIT_COST_CANDIDATE_POINTWISE_EXACT_PASS
+uniform_inner_slack 9247/250000
+bounded_checks 103
+witness ('1/100', '3/5', '1', '747/2000')
+old_masks (0, 3) new_masks (2, 1)
+strict_transfer_prism_volume 1/2000000000
+candidate_split_cost 142/125
+scope no aggregate revenue sign certified by this replay
+REPLAY V4_02/split_cost_revenue.py
+derivative_at_origin_interval ['-6846346437953982069309/1000000000000000000000000', '-1711586609488495517327/250000000000000000000000'] [-0.006846346437953982, -0.006846346437953982]
+gain_rational_interval ['1252797645849837077/200000000000000000000000', '3131994114624592693/500000000000000000000000'] [6.263988229249185e-06, 6.263988229249185e-06]
+revenue_rational_interval ['175049970192836728660881/200000000000000000000000', '875249850964183643304409/1000000000000000000000000'] [0.8752498509641836, 0.8752498509641836]
+SPLIT_COST_EXACT_REVENUE_PASS
+REPLAY V4_02/independent_split_revenue.py
+INDEPENDENT_SPLIT_REVENUE_PASS
+gain ['1252797645849837077/200000000000000000000000', '3131994114624592693/500000000000000000000000']
+revenue ['175049970192836728660881/200000000000000000000000', '875249850964183643304407/1000000000000000000000000']
+REPLAY V3_1/constrained_screening_verify.py
+{
+  "status": "PASS",
+  "scope": "Exact polynomial replay for full randomized inner optimum and global capacity support; not a two-bidder optimum certificate",
+  "k": "283/1000",
+  "prices": {
+    "item1": "2/3",
+    "item2": "7324801/12000000",
+    "bundle": "10720801/12000000"
+  },
+  "exact_inner_revenue": "236416913460803/432000000000000",
+  "value_polynomial_coefficients": [
+    "59/108",
+    "0",
+    "1/4",
+    "-1",
+    "9/16"
+  ],
+  "candidate_capacity_pairing": "236416913460803/432000000000000",
+  "pairing_parts": {
+    "item1_volume": "1/6",
+    "item1_top_edge": "24741719460803/216000000000000",
+    "item2_volume": "114933474539197/432000000000000"
+  },
+  "F_at_k": "191081317/4000000000",
+  "value_derivative": "-191081317/4000000000",
+  "three_partition_areas": [
+    "1/3",
+    "1/3",
+    "1/3"
+  ],
+  "polynomial_identity_degree_bound": 6,
+  "exact_interpolation_nodes": [
+    "7/25",
+    "29/100",
+    "3/10",
+    "31/100",
+    "8/25",
+    "33/100",
+    "17/50"
+  ],
+  "gap_identity": "<pi,r>-R=<pi,r-a>+3 integral_D0 u",
+  "not_claimed": [
+    "Outer bidder optimality against these prices",
+    "Full two-bidder optimal revenue",
+    "Formal machine verification of the measure proof"
+  ]
+}
+REPLAY V4_5/functional_exchange.py
+FUNCTIONAL_EXCHANGE_POINTWISE_EXACT_PASS 1480 54
+REPLAY V4_5/dual_support_verify.py
+V4_5_DUAL_CAPACITY_SUPPORT_EXACT_PASS
+old singular support common gap >= 11884909837073/6075000000000000
+thin-band support common gap >= 15635863/240000000000
+scope: Exact conditional capacity supports and quantified rejection of two common-support architectures; no matching auction upper certificate.
+REPLAY V4_5/residual_lottery.py
+RESIDUAL_LOTTERY_EXACT_PASS
+exact_total_gain 472617707798758460108653/101062797120000000000000000000
+pointwise_boundary_checks 1296
+witness {'profile': ['7/10', '1/10', '18/25', '29/100'], 'old_masks': [0, 1], 'new_allocation': [['0', '0'], ['1', '3125/4852']], 'new_payment': '85053/97040', 'new_utility': '919/30325'}
+REPLAY V4_5/independent_lottery.py
+INDEPENDENT_LOTTERY_EXACT_PASS
+exact_gain 472617707798758460108653/101062797120000000000000000000
+gain_decimal_for_display 4.6764756296778665e-06
+revenue_decimal_for_display 0.8752545274398134
+REPLAY V4_5/residual_second_lottery.py
+RESIDUAL_SECOND_LOTTERY_EXACT_PASS
+exact_sign_and_actual_hole_cases 9
+PRE_V4_5_PRESERVATION_PASS 912 identities; one mapped navigation file
+INDEPENDENT_GAIN_AND_SUPPORT_COMPATIBILITY_PASS
+V4_5_ALL_EXACT_REPLAYS_PASS: 14 mathematical replays and 912-file preservation
+REPLAY V4.6/outer_lottery_strip.py
+OUTER_LOTTERY_STRIP_EXACT_PASS
+exact_gain 305193169586616381246083/101062797120000000000000000000
+gain_decimal_for_display 3.01983695567258e-06
+checks 1372
+REPLAY V4.6/free_bidder_one.py
+FREE_BIDDER_ONE_EXACT_PASS
+gain_pair ['1925713777/243000000000', '-11719583/2250000000']
+gain_display 0.0005585288428503137
+total_display 0.8758160761196193
+REPLAY V4.6/inner_lottery_certificate.py
+INNER_LOTTERY_FULL_RANDOMIZED_CERTIFICATE_PASS
+exact_polygon_gap_examples 20
+actual_residual_boundary_checks 63
+REPLAY V4.6/outer_bundle_exchange.py
+OUTER_BUNDLE_EXCHANGE_EXACT_PASS
+gain_coefficients ['-61265474244901887143940289321/3402000000000000000000000000000', '155394217/12150000000', '-12495509/797343750000']
+gain_display 3.4716474043091348e-06
+pointwise_checks 167
+REPLAY V4.6/outer_bundle_reoptimized.py
+OUTER_BUNDLE_REOPTIMIZED_EXACT_PASS
+extra_gain_display 3.0246527089655005e-07
+full_bundle_gain_display 3.7741126752056845e-06
+pointwise_checks 267
+REPLAY V4.6/inner_diagonal_capacity.py
+INNER_DIAGONAL_AND_CONSTRAINED_Q_FULL_CERTIFICATE_PASS
+exact_polygon_gap_examples 24
+actual_occupied_trace_checks 45
+REPLAY V4.6/price_joint_reallocation.py
+PRICE_JOINT_REALLOCATION_EXACT_PASS
+strict_joint_gain_lower 26902077489/12500000000000000000
+boundary_replays 315
+REPLAY V4.6/price_joint_revenue.py
+PRICE_JOINT_REVENUE_EXACT_PASS
+increment_interval ['391612794214225366689702614233062113/100000000000000000000000000000000000000000000', '3916127942142253666897026142330621131/1000000000000000000000000000000000000000000000']
+first_bidder_exact_increment -24631898853429/125000000000000000000000
+REPLAY V4.6/outer_fee_polygon_audit.py
+OUTER_FEE_POLYGON_AUDIT_EXACT_PASS
+fee_fibers 33 actual_menu_cells 140 cut_fibers 5
+branches ['B13.1', 'B14.1', 'Eplus', 'retained_y_equals_c', 'zero_fee']
+REPLAY V4.6/independent_revenue.py
+V4_6_INDEPENDENT_CONTINUUM_REVENUE_PASS
+reference_revenue_display 0.8758195477670236
+refined_reference_revenue_display 0.8758198502322945
+coupled_safe_price_integral_pair ['-15039791471060638832530097/486000000000000000000000000000', '742187/113906250000']
+REPLAY V4.6/consolidated_bounds.py
+V4_6_EXACT_BOUNDS_LEDGER_PASS_NOT_CLOSED
+revenue_enclosure ['0.8758198541484224553460', '0.8758198541484224553461']
+gain_over_V4_5 ['0.0005653267086091341752', '0.0005653267086091341753']
+remaining_gap ['0.0099384483702321295385', '0.0099384483702321295386']
+PRE_V4_6_PRESERVATION_PASS 945 identities; one mapped navigation file
+V4_6_ALL_EXACT_REPLAYS_PASS: 11 new mathematical replays, inherited 14, 945-file preservation
+UNRESTRICTED_AUCTION_GAP_REMAINS_OPEN

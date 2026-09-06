@@ -1,0 +1,51 @@
+{
+  "status": "PASS_EXACT_FLATNESS_AND_NULL_OPPONENT_OBSTRUCTIONS",
+  "scope": "Global equality restrictions and architecture obstructions; no new numerical auction upper bound or candidate suboptimality claim.",
+  "singular_witness_opponents": {
+    "high": [
+      "3/4",
+      "4/5"
+    ],
+    "low": [
+      "0",
+      "1/5"
+    ],
+    "orientation": "physical item 1 high"
+  },
+  "singular_junction_consumed_mass": "512920803/640000000000",
+  "singular_top_consumed_mass": "860657154499/1200000000000000",
+  "singular_charged_gap_lower": "455595915031/300000000000000",
+  "singular_charged_gap_decimal": "0.0015186530501033334",
+  "lottery_box": {
+    "w1": [
+      "3/4",
+      "19/25"
+    ],
+    "w2": [
+      "1/20",
+      "1/10"
+    ],
+    "v1": [
+      "17/20",
+      "19/20"
+    ],
+    "v2": [
+      "3/10",
+      "7/20"
+    ]
+  },
+  "lottery_box_volume": "1/400000",
+  "beta_endpoints": [
+    "500000/555853",
+    "140000/151567"
+  ],
+  "beta_bounds": [
+    "4/5",
+    "19/20"
+  ],
+  "uniform_grid_n_finite_lift_gap_lower": "1/(400000000*(n+1))",
+  "positive_sink_density_a_gap_lower": "9*a/40000000",
+  "sink_density_coefficient": "9/40000000",
+  "source_profile_checks": 24,
+  "replay_boundary": "Exact rational polynomial identities, terminal-tail examples, and finite source checks support the written continuum proof."
+}

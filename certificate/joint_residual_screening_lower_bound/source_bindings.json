@@ -1,0 +1,851 @@
+{
+  "scope": "Selected self-contained mathematical closure. Historical preservation manifests and discovery files are not part of the supported replay.",
+  "files": [
+    {
+      "path": "source/V3/certificate/baseline_mechanism.json",
+      "origin": "auction/V3/certificate/baseline_mechanism.json",
+      "sha256": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/certificate/joined_independent.json",
+      "origin": "auction/V3/certificate/joined_independent.json",
+      "sha256": "e952cc9671f6c712ebfd83de385e136037ac98a592d0a23abcf1bdc84d414f09",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/certificate/joined_threshold.json",
+      "origin": "auction/V3/certificate/joined_threshold.json",
+      "sha256": "3d1f899191c780d94263da5b83dca997a13f28a388ed286c211580a2dc499ac3",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/certificate/stationary_s.json",
+      "origin": "auction/V3/certificate/stationary_s.json",
+      "sha256": "c133fce95c8e3b29f0ccc02e1320c20842ed2b495ccc5a7808f7f77406e0c3e4",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/admissible_variations.md",
+      "origin": "auction/V3/research_log/admissible_variations.md",
+      "sha256": "5a8fd6d59dbe57e2e19e6cc25d6df348d60409c5238286a07130c92091672773",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/baseline_mechanism.md",
+      "origin": "auction/V3/research_log/baseline_mechanism.md",
+      "sha256": "278e895682c5bf27d19768f26c8cac1c7a09ae32cc77ad4601cb7e0f049f9eb9",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/candidate_certificate.md",
+      "origin": "auction/V3/research_log/candidate_certificate.md",
+      "sha256": "3758fa475bd190aa2aedeca3a798ac29b577677806200d69afd59ddc5729e209",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/classification_techniques.md",
+      "origin": "auction/V3/research_log/classification_techniques.md",
+      "sha256": "b710173f6cb4a4681921a582db00fa5ebc426fc85e5995f9776950ff8cd6132c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/gap_ledger.md",
+      "origin": "auction/V3/research_log/gap_ledger.md",
+      "sha256": "8ce4827acc3123b683d68ae5d5435c5bcbfc3236d97d6518407bb0609d812fe7",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/joined_geometry.md",
+      "origin": "auction/V3/research_log/joined_geometry.md",
+      "sha256": "940fd5b34d8057943e532b555481051e53d88b400d8421b32de0edd0d17f2930",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/joined_independent_audit.md",
+      "origin": "auction/V3/research_log/joined_independent_audit.md",
+      "sha256": "5c666cfd35b1964960adbfd9a3f5feb09726bc5575bd82da9a3ae82af683ef78",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/joined_proof_audit.md",
+      "origin": "auction/V3/research_log/joined_proof_audit.md",
+      "sha256": "717c30e6e6d0baccda3e9f83de0b3538fe97e1657303cf274a793fd798294b3b",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/joined_threshold_candidate.md",
+      "origin": "auction/V3/research_log/joined_threshold_candidate.md",
+      "sha256": "6757beb3aa8f8783ba3b5ccc64b4a5dc326a8dc38bf35ff7448f81de4e467bbc",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/retrieval_tickets.md",
+      "origin": "auction/V3/research_log/retrieval_tickets.md",
+      "sha256": "39623e3f5802c12e08ab5979ec8ea78f68ad8ff854d4b3f0f249e4f2b27fa2fe",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/research_log/route_ledger.md",
+      "origin": "auction/V3/research_log/route_ledger.md",
+      "sha256": "35123956fb2c504dd6fa422b3a5e2519aa65393aa6a8997417e4c63728fee37d",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/verifier/baseline_mechanism.py",
+      "origin": "auction/V3/verifier/baseline_mechanism.py",
+      "sha256": "5c2b50701f9b7403222853d974f9aa1178ead5572b288dbd678a596081906c6b",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/verifier/baseline_replay.py",
+      "origin": "auction/V3/verifier/baseline_replay.py",
+      "sha256": "f4b4696dbd3baa6e2374de7f3b5f1c09ee11a155eb495d409d0388cb3d5ca9ce",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/verifier/joined_independent.py",
+      "origin": "auction/V3/verifier/joined_independent.py",
+      "sha256": "d6bfb5a6677ea39dcc618a04eef35067372800472a2a3e9eee14020fea70f35d",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/verifier/joined_threshold.py",
+      "origin": "auction/V3/verifier/joined_threshold.py",
+      "sha256": "286e093c0a600d92a77d4f009e82f573658e8c6c3d75766c85d4607c7a960c43",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3/verifier/stationary_s.py",
+      "origin": "auction/V3/verifier/stationary_s.py",
+      "sha256": "214a2d8c2cbc13ee2ded64e74d48c6d6f5e2cbf6af9312c7f6e00f333e705cc0",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/REPORT.md",
+      "origin": "auction/V3_1/REPORT.md",
+      "sha256": "de3d4fe4759d899919ee21d2d234e3bff87bfa9dbc271ca89a573905f89821ba",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/certificate/constrained_candidate.json",
+      "origin": "auction/V3_1/certificate/constrained_candidate.json",
+      "sha256": "9dfa581938811442389eca3e3bcd048bbac901de1ae77b81a21c678b5ec6fdae",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/certificate/constrained_screening.json",
+      "origin": "auction/V3_1/certificate/constrained_screening.json",
+      "sha256": "97fe123b0b4ad2f6d728e9c3539932a3b3a6c1188e1d5f1ddb73ecf42a0d2199",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/certificate/independent_revenue.json",
+      "origin": "auction/V3_1/certificate/independent_revenue.json",
+      "sha256": "25ed34a320152bd66a1569f13828a5c5500a4fd41951bda2e175c929e73364a1",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/actual_residual_geometry.md",
+      "origin": "auction/V3_1/research_log/actual_residual_geometry.md",
+      "sha256": "9c6a2ae59c26a11b121b6cbded5cba2e9c48e7e01f42f28762c21aaa42020bf5",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/closed_region_audit.md",
+      "origin": "auction/V3_1/research_log/closed_region_audit.md",
+      "sha256": "3b33f887801abf8f9afb9af791e5e712429967154dc74593223405248a6b3d0f",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/closed_region_independent_audit.md",
+      "origin": "auction/V3_1/research_log/closed_region_independent_audit.md",
+      "sha256": "1b40b32f07a1b5992c406324a73b94b7932fdc9b322e9b15528fef381882b9fd",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/constrained_screening.md",
+      "origin": "auction/V3_1/research_log/constrained_screening.md",
+      "sha256": "517f38d3c0d15fc7d8cb4f475b6d599660e038a8a9a2b8f053bfc733fec4ad56",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/forced_gradient_constraints.md",
+      "origin": "auction/V3_1/research_log/forced_gradient_constraints.md",
+      "sha256": "ae4bb456528cabcfc2bef42173abf1c280e3be818fb18449ccc8533ccab3d7fd",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/trial_scope.md",
+      "origin": "auction/V3_1/research_log/trial_scope.md",
+      "sha256": "83f900dfd067f482055e2ffc2ebc6b369440a856114a732232143f92c81dc78e",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/research_log/verification.md",
+      "origin": "auction/V3_1/research_log/verification.md",
+      "sha256": "2ae10c8444d8ce9006ee9adfc7a96e0f08e618890ebc3015c7e5f1e018bde183",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/verifier/constrained_candidate.py",
+      "origin": "auction/V3_1/verifier/constrained_candidate.py",
+      "sha256": "5987a273ce3fc326fb7d1235fa28710fc25a82e8b271f3635e513a40307ad150",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/verifier/constrained_screening_verify.py",
+      "origin": "auction/V3_1/verifier/constrained_screening_verify.py",
+      "sha256": "891801de585dca6fab3348173e3039d89c17883c11fe8becfedf8f974a93dbce",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V3_1/verifier/independent_revenue.py",
+      "origin": "auction/V3_1/verifier/independent_revenue.py",
+      "sha256": "295891886780e167ad6dd7f4bfa84c469bf3bca23610f0c8e495e473a8009144",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/certificate/combined_revenue.json",
+      "origin": "auction/V4/certificate/combined_revenue.json",
+      "sha256": "f14dd456b575f2f754169898f94d0fc4433266451f0e087251fedb5b12f61cd4",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/certificate/free_capacity_fibers.json",
+      "origin": "auction/V4/certificate/free_capacity_fibers.json",
+      "sha256": "b35cf164d851035249a0a335be34f915f09f22e76a0fe73db882b9a56503168d",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/free_capacity_fibers.md",
+      "origin": "auction/V4/research_log/free_capacity_fibers.md",
+      "sha256": "5135c8196cf8ade931175e0d63d83a45e728ed5375b0684a7db4d87b195a3405",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/functional_independent_audit.md",
+      "origin": "auction/V4/research_log/functional_independent_audit.md",
+      "sha256": "cc1925fb5f0848aa80a962af6219168b15bfdab25aa53f92ca402cd8f18352e2",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/gap_ledger.md",
+      "origin": "auction/V4/research_log/gap_ledger.md",
+      "sha256": "78f2e962ee8b0207c37882511cba253e205008a36be18aca207a9dbdc887497c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/joint_release.md",
+      "origin": "auction/V4/research_log/joint_release.md",
+      "sha256": "78a18498d364c7b4c68580dc1ac73b32404eb013c69eee9a32bbbcf48e214940",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/release_audit.md",
+      "origin": "auction/V4/research_log/release_audit.md",
+      "sha256": "bb90f1a65ca1ba21d90056b96332c5c367961dbdc71c60d28daee2c01fdc6b94",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/report_independent_audit.md",
+      "origin": "auction/V4/research_log/report_independent_audit.md",
+      "sha256": "c66c7570c5d7bd44f746c20aa96e6c7270c6eb070c0dd48ac979a5dfbec7d12c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/residual_functional.md",
+      "origin": "auction/V4/research_log/residual_functional.md",
+      "sha256": "3892ef36d2f3c9f3329f0459d0aaf3181ac81675cd080bd7e018db64ecbc7692",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/retrieval_tickets.md",
+      "origin": "auction/V4/research_log/retrieval_tickets.md",
+      "sha256": "35a5f6f8fd60258cc11ad3f7a6512f39fb18fe7c400b62a22f7888182aaf1c94",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/route_ledger.md",
+      "origin": "auction/V4/research_log/route_ledger.md",
+      "sha256": "77430c44997b6d7d3ea399773013867be7ed7263b8e3903521aa80cc1c161f2a",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/screening_independent_audit.md",
+      "origin": "auction/V4/research_log/screening_independent_audit.md",
+      "sha256": "63a3d62290c846c5362a8d243529db1015e1bd18f6988f299ecd7b8bb186aa61",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/type_dependent_screening.md",
+      "origin": "auction/V4/research_log/type_dependent_screening.md",
+      "sha256": "1e747dfbf7a1225e1a97ef02957bb18b95c9e1ba4574c23abeade23d69cf43e3",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/research_log/verification.md",
+      "origin": "auction/V4/research_log/verification.md",
+      "sha256": "286727b0d9f7953355b6e219bdd05455320e827a159e154f537268fd2bc2c743",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4/verifier/free_capacity_fibers.py",
+      "origin": "auction/V4/verifier/free_capacity_fibers.py",
+      "sha256": "25f57109900a99169b2ea07ec141c1a29923e6e4e11997d73daa6909ee5a9984",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/REPORT.md",
+      "origin": "auction/V4_02/REPORT.md",
+      "sha256": "b4a9890e8317091923c508e553dbe432259fe48de2558f69330f219c7b8f4804",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/certificate/base_split_cost.json",
+      "origin": "auction/V4_02/certificate/base_split_cost.json",
+      "sha256": "d6bc573cd5b0e1e494d664cd989b3ecbad2ac78b6ac131a3df7469d15fefc7a5",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/certificate/compression_boundary_sign.json",
+      "origin": "auction/V4_02/certificate/compression_boundary_sign.json",
+      "sha256": "2e374288d4ca924de0c98e6966a3f3183c39f23cf1c82877781a93536a9bb310",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/certificate/independent_split_revenue.json",
+      "origin": "auction/V4_02/certificate/independent_split_revenue.json",
+      "sha256": "265bfc152077ed12e8e4014060e2f12554e5af3321fcbc16e093d12197e9e61b",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/certificate/joint_geometry.json",
+      "origin": "auction/V4_02/certificate/joint_geometry.json",
+      "sha256": "c526d3a44a73817b28ef573c52d2f65fab8181f7861656e3ec5819cbcc5fbcf4",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/certificate/split_cost_revenue.json",
+      "origin": "auction/V4_02/certificate/split_cost_revenue.json",
+      "sha256": "e5512a4fa47bedba1dabc4f1bc453b34b0214b9f5fc14fcfe2c58c2d7e60f67d",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/base_split_cost.md",
+      "origin": "auction/V4_02/research_log/base_split_cost.md",
+      "sha256": "a47663de928d55e187e83a6e3997be8f9234aeeee690675841f9ce419c6c7b90",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/compression_boundary_sign.md",
+      "origin": "auction/V4_02/research_log/compression_boundary_sign.md",
+      "sha256": "7bbb9c36c30a2713691850892400b2dc150ca82f7a92d21ae6583b66a0623a80",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/independent_affine_transform.md",
+      "origin": "auction/V4_02/research_log/independent_affine_transform.md",
+      "sha256": "bd8363c00c973ce77d786a78c30bef1bd2e5045815c7903e9b1ce1a53c23a610",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/independent_final_audit.md",
+      "origin": "auction/V4_02/research_log/independent_final_audit.md",
+      "sha256": "b341a9cbef5c6cf08674a981a1bdcf32e5910219837159d3afa8da922b9c8397",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/independent_split_revenue.md",
+      "origin": "auction/V4_02/research_log/independent_split_revenue.md",
+      "sha256": "c8a566970a80ed7d85fbc2008329c5565c0a85c8fb1d40956b7e47fae57c3689",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/joint_compatibility.md",
+      "origin": "auction/V4_02/research_log/joint_compatibility.md",
+      "sha256": "f7cc3edd170b75569f0ff5199a720de3afa3fa74919797995fa8c674518bae27",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/localized_trial_independent.md",
+      "origin": "auction/V4_02/research_log/localized_trial_independent.md",
+      "sha256": "15138f062de8cba329faa1e88b6231730cd94cae4eba83aed7b88defbebea6c6",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/route_ledger.md",
+      "origin": "auction/V4_02/research_log/route_ledger.md",
+      "sha256": "83e36f7c0b79553475ae90575ee4b7170666af6fefcbf8aa445d5e9df2084d65",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/split_cost_independent_audit.md",
+      "origin": "auction/V4_02/research_log/split_cost_independent_audit.md",
+      "sha256": "cfe94c6b212a92cc2702666320257f8d8530e6b9f33396349c76b3a62b04b296",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/research_log/split_cost_revenue_derivation.md",
+      "origin": "auction/V4_02/research_log/split_cost_revenue_derivation.md",
+      "sha256": "303915cd465af0f47c94fb3cb44044ef4d4cee81564cb06352f31706af61cf69",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verification.md",
+      "origin": "auction/V4_02/verification.md",
+      "sha256": "edf4c4e440cad7b5645d542bdbe1eb0b13c7642b2ef34dec8b30f47dd5d50dbc",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/base_split_cost.py",
+      "origin": "auction/V4_02/verifier/base_split_cost.py",
+      "sha256": "31b51e2354595b610f084afe6d59faecd70c8a21f277dcc5861fa1cdd9cfb4a9",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/compression_boundary_sign.py",
+      "origin": "auction/V4_02/verifier/compression_boundary_sign.py",
+      "sha256": "fc1124ca16cea3c00c0eab5fd3f40215b02cbfb3dfb7b2c4e1b3e5be44e4c734",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/independent_affine_transform.py",
+      "origin": "auction/V4_02/verifier/independent_affine_transform.py",
+      "sha256": "27957efc78bfcc7d350ce140d221bcb094c85469e775be8cbd8f942b24292a6a",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/independent_split_revenue.py",
+      "origin": "auction/V4_02/verifier/independent_split_revenue.py",
+      "sha256": "da6750bafc39a07da64c5c8e50878249194ce5e446304f46e4eed71d02e40109",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/joint_geometry_verify.py",
+      "origin": "auction/V4_02/verifier/joint_geometry_verify.py",
+      "sha256": "61f5758bcd7b0198cad5b4b524d9a38ba12e241484e022e4756ae47dd0d66601",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/localized_trial_independent.py",
+      "origin": "auction/V4_02/verifier/localized_trial_independent.py",
+      "sha256": "9d00403d953954ee7f51a2df23fd7d076a0c4a0d649ff0387adc44d21d2a0157",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/split_cost_candidate.py",
+      "origin": "auction/V4_02/verifier/split_cost_candidate.py",
+      "sha256": "2f8a2769a0f6df6ad5fa081938d1e837ea0a058cf7ebe1ff9d90ea31c058e591",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_02/verifier/split_cost_revenue.py",
+      "origin": "auction/V4_02/verifier/split_cost_revenue.py",
+      "sha256": "64687881d86ed2e2206f6efad6dcb5f6d2b081dd75dc374c288bcac66defebbe",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/REPORT.md",
+      "origin": "auction/V4_5/REPORT.md",
+      "sha256": "f1b76c7f7b36bc324ce7b34021d4812c64373a01c9cbeb0ec2223d25220810f4",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/certificate/dual_support.json",
+      "origin": "auction/V4_5/certificate/dual_support.json",
+      "sha256": "3392f5cca54e1b3a92ea1c6f3393cef89f648c15a3d42148b8a93d79a6a71fd0",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/certificate/functional_exchange.json",
+      "origin": "auction/V4_5/certificate/functional_exchange.json",
+      "sha256": "400d49b8ea7957b9935a8d5878e2e5d0630cb438cfcf55685ff0a1c7d0833895",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/certificate/independent_lottery.json",
+      "origin": "auction/V4_5/certificate/independent_lottery.json",
+      "sha256": "2f3adf5ee77e858be029e5a35ec6119712ff0ae9b2855edc96ababeff45bd12c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/certificate/residual_lottery.json",
+      "origin": "auction/V4_5/certificate/residual_lottery.json",
+      "sha256": "849eb1b3af0b667c4e094d6e6018e32bf89b33aeb09ed3f3e960efd673e50a7b",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/certificate/residual_second_lottery.json",
+      "origin": "auction/V4_5/certificate/residual_second_lottery.json",
+      "sha256": "ecc2f507ca03ddacca792b8bdf8a6a1f2c692c47bd749f708fd80d0cd32f59be",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/dual_capacity_support.md",
+      "origin": "auction/V4_5/research_log/dual_capacity_support.md",
+      "sha256": "d8a365af9420dc59c0f91452effb6a3e71270a75122267413494d8f5889fd808",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/functional_exchange.md",
+      "origin": "auction/V4_5/research_log/functional_exchange.md",
+      "sha256": "8433ad8bec99991a24b3ca5ed2a0de2898e2e843fcde21b1890965a2569b7c01",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/functional_independent_lottery_audit.md",
+      "origin": "auction/V4_5/research_log/functional_independent_lottery_audit.md",
+      "sha256": "50af5bbe50a73f2df0f4537365dbad10bc7aab10bd33172448addb72300ff21b",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/gap_and_route_ledger.md",
+      "origin": "auction/V4_5/research_log/gap_and_route_ledger.md",
+      "sha256": "5268dd13c79af52f811cc5593fafc3e802ee14b0f12dfe9ffce38761bd0e9af4",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/independent_lottery_audit.md",
+      "origin": "auction/V4_5/research_log/independent_lottery_audit.md",
+      "sha256": "655c3da2c848898249aa3f88b5d7e8cc9bd542a89debfb50f92d0bb64e2e02dc",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/residual_lottery_extension.md",
+      "origin": "auction/V4_5/research_log/residual_lottery_extension.md",
+      "sha256": "b1d05c798273a0ab73fdc50b717acc8b96c53c4a12fd07afa61ac98d503c3e58",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/residual_second_lottery.md",
+      "origin": "auction/V4_5/research_log/residual_second_lottery.md",
+      "sha256": "7532880252811684cbafdfbb1ef9219a0ac57f1d018f3b128067c44a57189442",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/research_log/trial_scope.md",
+      "origin": "auction/V4_5/research_log/trial_scope.md",
+      "sha256": "9c2ecf6fa36a6db48e89f85e7988c0aaa3b9ab12d1bd22181901d2d618478bcd",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/verification.md",
+      "origin": "auction/V4_5/verification.md",
+      "sha256": "a49130dbc63299c5083038abdac99504088debb49e1f973a178bd33816c670e3",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/verifier/dual_support_verify.py",
+      "origin": "auction/V4_5/verifier/dual_support_verify.py",
+      "sha256": "3463d4a0e9eb18898547522ff80859107d63efc473cded2b18178bae001aa1db",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/verifier/functional_exchange.py",
+      "origin": "auction/V4_5/verifier/functional_exchange.py",
+      "sha256": "267133f7b9a5e3157671f39a8c2bf44beeb9c938f4b749ecb2cc05f4191ecda9",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/verifier/independent_lottery.py",
+      "origin": "auction/V4_5/verifier/independent_lottery.py",
+      "sha256": "2135b56efc36653d93b2dbd38f432170575bd21b7a14e955f604176796a27072",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/verifier/residual_lottery.py",
+      "origin": "auction/V4_5/verifier/residual_lottery.py",
+      "sha256": "4deef02644cf9ef3ecf9d0232a791f6f7407fbaebd05cd0ec1c9ace0f4e174af",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_5/verifier/residual_second_lottery.py",
+      "origin": "auction/V4_5/verifier/residual_second_lottery.py",
+      "sha256": "a2c1cec98aa2fe916230583d71a01fab62690972bb64b82ebe5eb4e32e0c1aa8",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/REPORT.md",
+      "origin": "auction/V4_6/REPORT.md",
+      "sha256": "ec527a5d46ec486c367d7695d590196f7a4f5fa7e3583009cc03a499acd211e7",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/VERIFICATION.md",
+      "origin": "auction/V4_6/VERIFICATION.md",
+      "sha256": "88fdb124c1ddd3178e673c337a86cb997c34775a81e3b78cf331d21010ff494c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/consolidated_bounds.json",
+      "origin": "auction/V4_6/certificate/consolidated_bounds.json",
+      "sha256": "b1f1ea198be1d0fa8d3a61ff1f5b0fd9c0ee4024d1c2bf89d886bb41600f0e47",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/free_bidder_one.json",
+      "origin": "auction/V4_6/certificate/free_bidder_one.json",
+      "sha256": "000ca4da6e31db0197486f3a60e605dc85422111472ecbf7fe2f161cf409981c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/independent_revenue.json",
+      "origin": "auction/V4_6/certificate/independent_revenue.json",
+      "sha256": "30dec4dbd7ef86ce90eb4fce6bae0afb9cd7be5895f048605e57b9bdd23636e8",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/inner_diagonal_capacity.json",
+      "origin": "auction/V4_6/certificate/inner_diagonal_capacity.json",
+      "sha256": "ee24fe4796ab45015ab10d8f0bd51c13a43389ed051e1afa723347b4508f4de5",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/inner_lottery_certificate.json",
+      "origin": "auction/V4_6/certificate/inner_lottery_certificate.json",
+      "sha256": "cb74dfd76f8ae0c4aee6882a072cf1d7d3c6c3ee9643431cca6d8d039180cb95",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/outer_bundle_exchange.json",
+      "origin": "auction/V4_6/certificate/outer_bundle_exchange.json",
+      "sha256": "0ff2e9ae3f83d8f54cc95c1c17d793a44f6a0bd739bf18b3bdb97f85c03036cf",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/outer_bundle_reoptimized.json",
+      "origin": "auction/V4_6/certificate/outer_bundle_reoptimized.json",
+      "sha256": "e815a4278ba866c5484bf1e12c43205ed3228ba23d02e37086061994f6cd0ace",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/outer_fee_polygon_audit.json",
+      "origin": "auction/V4_6/certificate/outer_fee_polygon_audit.json",
+      "sha256": "5f159198f99804e400220de21c670b0c6aad6e184467a9e21fca463f8110972f",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/outer_lottery_strip.json",
+      "origin": "auction/V4_6/certificate/outer_lottery_strip.json",
+      "sha256": "b710b9b63f9a8bffb2fffc861cbe1946740b26d56a74590738bccb066e60b6db",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/price_joint_reallocation.json",
+      "origin": "auction/V4_6/certificate/price_joint_reallocation.json",
+      "sha256": "ce63991fbb52d0c75ac66ba30f0abb233c5bc27e7ccc22c74a9d9c84caf5d6cb",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/certificate/price_joint_revenue.json",
+      "origin": "auction/V4_6/certificate/price_joint_revenue.json",
+      "sha256": "9d870c8a641515145edef1b1695304b7cb8079d04b9635ddca8fe793b2cd822a",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/conditional_coverage.md",
+      "origin": "auction/V4_6/research_log/conditional_coverage.md",
+      "sha256": "f07e553ab60a5e6e10bf489f587b3620764ae4cdc73fc6db17fb9aaa6226dd9c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/free_bidder_one.md",
+      "origin": "auction/V4_6/research_log/free_bidder_one.md",
+      "sha256": "45ac16113042e168f812cb2a6a629599d270f9e6db278401c18198865d937b20",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/independent_inner_audit.md",
+      "origin": "auction/V4_6/research_log/independent_inner_audit.md",
+      "sha256": "e56df0267e9f361d79988ad58f062558f6972b0fa8ecbbdeb1b52ff898d95ef8",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/inner_diagonal_capacity.md",
+      "origin": "auction/V4_6/research_log/inner_diagonal_capacity.md",
+      "sha256": "fe3876ba8bd20203c1f35dff816ac1fbe5fab99d494b7ee610e6e5116b691365",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/inner_joint_price_audit.md",
+      "origin": "auction/V4_6/research_log/inner_joint_price_audit.md",
+      "sha256": "52886a9ab2d8f1d3df81c6bb024198861bb8d201d0bd39c622ef81a3c9014647",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/inner_lottery_certificate.md",
+      "origin": "auction/V4_6/research_log/inner_lottery_certificate.md",
+      "sha256": "c3a35ef09fc4d28146df876f867d72686cc176060700ca2202b4770721ec3fa2",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/outer_bundle_exchange.md",
+      "origin": "auction/V4_6/research_log/outer_bundle_exchange.md",
+      "sha256": "683c85156713c667ff2e9ac0f8cd0f30c493dc2420be7c5a0c6c0a02698a13ab",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/outer_bundle_reoptimized.md",
+      "origin": "auction/V4_6/research_log/outer_bundle_reoptimized.md",
+      "sha256": "e8fc683d6ab2caeadcdc563c2cad8e5cec8f98f750ed94562fe4cb347c27e689",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/outer_capacity_junctions.md",
+      "origin": "auction/V4_6/research_log/outer_capacity_junctions.md",
+      "sha256": "d3e77855fdeb156074e5cb505b31955a450cc9f4b928d6d69fd8b80490fcb26c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/outer_fee_polygon_audit.md",
+      "origin": "auction/V4_6/research_log/outer_fee_polygon_audit.md",
+      "sha256": "f0a5bfd6fc96b6e4dbd03e439708ecf99cea2d0ac7ce137f407464ce9820fd49",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/outer_lottery_strip.md",
+      "origin": "auction/V4_6/research_log/outer_lottery_strip.md",
+      "sha256": "48157edb1cef0430f58f462ba571ea6d58e92498108ccb122f4c96a669212fc7",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/phase_delta.md",
+      "origin": "auction/V4_6/research_log/phase_delta.md",
+      "sha256": "a01d2f6eacaa8deea385b5e551103676f5da2ff15212a805a9b2107d0c203e49",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/price_joint_exact_revenue.md",
+      "origin": "auction/V4_6/research_log/price_joint_exact_revenue.md",
+      "sha256": "4665ad994ee13576c52041ca3ce631239345d7163da972d848579252b0f4504e",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/price_joint_reallocation.md",
+      "origin": "auction/V4_6/research_log/price_joint_reallocation.md",
+      "sha256": "0de9b287f00c0114d8637060f9576c33896cf182c317d4b7ef80744b970b29fe",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/research_log/report_audit.md",
+      "origin": "auction/V4_6/research_log/report_audit.md",
+      "sha256": "5125301be2eb7d12252ce0d6ba9787e2a753db3125de95c02b93c66bc7f785bf",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/consolidated_bounds.py",
+      "origin": "auction/V4_6/verifier/consolidated_bounds.py",
+      "sha256": "3d25fcdfca04331265f1c1e52b84eb33a31699c0c83faf02846421c7c9a3bd30",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/free_bidder_one.py",
+      "origin": "auction/V4_6/verifier/free_bidder_one.py",
+      "sha256": "4106a3e86c9ab1bc27fb1ded5474c7c8106926d3b3ca4c4bc9507d7aa3b438f2",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/independent_revenue.py",
+      "origin": "auction/V4_6/verifier/independent_revenue.py",
+      "sha256": "324a0d4c93ccf6dcc95480a10d82fd16608f978096cababb5ba8e9b554055126",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/inner_diagonal_capacity.py",
+      "origin": "auction/V4_6/verifier/inner_diagonal_capacity.py",
+      "sha256": "ac274932aa2b2f057c45682905bf07568d4c664ba37b0852bd7d747bee72e39d",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/inner_lottery_certificate.py",
+      "origin": "auction/V4_6/verifier/inner_lottery_certificate.py",
+      "sha256": "8f60377caae677f8f97adbb327691cb963c73c74508678248ef4a74da48c3845",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/outer_bundle_exchange.py",
+      "origin": "auction/V4_6/verifier/outer_bundle_exchange.py",
+      "sha256": "b446d988c634f66a52a43b66d3b44ad3e9d55d5eff455e304863f4d24555c54d",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/outer_bundle_reoptimized.py",
+      "origin": "auction/V4_6/verifier/outer_bundle_reoptimized.py",
+      "sha256": "fabbfde1217747f51b18910150045b76766caa806b3aeb19ecf86af0034d6b38",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/outer_fee_polygon_audit.py",
+      "origin": "auction/V4_6/verifier/outer_fee_polygon_audit.py",
+      "sha256": "76d5dd8610558aa65955853e164656fa44e32c947b9a1819c81d716127559279",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/outer_lottery_strip.py",
+      "origin": "auction/V4_6/verifier/outer_lottery_strip.py",
+      "sha256": "4f61523e8c95d7860b20716d163347a130efc10739e83c23980c3ce2e8934e86",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/price_joint_reallocation.py",
+      "origin": "auction/V4_6/verifier/price_joint_reallocation.py",
+      "sha256": "d597ff806e54f7e6c01c739f946d02ed3dc0dfdac02f6e26451c9fb4a3e5f72c",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6/verifier/price_joint_revenue.py",
+      "origin": "auction/V4_6/verifier/price_joint_revenue.py",
+      "sha256": "52ef88a2cbdbcf95ed8b542b68edf217d8f2a3dea360d7ecfd2182c0c2540c93",
+      "role": "frozen mathematical dependency or proof note"
+    },
+    {
+      "path": "source/V4_6_archive_audit/revenue/fresh_exact_gap.py",
+      "origin": "independent_archive_audit/revenue/fresh_exact_gap.py",
+      "sha256": "b158f394aad7fa40ca4bb6c70fe5bfdceb544804af7b1b3f6c09e724c04ec821",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/revenue/fresh_exact_gap.json",
+      "origin": "independent_archive_audit/revenue/fresh_exact_gap.json",
+      "sha256": "1d8fe767e6a56da040b888778d7814c932367890b90aa87764d67910993d0247",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/primal/check_primal.py",
+      "origin": "independent_archive_audit/primal/check_primal.py",
+      "sha256": "57b2941cd2b796e27679d82aa330d11a809d4db972cf5f90102ebc8638889185",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/primal/regression_result.json",
+      "origin": "independent_archive_audit/primal/regression_result.json",
+      "sha256": "9d03f408f7d2c78f898cc2b37acbfc62ddf1c9487335c85531b92c922097d300",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/dual/fresh_exact_dual_checks.py",
+      "origin": "independent_archive_audit/dual/fresh_exact_dual_checks.py",
+      "sha256": "b53d3851daffe0cb14437d1cace2bc29fe94056e4e12e2b039df62c17bf4e607",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/dual/fresh_exact_dual_checks.json",
+      "origin": "independent_archive_audit/dual/fresh_exact_dual_checks.json",
+      "sha256": "8dec18916c7a34bc758f453d98dbc4879805b1af6855aef8ed487082da33b470",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/dual/fresh_final_residual_checks.py",
+      "origin": "independent_archive_audit/dual/fresh_final_residual_checks.py",
+      "sha256": "a9ebfb830ea6def69c9b1eea4bba04fea07c264d2ccd77b293a1b1e78dd6d956",
+      "role": "fresh independent audit"
+    },
+    {
+      "path": "source/V4_6_archive_audit/dual/fresh_final_residual_checks.json",
+      "origin": "independent_archive_audit/dual/fresh_final_residual_checks.json",
+      "sha256": "6041ab17785d9b5631b77a4e3a1643fa30d1cefe7312904d757b4fbbf25fb39c",
+      "role": "fresh independent audit"
+    }
+  ]
+}

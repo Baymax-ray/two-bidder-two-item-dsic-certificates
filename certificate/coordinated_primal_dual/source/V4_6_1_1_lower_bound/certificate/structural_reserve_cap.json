@@ -1,0 +1,22 @@
+{
+  "status": "STRUCTURAL_SAFE_CAP_EXACT_PASS",
+  "scope": "complete pointwise feasible safe-price cap; full diagonal support restored on cap rows C=sum(w)",
+  "incremental_gain": "415457678468/28156757354736328125",
+  "uncapped_reference": "certificate/structural_reserve_candidate.json",
+  "revenue_coefficients": [
+    "339729591064650327529507/403655273437500000000000",
+    "31/1215",
+    "-50325149888/18687744140625"
+  ],
+  "basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(3692/16875)"
+  ],
+  "revenue_interval": [
+    "54778511442494500073749745597/62500000000000000000000000000",
+    "876456183079912001179995929553/1000000000000000000000000000000"
+  ],
+  "pointwise_cases": 90,
+  "proof": "research_log/structural_compatibility.md Section 9"
+}

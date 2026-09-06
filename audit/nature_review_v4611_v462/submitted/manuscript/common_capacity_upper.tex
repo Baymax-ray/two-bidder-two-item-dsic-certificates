@@ -1,0 +1,194 @@
+\subsection{A common capacity measure from conditional supports and IC cycles}\label{sec:common-upper}
+The stronger upper certificate retains the rational stream coefficients
+but changes their integration and their use in the whole-auction bound.
+A full-capacity conditional support can replace stream prices on a region
+where the other bidder's virtual values have a verified sign. Sparse
+long-range incentive cycles make a further compatible reduction.
+The common price is specified independently of any finite allocation
+range or finite report domain.
+
+\paragraph{A reusable conditional inequality.}
+Set $A=2/3$, $b_0=(4-\sqrt2)/3$, $k_0=b_0-A$, $Z=3/4$ and
+\[
+ \ell(x)=\begin{cases} A,&x<k_0,\\ b_0-x,&k_0<x<A,\end{cases}
+ \quad D_0=\{x<A,\ y<\ell(x)\}.
+\]
+Let $f(x)=3\ell(x)-2$ below $A$ and $f(x)=1$ above $A$,
+$F(x)=\int_x^1 f(s)ds$ and $H_Z(y)=4(y-Z)_+$. Define
+\begin{equation}\label{eq:reusable-Psi}
+\begin{split}
+ \Psi_1(x,y)&=3(x-A)_++4F(x)\mathbf1_{y>Z},\\
+ \Psi_2(x,y)&=3(y-\ell(x))_+\mathbf1_{x<A}+f(x)H_Z(y).
+\end{split}
+\end{equation}
+The first term of $\Psi_2$ is zero above $A$. Integration-boundary values
+may be chosen Borel. Both densities are bounded and nonnegative. For
+example, above $Z$ and below $A$ the second density is
+$(1-H_Z)3(y-\ell)+H_Z(3y-2)\ge0$.
+The edge-transfer envelope gives the universal identity
+\begin{equation}\label{eq:Psi-identity}
+ \langle\Psi,a\rangle-R=3\int_{D_0}u\ge0
+\end{equation}
+for every full randomized DSIC/IR conditional mechanism, including
+unnormalized utility. Equivalently, $\operatorname{div}\Psi=3$ outside
+$D_0$ and zero inside, with the required top/right boundary flux.
+The menu $\max(0,x-A,y-A,x+y-b_0)$ attains equality and saturates every
+positive price, so $\int(\Psi_1+\Psi_2)=R_0=4/9+2\sqrt2/27$.
+Unlike the occupied-wing identity, \eqref{eq:Psi-identity} is valid
+without freezing the residual's occupation constraints.
+
+\paragraph{Compatibility with the opposite bidder.}
+Write $W_0=[0,43/100]^2$, distinct from $W_{\rm wing}$ in the lower
+construction. The support $\Psi$ vanishes on $W_0$. For the inherited
+stream field $\phi_i$, exact rational Bernstein subdivision on both
+radial charts proves
+\[
+ \phi_{ij}(v_i,v_{-i})\le0\quad\text{if }v_i\in W_0
+ \quad(j=1,2),
+\]
+for every opposing report. The field value at its integrable radial
+origin can be set to zero; the origin IR trace remains in the envelope.
+This sign condition permits replacing prices according to the opponent's
+report while retaining an upper bound on its own complete screening problem.
+
+Add four symmetric, disjoint two-way IC flows to obtain $\phi'_i$.
+One flow acts for a fixed opposing box centered at $(3/5,1/5)$, joining
+own-report boxes centered at $(2/5,39/40)$ and $(7/20,23/40)$.
+All coordinate halfwidths are $3/200$ and the translated-pair flow density
+is $1/20$. Forward and reverse flows have equal mass. Bidder exchange
+and simultaneous item exchange produce four copies. Their eight profile
+boxes avoid every profile with either bidder in $W_0$.
+Each weighted inequality is an actual DSIC deviation with the opponent
+held fixed; mass balance cancels utilities and introduces no interior sink.
+The virtual correction is opposite on the paired boxes.
+
+Define a common nonnegative capacity density, in physical item coordinates,
+\begin{equation}\label{eq:common-Pi}
+ \Pi'_j(w,v)=\begin{cases}
+ 0,&w,v\in W_0,\\
+ \Psi_j(v),&w\in W_0, v\notin W_0,\\
+ \Psi_j(w),&v\in W_0, w\notin W_0,\\
+ \max(0,\phi'_{1j},\phi'_{2j}),&w,v\notin W_0.
+ \end{cases}
+\end{equation}
+\begin{theorem}[A common unrestricted charged support]\label{thm:common-support}
+For the full class of complete single-bidder DSIC/IR mechanisms with
+marginal allocations in $[0,1]^2$, define
+$H_i(\Pi')=\sup_{M_i}\{R_i-\langle\Pi',a_i\rangle\}$.
+Then $H_1(\Pi')=H_2(\Pi')=0$ and
+$\OPT\le\int\sum_j\Pi'_j$.
+\end{theorem}
+\begin{proof}
+When the opponent belongs to $W_0$, use \eqref{eq:Psi-identity}.
+Outside that opponent region, the stream envelope and the added
+nonnegative IC inequalities bound revenue by the $\phi'_i$ allocation
+pairing minus nonnegative IC/IR slack. If the own report is in $W_0$,
+its virtual coefficients are nonpositive and the cycle correction is zero;
+otherwise \eqref{eq:common-Pi} dominates them. Thus
+$R_i-\langle\Pi',a_i\rangle\le0$ for every complete $M_i$.
+The empty mechanism attains zero. Integrating joint capacity gives the
+auction bound. This argument applies directly to jointly measurable
+mechanisms with integrable payments and bounded allocations; it never
+interchanges an uncountable supremum with an integral. Positive field
+parts are integrable, and the absolutely continuous pairings cover the
+Lebesgue-measurable class stated in Section 3.
+\end{proof}
+Solving both charged problems does not produce an equality auction.
+For example, empty leaves all positively priced capacity unused.
+A matching mechanism must satisfy the capacity and incentive equalities
+at the same time.
+
+\paragraph{An independently replayed rational endpoint.}
+Let $B$ be the exact integral of the original stream maximum. The new
+continuous majorant uses
+\[
+ \max\left(0,\sum_k B_k a_k,\sum_k B_k b_k\right)
+ \le\sum_k B_k\max(0,a_k,b_k)
+\]
+for nonnegative tensor Bernstein basis functions $B_k$ summing to one.
+Integrating the right-hand side retains within-box variation. Exact
+rational construction, directed fixed-point error radii and complete
+dyadic coverage give
+\[
+ B\le B_{20}=\frac{231831916327659047}{262144000000000000}.
+\]
+The primary and independently reconstructed traversals each visit
+$1{,}351{,}220$ tree nodes and agree on the five recorded depth bounds
+and all chart coverages.
+
+Let $D$ be the reduction obtained by the two conditional replacements
+before the cycles. The overlap $W_0\times W_0$ has zero old and new price,
+so the two reductions add. At the single-buyer menu $a^*$,
+\[
+ D=2\int_{w\in W_0}\int_v\sum_j
+       \big[(\phi_{2j}(v,w))_+-a_j^*(v)\phi_{2j}(v,w)\big].
+\]
+The integrand is nonnegative. Integrate opponent variables exactly and
+partition each own radial chart into rational rectangles wholly inside a
+single menu region. On each such rectangle $K$ use
+$\int_K(f)_+\ge(\int_K f)_+$. Boundary-crossing rectangles are omitted.
+In particular, a bundle rectangle must meet both the total-price and
+lower-coordinate upgrade thresholds. Requiring total value alone would
+incorrectly include some singleton buyers. Seven nested partitions give
+increasing rational lower bounds $\Delta_{16},\ldots,\Delta_{1024}\le D$.
+These partitions certify integrals over continuous types; they do not
+replace the auction domain by a grid.
+
+On every sparse-cycle box, exact polynomial bounds keep the old and new
+virtual winners strict. Integration then gives the exact combined
+reduction $81/10^{10}$. Disjointness from the conditional replacement
+regions makes the two improvements compatible. Thus the active endpoint is
+\begin{equation}\label{eq:common-upper-endpoint}
+ U_*=B_{20}-\Delta_{1024}-\frac{81}{10^{10}},\qquad \OPT\le U_*.
+\end{equation}
+Here $\Delta_{1024}$ is the final exact rational \texttt{delta} in
+\path{V4_6_2_upper/certificate/conditional_global_splice.json};
+its full numerator and denominator and those of $U_*$ are exported in
+\path{certificate/coordinated_primal_dual/manifest.json}.
+Directed rational arithmetic gives
+\[
+ 0.8829230532587169692606<U_*<0.8829230532587169692607.
+\]
+The sixteen-stage ledger is strictly decreasing. It is not a proof that
+this fixed certificate architecture converges to the optimum.
+
+\paragraph{Which equality conditions remain unsatisfied.}
+Put $O_i=\{v_{-i}\in W_0\}$. The exact gap for the measure is the sum
+of four nonnegative mechanism slacks,
+\begin{align*}
+ S_{\rm screen}&=\sum_i3\int_{O_i}\int_{D_0}u_i,\\
+ S_{\rm capacity}&=\sum_j\int\Pi'_j(1-a_{1j}-a_{2j}),\\
+ S_{\rm virtual}&=\sum_{i,j}\int_{O_i^c}(\Pi'_j-\phi'_{ij})a_{ij},\\
+ S_{\rm IC}&=\sum_i\int_{O_i^c}u_i(0;v_{-i})
+   +\sum_{\rm cycle\ edges}\int\text{weighted truthful IC residual}.
+\end{align*}
+They satisfy $\int\Pi'-R=\sum S$. The origin IR trace is explicit;
+there is no positive interior sink at every type. Screening's internal
+utility terms are not counted again in $S_{\rm IC}$.
+The reported rational endpoint additionally includes
+\[
+ E_{\rm cert}=(B_{20}-B)+(D-\Delta_{1024})\ge0,
+ \qquad U_*-R=\sum S+E_{\rm cert}.
+\]
+Numerical majorization slack is thus separated from mechanism equality.
+The archived lottery-box tests show positive slack against the historical
+V4.6 and V4.6.1 candidates. Such a test diagnoses the tested certificate;
+it does not establish an admissible primal improvement or suboptimality
+of a candidate. The fresh audit also checks the selected mechanism on the box centered
+at $(151/200,3/40,9/10,63/200)$ with halfwidth $10^{-4}$. Its base fee
+is active, but bidder 1 remains uniquely empty and bidder 2 uniquely
+chooses $(1,\beta)$, with $9/10<\beta<49/50$. An independently
+reconstructed whole-box bound makes its safe virtual value strictly
+negative. Consequently the safe capacity-plus-virtual slack is at least
+$-\beta\phi'_{2,\rm safe}>0$ there. The exact positive integrated
+rational lower bound is sealed in the fresh audit certificate. This
+establishes that the common measure does not match the latest mechanism,
+without inferring its primal suboptimality.
+
+The exported combined proof, sign certificate, sparse-cycle proof and
+independent exact checks are under
+\texttt{V4\_6\_2\_upper/} in the coordinated source package.
+A residual-specific theorem alone need not provide a price for arbitrary
+capacity changes. Here the reusable identity \eqref{eq:Psi-identity}
+and the opposing sign certificate are precisely the additional conditions
+that make the support common.

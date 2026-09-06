@@ -1,0 +1,27 @@
+{
+  "scope": "Exact conditional capacity supports and quantified rejection of two common-support architectures; no matching auction upper certificate.",
+  "baseline_split_cost": "142/125",
+  "baseline_evaluator_sha256": "2f8a2769a0f6df6ad5fa081938d1e837ea0a058cf7ebe1ff9d90ea31c058e591",
+  "broad_band_lower_edge": "5/6",
+  "frozen_joined_base_cutoff": "1058587/1362000",
+  "parameter_k_interval": [
+    "137/500",
+    "661/1500"
+  ],
+  "singular_support_common_Lagrangian_gap_lower_bound": "11884909837073/6075000000000000",
+  "singular_witness_box_mass": "730317/200000000000",
+  "conditional_band_charge_coefficient_H": "39635863/2700000000",
+  "thin_band_width": "1/1000",
+  "thin_band_opponent_x_interval": [
+    "1/5",
+    "1/4"
+  ],
+  "thin_band_consumed_charge": "39635863/240000000000",
+  "thin_band_lost_revenue_upper": "1/10000",
+  "thin_band_common_Lagrangian_gap_lower_bound": "15635863/240000000000",
+  "rational_density_junction_regressions": 105,
+  "actual_menu_boundary_regressions": 216,
+  "reverse_lottery_splice_Q_support_regressions": 12,
+  "targeted_support_junction_measure": "F(k) H(y) delta_{x=k}(dx) dy, H(y)=6(y-5/6)_+",
+  "lottery_complementarity": "Every tight nonnegative capacity measure must assign zero item-2 measure to the genuine lottery region when capacity=1 and allocation beta is strictly between 0 and 1."
+}

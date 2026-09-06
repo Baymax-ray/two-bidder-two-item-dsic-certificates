@@ -1,0 +1,49 @@
+{
+  "status": "REFINED_POINTWISE_CANDIDATE_PASS",
+  "parameters": {
+    "a": "1025947/1500000",
+    "A": "2/3",
+    "b": "1496947/1500000",
+    "c": "157/500",
+    "d": "1/2",
+    "q": "93/500",
+    "s": "1775947/1500000",
+    "T": "593/750",
+    "U": "779/750",
+    "slope": "4/5",
+    "endpoint": "3421/10000",
+    "jump": "281/12500",
+    "nu": "8649/500000"
+  },
+  "bounded_profile_checks": 8961,
+  "extra_floor_uniform_slack": "37/5000000",
+  "witness": [
+    "103/200",
+    "1/10",
+    "63/200",
+    "99/100"
+  ],
+  "old_witness_allocations": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "new_witness_allocations": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "1"
+    ]
+  ],
+  "witness_box_corner_checks": 16,
+  "tie_rule": "empty at zero; lexicographically first feasible full-menu maximizing pair",
+  "scope": "Finite implementation replay; all-real proof and exact revenue verified separately"
+}

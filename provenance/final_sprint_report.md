@@ -1,3 +1,11 @@
+Current-release note, 5 September 2026. The sprints below are historical.
+The active randomized lower certificate and conditional screening theory are
+documented in ../certificate/joint_residual_screening_lower_bound and
+../audit/proof_audit.md. Their gap to the retained unrestricted upper is below
+0.01. No exact global optimizer is claimed.
+
+---
+
 # Bounded continuation sprints and freeze decisions
 
 Dates: 27 and 30 August 2026.

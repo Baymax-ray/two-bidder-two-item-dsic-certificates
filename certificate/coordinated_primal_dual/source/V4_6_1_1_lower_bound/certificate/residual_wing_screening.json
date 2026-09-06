@@ -1,0 +1,52 @@
+{
+  "status": "RESIDUAL_WING_SCREENING_EXACT_PASS",
+  "theorem": {
+    "continuous_menu_identity_checks": 168,
+    "strict_gap_examples": 144,
+    "parameter_pairs": [
+      [
+        "407/500",
+        "5281/10000"
+      ],
+      [
+        "4/5",
+        "11/20"
+      ],
+      [
+        "3/4",
+        "3/5"
+      ],
+      [
+        "2/3",
+        "2/3"
+      ],
+      [
+        "7/10",
+        "4/5"
+      ],
+      [
+        "2/5",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ]
+  },
+  "actual_residual": {
+    "source": "verifier/refined_candidate.py",
+    "source_sha256": "a96febdad8ca1e0ddb320a59ab9520891a25ae9542d0a866396bbb6f35b75852",
+    "fixed_opponent_checks": 22,
+    "complete_menu_profile_checks": 12220,
+    "first_item_strip_checks": 8896,
+    "first_item_hole_checks": 3904,
+    "left_edge_bundle_checks": 1908,
+    "wing_area": "438867/2500000",
+    "density_margin": "18601/5000000",
+    "scope": "Frozen refined candidate; both bidder labels and both item orientations; bounded implementation checks support the separate all-real proof"
+  },
+  "identity": "R+u0=integral_G(((3x-1)a1+(3y-1)a2)/2)+integral_H((((3k+1)y-k-1)/(2k))a2)",
+  "scope": "Full randomized conditional optimum for each bidder on the actual wing residual; no lower-bound increment or unrestricted auction upper claimed",
+  "proof": "research_log/residual_wing_screening.md"
+}

@@ -1,0 +1,55 @@
+RUN parameter_candidate.py
+PARAMETER_CANDIDATE_POINTWISE_REPLAY_PASS
+checks 6676
+RUN parameter_revenue.py
+PARAMETER_REBUILT_EXACT_REVENUE_PASS
+revenue ['2191138245679028739161677917/2500000000000000000000000000', '8764552982716114956646711669/10000000000000000000000000000'] [0.8764552982716115, 0.8764552982716115]
+base 0.8715105519065021
+RUN independent_family_revenue.py
+INDEPENDENT_FAMILY_CONTINUUM_REVENUE_PASS
+full_Q_display 0.8764552982716115
+with_H_display 0.8764552982716115
+base_cells 9
+RUN gap_low_square.py
+GAP_LOW_SQUARE_EXACT_PASS
+gain_display 4.94589800751369e-06
+exact_cases 368
+RUN sym_rescreen.py
+SYM_G_FULL_RANDOMIZED_RESCREEN_PASS
+gain 1.8408748157996436e-06
+pair ['30892611299/151875000000000', '-180389/1265625000']
+RUN sym_full_q_mirror.py
+SYM_FULL_Q_MIRROR_EXACT_PASS
+conditional_Q_gain 2.5232248691948265e-05
+RUN gap_parameter_audit.py
+GAP_REBUILT_INTERACTION_AUDIT_EXACT_PASS
+profiles 31684
+types 178
+ties 1796
+RUN sym_parameter_q_audit.py
+SYM_PARAMETER_Q_INDEPENDENT_AUDIT_PASS
+RUN functional_exchange.py
+FUNCTIONAL_EXCHANGE_EXACT_PASS
+gain 68161978301/216000000000000000 3.155647143564815e-07
+revenue [0.8764556138363259, 0.8764556138363259]
+checks 7201
+RUN independent_functional.py
+INDEPENDENT_FUNCTIONAL_REVENUE_PASS
+gain 68161978301/216000000000000000
+RUN functional_gap_audit.py
+FUNCTIONAL_GAP_AUDIT_EXACT_PASS
+independent_profile_pairs 119019
+occupied_trace_cases 108
+RUN branch_summary.py
+V4_6_1_LOWER_BOUND_CERTIFIED
+revenue ['0.8764556138363258521461526', '0.8764556138363258521461527']
+gain ['0.0006357596879033968000721', '0.0006357596879033968000762']
+RUN predecessor identities
+V4_6_1_BASELINE_PRESERVATION_PASS 992 unchanged live identities + 1 matching archived navigation identity
+live_navigation_matches_start_snapshot False (not written or managed by this branch)
+outer_manifest_matches_start_snapshot False (not written or managed by this branch)
+Pre-existing unlisted audit/upper-branch files are outside this preservation claim.
+RUN V4.6 manifest
+PASS: SHA256SUMS verifies all 47 stable files
+Excluded: LaTeX/build/**, LaTeX/qa/**, __pycache__ directories, *.pyc, SHA256SUMS
+V4_6_1_EXACT_REPLAY_PASS mathematical_replays=12

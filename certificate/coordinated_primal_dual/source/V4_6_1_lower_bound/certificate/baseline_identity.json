@@ -1,0 +1,26 @@
+{
+  "V4_6_manifest": "47 stable files verified",
+  "preexisting_unlisted_count": 433,
+  "preexisting_unlisted_top_directories": [
+    "V4_6_2_upper",
+    "V4_6_archive_audit"
+  ],
+  "scope": "992 original live file identities are checked directly. The original CURRENT_PHASE.md identity is checked against its archived starting snapshot; current outer navigation and manifest drift are recorded separately and are not managed by this branch. Pre-existing audit and concurrent upper-branch files are outside this claim. The initial 993-live-file success is retained only as a historical observation.",
+  "historical_initial_live_identity_check": {
+    "previous_manifest_identity_count": 993,
+    "previous_manifest_identity_mismatches": [],
+    "status": "Historical observation before concurrent navigation changed; not a claim about current live metadata."
+  },
+  "current_preservation_check": {
+    "saved_manifest_records": 993,
+    "unchanged_live_file_identities": 992,
+    "live_mismatches_from_start": [
+      "CURRENT_PHASE.md"
+    ],
+    "archived_navigation_file": "certificate/pre_V4_6_1_CURRENT_PHASE.md",
+    "archived_navigation_matches_original_digest": true,
+    "original_navigation_digest": "779d14f633c2ca463797e61d64810c5984e25ad3192dac2ab26063f5d1f95542",
+    "live_navigation_digest": "42f80fdd2ac597614a61f880a75cbf25d1779c3e528721307852af30b44bd258",
+    "outer_manifest_matches_start_snapshot": false
+  }
+}

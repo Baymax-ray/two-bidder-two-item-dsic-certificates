@@ -1,0 +1,25 @@
+{
+  "status": "EXACT_LOTTERY_SUPPORT_REDISTRIBUTION_IDENTITIES_PASS",
+  "parameters": {
+    "q": "113/500",
+    "c": "137/500",
+    "A": "2/3",
+    "T": "613/750"
+  },
+  "corner_multiplier_polynomial": [
+    "485693/2000000",
+    "-2279079/4000000",
+    "27/1000",
+    "27/64"
+  ],
+  "bulk_sink_coefficient": "661/500",
+  "corner_sink_margin_lower": "136617/500000",
+  "stable_t_interval": [
+    "3/4",
+    "4/5"
+  ],
+  "original_null_consumed_mass": "70270150011/32000000000000",
+  "remaining_null_consumed_mass": "9608742011/32000000000000",
+  "remaining_mass_decimal_diagnostic": 0.00030027318784375,
+  "scope": "Universal support and gap proved in written continuum derivation. Exact replay verifies polynomial identities and positive bounds, not all-real convexity by enumeration. No new numerical upper subtraction uses this lottery support."
+}

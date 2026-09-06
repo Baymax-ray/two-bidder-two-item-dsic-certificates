@@ -1,0 +1,70 @@
+{
+  "scope": "complete feasible mechanism; full randomized inner optimum on the certified opponent region only",
+  "exact_gain": "2*integral_d^t1 (b-t)*(G(2/3,C(t)-k,C(t))-G(a,b-k,b))dt - G_root_V3/2",
+  "exact_revenue": "R_V3_1 = R_free_V4 + exact_gain; finite algebraic/logarithmic expression",
+  "integrand_coefficients": [
+    "71454143066033/21600000000000000",
+    "9393280981477/216000000000000",
+    "13858439/250000000",
+    "-4189543/4000000",
+    "8181/4000",
+    "-9/8"
+  ],
+  "gain_rational_interval": [
+    "2692256889878644167/125000000000000000000000",
+    "21538055119029153337/1000000000000000000000000"
+  ],
+  "revenue_rational_interval": [
+    "43762179348797719705951/50000000000000000000000",
+    "875243586975954394119023/1000000000000000000000000"
+  ],
+  "gap_rational_interval": [
+    "10514715542700190765621/1000000000000000000000000",
+    "1314339442837523845703/125000000000000000000000"
+  ],
+  "solved_opponent_region_area": "63871/180000",
+  "exact_bidder2_value_on_solved_region": {
+    "rational": "3270005919999123155413/19440000000000000000000",
+    "sqrt2_coefficient": "246769/13500000"
+  },
+  "positive_measure_changed_region": "d<t<t1, 0<=rho<b-t; either orientation",
+  "solved_region": "closed Q={max(w1,w2)<=2/3, w1+w2<=b}; all its fibers and boundaries optimized",
+  "witness": [
+    "51/100",
+    "1/100",
+    "3/10",
+    "3/5"
+  ],
+  "old_masks": [
+    0,
+    0
+  ],
+  "new_masks": [
+    0,
+    3
+  ],
+  "binding_tie_profile": [
+    "51/100",
+    "1/100",
+    "283/1000",
+    "1"
+  ],
+  "binding_tie_masks": [
+    0,
+    2
+  ],
+  "rational_report_smoke_checks": 8,
+  "conditional_gain_identity": {
+    "separate_degree_bounds": [
+      3,
+      2,
+      4
+    ],
+    "exact_interpolation_checks": 60
+  },
+  "not_claimed": [
+    "full inner optimum on every opponent report",
+    "outer bidder optimality",
+    "matching unrestricted two-bidder upper certificate"
+  ]
+}

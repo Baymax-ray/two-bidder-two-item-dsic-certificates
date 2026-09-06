@@ -1,0 +1,365 @@
+{
+  "scope": "Independent feasible-mechanism and revenue audit; no unrestricted optimality claim",
+  "method": "rational polynomial integration with binomial tail; no log-series import and no candidate calculate() call",
+  "base_value": "26232089810531183/30000000000000000",
+  "retained_bundle_gain": "70946101529751/10240000000000000000",
+  "removed_baseline_gain": "780257552943947517/4000000000000000000000",
+  "new_S_gain": "45691126330408099543/367740000000000000000000",
+  "new_Z_root_interval": [
+    "45217043887383137291/1000000000000000000000000",
+    "11304260971845784323/250000000000000000000000"
+  ],
+  "new_Z_plateau_interval": [
+    "13899561783341586207/200000000000000000000000",
+    "17374452229176982759/250000000000000000000000"
+  ],
+  "revenue_interval": [
+    "874648885321014009995481/1000000000000000000000000",
+    "437324442660507004997741/500000000000000000000000"
+  ],
+  "gain_interval": [
+    "4389891817774170347/100000000000000000000000",
+    "43898918177741703471/1000000000000000000000000"
+  ],
+  "candidate_published_interval": [
+    "874648885321014009/1000000000000000000",
+    "87464888532101401/100000000000000000"
+  ],
+  "sqrt_bracket_bits": 160,
+  "binomial_order": 24,
+  "binomial_center_root": "93/100",
+  "uniform_relative_argument_bound": "1/20",
+  "uniform_root_cube_error_bound": "16556544099400383/44862481587261629530112000000000000000000000000000000",
+  "t0_interval": [
+    "260433091348863048867691/500000000000000000000000",
+    "520866182697726097735383/1000000000000000000000000"
+  ],
+  "t1_interval": [
+    "605300292242962866986209/1000000000000000000000000",
+    "60530029224296286698621/100000000000000000000000"
+  ],
+  "general_cone": "alpha,beta,gamma>=0 and gamma>=max(alpha,beta), with base subadditivity and zero-price opt-out",
+  "archived_delta_guard_required": false,
+  "rational_profile_checks": [
+    {
+      "profile": [
+        "3/4",
+        "137/500",
+        "11/20",
+        "1/10"
+      ],
+      "masks": [
+        1,
+        0
+      ],
+      "branches": [
+        "square_root",
+        "affine"
+      ]
+    },
+    {
+      "profile": [
+        "323/1000",
+        "3/4",
+        "11/20",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "square_root",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "579707/900000",
+        "137/1000",
+        "490607/900000",
+        "1/10"
+      ],
+      "masks": [
+        0,
+        0
+      ],
+      "branches": [
+        "square_root",
+        "quadratic"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "501/1000",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "base",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "501/1000",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        0
+      ],
+      "branches": [
+        "base",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "31/50",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "31/50",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        0
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "159/250",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "159/250",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        0
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "13/20",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "13/20",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        1
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "2/3",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "2/3",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        1
+      ],
+      "branches": [
+        "quadratic",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "7/10",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "affine",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "7/10",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        1
+      ],
+      "branches": [
+        "affine",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "1058587/1362000",
+        "1/10"
+      ],
+      "masks": [
+        3,
+        0
+      ],
+      "branches": [
+        "base",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "1058587/1362000",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        1
+      ],
+      "branches": [
+        "base",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "3/4",
+        "2/5",
+        "9/10",
+        "1/10"
+      ],
+      "masks": [
+        0,
+        1
+      ],
+      "branches": [
+        "base",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "0",
+        "0",
+        "9/10",
+        "137/500"
+      ],
+      "masks": [
+        0,
+        1
+      ],
+      "branches": [
+        "base",
+        "inherited"
+      ]
+    },
+    {
+      "profile": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "masks": [
+        0,
+        0
+      ],
+      "branches": [
+        "inherited",
+        "inherited"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "AUTHOR_UPPER_TABLE_EXACT_CHECK_PASS",
+  "rounded_reductions": [
+    "0.00138972521893",
+    "0.00144551594101"
+  ],
+  "cycle_exact": "81/10000000000",
+  "total_decomposition_exact": true,
+  "manifest_sha256": "06a44df714427fa269e2acbd0c31b9f78d48dea9ff91e3909a2b39124fda4303"
+}

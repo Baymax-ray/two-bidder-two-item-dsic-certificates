@@ -1,0 +1,36 @@
+{
+  "status": "V4_6_1_1_LOWER_BOUND_CERTIFIED",
+  "mechanism": "verifier/refined_candidate.py: mechanism(profile)",
+  "mechanism_source_sha256": "a96febdad8ca1e0ddb320a59ab9520891a25ae9542d0a866396bbb6f35b75852",
+  "field_basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(493894)"
+  ],
+  "exact_revenue_coefficients": [
+    "35791404252341621852527735747861637/42525000000000000000000000000000000",
+    "31/1215",
+    "-15059524650320123/8305664062500000000000"
+  ],
+  "revenue_enclosure": [
+    "0.876464164471798049944906113027",
+    "0.876464164471798049944906113028"
+  ],
+  "gain_over_V4_6_1_enclosure": [
+    "0.000008550635472197798753464735",
+    "0.000008550635472197798753464736"
+  ],
+  "strict_gain_lower": "17/2000000",
+  "exact_comparison": "Independent continuous integrations agree coefficientwise after exact radical conversion",
+  "certified_conditional_area": {
+    "Q": "1746937679191/4500000000000",
+    "E": "4867/62500",
+    "W": "438867/2500000",
+    "union": "2887322279191/4500000000000"
+  },
+  "conditional_scope": "Both bidders, actual residual, full randomized DSIC/IR conditional optimum on disjoint Q, E and W; area is in opponent-report space",
+  "unresolved_area": "1612677720809/4500000000000",
+  "screening_does_not_add_revenue": true,
+  "optimality": "No unrestricted auction optimum, common global capacity support, or final parameter-family optimum claimed",
+  "baseline": "V4_6_1_lower_bound; its saved 52-file manifest is verified separately"
+}

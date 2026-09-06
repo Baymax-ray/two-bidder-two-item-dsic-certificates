@@ -1,0 +1,16 @@
+{
+  "status": "INDEPENDENT_CONDITIONAL_SPLICE_PASS",
+  "symbolic_integration": "all coefficients match direct analytic derivatives plus tensor Boole integration",
+  "field_monomial_counts": [
+    24,
+    24
+  ],
+  "exact_cell_corner_comparisons": 20968,
+  "exact_independent_cell_integrals": 30,
+  "rejected_crossing_cell": {
+    "n": 16,
+    "i": 14,
+    "j": 3
+  },
+  "scope": "independent full polynomial identity and boundary classification audits; main verifier reconstructs 1024 integral partition"
+}

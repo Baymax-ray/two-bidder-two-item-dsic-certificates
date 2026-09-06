@@ -1,0 +1,38 @@
+{
+  "status": "REFINED_STRUCTURE_FULL_CONTINUUM_AUDIT_PASS",
+  "scope": "Complete all-real joint feasibility and full randomized conditional Q/E optimality for this exact candidate; no global capacity supergradient or auction optimum",
+  "extra_floor_slack": "37/5000000",
+  "inverse_plateau": [
+    "1/2",
+    "6531/12500"
+  ],
+  "inverse_affine_image": [
+    "6531/12500",
+    "5281/10000"
+  ],
+  "support_endpoint_price": "5281/10000",
+  "reserve_allowance": "8649/500000",
+  "independent_menu_types": 47,
+  "independent_profile_cases": 2209,
+  "region_pair_counts": {
+    "Q/Q": 441,
+    "E/Q": 252,
+    "Q/base": 840,
+    "E/E": 36,
+    "E/base": 240,
+    "base/base": 400
+  },
+  "positive_tie_profiles": 64,
+  "occupied_trace_cases": {
+    "Q_top": 48,
+    "Q_anchor": 15,
+    "E_top": 15,
+    "E_rectangle": 12,
+    "E_vacant_face": 1
+  },
+  "capped_conditional_cases": 4,
+  "source_menu_comparisons": 47,
+  "source_profile_comparisons": 188,
+  "proof": "research_log/refined_structure_audit.md",
+  "important_distinction": "E junction allocation is forced by DSIC and open-rectangle capacity, even where literal junction residual is positive"
+}

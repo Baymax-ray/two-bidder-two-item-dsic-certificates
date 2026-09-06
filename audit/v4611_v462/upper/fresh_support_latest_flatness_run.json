@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\Anaconda\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\\u6587\u6863\\ChatGPT\\AI4MATH\\output\\output\\two_bidder_two_item_full_dsic_exact_auction\\V4_6_1_1_V4_6_2_archive_audit\\upper\\fresh_support_latest_flatness.py"
+  ],
+  "seconds": 0.3279999999795109,
+  "returncode": 0,
+  "script_sha256": "33d6a21f5ee0634563ea682d1646cbfcbc4782a697e68f9f290aedfa992486f0",
+  "stdout_sha256": "9e039818b2802e5f02d1dc2243f58602dc258b1b8ec951185e46ce255e0252c4"
+}

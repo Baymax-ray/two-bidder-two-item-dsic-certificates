@@ -1,0 +1,116 @@
+[
+  {
+    "label": "exact base lower certificate",
+    "command": [
+      "-B",
+      "verify_ama.py"
+    ],
+    "cwd": "certificate\\ama_lower_bound",
+    "seconds": 82.26599999994505,
+    "output": "AMA LOWER-BOUND CERTIFICATE: PASS\nparameters: a=159/250, b=91/100, s=1137/1000\nrefined full-dimensional cells: 39 / 144\nenumerated cell vertices (with repetition across cells): 671\nexact barycentric 4-simplices: 16336\noutcome 0: cells=1, volume=452232019429/4000000000000, revenue=0\noutcome 1: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000\noutcome 2: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000\noutcome 3: cells=4, volume=599092954853/2000000000000, revenue=18435139321645253/60000000000000000\noutcome 4: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000\noutcome 5: cells=3, volume=9575989969/250000000000, revenue=1591546208707/62500000000000\noutcome 6: cells=4, volume=599092954853/2000000000000, revenue=18435139321645253/60000000000000000\noutcome 7: cells=9, volume=538532803143/8000000000000, revenue=158039392272283/2000000000000000\noutcome 8: cells=9, volume=538532803143/8000000000000, revenue=158039392272283/2000000000000000\ntotal volume: 1\nexact expected revenue: 26232089810531183/30000000000000000\ndecimal expected revenue: 0.874402993684373\nscope: exact feasible/DSIC/ex-post-IR primal lower bound only; no global upper bound\n"
+  },
+  {
+    "label": "predecessor surcharge lower certificate",
+    "command": [
+      "-B",
+      "verify_surcharge.py"
+    ],
+    "cwd": "certificate\\menu_surcharge_lower_bound",
+    "seconds": 0.062000000034458935,
+    "output": "MENU-SURCHARGE LOWER-BOUND CERTIFICATE: PASS\nmanifest obligations: PASS\nbase certificate hashes: PASS\nparameters: a=159/250, b=91/100, s=1137/1000, e=1/40\nsurcharge t-interval: [23/40, 3/5]\ndelta(t) coefficients low-to-high: -2167/1000000, -681/40000, 3/80\ndelta(lo): 7073/16000000\ndelta(hi): 559/500000\none-strip exact integral: 6209/320000000\ntotal exact surcharge gain: 18627/800000000\nbase exact revenue: 26232089810531183/30000000000000000\nfinal exact revenue: 26232788323031183/30000000000000000\ndecimal final revenue: 0.874426277434373\nscope: exact feasible/DSIC/ex-post-IR primal lower bound only; no global upper bound\n"
+  },
+  {
+    "label": "active piecewise-surcharge lower certificate",
+    "command": [
+      "-B",
+      "verify_piecewise_surcharge.py"
+    ],
+    "cwd": "certificate\\piecewise_surcharge_lower_bound",
+    "seconds": 0.0779999999795109,
+    "output": "PIECEWISE-SURCHARGE LOWER-BOUND CERTIFICATE: PASS\nbase certificate hashes: PASS\nbase conditional menus reconstructed at every band vertex: PASS\nparameters: a=159/250, b=91/100, s=1137/1000, d=s-a=501/1000, c=b-a=137/500\nZ1: t=[53/100,11/20], fee=3/500, exact symmetric gain=2036829/1250000000000\nZ2: t=[11/20,57/100], fee=13/1000, exact symmetric gain=86099/12500000000\nZ3: t=[57/100,59/100], fee=21/1000, exact symmetric gain=4926369/312500000000\nZ4: t=[59/100,61/100], fee=29/1000, exact symmetric gain=8783607/312500000000\nZ5: t=[61/100,159/250], fee=19/500, exact symmetric gain=7506764473/125000000000000\nS1: t=[159/250,13/20], fee=39/1000, exact symmetric gain=4223283519/125000000000000\nS2: t=[13/20,133/200], fee=31/1000, exact symmetric gain=2307433323/100000000000000\nS3: t=[133/200,17/25], fee=23/1000, exact symmetric gain=1270757337/100000000000000\nS4: t=[17/25,139/200], fee=3/200, exact symmetric gain=109661787/20000000000000\nS5: t=[139/200,71/100], fee=7/1000, exact symmetric gain=128409141/100000000000000\nzero-pivot exact gain: 14055427773/125000000000000\nsingleton-pivot exact gain: 9541919439/125000000000000\ntotal exact gain over affine base: 5899336803/31250000000000\nexact expected revenue: 26237753173862063/30000000000000000\nstrict improvement over previous lower: 10343439231/62500000000000\ndecimal expected revenue: 0.874591772462069\nscope: exact feasible/DSIC/ex-post-IR primal lower bound only; no optimality claim\n"
+  },
+  {
+    "label": "independent piecewise-surcharge replay",
+    "command": [
+      "-B",
+      "independent_replay.py"
+    ],
+    "cwd": "certificate\\piecewise_surcharge_lower_bound",
+    "seconds": 0.07900000002700835,
+    "output": "INDEPENDENT PIECEWISE-SURCHARGE REPLAY: PASS\nmethod: scalar exact arithmetic + fifth-difference degree checks + exact Boole quadrature\nbase certificate hashes: PASS\nZ1: exact symmetric gain=2036829/1250000000000\nZ2: exact symmetric gain=86099/12500000000\nZ3: exact symmetric gain=4926369/312500000000\nZ4: exact symmetric gain=8783607/312500000000\nZ5: exact symmetric gain=7506764473/125000000000000\nS1: exact symmetric gain=4223283519/125000000000000\nS2: exact symmetric gain=2307433323/100000000000000\nS3: exact symmetric gain=1270757337/100000000000000\nS4: exact symmetric gain=109661787/20000000000000\nS5: exact symmetric gain=128409141/100000000000000\nzero-pivot exact gain: 14055427773/125000000000000\nsingleton-pivot exact gain: 9541919439/125000000000000\ntotal exact gain over affine base: 5899336803/31250000000000\nexact expected revenue: 26237753173862063/30000000000000000\nstrict improvement over previous lower: 10343439231/62500000000000\nscope: independent exact replay of a primal lower mechanism only\n"
+  },
+  {
+    "label": "twenty-band lower certificate",
+    "command": [
+      "-B",
+      "-X",
+      "utf8",
+      "verify_twenty_band_surcharge.py"
+    ],
+    "cwd": "certificate\\piecewise_surcharge_twenty_band_lower_bound",
+    "seconds": 0.0779999999795109,
+    "output": "TWENTY-BAND RATIONAL SURCHARGE LOWER CERTIFICATE: PASS\naffine-base, predecessor, and current-upper dependency hashes: PASS\nten predecessor bands split into twenty exact rational half-bands: PASS\ncommon nonnegative opponent-only fee on all nonempty options: PASS\nprice regimes and deletion-feasibility chamber vertices: PASS\nZ1.1: t=[53/100,27/50], fee=233/50000, exact gain=22298829989/50000000000000000\nZ1.2: t=[27/50,11/20], fee=807/100000, exact gain=13069531099161/10000000000000000000\nZ2.1: t=[11/20,14/25], fee=1159/100000, exact gain=26236839376791/10000000000000000000\nZ2.2: t=[14/25,57/100], fee=1519/100000, exact gain=43954147179229/10000000000000000000\nZ3.1: t=[57/100,29/50], fee=1889/100000, exact gain=66175397928277/10000000000000000000\nZ3.2: t=[29/50,59/100], fee=567/25000, exact gain=145022445603/15625000000000000\nZ4.1: t=[59/100,3/5], fee=2657/100000, exact gain=123742997293241/10000000000000000000\nZ4.2: t=[3/5,61/100], fee=1527/50000, exact gain=19848727107837/1250000000000000000\nZ5.1: t=[61/100,623/1000], fee=3521/100000, exact gain=26499525207145809/1000000000000000000000\nZ5.2: t=[623/1000,159/250], fee=127/3125, exact gain=132296434366343/3906250000000000000\nS1.1: t=[159/250,643/1000], fee=4143/100000, exact gain=4648357333829937/250000000000000000000\nS1.2: t=[643/1000,13/20], fee=937/25000, exact gain=119401720475821/7812500000000000000\nS2.1: t=[13/20,263/400], fee=3343/100000, exact gain=327187239336087/25000000000000000000\nS2.2: t=[263/400,133/200], fee=183/6250, exact gain=7884185952501/781250000000000000\nS3.1: t=[133/200,269/400], fee=1259/50000, exact gain=187510924443687/25000000000000000000\nS3.2: t=[269/400,17/25], fee=66/3125, exact gain=1036308235941/195312500000000000\nS4.1: t=[17/25,11/16], fee=107/6250, exact gain=2734894756239/781250000000000000\nS4.2: t=[11/16,139/200], fee=263/20000, exact gain=830964180849/400000000000000000\nS5.1: t=[139/200,281/400], fee=923/100000, exact gain=25723793777097/25000000000000000000\nS5.2: t=[281/400,71/100], fee=67/12500, exact gain=272071590603/781250000000000000\nzero-pivot gain: 113291698497241117/1000000000000000000000\nsingleton-pivot gain: 2400553481931223/31250000000000000000\ntotal surcharge gain: 190109409919040253/1000000000000000000000\nstrict gain over predecessor: 1330632223040253/1000000000000000000000\ncertified exact expected revenue: 2623779309282875420759/3000000000000000000000\nremaining exact gap to current upper: 34299492631642453908409/3072000000000000000000000\nscope: exact deterministic DSIC/ex-post-IR primal lower bound; no optimality claim\n"
+  },
+  {
+    "label": "independent twenty-band lower replay",
+    "command": [
+      "-B",
+      "-X",
+      "utf8",
+      "independent_replay.py"
+    ],
+    "cwd": "certificate\\piecewise_surcharge_twenty_band_lower_bound",
+    "seconds": 0.0779999999795109,
+    "output": "INDEPENDENT TWENTY-BAND LOWER-CERTIFICATE REPLAY: PASS\nmethod: scalar Fraction arithmetic, degree check, exact Boole quadrature\naffine-base, predecessor, and current-upper dependency hashes: PASS\nZ1.1: exact symmetric gain=22298829989/50000000000000000\nZ1.2: exact symmetric gain=13069531099161/10000000000000000000\nZ2.1: exact symmetric gain=26236839376791/10000000000000000000\nZ2.2: exact symmetric gain=43954147179229/10000000000000000000\nZ3.1: exact symmetric gain=66175397928277/10000000000000000000\nZ3.2: exact symmetric gain=145022445603/15625000000000000\nZ4.1: exact symmetric gain=123742997293241/10000000000000000000\nZ4.2: exact symmetric gain=19848727107837/1250000000000000000\nZ5.1: exact symmetric gain=26499525207145809/1000000000000000000000\nZ5.2: exact symmetric gain=132296434366343/3906250000000000000\nS1.1: exact symmetric gain=4648357333829937/250000000000000000000\nS1.2: exact symmetric gain=119401720475821/7812500000000000000\nS2.1: exact symmetric gain=327187239336087/25000000000000000000\nS2.2: exact symmetric gain=7884185952501/781250000000000000\nS3.1: exact symmetric gain=187510924443687/25000000000000000000\nS3.2: exact symmetric gain=1036308235941/195312500000000000\nS4.1: exact symmetric gain=2734894756239/781250000000000000\nS4.2: exact symmetric gain=830964180849/400000000000000000\nS5.1: exact symmetric gain=25723793777097/25000000000000000000\nS5.2: exact symmetric gain=272071590603/781250000000000000\nzero-pivot gain: 113291698497241117/1000000000000000000000\nsingleton-pivot gain: 2400553481931223/31250000000000000000\ntotal surcharge gain: 190109409919040253/1000000000000000000000\ncertified exact expected revenue: 2623779309282875420759/3000000000000000000000\nstrict improvement over predecessor: 1330632223040253/1000000000000000000000\nremaining exact gap to current upper: 34299492631642453908409/3072000000000000000000000\nscope: independent exact primal replay; no global-optimality claim\n"
+  },
+  {
+    "label": "bundle-pivot lower certificate",
+    "command": [
+      "-B",
+      "-X",
+      "utf8",
+      "verify_combined_surcharge.py"
+    ],
+    "cwd": "certificate\\piecewise_surcharge_bundle_pivot_lower_bound",
+    "seconds": 0.10900000005494803,
+    "output": "COMBINED TWENTY-BAND + BUNDLE-PIVOT LOWER CERTIFICATE: PASS\naffine-base, predecessor, and current-upper dependency hashes: PASS\nbundle-pivot chamber reconstruction and price regimes: PASS\nJacobian u-k and factor 2 item orientations x 2 bidders: PASS\nZ/B separation by u=b and S/B separation by rho=c: PASS\nshared boundaries assigned to predecessor by ordered rule: PASS\nB1.1: u=[91/100,183/200], r=[0,1/8], fee=383/10000, exact gain=1455597730261/2048000000000000000\nB1.2: u=[91/100,183/200], r=[1/8,1/4], fee=39/1250, exact gain=119747343963/256000000000000000\nB1.3: u=[91/100,183/200], r=[1/4,3/8], fee=243/10000, exact gain=578248266771/2048000000000000000\nB1.4: u=[91/100,183/200], r=[3/8,1/2], fee=177/10000, exact gain=304188774519/2048000000000000000\nB1.5: u=[91/100,183/200], r=[1/2,5/8], fee=113/10000, exact gain=124012234991/2048000000000000000\nB1.6: u=[91/100,183/200], r=[5/8,3/4], fee=13/2500, exact gain=6588903061/512000000000000000\nB2.1: u=[183/200,23/25], r=[0,1/8], fee=353/10000, exact gain=6427644275177/10240000000000000000\nB2.2: u=[183/200,23/25], r=[1/8,1/4], fee=139/5000, exact gain=1985908923701/5120000000000000000\nB2.3: u=[183/200,23/25], r=[1/4,3/8], fee=103/5000, exact gain=1085575875933/5120000000000000000\nB2.4: u=[183/200,23/25], r=[3/8,1/2], fee=137/10000, exact gain=954665192453/10240000000000000000\nB2.5: u=[183/200,23/25], r=[1/2,5/8], fee=71/10000, exact gain=253877706211/10240000000000000000\nB2.6: u=[183/200,23/25], r=[5/8,3/4], fee=1/1250, exact gain=363888339/1280000000000000000\nB3.1: u=[23/25,37/40], r=[0,1/8], fee=323/10000, exact gain=5594565564629/10240000000000000000\nB3.2: u=[23/25,37/40], r=[1/8,1/4], fee=49/2000, exact gain=25597972841/81920000000000000\nB3.3: u=[23/25,37/40], r=[1/4,3/8], fee=17/1000, exact gain=6122247213/40960000000000000\nB3.4: u=[23/25,37/40], r=[3/8,1/2], fee=49/5000, exact gain=252473907427/5120000000000000000\nB3.5: u=[23/25,37/40], r=[1/2,5/8], fee=29/10000, exact gain=43798962943/10240000000000000000\nB4.1: u=[37/40,93/100], r=[0,1/8], fee=147/5000, exact gain=2393776658091/5120000000000000000\nB4.2: u=[37/40,93/100], r=[1/8,1/4], fee=53/2500, exact gain=621225480811/2560000000000000000\nB4.3: u=[37/40,93/100], r=[1/4,3/8], fee=67/5000, exact gain=491673279921/5120000000000000000\nB4.4: u=[37/40,93/100], r=[3/8,1/2], fee=59/10000, exact gain=188440785167/10240000000000000000\nB5.1: u=[93/100,187/200], r=[0,1/8], fee=33/1250, exact gain=501905554887/1280000000000000000\nB5.2: u=[93/100,187/200], r=[1/8,1/4], fee=179/10000, exact gain=1838465676451/10240000000000000000\nB5.3: u=[93/100,187/200], r=[1/4,3/8], fee=49/5000, exact gain=271702053189/5120000000000000000\nB5.4: u=[93/100,187/200], r=[3/8,1/2], fee=1/500, exact gain=43688203/20480000000000000\nB6.1: u=[187/200,47/50], r=[0,1/8], fee=47/2000, exact gain=5257953027/16384000000000000\nB6.2: u=[187/200,47/50], r=[1/8,1/4], fee=147/10000, exact gain=254314558617/2048000000000000000\nB6.3: u=[187/200,47/50], r=[1/4,3/8], fee=31/5000, exact gain=22462375281/1024000000000000000\nB7.1: u=[47/50,189/200], r=[0,1/8], fee=103/5000, exact gain=1304457259873/5120000000000000000\nB7.2: u=[47/50,189/200], r=[1/8,1/4], fee=57/5000, exact gain=397640892057/5120000000000000000\nB7.3: u=[47/50,189/200], r=[1/4,3/8], fee=13/5000, exact gain=20443017153/5120000000000000000\nB8.1: u=[189/200,19/20], r=[0,1/8], fee=177/10000, exact gain=1991676497961/10240000000000000000\nB8.2: u=[189/200,19/20], r=[1/8,1/4], fee=41/5000, exact gain=210289950503/5120000000000000000\nB9.1: u=[19/20,191/200], r=[0,1/8], fee=37/2500, exact gain=360685179219/2560000000000000000\nB9.2: u=[19/20,191/200], r=[1/8,1/4], fee=49/10000, exact gain=158441007697/10240000000000000000\nB10.1: u=[191/200,24/25], r=[0,1/8], fee=3/250, exact gain=970258899/10240000000000000\nB10.2: u=[191/200,24/25], r=[1/8,1/4], fee=17/10000, exact gain=19750108207/10240000000000000000\nB11.1: u=[24/25,193/200], r=[0,1/8], fee=91/10000, exact gain=23290129317/409600000000000000\nB12.1: u=[193/200,97/100], r=[0,1/8], fee=63/10000, exact gain=286682458167/10240000000000000000\nB13.1: u=[97/100,39/40], r=[0,1/8], fee=7/2000, exact gain=146188133/16384000000000000\nB14.1: u=[39/40,49/50], r=[0,1/8], fee=7/10000, exact gain=4055207919/10240000000000000000\nbundle-pivot extension gain: 70946101529751/10240000000000000000\ncertified exact expected revenue: 83961603016753854879913/96000000000000000000000\nstrict improvement over predecessor: 70946101529751/10240000000000000000\nremaining exact gap to current upper: 34278208801183528608409/3072000000000000000000000\nscope: exact deterministic DSIC/ex-post-IR primal lower bound; no optimality claim\n"
+  },
+  {
+    "label": "independent bundle-pivot lower replay",
+    "command": [
+      "-B",
+      "-X",
+      "utf8",
+      "independent_replay.py"
+    ],
+    "cwd": "certificate\\piecewise_surcharge_bundle_pivot_lower_bound",
+    "seconds": 0.25,
+    "output": "INDEPENDENT COMBINED SURCHARGE LOWER-CERTIFICATE REPLAY: PASS\nmethod: scalar Fraction arithmetic and tensor exact Boole quadrature\naffine-base, predecessor, and current-upper dependency hashes: PASS\ndegree <=4 in u and <=3 in r, with Jacobian u-k: PASS\nbundle-pivot chamber and deletion-compatible price regimes: PASS\nB1.1: exact symmetric gain=1455597730261/2048000000000000000\nB1.2: exact symmetric gain=119747343963/256000000000000000\nB1.3: exact symmetric gain=578248266771/2048000000000000000\nB1.4: exact symmetric gain=304188774519/2048000000000000000\nB1.5: exact symmetric gain=124012234991/2048000000000000000\nB1.6: exact symmetric gain=6588903061/512000000000000000\nB2.1: exact symmetric gain=6427644275177/10240000000000000000\nB2.2: exact symmetric gain=1985908923701/5120000000000000000\nB2.3: exact symmetric gain=1085575875933/5120000000000000000\nB2.4: exact symmetric gain=954665192453/10240000000000000000\nB2.5: exact symmetric gain=253877706211/10240000000000000000\nB2.6: exact symmetric gain=363888339/1280000000000000000\nB3.1: exact symmetric gain=5594565564629/10240000000000000000\nB3.2: exact symmetric gain=25597972841/81920000000000000\nB3.3: exact symmetric gain=6122247213/40960000000000000\nB3.4: exact symmetric gain=252473907427/5120000000000000000\nB3.5: exact symmetric gain=43798962943/10240000000000000000\nB4.1: exact symmetric gain=2393776658091/5120000000000000000\nB4.2: exact symmetric gain=621225480811/2560000000000000000\nB4.3: exact symmetric gain=491673279921/5120000000000000000\nB4.4: exact symmetric gain=188440785167/10240000000000000000\nB5.1: exact symmetric gain=501905554887/1280000000000000000\nB5.2: exact symmetric gain=1838465676451/10240000000000000000\nB5.3: exact symmetric gain=271702053189/5120000000000000000\nB5.4: exact symmetric gain=43688203/20480000000000000\nB6.1: exact symmetric gain=5257953027/16384000000000000\nB6.2: exact symmetric gain=254314558617/2048000000000000000\nB6.3: exact symmetric gain=22462375281/1024000000000000000\nB7.1: exact symmetric gain=1304457259873/5120000000000000000\nB7.2: exact symmetric gain=397640892057/5120000000000000000\nB7.3: exact symmetric gain=20443017153/5120000000000000000\nB8.1: exact symmetric gain=1991676497961/10240000000000000000\nB8.2: exact symmetric gain=210289950503/5120000000000000000\nB9.1: exact symmetric gain=360685179219/2560000000000000000\nB9.2: exact symmetric gain=158441007697/10240000000000000000\nB10.1: exact symmetric gain=970258899/10240000000000000\nB10.2: exact symmetric gain=19750108207/10240000000000000000\nB11.1: exact symmetric gain=23290129317/409600000000000000\nB12.1: exact symmetric gain=286682458167/10240000000000000000\nB13.1: exact symmetric gain=146188133/16384000000000000\nB14.1: exact symmetric gain=4055207919/10240000000000000000\nbundle-pivot extension gain: 70946101529751/10240000000000000000\ncertified exact expected revenue: 83961603016753854879913/96000000000000000000000\nstrict improvement over predecessor: 70946101529751/10240000000000000000\nremaining exact gap to current upper: 34278208801183528608409/3072000000000000000000000\nscope: independent exact primal replay; no global-optimality claim\n"
+  },
+  {
+    "label": "retained deterministic item-containment lower certificate",
+    "command": [
+      "-B",
+      "-X",
+      "utf8",
+      "-I",
+      "verify_final_combined.py"
+    ],
+    "cwd": "certificate\\refined_item_containment_bundle_pivot_lower_bound",
+    "seconds": 0.06299999996554106,
+    "output": "FINAL BUNDLE-PIVOT + ITEM-CONTAINMENT LOWER CERTIFICATE: PASS\nsealed bundle predecessor, twenty-band predecessor, and upper hashes: PASS\ndeterministic zero/tie rules and rho=c predecessor priority: PASS\neight item rows, price regimes, deletion slack, and coverage: PASS\nI1.1: t=(139/200,223/320], common=923/100000, item=899/50000, deletion_margin=873/4000, cap_margin=383/200000, gain=265762556618439/400000000000000000000\nI1.2: t=(223/320,559/800], common=923/100000, item=433/25000, deletion_margin=21891/100000, cap_margin=7/10000, gain=123242723382363/200000000000000000000\nI1.3: t=(559/800,1121/1600], common=923/100000, item=807/50000, deletion_margin=22009/100000, cap_margin=1/200000, gain=227718499774527/400000000000000000000\nI1.4: t=(1121/1600,281/400], common=923/100000, item=1427/100000, deletion_margin=5549/25000, cap_margin=0, gain=415366149390597/800000000000000000000\nI2.1: t=(281/400,1127/1600], common=67/12500, item=813/50000, deletion_margin=2161/10000, cap_margin=1/200000, gain=75643937570133/100000000000000000000\nI2.2: t=(1127/1600,113/160], common=67/12500, item=1439/100000, deletion_margin=21797/100000, cap_margin=0, gain=137218436482149/200000000000000000000\nI2.3: t=(113/160,1133/1600], common=67/12500, item=1251/100000, deletion_margin=4397/20000, cap_margin=1/200000, gain=122237371904391/200000000000000000000\nI2.4: t=(1133/1600,71/100], common=67/12500, item=133/12500, deletion_margin=5543/25000, cap_margin=0, gain=13303398867003/25000000000000000000\nitem-containment exact gain: 3963982653557301/800000000000000000000\npredecessor exact revenue: 83961603016753854879913/96000000000000000000000\ncertified exact expected revenue: 83962078694672281756033/96000000000000000000000\nstrict improvement over predecessor: 3963982653557301/800000000000000000000\nremaining exact gap to current upper: 34262987107793868572569/3072000000000000000000000\nscope: exact deterministic DSIC/ex-post-IR primal lower bound; no optimality claim\n"
+  },
+  {
+    "label": "independent retained deterministic lower replay",
+    "command": [
+      "-B",
+      "-X",
+      "utf8",
+      "-I",
+      "independent_replay.py"
+    ],
+    "cwd": "certificate\\refined_item_containment_bundle_pivot_lower_bound",
+    "seconds": 0.2029999999795109,
+    "output": "FINAL COMBINED NON-IMPORTING DEMAND-POLYGON REPLAY: PASS\nimplementation: exact rational polygon clipping and Boole quadrature; finite differences are consistency checks\nsealed bundle predecessor, twenty-band predecessor, and upper hashes: PASS\ndeterministic tie rule, half-open item rows, and rho=c priority: PASS\nI1.1: exact polygon gain=265762556618439/400000000000000000000\nI1.2: exact polygon gain=123242723382363/200000000000000000000\nI1.3: exact polygon gain=227718499774527/400000000000000000000\nI1.4: exact polygon gain=415366149390597/800000000000000000000\nI2.1: exact polygon gain=75643937570133/100000000000000000000\nI2.2: exact polygon gain=137218436482149/200000000000000000000\nI2.3: exact polygon gain=122237371904391/200000000000000000000\nI2.4: exact polygon gain=13303398867003/25000000000000000000\nitem-containment exact gain: 3963982653557301/800000000000000000000\npredecessor exact revenue: 83961603016753854879913/96000000000000000000000\ncertified exact expected revenue: 83962078694672281756033/96000000000000000000000\nremaining exact gap to current upper: 34262987107793868572569/3072000000000000000000000\nscope: independent eight-row gain replay with shared predecessor revenue; no global-optimality claim\n"
+  }
+]

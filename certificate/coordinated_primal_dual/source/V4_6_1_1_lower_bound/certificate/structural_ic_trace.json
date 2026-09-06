@@ -1,0 +1,22 @@
+{
+  "status": "STRUCTURAL_IC_DERIVED_E_TRACE_PASS",
+  "scope": "Full E inner certificate repaired through DSIC-derived horizontal trace; not a global capacity supergradient",
+  "actual_capacity_examples": {
+    "rectangle": 54,
+    "top": 27
+  },
+  "vacant_literal_junction": {
+    "profile": [
+      "7549/11250",
+      "47/150",
+      "3799/5625",
+      "1/10"
+    ],
+    "opponent_allocation": [
+      "0",
+      "0"
+    ]
+  },
+  "all_real_proof": "research_log/structural_compatibility.md Section 10",
+  "conclusion": "Capped identity-h reserve candidate has full randomized conditional certificates on Q and E for both bidders"
+}

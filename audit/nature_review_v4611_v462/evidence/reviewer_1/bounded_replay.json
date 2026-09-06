@@ -1,0 +1,38 @@
+[
+  {
+    "entrypoint": "V4_6_1_1_lower_bound/verifier/refined_structure_audit.py",
+    "exit_code": 0,
+    "stdout": "REFINED_STRUCTURE_FULL_CONTINUUM_AUDIT_PASS\nprofiles 2209\nsource_profiles 188\n",
+    "stderr": ""
+  },
+  {
+    "entrypoint": "V4_6_1_1_lower_bound/verifier/residual_wing_screening.py",
+    "exit_code": 0,
+    "stdout": "RESIDUAL_WING_SCREENING_EXACT_PASS\ncontinuous_identity_checks 168\nactual_profiles 12220\nwing_area 438867/2500000\n",
+    "stderr": ""
+  },
+  {
+    "entrypoint": "V4_6_1_1_lower_bound/verifier/refined_revenue_audit.py",
+    "exit_code": 0,
+    "stdout": "REFINED_CONTINUOUS_REVENUE_AUDIT_PASS\nrevenue ['876464164471798049944906113027/1000000000000000000000000000000', '219116041117949512486226528257/250000000000000000000000000000']\ngain 12679344561540434503009375151/1575000000000000000000000000000000 8.050377499390751e-06\nmenu_area_checks 45\n",
+    "stderr": ""
+  },
+  {
+    "entrypoint": "V4_6_1_1_V4_6_2_archive_audit/lower_revenue/third_revenue_and_pairing.py",
+    "exit_code": 0,
+    "stdout": "FRESH_THIRD_CONTINUUM_REVENUE_AND_PAIRING_PASS\nrevenue ['0.876464164471798049944906113027', '0.876464164471798049944906113028']\ngain_vs_V461 ['0.000008550635472197798753464735', '0.000008550635472197798753464736']\nnew_upper ['0.882923053258716969260626799854', '0.882923053258716969260626799855']\ngap ['0.006458888786918919315720686827', '0.006458888786918919315720686828']\nratio_lower_over_upper ['0.992684652685100617902519468374', '0.992684652685100617902519468375']\n",
+    "stderr": ""
+  },
+  {
+    "entrypoint": "V4_6_1_1_V4_6_2_archive_audit/lower_structure/independent_structure_identities.py",
+    "exit_code": 0,
+    "stdout": "INDEPENDENT_STRUCTURE_IDENTITIES_PASS 22\n",
+    "stderr": ""
+  },
+  {
+    "entrypoint": "V4_6_1_1_V4_6_2_archive_audit/upper/fresh_support_latest_flatness.py",
+    "exit_code": 0,
+    "stdout": "FRESH_SUPPORT_AND_V4611_FLATNESS_AUDIT_PASS\nlatest lottery slack lower 20713951685181288237158030799493718099271891975708211642482906687562812796829617476303946113215374107945458363022586736520056497351180922280502457242613057285323601152747682531852295627533071/1215754042735767941301037861692638007849567075297634590782990587209194853582667093366902274639538956531825840112960805280601773183133054628880784642537467135475542500000000000000000000000000000000000000000000\napproximation 1.7037945963617297e-17\n",
+    "stderr": ""
+  }
+]

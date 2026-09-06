@@ -1,0 +1,373 @@
+\subsection{Residual capacity as a screening constraint}\label{sec:residual}
+
+Deletion containment gives a convenient sufficient condition for feasibility,
+but excludes profitable changes in ownership. We instead fix a complete
+mechanism for bidder 1 and optimize bidder 2 against the residual allocation.
+For a jointly measurable capacity function $r:[0,1]^4\to[0,1]^2$, let
+\[
+\mathcal V(r)=\sup\{\operatorname{Rev}_2(M_2):
+ M_2\text{ is pointwise DSIC/IR and }x_2\le r\}.
+\]
+The mechanisms in this definition remain jointly measurable, with integrable
+payments. Grouping feasible pairs by their first component gives exactly
+\[
+\OPT=\sup_{M_1}\{\operatorname{Rev}_1(M_1)+\mathcal V(1-x_1)\}.
+\]
+This identity does not assert existence of a best response or invoke a
+measurable selection of pointwise optimizers.
+
+\begin{proposition}[Residual value and supporting measures]\label{prop:residual-value}
+The functional $\mathcal V$ is nondecreasing and concave. On a fixed opponent
+fiber, suppose a finite nonnegative capacity-price measure $\pi$ satisfies
+$R(u,a)\le\langle\pi,a\rangle$ for every admissible conditional mechanism,
+and a feasible candidate at $r^*$ attains
+$R^*=\langle\pi,r^*\rangle$. Then that candidate solves the full randomized
+conditional problem and, for every residual for which the pairing is defined,
+\[
+V(r)\le V(r^*)+\langle\pi,r-r^*\rangle.
+\]
+\end{proposition}
+\begin{proof}
+Monotonicity is immediate. Mix any two admissible mechanisms using one
+exogenous coin with constant probability $\theta$. All pointwise incentive,
+IR and capacity inequalities are preserved, as are measurability and
+integrability. Apply this to arbitrarily near-optimal competitors and pass
+to the supremum. For the second assertion,
+$R\le\langle\pi,a\rangle\le\langle\pi,r\rangle$, and equality at $r^*$
+gives the claim. No own-report-dependent mixture is used.
+\end{proof}
+
+Concavity is the standard convex-mixture observation. The substantive step
+below is an explicit support for residuals with binding report-line
+constraints. These supports price information rents as well as item supply.
+They are conditional certificates; a single measure supporting both bidders
+simultaneously is a separate, unresolved requirement.
+
+\subsection{A diagonal-hole capacity certificate}\label{sec:diagonal-support}
+
+Use aligned own coordinates $(x,y)$, where item 1 is scarce. Put $A=2/3$,
+$k=C-B<1/2$, $0\le k$, and
+\[
+ B=C-k\le A,\qquad C_0=5/6+3k^2/4,\qquad C\ge C_0.
+\]
+The candidate menu has prices $(0,A,B,C)$ and utility
+$u^*=\max(0,x-A,y-B,x+y-C)$. Assume its complete allocation is feasible
+against a Borel residual $r^*$ and that (the first two conditions are
+needed only when $m=2(C-C_0)>0$)
+\begin{equation}\label{eq:diagonal-traces}
+\begin{split}
+r^*_1(x,0)&=0\quad(0<x<1/2),\\
+r^*_2(1/2,y)&=0\quad(0<y<C-1/2),\\
+r^*_1(x,1)&=0\quad(0<x<k)\quad\text{if }B<A.
+\end{split}
+\end{equation}
+Define $\ell(x)=B$ below $k$ and $\ell(x)=C-x$ on $(k,A)$;
+let $D_0=\{x<A,y<\ell(x)\}$. Set $f=3\ell-2$ below $A$ and $f=1$
+above $A$. Direct integration gives
+\[
+m=\int_0^1 f=2(C-C_0)\ge0,\qquad 3|D_0|=m+1.
+\]
+The function $F_m(x)=\int_x^1f(s)\,ds-m\mathbf1_{x<1/2}$ is nonnegative.
+Indeed, below the anchor it equals $-\int_0^x f$, while above the anchor
+its tail is nonnegative because $f\le0$ below $A$ and $f=1$ above $A$.
+
+\begin{theorem}[Anchored full screening support]\label{thm:diagonal}
+Under these hypotheses the candidate solves the complete randomized
+conditional problem. A supporting capacity measure is
+\[
+\begin{aligned}
+\pi_1={}&3(x-A)_+\,dx\,dy+F_m(x)\,dx\,\delta_1(dy)
+                +m\mathbf1_{0<x<1/2}\,dx\,\delta_0(dy),\\
+\pi_2={}&3(y-\ell(x))_+\mathbf1_{x<A}\,dx\,dy
+                +m\delta_{1/2}(dx)\,dy.
+\end{aligned}
+\]
+For every randomized DSIC/IR competitor with selected allocation $a\le r$,
+\begin{equation}\label{eq:diagonal-gap}
+\langle\pi,r\rangle-R
+ =\langle\pi,r-a\rangle+3\int_{D_0}u-mu(0,0)\ge0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Uniform revenue is
+$R=\int u(1,y)\,dy+\int u(x,1)\,dx-3\int u$.
+Horizontal envelopes on $x>A$ and vertical envelopes above $\ell(x)$
+give the displayed volume prices and the residual top pairing
+$\int f(x)u(x,1)\,dx$. Anchoring it at $1/2$ gives
+\[
+\int f(x)u(x,1)\,dx
+ =mu(1/2,1)+\int F_m(x)a_1(x,1)\,dx.
+\]
+Expand $u(1/2,1)$ along the bottom edge and then the vertical line at $1/2$.
+This produces the remaining two prices and \eqref{eq:diagonal-gap}.
+Monotonicity and IR imply $u\ge u(0,0)\ge0$, so the non-capacity slack is
+at least $u(0,0)$ by $3|D_0|=m+1$.
+
+At the candidate this slack vanishes. Every positive volume price charges a
+unit marginal. The top price below $k$ is zero if $B=A$ and is saturated by
+the last condition in \eqref{eq:diagonal-traces} otherwise. The other two
+conditions saturate the bottom and vertical charges. All line endpoints
+have zero price mass, but retain their complete allocation rules.
+\end{proof}
+
+This proof uses the actual tangential allocation on each priced line.
+Pointwise DSIC makes that component monotone and equal to the convex trace's
+derivative almost everywhere on the line. It therefore covers arbitrary
+selected subgradients and allocations with an infinite range. It neither
+normalizes $u(0,0)$ to zero nor restricts competitors to a finite menu.
+At $B=A$, $C=b_0=(4-\sqrt2)/3$, the mass $m$ is zero and no occupied
+trace is required. This recovers the full-capacity single-buyer support.
+
+\subsection{A lottery-junction capacity certificate}\label{sec:lottery-support}
+
+Set $c=137/500$, $q=113/500$, $T=613/750$, and $A<t<T$. Write
+\[
+\begin{gathered}
+\alpha=3t-2,\quad
+\delta=q+3q^2/4-3qt/2+\alpha^2/16,\quad
+\beta=\frac{\alpha}{\alpha+2\delta},\\
+B=1/2+\delta,\quad C=t+c+\delta,\quad k=t-q,\quad
+\ell_*=\delta+\alpha/2,\quad Y=c+\ell_*,\quad j=1-t/2.
+\end{gathered}
+\]
+Here $0<k<j<A<t<1$, $c<Y<B<A$ and $0<\beta<1$. Offer, in order,
+\[
+(0,0;0),\ (0,1;B),\ (1,0;t),\ (1,1;C),\
+(1,\beta;t+\beta c),
+\]
+choosing the first utility maximizer. Assume feasibility at $r^*$ and
+\begin{equation}\label{eq:lottery-traces}
+r^*_1(x,1)=0\ (x<k),\qquad
+r^*_1(x,c)=0\ (A<x<t).
+\end{equation}
+Define $z(y)$ by $t$ below $c$, $t-\beta(y-c)$ on $(c,Y)$, and $A$
+above $Y$. Define $e(x)$ by $B$ below $k$, $C-x$ on $(k,j)$, and $Y$
+on $(j,A)$. Horizontal integration on $G=\{x>z(y)\}$ and vertical
+integration on $H=\{x<A,y>e(x)\}$ partition the positive-utility region
+up to volume-zero faces. Put $D_0=[0,1]^2\setminus(G\cup H)$; the
+candidate has zero utility \emph{almost everywhere} on $D_0$. This statement
+about a volume integral does not discard pointwise capacity or line prices.
+
+Let $f=3e-2$ below $A$ and $f=1$ above $A$. The displayed formula for
+$\delta$ implies $\int f=0$, and $F(x)=\int_x^1 f\ge0$. Set
+$\lambda=\alpha(c+\ell_*/4)$ and let $w(x)$ equal zero below $A$,
+$3t(c+\ell_*/4)$ on $(A,t)$, and $\lambda$ above $t$.
+
+\begin{theorem}[Full randomized lottery support]\label{thm:lottery}
+Under these hypotheses the five-option candidate is optimal over all
+randomized conditional mechanisms. A supporting measure is
+\[
+\begin{aligned}
+\pi_1&=3(x-z(y))_+\,dx\,dy+F(x)\,dx\,\delta_1(dy)
+                         +w(x)\,dx\,\delta_c(dy),\\
+\pi_2&=3(y-e(x))_+\mathbf1_{x<A}\,dx\,dy.
+\end{aligned}
+\]
+For every competitor with $a\le r$,
+\begin{equation}\label{eq:lottery-gap}
+\langle\pi,r\rangle-R
+ =\langle\pi,r-a\rangle+T_g+\lambda M_a+S_u\ge0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $g(y)=u(1,y)$ and let $\nu$ be its nonnegative second-derivative
+measure. The horizontal and vertical envelopes leave top coefficient $f$
+and right coefficient $\sigma(y)$, equal to $\alpha$ below $c$,
+$\alpha-3\beta(y-c)$ on $(c,Y)$ and zero above $Y$.
+The top coefficient integrates to the stated top-line price. Convexity on
+the whole lottery interval gives
+\[
+\begin{split}
+T_g&=\lambda g(c)-\int\sigma(y)g(y)\,dy\\
+&=\alpha\int_0^c[g(c)-g(y)]\,dy
+ +\frac\beta2\int_0^{\ell_*}s(\ell_*-s)^2\,d\nu(c+s)\ge0.
+\end{split}
+\]
+This follows from the exact hinge coefficient
+$\int_s^{\ell_*}(\alpha-3\beta z)(z-s)\,dz
+=-\beta s(\ell_*-s)^2/2$ and $\beta\ell_*=\alpha/2$.
+Next, monotonicity of $a_1(\cdot,c)$ gives
+\[
+M_a=\frac{t}{t-A}\int_A^t a_1(x,c)\,dx-
+                     \int_0^t a_1(x,c)\,dx\ge0.
+\]
+Expand $g(c)$ along this line to obtain its price $w$.
+Finally,
+$S_u=3\int_{D_0}u-\lambda u(0,c)\ge0$ because
+$D_0$ contains $[0,k]\times[c,B]$ up to volume-zero faces and
+\[
+3k(B-c)-\lambda\ge q(1-3q/2)>0.
+\]
+These identities yield \eqref{eq:lottery-gap} without removing origin
+utility. At the candidate the trace is constant below $c$, affine on
+$(c,Y)$, and all three non-capacity slacks vanish. Feasibility and
+\eqref{eq:lottery-traces} saturate the prices. The safe-item price is zero
+on the genuine lottery cell, consistent with its fractional allocation.
+\end{proof}
+
+The hinge term excludes nonlinear convex trace changes and additional
+lotteries, including scarce allocations below one. Thus the finite menu is
+an equality case of a bound over the unrestricted conditional class, not a
+without-loss restriction imposed on that class.
+
+\subsection{Complete joint reallocations}\label{sec:joint-mechanism}
+
+The archived reference is the explicit V4.5 mechanism, defined by its finite
+menu rules, rational tables and algebraic tests in the source-bound
+certificate \path{joint_residual_screening_lower_bound}. Its complete
+predecessor proofs and exact revenue integrals are included in that package.
+The following modifications are applied in order. All new menu selections
+have the stated fixed priority; unmodified rows retain their complete
+predecessor maximizer selection, which need not be independent of the own
+report. Selecting any utility-maximizing option from a fixed opponent menu
+is sufficient for pointwise DSIC.
+
+First extend both lottery menus to
+$E^+=\{A<\max(v)<T,\min(v)<c\}$. Retain the predecessor on the
+$\min(v)=c$ face. The retained competing bidder cannot take its low item
+there, and the two occupied traces in \eqref{eq:lottery-traces} remain in
+place. Theorem~\ref{thm:lottery} therefore solves both corresponding inner
+problems at this reference residual.
+
+Second, bidder 2 receives nothing at every opponent report whenever its
+own type lies in the closed set
+\[
+F=\{\max(v)\le1/2,\ v_1+v_2\le b_0\},\qquad
+b_0=(4-\sqrt2)/3.
+\]
+On opponents in F, replace bidder 1's constant menu $(a,a,b)$ by the full
+single-buyer optimal menu $(A,A,b_0)$. Here $a=159/250$, $b=91/100$.
+Capacity is entirely free on these fibers; zero-utility ties select empty.
+
+Third, on $G=\{\max(v)\le1/2,b_0<v_1+v_2<b\}$, bidder 1 offers bundle
+price $v_1+v_2$, retaining singleton prices $(a,a)$. Bidder 2's complete
+response changes on $Q=\{\max(w)\le A,\sum w\le b\}$. For $\max(w)\le1/2$
+its prices are $(A,A,\max(b_0,\sum w))$. In a constrained row write
+$t=\max(w)>1/2$, $k=t-q$, $C_0=5/6+3k^2/4$, and $z=\sum w$.
+If $z>C_0$, the aligned prices are $(A,z-k,z)$; otherwise retain its earlier
+Q menu. Moving the safe and bundle prices together preserves $C-B=k$.
+Relative to the earlier feasible Q menu this only discards allocations.
+A new bidder-1 bundle requires $\sum w>\sum v$, and the opposing bundle
+threshold prevents double allocation. At $(w,v)=((.45,.45),(.44,.44))$,
+ownership transfers strictly from bidder 2 to bidder 1, who pays $.88$.
+
+On the reopened Q rows, F/G bundle purchases supply the bottom and vertical
+conditions in \eqref{eq:diagonal-traces}; the top hole is inherited from the
+previous capacity rule. Theorem~\ref{thm:diagonal} recertifies the whole
+response. This includes all Q after combining unchanged and changed rows.
+It also shows why increasing only the opposing bundle price was insufficient.
+The complete constrained conditional revenue change is exactly
+$-(z-C_0)^2$ at the coupled response.
+
+Finally, the conditional lottery certificate identifies a consumed
+junction that admits a profitable joint capacity release. Use one physical
+orientation and set
+\[
+\varepsilon=9/10000,\quad
+W=[.7,.71]\times[0,1/5],\quad
+S=[.7-4\varepsilon,.71]\times[c-2\varepsilon,c+4\varepsilon].
+\]
+The rectangles are closed. On bidder-2 menus indexed by $w\in W$, lower
+only the lottery payment by $\varepsilon$. On bidder-1 menus indexed by
+$v\in S$, add $\varepsilon$ to every nonempty option. Choose empty whenever
+the old maximal utility is at most $\varepsilon$; otherwise retain its old
+maximizer and charge the additional fee. All other rows are unchanged.
+
+\begin{proposition}[Pointwise joint release]\label{prop:joint-release}
+The composed mechanism is pointwise DSIC, ex-post IR and jointly feasible.
+Its allocations are jointly measurable and its payments are integrable. The final release has strictly positive
+exact revenue increment $J$ given below.
+\end{proposition}
+\begin{proof}
+Each change specifies a complete opponent-dependent menu before maximizing;
+the empty option and full predecessor rules handle every exceptional report.
+For the final change only a newly chosen lottery can introduce a capacity
+conflict, since the fee contracts bidder 1's allocation. Writing $v=(x,y)$,
+its comparisons with singleton, bundle and empty force
+\[
+c-\varepsilon/\beta\le y\le Y+\varepsilon/(1-\beta),\qquad
+x+\beta(y-c)-t+\varepsilon>0.
+\]
+Throughout W, $3/5<\beta<3/4$ and
+$x\ge1-t/2-4\varepsilon>1/2$. The F/G modifications are therefore absent
+at every newly chosen lottery report. Bidder 1 can only take the scarce
+singleton, at price $P\ge\max(x,x+y-c)$. If $t>P$, the displayed lottery
+inequalities force $(x,y)\in S$ and
+\[
+t-P\le t-\max(x,x+y-c)<\varepsilon.
+\]
+The entry fee selects empty, releasing that item. Its low item is already
+free because its value is at most $1/5<c$. Equalities use the explicit empty
+priority. The earlier splices have the full same-orientation, opposite-
+orientation and reverse-Q capacity checks in the certificate proof notes;
+these checks include the excluded $\rho=c$ and $\sum v=b$ faces.
+Finite menus with Borel parameters yield joint measurability and bounded
+payments. Feasible marginals can be realized itemwise.
+\end{proof}
+
+This release preserves the full F and Q certificates. It changes some
+Eplus menus and their binding residuals. A sufficient preserved Eplus scope
+excludes S for bidder 1 and excludes
+$\max(w)\in[.7-4\varepsilon,.71+\varepsilon]$ for bidder 2. The wider
+second exclusion includes releases outside W. No conditional optimality is
+asserted on excluded fibers, and no common auction support is obtained.
+
+\subsection{Exact new revenue and a sub-0.01 bracket}\label{sec:joint-revenue}
+
+Let $R_{4.5}$ be the exact revenue of the source-bound reference, specified
+by the included V4.02 continuous integrals plus
+$472617707798758460108653/101062797120000000000000000000$.
+The baseline is an exact mathematical integral, not its printed decimal.
+Exact continuous-cell integration of all subsequent complete menus gives
+\begin{equation}\label{eq:joint-revenue}
+R_J=R_{4.5}+a_0+a_2\sqrt2+a_{23}\sqrt{23}+J,
+\end{equation}
+where
+\[
+\begin{gathered}
+a_0=-\frac{1609541379668231661249547038251}
+              {159173905464000000000000000000000},\qquad
+ a_2=\frac{57567793}{7593750000},\\
+a_{23}=-\frac{12167}{1328906250},
+\end{gathered}
+\]
+and
+\[
+\begin{split}
+J={}&\frac{6578986777818169914603}{10652675687500000000000000000000}\\
+&+\frac{6248637}{282500000000000}\log\frac{161}{176}
+-\frac{61575471}{282500000000000}\log\frac{613}{628}\\
+&-\frac{9308601}{5000000000000000000}\log\frac{13}{10}.
+\end{split}
+\]
+Here $J=0.00000000391612794214225366689702614\ldots$ and an independently
+proved rational lower bound is $J\ge26902077489/12500000000000000000>0$.
+
+All induced information-rent changes are included. In a lottery row,
+\[
+\Delta R_2=\frac{\alpha\ell_*}{4}\varepsilon
+-\frac{\alpha}{4\beta(1-\beta)}\varepsilon^2
+-\frac{1}{2\beta(1-\beta)^2}\varepsilon^3.
+\]
+For a complete entry-fee row with no-sale area $D$ and bundle price $C$,
+$\Delta R_1=(1-3D)\varepsilon-3C\varepsilon^2/2-\varepsilon^3/2$.
+The literal retained tariff chambers, including the distinct $y=c$ face,
+are checked independently by rational demand polygons. Integration over
+opponent reports gives the expression above. Radical bounds use integer
+square-root enclosures; logarithm bounds use signed rational series
+remainders. An independent reconstruction uses direct bivariate menu
+integration and local pole expansions instead of the primary partial-
+fraction linear system.
+
+The resulting rational enclosure is
+\[
+0.8758198541484224553460<R_J<0.8758198541484224553461.
+\]
+Consequently
+\[
+0<\Ustream-R_J<0.0099384483702321295386<\frac1{100}.
+\]
+This establishes the lower claim in Theorem~\ref{thm:bracket}. It improves
+the deterministic predecessor by $0.001214867745586187\ldots$ and the
+V4.5 reference by $0.000565326708609134\ldots$. These are internal certified
+improvements, not comparisons with the reported GemNet revenue.

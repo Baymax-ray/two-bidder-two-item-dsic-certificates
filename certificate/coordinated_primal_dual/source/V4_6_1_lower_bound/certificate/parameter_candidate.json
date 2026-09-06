@@ -1,0 +1,28 @@
+{
+  "status": "PARAMETER_CANDIDATE_POINTWISE_REPLAY_PASS",
+  "bounded_profile_checks": 6676,
+  "all_real_proof": "research_log/parameter_rebuilt_family.md; independent gap-agent audit",
+  "tie_rule": "empty at zero utility; otherwise lexicographically first jointly feasible pair among full menu argmax rows",
+  "menu_structures": [
+    "affine base",
+    "symmetric full-Q screening with bundle competition",
+    "five-option E lottery"
+  ],
+  "removed_from_definition": [
+    "inherited fee boxes",
+    "square-root joined branch",
+    "F/G wrappers",
+    "corner corrections"
+  ],
+  "parameters": {
+    "a": "2/3",
+    "b": "49/50",
+    "c": "47/150",
+    "s": "7/6",
+    "d": "1/2",
+    "q": "14/75",
+    "A": "2/3",
+    "T": "178/225",
+    "U": "26/25"
+  }
+}

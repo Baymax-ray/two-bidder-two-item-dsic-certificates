@@ -1,0 +1,12 @@
+{
+  "status": "INDEPENDENT_PRIMAL_REGRESSION_PASS",
+  "arithmetic": "Fraction and exact quadratic comparisons",
+  "counts": {
+    "profiles": 2939,
+    "final_fee_profiles": 421,
+    "final_cut_profiles": 620,
+    "fee_and_cut_profiles": 251,
+    "tariff_endpoint_reports": 258
+  },
+  "scope": "bounded source/menu audit; continuum proof is in audit.md"
+}

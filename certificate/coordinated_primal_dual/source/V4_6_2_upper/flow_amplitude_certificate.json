@@ -1,0 +1,60 @@
+{
+  "status": "EXACT_CONTINUOUS_BOUND_PASS",
+  "scale": 1000000000000,
+  "method": "coefficientwise Bernstein convex majorant",
+  "amplitude": "860972/862497",
+  "results": [
+    {
+      "depth": 12,
+      "accumulator": "1813560159773092",
+      "coverage": 16384,
+      "upper_bound": "453390039943273/512000000000000",
+      "upper_decimal": 0.8855274217642051,
+      "monotone_incumbent": "453390039943273/512000000000000"
+    },
+    {
+      "depth": 14,
+      "accumulator": "7248702633057405",
+      "coverage": 65536,
+      "upper_bound": "1449740526611481/1638400000000000",
+      "upper_decimal": 0.8848513956368903,
+      "monotone_incumbent": "1449740526611481/1638400000000000"
+    },
+    {
+      "depth": 16,
+      "accumulator": "28985710877201945",
+      "coverage": 262144,
+      "upper_bound": "5797142175440389/6553600000000000",
+      "upper_decimal": 0.8845736962036727,
+      "monotone_incumbent": "5797142175440389/6553600000000000"
+    },
+    {
+      "depth": 18,
+      "accumulator": "115925005735262209",
+      "coverage": 1048576,
+      "upper_bound": "115925005735262209/131072000000000000",
+      "upper_decimal": 0.8844376047917344,
+      "monotone_incumbent": "115925005735262209/131072000000000000"
+    },
+    {
+      "depth": 20,
+      "accumulator": "463664341531926533",
+      "coverage": 4194304,
+      "upper_bound": "463664341531926533/524288000000000000",
+      "upper_decimal": 0.8843695479048281,
+      "monotone_incumbent": "463664341531926533/524288000000000000"
+    }
+  ],
+  "statistics": {
+    "nodes": 1350994,
+    "fixed": 200414,
+    "leaves": 475085,
+    "max_error": 157
+  },
+  "seconds": 203.31879878044128,
+  "dependencies": {
+    "manifest.json": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
+    "verify_stream_dual.py": "7e6cdc6834bc28c7e9878ea76077fc62dbd3b9743a79b676a19aa441d1557e29",
+    "dual_polynomials.py": "4b5665490f70576efd0e93dc8fbfcbab084362cfabfc6ed035db5a65f7822481"
+  }
+}

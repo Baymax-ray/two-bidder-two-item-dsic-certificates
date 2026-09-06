@@ -14,12 +14,16 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-UPPER = Fraction(3715139591287203, 4194304000000000)
+LEGACY_UPPER = Fraction(3715139591287203, 4194304000000000)
+ACTIVE_MANIFEST = json.loads((ROOT / "certificate/coordinated_primal_dual/manifest.json").read_text(encoding="utf-8"))
+UPPER = Fraction(ACTIVE_MANIFEST["upper"])
 LOWER = Fraction(83962078694672281756033, 96000000000000000000000)
 TEN_BAND_LOWER = Fraction(26237753173862063, 30000000000000000)
 TWENTY_BAND_LOWER = Fraction(2623779309282875420759, 3000000000000000000000)
 BUNDLE_PIVOT_LOWER = Fraction(83961603016753854879913, 96000000000000000000000)
-AI_DECLARATION = "This manuscript was completed with the assistance of OpenAI GPT-5.6 Sol."
+JOINT_FLOOR = Fraction(437909927074211227673, 500000000000000000000)
+LOWER_FLOOR = Fraction(ACTIVE_MANIFEST["lower_enclosure"][0])
+AI_DECLARATION = "This manuscript was developed with the assistance of OpenAI GPT-5.6 Sol and OpenAI Codex."
 AUTHOR_EMAIL = "baymin@bu.edu"
 AUTHOR_ORCID = "0009-0006-9100-0445"
 REPOSITORY_URL = "https://github.com/Baymax-ray/two-bidder-two-item-dsic-certificates"
@@ -155,7 +159,7 @@ def check_certificates(recorder: Recorder) -> None:
             "independent bundle-pivot replay did not report its sealed endpoint")
 
     output = run_checked(
-        "active bundle-pivot plus item-containment lower certificate",
+        "retained deterministic item-containment lower certificate",
         [python, "-B", "-X", "utf8", "-I", "verify_final_combined.py"],
         final_lower,
         recorder,
@@ -165,7 +169,7 @@ def check_certificates(recorder: Recorder) -> None:
             "active lower verifier did not report the release endpoint")
 
     output = run_checked(
-        "independent active lower replay",
+        "independent retained deterministic lower replay",
         [python, "-B", "-X", "utf8", "-I", "independent_replay.py"],
         final_lower,
         recorder,
@@ -174,29 +178,39 @@ def check_certificates(recorder: Recorder) -> None:
             and str(LOWER) in output,
             "independent active lower replay did not report the release endpoint")
 
+    joint = ROOT / "certificate" / "joint_residual_screening_lower_bound"
     output = run_checked(
-        "formal nonuniform upper certificate",
-        [python, "-B", "verify_stream_dual.py"],
-        stream,
+        "active joint residual-screening lower certificate and fresh audits",
+        [python, "-B", "-X", "utf8", "verify_joint_residual.py"],
+        joint,
         recorder,
     )
-    require('"status": "PASS"' in output and str(UPPER) in output,
-            "formal upper replay did not report the release endpoint")
+    require("JOINT_RESIDUAL_SCREENING_CERTIFICATE_PASS" in output
+            and str(JOINT_FLOOR) in output
+            and "STRICT_GAP_LT_1_100_PASS" in output,
+            "joint lower verifier did not certify the release enclosure")
 
     output = run_checked(
-        "independent nonuniform upper replay",
-        [python, "-B", "independent_replay.py"],
-        stream,
+        "post-review independent joint revenue explanation",
+        [python, "-B", "-X", "utf8", "joint_explanation_check.py"],
+        ROOT / "audit" / "nature_review_v46",
         recorder,
     )
-    require('"status": "PASS"' in output and str(UPPER) in output,
-            "independent full replay did not report the release endpoint")
-    require('"coverage_units": 33554432' in output,
-            "independent full coverage mismatch")
+    require("JOINT_EXPLANATION_INDEPENDENT_EXACT_PASS" in output,
+            "post-review revenue derivation failed")
+
+    paired = ROOT / "certificate/coordinated_primal_dual"
+    output = run_checked(
+        "active coordinated primal-dual certificate and both full upper traversals",
+        [python, "-B", "-X", "utf8", "verify_coordinated.py"], paired, recorder)
+    require("COORDINATED_PRIMAL_DUAL_CERTIFICATE_PASS 46" in output
+            and str(UPPER) in output and "STRICT_GAP_LT_1_100_PASS" in output,
+            "active coordinated replay did not certify current endpoints")
 
 
 def check_text_consistency(recorder: Recorder) -> None:
-    manuscript = (ROOT / "manuscript" / "manuscript.tex").read_text(encoding="utf-8")
+    manuscript = "\n".join(p.read_text(encoding="utf-8")
+                           for p in sorted((ROOT / "manuscript").glob("*.tex")))
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     upper_manifest = json.loads(
         (ROOT / "certificate" / "continuous_stream_degree4_two_level_nonuniform_upper_bound" / "manifest.json")
@@ -206,23 +220,35 @@ def check_text_consistency(recorder: Recorder) -> None:
         (ROOT / "certificate" / "refined_item_containment_bundle_pivot_lower_bound" / "manifest.json")
         .read_text(encoding="utf-8")
     )
-    require(Fraction(upper_manifest["expected"]["promoted"]["upper_fraction"]) == UPPER,
-            "upper manifest differs from release theorem")
+    require(Fraction(upper_manifest["expected"]["promoted"]["upper_fraction"]) == LEGACY_UPPER,
+            "historical upper manifest mismatch")
     require(Fraction(lower_manifest["expected"]["final_expected_revenue"]) == LOWER,
             "lower manifest differs from release theorem")
-    require(LOWER / UPPER > Fraction(987408, 1000000),
-            "exact endpoints do not certify the stated 98.7408% guarantee")
+    joint_manifest = json.loads(
+        (ROOT / "certificate" / "joint_residual_screening_lower_bound" / "manifest.json")
+        .read_text(encoding="utf-8")
+    )
+    require(Fraction(joint_manifest["lower_floor"]) == JOINT_FLOOR,
+            "historical joint lower floor mismatch")
+    require(Fraction(joint_manifest["upper"]) == LEGACY_UPPER,
+            "joint manifest upper differs from release theorem")
+    require(UPPER - LOWER_FLOOR < Fraction(1, 100),
+            "exact endpoints do not certify a gap below 0.01")
+    require(LOWER_FLOOR / UPPER > Fraction(992684, 1000000),
+            "exact endpoints do not certify the stated 99.2684% guarantee")
     for text, label in ((manuscript, "manuscript"), (readme, "README")):
-        require("98.7408" in text,
+        require("99.2684" in text,
                 f"certified revenue guarantee missing from {label}")
         require("3715139591287203" in text and "4194304000000000" in text,
                 f"upper endpoint missing from {label}")
         require("83962078694672281756033" in text
                 and "96000000000000000000000" in text,
                 f"lower endpoint missing from {label}")
-        require("34262987107793868572569" in text
-                and "3072000000000000000000000" in text,
-                f"remaining exact gap missing from {label}")
+        require("0.876464164471798049944906113027" in text
+                and "0.876464164471798049944906113028" in text,
+                f"new exact revenue enclosure missing from {label}")
+        require("0.006458888786918919315720686828" in text,
+                f"remaining gap enclosure missing from {label}")
         require(text.count(AI_DECLARATION) == 1,
                 f"AI declaration must occur exactly once in {label}")
         require("The author retains responsibility" in text
@@ -232,15 +258,25 @@ def check_text_consistency(recorder: Recorder) -> None:
                 f"public repository URL missing from {label}")
         require(AUTHOR_EMAIL in text and AUTHOR_ORCID in text,
                 f"author metadata missing from {label}")
-    require("certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound" in readme,
+    require("certificate/coordinated_primal_dual" in readme,
             "active upper certificate path missing from README")
-    require("certificate/refined_item_containment_bundle_pivot_lower_bound" in readme,
+    require("certificate/joint_residual_screening_lower_bound" in readme,
             "active lower certificate path missing from README")
     require("1445765276937161827" not in manuscript
             and "1445765276937161827" not in readme,
             "superseded exact gap remains active in publication text")
     require("0.8919" in manuscript and "0.876" in manuscript,
             "external benchmark values missing from manuscript")
+    run_checked("immutable self-review evidence packet",
+                [sys.executable, "-B", "audit/nature_review_v46/verify_review_snapshot.py"],
+                ROOT, recorder)
+    run_checked("immutable coordinated self-review evidence packet",
+                [sys.executable, "-B", "audit/nature_review_v4611_v462/verify_review_snapshot.py"],
+                ROOT, recorder)
+    active = json.loads((ROOT / "certificate/coordinated_primal_dual/manifest.json").read_text(encoding="utf-8"))
+    require(active == ACTIVE_MANIFEST, "active manifest changed during replay")
+    require(active["revenue_coefficients"][0].split("/")[0] in manuscript,
+            "active algebraic revenue missing from manuscript")
     recorder.say("PASS theorem, README, manifest, and declaration consistency")
 
 
@@ -252,7 +288,8 @@ def compile_manuscript(recorder: Recorder) -> None:
     source = ROOT / "manuscript"
     with tempfile.TemporaryDirectory(prefix="dsic-preprint-") as temporary:
         build = Path(temporary)
-        shutil.copy2(source / "manuscript.tex", build / "manuscript.tex")
+        for tex in source.glob("*.tex"):
+            shutil.copy2(tex, build / tex.name)
         shutil.copy2(source / "references.bib", build / "references.bib")
         latex = [
             pdflatex,
@@ -264,7 +301,12 @@ def compile_manuscript(recorder: Recorder) -> None:
         run_checked("LaTeX pass 1", latex, build, recorder)
         run_checked("BibTeX", [bibtex, "manuscript"], build, recorder)
         run_checked("LaTeX pass 2", latex, build, recorder)
-        run_checked("LaTeX pass 3", latex, build, recorder)
+        final_output = run_checked("LaTeX pass 3", latex, build, recorder)
+        if "Label(s) may have changed" in final_output:
+            final_output = run_checked("LaTeX cross-reference pass", latex, build, recorder)
+        require("Label(s) may have changed" not in final_output
+                and "undefined references" not in final_output,
+                "manuscript references did not stabilize")
         pdf = build / "manuscript.pdf"
         require(pdf.is_file() and pdf.stat().st_size > 10_000,
                 "clean manuscript PDF was not produced")
@@ -290,7 +332,7 @@ def main() -> int:
         )
         recorder.say(
             "PUBLICATION_REPRODUCTION_PASS "
-            f"lower={LOWER} upper={UPPER} formal=PASS independent=PASS "
+            f"lower_floor={LOWER_FLOOR} upper={UPPER} formal=PASS independent=PASS "
             "paper=compiled hashes=verified"
         )
         if arguments.transcript is not None:

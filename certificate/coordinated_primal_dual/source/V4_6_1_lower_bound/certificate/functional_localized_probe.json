@@ -1,0 +1,71 @@
+{
+  "status": "FLOATING_DISCOVERY_ONLY",
+  "trials": [
+    {
+      "epsilon": 1e-05,
+      "Q_revenue_change_float": 1.4143804458818896e-08,
+      "base_revenue_change_float": -1.0885085185185197e-08,
+      "total_change_float": 3.2587192736336985e-09,
+      "tent": [
+        0.32,
+        0.33,
+        0.34
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "Q_revenue_change_float": 1.6393010258119662e-08,
+      "base_revenue_change_float": -1.7858405185185192e-08,
+      "total_change_float": -1.4653949270655303e-09,
+      "tent": [
+        0.33999999999999997,
+        0.35,
+        0.36
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "Q_revenue_change_float": 1.9168338930506686e-08,
+      "base_revenue_change_float": -2.9314385185185212e-08,
+      "total_change_float": -1.0146046254678526e-08,
+      "tent": [
+        0.37,
+        0.38,
+        0.39
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "Q_revenue_change_float": 2.0873097771094173e-08,
+      "base_revenue_change_float": -4.193676518518521e-08,
+      "total_change_float": -2.106366741409104e-08,
+      "tent": [
+        0.39999999999999997,
+        0.41,
+        0.42
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "Q_revenue_change_float": 2.2523381090607553e-08,
+      "base_revenue_change_float": -5.569314518518523e-08,
+      "total_change_float": -3.316976409457768e-08,
+      "tent": [
+        0.43,
+        0.44,
+        0.45
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "Q_revenue_change_float": 2.458182413779201e-08,
+      "base_revenue_change_float": -7.055112518518524e-08,
+      "total_change_float": -4.596930104739323e-08,
+      "tent": [
+        0.45999999999999996,
+        0.47,
+        0.48
+      ]
+    }
+  ]
+}

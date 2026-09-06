@@ -1,0 +1,39 @@
+{
+  "status": "new exact feasible lower bound; unrestricted optimum unresolved",
+  "exact_revenue": "R_free = R_V3 - 56874392995943/2250000000000000 + (246769/13500000)*sqrt(2)",
+  "R_V3_exact_definition": "../V3/research_log/joined_threshold_candidate.md, section 6",
+  "R_V3_independent_interval": [
+    "874648885321014009995481/1000000000000000000000000",
+    "437324442660507004997741/500000000000000000000000"
+  ],
+  "delta": {
+    "rational": "-56874392995943/2250000000000000",
+    "sqrt2_coefficient": "246769/13500000"
+  },
+  "revenue_rational_interval": [
+    "218805512230208841241421/250000000000000000000000",
+    "437611024460417682482843/500000000000000000000000"
+  ],
+  "revenue_decimal_interval": [
+    "0.875222048920835364965684",
+    "0.875222048920835364965686"
+  ],
+  "inherited_unrestricted_upper": "3715139591287203/4194304000000000",
+  "remaining_gap_rational_interval": [
+    "5268126798909609959479/500000000000000000000000",
+    "131703169972740248987/12500000000000000000000"
+  ],
+  "remaining_gap_decimal_interval": [
+    "0.010536253597819219918958",
+    "0.01053625359781921991896"
+  ],
+  "release_lower_guarantee_interval": [
+    "218800512230208841241421/250000000000000000000000",
+    "437601024460417682482843/500000000000000000000000"
+  ],
+  "release_lower_guarantee_decimal_interval": [
+    "0.875202048920835364965684",
+    "0.875202048920835364965686"
+  ],
+  "scope": "release guarantee is bounded here; release actual revenue not evaluated exactly"
+}

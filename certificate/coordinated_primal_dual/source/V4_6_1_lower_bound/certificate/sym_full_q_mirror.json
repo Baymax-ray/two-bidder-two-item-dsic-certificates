@@ -1,0 +1,36 @@
+{
+  "status": "SYM_FULL_Q_MIRROR_EXACT_PASS",
+  "scope": "complete pointwise symmetric menu mechanism; full inner Q screening; no global optimum",
+  "revenue": {
+    "net_gain_over_V4_6": [
+      "25228332564006122516964773/1000000000000000000000000000000",
+      "12614166282003061258482387/500000000000000000000000000000"
+    ],
+    "total_revenue_interval": [
+      "175169016496197292293718696729/200000000000000000000000000000",
+      "437922541240493230734298741823/500000000000000000000000000000"
+    ],
+    "old_Q_gap": [
+      "594701654940384123539547889/1000000000000000000000000000000",
+      "59470165494038412353954789/100000000000000000000000000000"
+    ],
+    "inner_split_change": [
+      "-11829367600837900707549363/1000000000000000000000000000000",
+      "-5914683800418950353774681/500000000000000000000000000000"
+    ],
+    "retained_Q_split_change": [
+      "-10006902566932173247345227/1000000000000000000000000000000",
+      "-5003451283466086623672613/500000000000000000000000000000"
+    ],
+    "reverse_Q_gain": [
+      "2523224869194826477063167/100000000000000000000000000000",
+      "25232248691948264770631671/1000000000000000000000000000000"
+    ],
+    "exact_formula": "D0 + (IQ(s)-IQ(s0)) - (BQ(s)-BQ(s0)-3theta*M1Q+3theta^2*M0Q/2) - F_gain - G1_gain + G2_free_cost + G2_coupled_cost",
+    "revenue_formula": "R_V4.6 - J + reverse_Q_gain",
+    "caveat": "J is deliberately removed; old corner region is restored before complete symmetric Q screening"
+  },
+  "pointwise_cases": 144,
+  "boundary_cases": 162,
+  "proof": "research_log/sym_full_q_mirror.md"
+}

@@ -1,0 +1,971 @@
+{
+  "name": "BASE-1 exact layered deterministic auction",
+  "scope": "pointwise DSIC, ex-post IR, ex-post feasible; no optimality claim",
+  "parameters": {
+    "a": "159/250",
+    "b": "91/100",
+    "split_cost": "1137/1000",
+    "c": "137/500",
+    "d": "501/1000"
+  },
+  "base_outcome_order": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "common_rows": [
+    {
+      "id": "Z1.1",
+      "parent": "Z1",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "53/100",
+        "27/50"
+      ],
+      "fee": "233/50000",
+      "expected_gain": "22298829989/50000000000000000"
+    },
+    {
+      "id": "Z1.2",
+      "parent": "Z1",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "27/50",
+        "11/20"
+      ],
+      "fee": "807/100000",
+      "expected_gain": "13069531099161/10000000000000000000"
+    },
+    {
+      "id": "Z2.1",
+      "parent": "Z2",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "11/20",
+        "14/25"
+      ],
+      "fee": "1159/100000",
+      "expected_gain": "26236839376791/10000000000000000000"
+    },
+    {
+      "id": "Z2.2",
+      "parent": "Z2",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "14/25",
+        "57/100"
+      ],
+      "fee": "1519/100000",
+      "expected_gain": "43954147179229/10000000000000000000"
+    },
+    {
+      "id": "Z3.1",
+      "parent": "Z3",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "57/100",
+        "29/50"
+      ],
+      "fee": "1889/100000",
+      "expected_gain": "66175397928277/10000000000000000000"
+    },
+    {
+      "id": "Z3.2",
+      "parent": "Z3",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "29/50",
+        "59/100"
+      ],
+      "fee": "567/25000",
+      "expected_gain": "145022445603/15625000000000000"
+    },
+    {
+      "id": "Z4.1",
+      "parent": "Z4",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "59/100",
+        "3/5"
+      ],
+      "fee": "2657/100000",
+      "expected_gain": "123742997293241/10000000000000000000"
+    },
+    {
+      "id": "Z4.2",
+      "parent": "Z4",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "3/5",
+        "61/100"
+      ],
+      "fee": "1527/50000",
+      "expected_gain": "19848727107837/1250000000000000000"
+    },
+    {
+      "id": "Z5.1",
+      "parent": "Z5",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "61/100",
+        "623/1000"
+      ],
+      "fee": "3521/100000",
+      "expected_gain": "26499525207145809/1000000000000000000000"
+    },
+    {
+      "id": "Z5.2",
+      "parent": "Z5",
+      "chamber": "zero_pivot_one_high_triangle",
+      "high_interval": [
+        "623/1000",
+        "159/250"
+      ],
+      "fee": "127/3125",
+      "expected_gain": "132296434366343/3906250000000000000"
+    },
+    {
+      "id": "S1.1",
+      "parent": "S1",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "159/250",
+        "643/1000"
+      ],
+      "fee": "4143/100000",
+      "expected_gain": "4648357333829937/250000000000000000000"
+    },
+    {
+      "id": "S1.2",
+      "parent": "S1",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "643/1000",
+        "13/20"
+      ],
+      "fee": "937/25000",
+      "expected_gain": "119401720475821/7812500000000000000"
+    },
+    {
+      "id": "S2.1",
+      "parent": "S2",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "13/20",
+        "263/400"
+      ],
+      "fee": "3343/100000",
+      "expected_gain": "327187239336087/25000000000000000000"
+    },
+    {
+      "id": "S2.2",
+      "parent": "S2",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "263/400",
+        "133/200"
+      ],
+      "fee": "183/6250",
+      "expected_gain": "7884185952501/781250000000000000"
+    },
+    {
+      "id": "S3.1",
+      "parent": "S3",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "133/200",
+        "269/400"
+      ],
+      "fee": "1259/50000",
+      "expected_gain": "187510924443687/25000000000000000000"
+    },
+    {
+      "id": "S3.2",
+      "parent": "S3",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "269/400",
+        "17/25"
+      ],
+      "fee": "66/3125",
+      "expected_gain": "1036308235941/195312500000000000"
+    },
+    {
+      "id": "S4.1",
+      "parent": "S4",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "17/25",
+        "11/16"
+      ],
+      "fee": "107/6250",
+      "expected_gain": "2734894756239/781250000000000000"
+    },
+    {
+      "id": "S4.2",
+      "parent": "S4",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "11/16",
+        "139/200"
+      ],
+      "fee": "263/20000",
+      "expected_gain": "830964180849/400000000000000000"
+    },
+    {
+      "id": "S5.1",
+      "parent": "S5",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "139/200",
+        "281/400"
+      ],
+      "fee": "923/100000",
+      "expected_gain": "25723793777097/25000000000000000000"
+    },
+    {
+      "id": "S5.2",
+      "parent": "S5",
+      "chamber": "singleton_pivot_rectangle",
+      "high_interval": [
+        "281/400",
+        "71/100"
+      ],
+      "fee": "67/12500",
+      "expected_gain": "272071590603/781250000000000000"
+    }
+  ],
+  "bundle_rows": [
+    {
+      "id": "B1.1",
+      "sum_interval": [
+        "91/100",
+        "183/200"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "383/10000",
+      "expected_gain": "1455597730261/2048000000000000000"
+    },
+    {
+      "id": "B1.2",
+      "sum_interval": [
+        "91/100",
+        "183/200"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "39/1250",
+      "expected_gain": "119747343963/256000000000000000"
+    },
+    {
+      "id": "B1.3",
+      "sum_interval": [
+        "91/100",
+        "183/200"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "243/10000",
+      "expected_gain": "578248266771/2048000000000000000"
+    },
+    {
+      "id": "B1.4",
+      "sum_interval": [
+        "91/100",
+        "183/200"
+      ],
+      "normalized_rho_interval": [
+        "3/8",
+        "1/2"
+      ],
+      "fee": "177/10000",
+      "expected_gain": "304188774519/2048000000000000000"
+    },
+    {
+      "id": "B1.5",
+      "sum_interval": [
+        "91/100",
+        "183/200"
+      ],
+      "normalized_rho_interval": [
+        "1/2",
+        "5/8"
+      ],
+      "fee": "113/10000",
+      "expected_gain": "124012234991/2048000000000000000"
+    },
+    {
+      "id": "B1.6",
+      "sum_interval": [
+        "91/100",
+        "183/200"
+      ],
+      "normalized_rho_interval": [
+        "5/8",
+        "3/4"
+      ],
+      "fee": "13/2500",
+      "expected_gain": "6588903061/512000000000000000"
+    },
+    {
+      "id": "B2.1",
+      "sum_interval": [
+        "183/200",
+        "23/25"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "353/10000",
+      "expected_gain": "6427644275177/10240000000000000000"
+    },
+    {
+      "id": "B2.2",
+      "sum_interval": [
+        "183/200",
+        "23/25"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "139/5000",
+      "expected_gain": "1985908923701/5120000000000000000"
+    },
+    {
+      "id": "B2.3",
+      "sum_interval": [
+        "183/200",
+        "23/25"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "103/5000",
+      "expected_gain": "1085575875933/5120000000000000000"
+    },
+    {
+      "id": "B2.4",
+      "sum_interval": [
+        "183/200",
+        "23/25"
+      ],
+      "normalized_rho_interval": [
+        "3/8",
+        "1/2"
+      ],
+      "fee": "137/10000",
+      "expected_gain": "954665192453/10240000000000000000"
+    },
+    {
+      "id": "B2.5",
+      "sum_interval": [
+        "183/200",
+        "23/25"
+      ],
+      "normalized_rho_interval": [
+        "1/2",
+        "5/8"
+      ],
+      "fee": "71/10000",
+      "expected_gain": "253877706211/10240000000000000000"
+    },
+    {
+      "id": "B2.6",
+      "sum_interval": [
+        "183/200",
+        "23/25"
+      ],
+      "normalized_rho_interval": [
+        "5/8",
+        "3/4"
+      ],
+      "fee": "1/1250",
+      "expected_gain": "363888339/1280000000000000000"
+    },
+    {
+      "id": "B3.1",
+      "sum_interval": [
+        "23/25",
+        "37/40"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "323/10000",
+      "expected_gain": "5594565564629/10240000000000000000"
+    },
+    {
+      "id": "B3.2",
+      "sum_interval": [
+        "23/25",
+        "37/40"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "49/2000",
+      "expected_gain": "25597972841/81920000000000000"
+    },
+    {
+      "id": "B3.3",
+      "sum_interval": [
+        "23/25",
+        "37/40"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "17/1000",
+      "expected_gain": "6122247213/40960000000000000"
+    },
+    {
+      "id": "B3.4",
+      "sum_interval": [
+        "23/25",
+        "37/40"
+      ],
+      "normalized_rho_interval": [
+        "3/8",
+        "1/2"
+      ],
+      "fee": "49/5000",
+      "expected_gain": "252473907427/5120000000000000000"
+    },
+    {
+      "id": "B3.5",
+      "sum_interval": [
+        "23/25",
+        "37/40"
+      ],
+      "normalized_rho_interval": [
+        "1/2",
+        "5/8"
+      ],
+      "fee": "29/10000",
+      "expected_gain": "43798962943/10240000000000000000"
+    },
+    {
+      "id": "B4.1",
+      "sum_interval": [
+        "37/40",
+        "93/100"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "147/5000",
+      "expected_gain": "2393776658091/5120000000000000000"
+    },
+    {
+      "id": "B4.2",
+      "sum_interval": [
+        "37/40",
+        "93/100"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "53/2500",
+      "expected_gain": "621225480811/2560000000000000000"
+    },
+    {
+      "id": "B4.3",
+      "sum_interval": [
+        "37/40",
+        "93/100"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "67/5000",
+      "expected_gain": "491673279921/5120000000000000000"
+    },
+    {
+      "id": "B4.4",
+      "sum_interval": [
+        "37/40",
+        "93/100"
+      ],
+      "normalized_rho_interval": [
+        "3/8",
+        "1/2"
+      ],
+      "fee": "59/10000",
+      "expected_gain": "188440785167/10240000000000000000"
+    },
+    {
+      "id": "B5.1",
+      "sum_interval": [
+        "93/100",
+        "187/200"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "33/1250",
+      "expected_gain": "501905554887/1280000000000000000"
+    },
+    {
+      "id": "B5.2",
+      "sum_interval": [
+        "93/100",
+        "187/200"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "179/10000",
+      "expected_gain": "1838465676451/10240000000000000000"
+    },
+    {
+      "id": "B5.3",
+      "sum_interval": [
+        "93/100",
+        "187/200"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "49/5000",
+      "expected_gain": "271702053189/5120000000000000000"
+    },
+    {
+      "id": "B5.4",
+      "sum_interval": [
+        "93/100",
+        "187/200"
+      ],
+      "normalized_rho_interval": [
+        "3/8",
+        "1/2"
+      ],
+      "fee": "1/500",
+      "expected_gain": "43688203/20480000000000000"
+    },
+    {
+      "id": "B6.1",
+      "sum_interval": [
+        "187/200",
+        "47/50"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "47/2000",
+      "expected_gain": "5257953027/16384000000000000"
+    },
+    {
+      "id": "B6.2",
+      "sum_interval": [
+        "187/200",
+        "47/50"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "147/10000",
+      "expected_gain": "254314558617/2048000000000000000"
+    },
+    {
+      "id": "B6.3",
+      "sum_interval": [
+        "187/200",
+        "47/50"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "31/5000",
+      "expected_gain": "22462375281/1024000000000000000"
+    },
+    {
+      "id": "B7.1",
+      "sum_interval": [
+        "47/50",
+        "189/200"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "103/5000",
+      "expected_gain": "1304457259873/5120000000000000000"
+    },
+    {
+      "id": "B7.2",
+      "sum_interval": [
+        "47/50",
+        "189/200"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "57/5000",
+      "expected_gain": "397640892057/5120000000000000000"
+    },
+    {
+      "id": "B7.3",
+      "sum_interval": [
+        "47/50",
+        "189/200"
+      ],
+      "normalized_rho_interval": [
+        "1/4",
+        "3/8"
+      ],
+      "fee": "13/5000",
+      "expected_gain": "20443017153/5120000000000000000"
+    },
+    {
+      "id": "B8.1",
+      "sum_interval": [
+        "189/200",
+        "19/20"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "177/10000",
+      "expected_gain": "1991676497961/10240000000000000000"
+    },
+    {
+      "id": "B8.2",
+      "sum_interval": [
+        "189/200",
+        "19/20"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "41/5000",
+      "expected_gain": "210289950503/5120000000000000000"
+    },
+    {
+      "id": "B9.1",
+      "sum_interval": [
+        "19/20",
+        "191/200"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "37/2500",
+      "expected_gain": "360685179219/2560000000000000000"
+    },
+    {
+      "id": "B9.2",
+      "sum_interval": [
+        "19/20",
+        "191/200"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "49/10000",
+      "expected_gain": "158441007697/10240000000000000000"
+    },
+    {
+      "id": "B10.1",
+      "sum_interval": [
+        "191/200",
+        "24/25"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "3/250",
+      "expected_gain": "970258899/10240000000000000"
+    },
+    {
+      "id": "B10.2",
+      "sum_interval": [
+        "191/200",
+        "24/25"
+      ],
+      "normalized_rho_interval": [
+        "1/8",
+        "1/4"
+      ],
+      "fee": "17/10000",
+      "expected_gain": "19750108207/10240000000000000000"
+    },
+    {
+      "id": "B11.1",
+      "sum_interval": [
+        "24/25",
+        "193/200"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "91/10000",
+      "expected_gain": "23290129317/409600000000000000"
+    },
+    {
+      "id": "B12.1",
+      "sum_interval": [
+        "193/200",
+        "97/100"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "63/10000",
+      "expected_gain": "286682458167/10240000000000000000"
+    },
+    {
+      "id": "B13.1",
+      "sum_interval": [
+        "97/100",
+        "39/40"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "7/2000",
+      "expected_gain": "146188133/16384000000000000"
+    },
+    {
+      "id": "B14.1",
+      "sum_interval": [
+        "39/40",
+        "49/50"
+      ],
+      "normalized_rho_interval": [
+        "0",
+        "1/8"
+      ],
+      "fee": "7/10000",
+      "expected_gain": "4055207919/10240000000000000000"
+    }
+  ],
+  "item_rows": [
+    {
+      "id": "I1.1",
+      "parent": "S5.1",
+      "high_interval": [
+        "139/200",
+        "223/320"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "923/100000",
+      "item_surcharge": "899/50000",
+      "expected_gain": "265762556618439/400000000000000000000"
+    },
+    {
+      "id": "I1.2",
+      "parent": "S5.1",
+      "high_interval": [
+        "223/320",
+        "559/800"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "923/100000",
+      "item_surcharge": "433/25000",
+      "expected_gain": "123242723382363/200000000000000000000"
+    },
+    {
+      "id": "I1.3",
+      "parent": "S5.1",
+      "high_interval": [
+        "559/800",
+        "1121/1600"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "923/100000",
+      "item_surcharge": "807/50000",
+      "expected_gain": "227718499774527/400000000000000000000"
+    },
+    {
+      "id": "I1.4",
+      "parent": "S5.1",
+      "high_interval": [
+        "1121/1600",
+        "281/400"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "923/100000",
+      "item_surcharge": "1427/100000",
+      "expected_gain": "415366149390597/800000000000000000000"
+    },
+    {
+      "id": "I2.1",
+      "parent": "S5.2",
+      "high_interval": [
+        "281/400",
+        "1127/1600"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "67/12500",
+      "item_surcharge": "813/50000",
+      "expected_gain": "75643937570133/100000000000000000000"
+    },
+    {
+      "id": "I2.2",
+      "parent": "S5.2",
+      "high_interval": [
+        "1127/1600",
+        "113/160"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "67/12500",
+      "item_surcharge": "1439/100000",
+      "expected_gain": "137218436482149/200000000000000000000"
+    },
+    {
+      "id": "I2.3",
+      "parent": "S5.2",
+      "high_interval": [
+        "113/160",
+        "1133/1600"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "67/12500",
+      "item_surcharge": "1251/100000",
+      "expected_gain": "122237371904391/200000000000000000000"
+    },
+    {
+      "id": "I2.4",
+      "parent": "S5.2",
+      "high_interval": [
+        "1133/1600",
+        "71/100"
+      ],
+      "left_endpoint_open": true,
+      "common_fee": "67/12500",
+      "item_surcharge": "133/12500",
+      "expected_gain": "13303398867003/25000000000000000000"
+    }
+  ],
+  "pointwise_rules": {
+    "ordered_rule": "evaluate the hash-bound immediate predecessor first; if its first matching twenty-band row is S5.1 or S5.2, then apply the unique listed item row with t in (lower,upper]; otherwise retain the predecessor menu unchanged",
+    "shared_boundary_rule": "the predecessor tests all twenty-band rows before bundle-pivot rows, so rho=c belongs to the S row (and its item surcharge when applicable); bundle-pivot positive-measure support has rho>c",
+    "zero_utility_rule": "if the maximum utility is zero, choose the empty outcome",
+    "tie_rule": "at positive maximum utility, retain the predecessor-selected outcome whenever it remains maximizing; otherwise choose the maximizing itemwise subset of that predecessor outcome with smallest outcome id under the predecessor's fixed outcome order"
+  },
+  "expected": {
+    "base": "26232089810531183/30000000000000000",
+    "common": "190109409919040253/1000000000000000000000",
+    "bundle": "70946101529751/10240000000000000000",
+    "item": "3963982653557301/800000000000000000000",
+    "total": "83962078694672281756033/96000000000000000000000",
+    "common_Z": "113291698497241117/1000000000000000000000",
+    "common_S": "2400553481931223/31250000000000000000",
+    "S_common_plus_item": "327090758954983049/4000000000000000000000"
+  },
+  "source_root": "D:\\文档\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates",
+  "source_bindings": [
+    {
+      "path": "certificate/piecewise_surcharge_twenty_band_lower_bound/manifest.json",
+      "sha256": "9E436BEDF33505E32FD33B638D49789A79006EE310BDC55B03068D2ACB00CD05"
+    },
+    {
+      "path": "certificate/piecewise_surcharge_bundle_pivot_lower_bound/manifest.json",
+      "sha256": "06F8E0487F4E4250F3D4CD9DD0673BCAE46FD5D7772305DB0750322D471B8F23"
+    },
+    {
+      "path": "certificate/refined_item_containment_bundle_pivot_lower_bound/manifest.json",
+      "sha256": "F5147FF14E550D543787DEB06BA049BF5F4FF0A05961267F7F6F0031C9EBA1CD"
+    },
+    {
+      "path": "certificate/ama_lower_bound/manifest.json",
+      "sha256": "F3B7790ADCEC61087D3C080F3D4EE89BBF9AD5E0BD1D41EF825970A258998EE9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "76763E552E1A3C46EF3069F9F544076DF9267ED4C291692E7951D60F6017D801"
+    },
+    {
+      "path": "manuscript/manuscript.tex",
+      "sha256": "255931F04B4769C1BE1F88220F69808F247F37296131F0EE2475F92413189715"
+    },
+    {
+      "path": "certificate/ama_lower_bound/README.md",
+      "sha256": "12312A0F3FB21D6AB8836595B8F52D862D87DD3ABCB4A0B12AFC2E51930568E5"
+    },
+    {
+      "path": "certificate/ama_lower_bound/verify_ama.py",
+      "sha256": "A8EBDFE42030879F0E8B500B9D772002E09C3AF07BFD046203323AD471FFB334"
+    },
+    {
+      "path": "certificate/piecewise_surcharge_twenty_band_lower_bound/README.md",
+      "sha256": "1AA22A532876192993EFE7BE930EF192F94999F60803AB2F0E0DCCB6AC09F4F1"
+    },
+    {
+      "path": "certificate/piecewise_surcharge_bundle_pivot_lower_bound/README.md",
+      "sha256": "6C9614DA3EC638BD6090118EC1705B9D3746818BDEB6F10F00CF88FDAF0EC384"
+    },
+    {
+      "path": "certificate/refined_item_containment_bundle_pivot_lower_bound/README.md",
+      "sha256": "7B9498BE918B4EAB55D41D3E989FF236DCF033DA04A65DEE189F9CD58554B8A6"
+    },
+    {
+      "path": "certificate/refined_item_containment_bundle_pivot_lower_bound/verify_final_combined.py",
+      "sha256": "85D2B8A181608B6569345B95090A1E62D153256FE77EE72292E09A7235A092C9"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "source": "pre_V4_6_2_SHA256SUMS",
+    "count": 993,
+    "changes": []
+  },
+  {
+    "source": "preexisting_archive_audit_SHA256SUMS",
+    "count": 383,
+    "changes": [
+      {
+        "path": "V4_6_archive_audit/build_final/manuscript.log",
+        "original_sha256": "1391f6ad387423ea83f0a31951c0bef01513b488ccb6e3864aee76c26d8e380d",
+        "current_sha256": "66fe693531512e40efb95237f640f297ab84ae69b19e88b9dbb1529123826108",
+        "mtime": "2026-09-05T23:37:23.323365"
+      },
+      {
+        "path": "V4_6_archive_audit/build_final/manuscript.pdf",
+        "original_sha256": "7108a4678c65c3b2e2e721b9bd2d53f7e6231f66fadfd5fc2936157586b2629f",
+        "current_sha256": "c3ca15d15590ecfc33964a2ecde0cf3a4a82073ae7ea145fbdda539ac8e94d97",
+        "mtime": "2026-09-05T23:37:23.323365"
+      },
+      {
+        "path": "V4_6_archive_audit/build_final/pass1.log",
+        "original_sha256": "7615fadc9ecddc4e896a3f80226f8bbf354b9816e08058d45450f2b22206e27e",
+        "current_sha256": "b74dd302f4dc95d74650715ef576be8ea16b7e3f151b18e205d4e041054b673f",
+        "mtime": "2026-09-05T23:37:21.687975"
+      },
+      {
+        "path": "V4_6_archive_audit/build_final/pass3.log",
+        "original_sha256": "c8eab9a022dc543b8bde3e93a10a5c0407ead010bdc49df29982f41ac7ca9e0b",
+        "current_sha256": "a4b39be4cddc3a94973eafd53641917883bcd5016752fa436ff4f5f91fb925a0",
+        "mtime": "2026-09-05T23:37:22.256340"
+      },
+      {
+        "path": "V4_6_archive_audit/build_final/pass4.log",
+        "original_sha256": "418ba46894d670cf881752eab900bc4e5136aedd7959c78030e8ce57380d8d5e",
+        "current_sha256": "c858d771db3580d0ab551fcd6e43b6737ac379a996369899f4800a679bd81799",
+        "mtime": "2026-09-05T23:37:22.790801"
+      },
+      {
+        "path": "V4_6_archive_audit/build_final/pass5.log",
+        "original_sha256": "c0db702ff926f06de3f4a0b276df3de7e0df7819c29511ba6b4feb38aa77dbbc",
+        "current_sha256": "25bb19801096fbaef0bfda083e88e52d9f8e8b9816d2ac9cdb8a2b68d1e26a80",
+        "mtime": "2026-09-05T23:37:23.328413"
+      },
+      {
+        "path": "V4_6_archive_audit/validate_release.py",
+        "original_sha256": "af607a8b8468a99449ad0b2d383c73713445075fc8cfa76a8dd74db3906ffd96",
+        "current_sha256": "16006837e76752f512bdaafa3a6cb9bc572cc8a764b05e1c07826dcbb72b7170",
+        "mtime": "2026-09-05T23:26:22.644332"
+      }
+    ]
+  }
+]

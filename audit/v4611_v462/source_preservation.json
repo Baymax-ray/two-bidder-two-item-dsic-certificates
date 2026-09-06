@@ -1,0 +1,11 @@
+{
+  "status": "FINAL_SOURCE_PRESERVATION_PASS",
+  "bound_original_or_new_audit_sources": {
+    "V4_6_1_1_V4_6_2_archive_audit": 6,
+    "V4_6_1_1_lower_bound": 50,
+    "V4_6_1_lower_bound": 47,
+    "V4_6_2_upper": 53
+  },
+  "historical_certificate_files_byte_identical": 227,
+  "boundary": "File identity only; fresh mathematical replays recorded separately."
+}

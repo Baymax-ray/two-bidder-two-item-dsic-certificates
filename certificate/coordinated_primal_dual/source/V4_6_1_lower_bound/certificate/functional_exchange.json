@@ -1,0 +1,45 @@
+{
+  "status": "FUNCTIONAL_EXCHANGE_EXACT_PASS",
+  "scope": "Complete positive functional candidate plus rejection of one different positive tent; no unrestricted optimality",
+  "support": [
+    "8/25",
+    "33/100",
+    "17/50"
+  ],
+  "epsilon": "1/1000",
+  "slopes": [
+    "11/10",
+    "9/10"
+  ],
+  "capacity_repricing_slack": "14/1875",
+  "linear_coefficient": "70410824789/216000000000000",
+  "quadratic_coefficient": "-31233979/3000000000",
+  "exact_gain": "68161978301/216000000000000000",
+  "coefficient_components": {
+    "Q_linear": "11315129807/8000000000000",
+    "base_linear": "-2938721/2700000000",
+    "Q_quadratic": "-1077993/1000000000",
+    "base_quadratic": "-7/750"
+  },
+  "exact_gain_decimal_display": 3.155647143564815e-07,
+  "radical_coefficients_basis_1_sqrt2_sqrt11": [
+    "309078860435260513361/367416000000000000000",
+    "31/1215",
+    "-170368/664453125"
+  ],
+  "revenue_interval": [
+    "4382278069181629260730763241/5000000000000000000000000000",
+    "8764556138363258521461526483/10000000000000000000000000000"
+  ],
+  "pointwise_profile_checks": 7201,
+  "negative_tent": {
+    "support": [
+      "17/50",
+      "9/25",
+      "19/50"
+    ],
+    "right_derivative_upper_bound": "-1392246823/1687500000000",
+    "claim": "This positive tent is locally unprofitable; this does not rule out other h directions."
+  },
+  "proof": "research_log/functional_exchange.md"
+}

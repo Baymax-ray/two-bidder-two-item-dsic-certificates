@@ -1,0 +1,49 @@
+{
+  "scope": "exact optimum of the full-capacity inner fibers only; unrestricted auction optimum unresolved",
+  "free_fiber": "0<=w1<501/1000, 0<=w2<501/1000, w1+w2<91/100",
+  "free_fiber_area": "246769/1000000",
+  "old_conditional_revenue": {
+    "rational": "136719583/250000000",
+    "sqrt2_coefficient": "0"
+  },
+  "optimal_conditional_revenue": {
+    "rational": "4/9",
+    "sqrt2_coefficient": "2/27"
+  },
+  "strict_revenue_gain": {
+    "rational": "-56874392995943/2250000000000000",
+    "sqrt2_coefficient": "246769/13500000"
+  },
+  "gain_rational_interval": [
+    "2418033936746341280544976495157182859544257/4218750000000000000000000000000000000000000000",
+    "77377085975882920977439247845029851505662993/135000000000000000000000000000000000000000000000"
+  ],
+  "witness_profile": [
+    "1/10",
+    "1/10",
+    "9/20",
+    "9/20"
+  ],
+  "witness_base_masks": [
+    0,
+    0
+  ],
+  "witness_V3_masks": [
+    0,
+    0
+  ],
+  "witness_V4_masks": [
+    0,
+    3
+  ],
+  "witness_new_bundle_price": {
+    "rational": "4/3",
+    "sqrt2_coefficient": "-1/3"
+  },
+  "positive_volume_escape_box": [
+    "[9/100,11/100]^2",
+    "[11/25,9/20]^2"
+  ],
+  "pointwise_smoke_checks": 7,
+  "theorem_dependency": "Giannakopoulos--Koutsoupias arXiv:1404.2329v4 Theorem 2, randomized single-buyer class"
+}

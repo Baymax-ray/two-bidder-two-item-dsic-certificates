@@ -1,0 +1,40 @@
+{
+  "status": "FUNCTIONAL_STAR_EXACT_PASS",
+  "scope": "Explicit globally feasible analytic candidate; optimum of the named sufficient h family, not the full auction",
+  "right_jump_height": "1508114993/66178620000",
+  "jump_plateau_t_interval": [
+    "1/2",
+    "34597424993/66178620000"
+  ],
+  "inverse_polynomial": "2 B(k) (k+q-t)+A(k)=0, unique root in (c,t-q) when not on plateau or unchanged branch",
+  "root_decision_method": "rational interval refinement; polynomial gcd detects exact ties; uniqueness follows from certified h monotonicity",
+  "exact_revenue": "clean_radical_expression + integral_c^kappa A(x)^2/(4B(x)) dx",
+  "integral_interval": [
+    "1010021275471446749704271/125000000000000000000000000000",
+    "8080170203771573997634169/1000000000000000000000000000000"
+  ],
+  "revenue_interval": [
+    "876463378441815267238668800979/1000000000000000000000000000000",
+    "43823168922090763361933440049/50000000000000000000000000000"
+  ],
+  "gain_over_V4_6_1_interval": [
+    "7764605489415092516152687/1000000000000000000000000000000",
+    "485287843088443282259543/62500000000000000000000000000"
+  ],
+  "advantage_over_affine_interval": [
+    "25689928517510463719/50000000000000000000000000000",
+    "513798570350209274381/1000000000000000000000000000000"
+  ],
+  "quadrature_certificate": {
+    "highest_geometric_power": 28,
+    "summands": 29,
+    "rho_bound": "33505531/597930125",
+    "remainder_bound": [
+      "2111551/500000000000000000000000000000000000000000000000",
+      "4223103/1000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "rational_profile_checks": 927,
+  "exact_algebraic_root_ties": 5,
+  "proof": "research_log/functional_jump.md"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "OUTER_LOTTERY_STRIP_EXACT_PASS",
+  "scope": "complete DSIC/IR feasible lower improvement; full inner optimum certified separately in inner_lottery_certificate",
+  "constants": {
+    "a": "159/250",
+    "b": "91/100",
+    "c": "137/500",
+    "d": "1/2",
+    "A": "2/3",
+    "T": "613/750"
+  },
+  "revenue": {
+    "exact_gain": "305193169586616381246083/101062797120000000000000000000",
+    "gain_before_old_cutoff": "388668763410121787672934397557053/151313910543974522880000000000000000000",
+    "gain_after_old_cutoff": "2528687983626197496416124657657/5604218909036093440000000000000000000",
+    "integrand_before": [
+      "-495198797654079/1000000000000000",
+      "12689682266769/4000000000000",
+      "-1592084487/200000000",
+      "19430217/2000000",
+      "-91287/16000",
+      "81/64"
+    ],
+    "integrand_after": [
+      "-42057358749591/62500000000000",
+      "195386772221/50000000000",
+      "-4484786121/500000000",
+      "20349567/2000000",
+      "-91287/16000",
+      "81/64"
+    ],
+    "added_opponent_area": "5989/187500",
+    "extended_opponent_area": "15481/187500",
+    "revenue_interval": [
+      "81182063076524333062166743441/92752200000000000000000000000",
+      "405910315382621665310835572249/463761000000000000000000000000"
+    ],
+    "multiplier_scope": "both bidders and both item orientations; added rho width t-a",
+    "independent_replay": "dictionary polynomial integration agrees exactly"
+  },
+  "boundary_checks": 988,
+  "simultaneous_splice_checks": 144,
+  "reverse_Q_checks": 96,
+  "occupied_capacity_trace_checks": 144,
+  "witness": {
+    "profile": [
+      "7/10",
+      "1/4",
+      "18/25",
+      "29/100"
+    ],
+    "old_allocation": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "new_allocation": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "3125/4852"
+      ]
+    ],
+    "new_payment": "85053/97040"
+  },
+  "closed_face_policy": "retain V4.5 on rho=c and t in {2/3,T}",
+  "continuum_proof": "research_log/outer_lottery_strip.md"
+}

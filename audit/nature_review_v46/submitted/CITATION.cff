@@ -1,0 +1,32 @@
+cff-version: 1.3.0
+message: "If you use this work, please cite the research preprint."
+title: "Exact Primal-Dual Certificates for a Two-Bidder, Two-Item Auction"
+type: article
+authors:
+  - family-names: Fang
+    given-names: Jiarui
+    affiliation: Boston University
+    email: baymin@bu.edu
+    orcid: "https://orcid.org/0009-0006-9100-0445"
+version: 1.3.0
+date-released: 2026-09-05
+repository-code: "https://github.com/Baymax-ray/two-bidder-two-item-dsic-certificates"
+license: CC-BY-4.0
+abstract: >-
+  Exact stream-dual upper certificates and residual-capacity screening
+  yield a rigorous bracket of width below 0.01 for the two-bidder,
+  two-item independent-uniform pointwise-DSIC auction. An explicit
+  randomized mechanism has revenue 0.875819854148422455346... and earns
+  at least 98.8779% of unrestricted optimal revenue. New full randomized
+  conditional supports at diagonal holes and lottery junctions guide
+  jointly feasible menu changes with exact algebraic/logarithmic gains.
+  Independent audits reconstruct the new additions while retaining the
+  historical exact reference integral. The unrestricted optimum and a
+  matching common capacity support remain open.
+preferred-citation:
+  type: article
+  title: "Exact Primal-Dual Certificates for a Two-Bidder, Two-Item Auction"
+  authors:
+    - family-names: Fang
+      given-names: Jiarui
+  year: 2026

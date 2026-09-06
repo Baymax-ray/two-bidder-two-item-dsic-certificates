@@ -1,0 +1,13 @@
+{
+  "source_count": 156,
+  "dependency_count": 149,
+  "changed_staged_sources": [
+    "V4_6_1_1_V4_6_2_archive_audit/upper/fresh_support_latest_flatness.json"
+  ],
+  "changed_json_keys": {
+    "V4_6_1_1_V4_6_2_archive_audit/upper/fresh_support_latest_flatness.json": [
+      "source_sha256"
+    ]
+  },
+  "packet_input_hashes_after": "PASS"
+}

@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "role": "Author-side validation; not an independent reviewer report.",
+  "scope": "Second fresh corrected full portable replay in a distinct temporary root, followed by source identity and exact endpoint reconciliation.",
+  "prior_environment_failure": "attempt1_environment_failure/validation_report.json; 0/46 entrypoints, WinError 267 from excessive temporary cwd length; corrected here using a shorter temporary root.",
+  "started_utc": "2026-09-06T06:47:36.225930+00:00",
+  "finished_utc": "2026-09-06T06:57:41.169891+00:00",
+  "elapsed_seconds": 604.8428389000474,
+  "exit_code": 0,
+  "command": [
+    "D:\\Anaconda\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\文档\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates\\certificate\\coordinated_primal_dual\\verify_coordinated.py"
+  ],
+  "temporary_root": "C:\\Users\\FangJ\\AppData\\Local\\Temp\\dsic-second-corrected-803724c3",
+  "package_file_count_before": 162,
+  "package_file_count_after": 162,
+  "all_package_files_unchanged": true,
+  "changed_paths": [],
+  "expected_entrypoint_count": 46,
+  "passed_entrypoint_count": 46,
+  "entrypoint_sequence_matches": true,
+  "final_marker_expected": "COORDINATED_PRIMAL_DUAL_CERTIFICATE_PASS 46 entrypoints",
+  "final_marker_observed": true,
+  "stderr_empty": true,
+  "final_source_identity": {
+    "status": "PASS",
+    "bound_source_files": 156,
+    "dependency_files": 149
+  },
+  "wrapper_sha256_before": "c105843778d48cb59e27901351fabbd55f3197ec6fcb635717dc083970e3331f",
+  "wrapper_sha256_after": "c105843778d48cb59e27901351fabbd55f3197ec6fcb635717dc083970e3331f",
+  "manifest_sha256_before": "06a44df714427fa269e2acbd0c31b9f78d48dea9ff91e3909a2b39124fda4303",
+  "manifest_sha256_after": "06a44df714427fa269e2acbd0c31b9f78d48dea9ff91e3909a2b39124fda4303",
+  "endpoint_reconciliation": {
+    "status": "PASS",
+    "method": "Exact Fraction arithmetic; independently bounded radicals by integer-square-root intervals at 60 decimal places.",
+    "revenue_basis": [
+      "1",
+      "sqrt(2)",
+      "sqrt(493894)"
+    ],
+    "revenue_coefficients": [
+      "35791404252341621852527735747861637/42525000000000000000000000000000000",
+      "31/1215",
+      "-15059524650320123/8305664062500000000000"
+    ],
+    "upper_exact": "13567868514857895377422588406542072007419811564286894575878522410727788846371952817118058918329875423712283695826717748044723616278183916405286408466921019145566408172251659463/15366988623506010839300830964448254142215307259735475230302635058848387209170137623759432896455546120917565820755151689314984524762582018568697850980189516580519936000000000000",
+    "lower_enclosure": [
+      "0.876464164471798049944906113027",
+      "0.876464164471798049944906113028"
+    ],
+    "upper_enclosure": [
+      "0.882923053258716969260626799854",
+      "0.882923053258716969260626799855"
+    ],
+    "gap_enclosure": [
+      "0.006458888786918919315720686827",
+      "0.006458888786918919315720686828"
+    ],
+    "ratio_enclosure": [
+      "0.992684652685100617902519468374",
+      "0.992684652685100617902519468375"
+    ],
+    "strict_gap_lt_1_100": true,
+    "strict_ratio_gt_992684_over_1000000": true,
+    "independent_lower_rational_bounds": [
+      "808846323658055817576109645323206492559801118514361999986778602974701689439179963/922851562500000000000000000000000000000000000000000000000000000000000000000000000",
+      "34664842442488106467547556228137421109705762222044085713719083993816367760013999/39550781250000000000000000000000000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "stdout_sha256": "ec89839606e72a0a936370575231086e56b81de79523b9ee51f571d19b620659",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "errors": [],
+  "limitations": "Validation establishes this finite frozen certificate replay and stated endpoint bracket; it does not establish optimality, convergence, or hypotheses beyond those of the certificate.",
+  "observed_staged_mirror": "C:\\Users\\FangJ\\AppData\\Local\\Temp\\dsic-second-corrected-803724c3\\dsic-pair-kt_as0b8",
+  "prior_attempt": {
+    "path": "attempt1_environment_failure/validation_report.json",
+    "status": "ENVIRONMENT_FAILURE_BEFORE_VERIFICATION",
+    "entrypoints_passed": 0,
+    "error": "WinError 267: excessive Windows subprocess working-directory length; corrected by a short ordinary process-specific TEMP/TMP root.",
+    "proof_sources_modified": false
+  }
+}

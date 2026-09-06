@@ -1,0 +1,10 @@
+{
+  "proof_identity_after_fresh_portable_pass": {
+    "source_bindings.json": "be4b849d8c512f87c84158514191a86b7d0392f0e71f99d924988e4d05b33986",
+    "dependencies.json": "07f82f84191ced6571fdd84ceb412d2194c3e2ee4e6ac25aebb246a71ed4d926",
+    "entrypoints.json": "112ba5c87eff1f01659773cb0a816ef6a2478464213560732e92ca0e1550f713",
+    "manifest.json": "06a44df714427fa269e2acbd0c31b9f78d48dea9ff91e3909a2b39124fda4303",
+    "verify_coordinated.py": "c105843778d48cb59e27901351fabbd55f3197ec6fcb635717dc083970e3331f"
+  },
+  "portable_stdout_sha256": "ec89839606e72a0a936370575231086e56b81de79523b9ee51f571d19b620659"
+}

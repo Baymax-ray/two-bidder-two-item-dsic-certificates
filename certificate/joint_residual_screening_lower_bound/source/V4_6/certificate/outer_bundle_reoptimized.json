@@ -1,0 +1,49 @@
+{
+  "status": "OUTER_BUNDLE_REOPTIMIZED_EXACT_PASS",
+  "scope": "complete pointwise feasible coupled conditional response; exact strict gain",
+  "revenue": {
+    "extra_gain_pair": [
+      "-15039791471060638832530097/486000000000000000000000000000",
+      "742187/113906250000"
+    ],
+    "extra_gain_field": "sqrt(23)",
+    "extra_gain_interval": [
+      "43065855953825190056670350189646640500745011637125059020721/142382812500000000000000000000000000000000000000000000000000000000",
+      "7656152169568922676741395589270513866799113179933343842399/25312500000000000000000000000000000000000000000000000000000000000"
+    ],
+    "constrained_cost_pair": [
+      "6214545829445349343/141750000000000000000000",
+      "-12167/1328906250"
+    ],
+    "constrained_cost_field": "sqrt(23)",
+    "constrained_integrand": {
+      "0": "-1524011478638039/40500000000000000000",
+      "1": "-1496478915233/1500000000000000",
+      "2": "-7931359759/1200000000000",
+      "3": "2607927/200000000",
+      "4": "206763/1600000",
+      "5": "-3051/8000",
+      "6": "9/32"
+    },
+    "full_bundle_exchange_gain_coefficients": [
+      "-284123855487033850073/15750000000000000000000",
+      "155394217/12150000000",
+      "-12167/1328906250"
+    ],
+    "full_bundle_exchange_gain_basis": [
+      "1",
+      "sqrt(2)",
+      "sqrt(23)"
+    ],
+    "full_bundle_exchange_gain_interval": [
+      "3209882830262434771990271827581172769960913348107370106654469/850500000000000000000000000000000000000000000000000000000000000000",
+      "802470707565608692997567956895293192490228337026842798798169/212625000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "exact_continuous_polygon_checks": 8,
+    "scope": "exact additional gain over outer_bundle_exchange; whole changed conditional menus included"
+  },
+  "pointwise_cases": 240,
+  "occupied_trace_cases": 27,
+  "proof": "research_log/outer_bundle_reoptimized.md",
+  "predecessor": "verifier/outer_bundle_exchange.py"
+}

@@ -1,0 +1,66 @@
+{
+  "status": "RESIDUAL_LOTTERY_EXACT_PASS",
+  "scope": "complete pointwise feasible randomized DSIC/IR lower improvement; no full inner optimality claim",
+  "parameters": {
+    "a": "159/250",
+    "b": "91/100",
+    "c": "137/500",
+    "d": "1/2",
+    "q": "113/500",
+    "q_old": "227/1000",
+    "region_low": "2/3",
+    "region_high": "613/750",
+    "factor_second_root": "839/750",
+    "old_cutoff": "1058587/1362000"
+  },
+  "revenue": {
+    "gain": "472617707798758460108653/101062797120000000000000000000",
+    "asymmetric_gain": "472617707798758460108653/202125594240000000000000000000",
+    "gain_before_old_cutoff": "651915705256662376743221578465483/302627821087949045760000000000000000000",
+    "gain_after_old_cutoff": "2062967030870045328766504663407/11208437818072186880000000000000000000",
+    "integrand_before": [
+      "283415664066171/800000000000000",
+      "-16814857567161/8000000000000",
+      "1221047679/250000000",
+      "-22115691/4000000",
+      "193671/64000",
+      "-81/128"
+    ],
+    "integrand_after": [
+      "24070563812659/50000000000000",
+      "-1283857878109/500000000000",
+      "10903482189/2000000000",
+      "-23035041/4000000",
+      "193671/64000",
+      "-81/128"
+    ]
+  },
+  "identity_checks": 36,
+  "pointwise_boundary_checks": 1296,
+  "symmetric_boundary_checks": 240,
+  "witness": {
+    "profile": [
+      "7/10",
+      "1/10",
+      "18/25",
+      "29/100"
+    ],
+    "old_masks": [
+      0,
+      1
+    ],
+    "new_allocation": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "3125/4852"
+      ]
+    ],
+    "new_payment": "85053/97040",
+    "new_utility": "919/30325"
+  },
+  "full_class_upper": "unresolved outside inherited Q; no upper bound improvement claimed"
+}

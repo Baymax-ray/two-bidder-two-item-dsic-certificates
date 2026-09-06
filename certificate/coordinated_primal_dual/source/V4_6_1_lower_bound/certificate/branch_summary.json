@@ -1,0 +1,49 @@
+{
+  "status": "V4_6_1_LOWER_BOUND_CERTIFIED",
+  "mechanism": "verifier/functional_exchange.py: mechanism(profile)",
+  "exact_revenue_coefficients": [
+    "309078860435260513361/367416000000000000000",
+    "31/1215",
+    "-170368/664453125"
+  ],
+  "field_basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(11)"
+  ],
+  "revenue_enclosure": [
+    "0.8764556138363258521461526",
+    "0.8764556138363258521461527"
+  ],
+  "gain_over_V4_6_enclosure": [
+    "0.0006357596879033968000721",
+    "0.0006357596879033968000762"
+  ],
+  "clean_mechanism": {
+    "evaluator": "verifier/parameter_candidate.py: mechanism(profile)",
+    "exact_revenue_coefficients": [
+      "482935538268336599/574087500000000000",
+      "31/1215",
+      "-170368/664453125"
+    ],
+    "revenue_enclosure": [
+      "0.8764552982716114956646711",
+      "0.8764552982716114956646712"
+    ],
+    "gain_over_V4_6_enclosure": [
+      "0.0006354441231890403185906",
+      "0.0006354441231890403185947"
+    ]
+  },
+  "functional_increment": "68161978301/216000000000000000",
+  "strict_gain_lower": "63/100000",
+  "certified_inner_area": {
+    "Q": "17191/45000",
+    "E": "1316/16875",
+    "union": "62101/135000"
+  },
+  "conditional_scope": "both bidders fully optimized on Q union E for the new actual residual; remaining region unresolved",
+  "exact_comparison": "independent simplex moments and primary Green boundary integrals agree coefficientwise",
+  "optimality": "Neither unrestricted nor parameter-family optimality is claimed",
+  "baseline": "V4_6 strongest complete mechanism; predecessor file identities checked separately; concurrent outer manifest updates are outside this branch"
+}

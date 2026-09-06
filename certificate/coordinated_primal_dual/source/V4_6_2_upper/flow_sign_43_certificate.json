@@ -1,0 +1,31 @@
+{
+  "status": "EXACT_STREAM_SIGN_PASS",
+  "w_square": [
+    "0",
+    "43/100"
+  ],
+  "opponent_square": [
+    "0",
+    "1"
+  ],
+  "scale": 1000000000000,
+  "records": [
+    {
+      "chart": 0,
+      "nodes": 15,
+      "leaves": 8,
+      "max_depth": 6,
+      "max_upper_control": -9023081075,
+      "coverage": "1"
+    },
+    {
+      "chart": 1,
+      "nodes": 1,
+      "leaves": 1,
+      "max_depth": 0,
+      "max_upper_control": -70018012548,
+      "coverage": "1"
+    }
+  ],
+  "statement": "Both bidder1 virtual values are nonpositive whenever max(w)<=h, for all opponent reports, by own-chart proof and simultaneous item symmetry."
+}

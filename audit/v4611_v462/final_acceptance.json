@@ -1,0 +1,40 @@
+{
+  "status": "AUDITED_REVISED_PACKAGE_ACCEPTED_WITH_OPEN_OPTIMUM",
+  "date": "2026-09-06",
+  "versions": [
+    "V4.6.1.1",
+    "V4.6.2"
+  ],
+  "internal_review_reports": 3,
+  "post_review_syntheses": 1,
+  "concern_ids_addressed": [
+    "R1-M1",
+    "R1-m1",
+    "R1-m2",
+    "R2-M1",
+    "R2-m1",
+    "R2-m2",
+    "R2-m3",
+    "R3-M1",
+    "R3-m1",
+    "R3-m2",
+    "R3-m3"
+  ],
+  "corrected_full_portable_runs": 2,
+  "entrypoints_per_full_run": 46,
+  "all_final_staged_identity_checks_passed": true,
+  "fresh_publication_component_groups": 13,
+  "publication_validation_boundary": "Fresh separately executed component results reused after proof-identity checks through the public runner assertions, then current snapshots/text/clean compilation/hash checks; not an additional full mathematical replay.",
+  "upper_independence_boundary": "Two complete independent B20 traversals; one full Delta1024 partition accumulation with all-coefficient and bounded classifier/cell cross-checks; separate whole-box and exact IC-cycle proofs.",
+  "immutable_review_packet_counts": [
+    230,
+    404
+  ],
+  "pdf_pages": 32,
+  "pdf_sha256": "2b4b5bf7a59e0bc54d861a44eedb3844b1767a3bdba32811f914994ce1a6130d",
+  "visual_qa": "all32 pages inspected",
+  "global_optimum": "OPEN",
+  "matching_certificate": "OPEN",
+  "external_peer_review": false,
+  "novelty_boundary": "Strict common-price mass reductions preserving both bidder inequalities, complete exchange and residual-specific identities; common-price existence and zero charged values alone are not new."
+}

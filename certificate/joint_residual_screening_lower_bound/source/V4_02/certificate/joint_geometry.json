@@ -1,0 +1,110 @@
+{
+  "status": "JOINT_GEOMETRY_EXACT_PASS",
+  "scope": "Exact witnesses and affine inverse identity; no expected-revenue improvement asserted",
+  "singleton_shift_profile": [
+    "3/4",
+    "7/10",
+    "1",
+    "7/20"
+  ],
+  "old_masks": [
+    2,
+    1
+  ],
+  "old_menus": [
+    [
+      "0",
+      "269/250",
+      "577/1000",
+      "27/20"
+    ],
+    [
+      "0",
+      "977/1000",
+      "927/1000",
+      "29/20"
+    ]
+  ],
+  "singleton2_price_shift": "53/1000",
+  "shifted_first_utilities": [
+    "0",
+    "-163/500",
+    "7/100",
+    "1/10"
+  ],
+  "incompatible_graft_masks": [
+    3,
+    1
+  ],
+  "item2_to_bundle_junction": [
+    "773/1000",
+    "18/25"
+  ],
+  "compression_lambda": "547/600",
+  "compression_profile": [
+    "0",
+    "3/5",
+    "1",
+    "7/20"
+  ],
+  "compression_source_profile": [
+    "0",
+    "547/1000",
+    "1",
+    "7/20"
+  ],
+  "compression_old_masks": [
+    2,
+    1
+  ],
+  "compression_new_masks": [
+    0,
+    3
+  ],
+  "compression_second_payment": "3413/3750",
+  "compression_target_threshold": "8/25",
+  "feasible_deterministic_joint_mask_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "not_claimed": [
+    "Improved expected revenue",
+    "All-report numerical verification",
+    "Actual GemNet model reconstructed",
+    "Finite-menu optimality for original problem"
+  ]
+}

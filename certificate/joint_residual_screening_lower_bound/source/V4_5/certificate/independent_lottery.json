@@ -1,0 +1,67 @@
+{
+  "scope": "independent exact continuous-cell revenue audit; no full inner or auction optimality claim",
+  "method": "rational halfplane clipping, shoelace areas, dictionary-polynomial integration",
+  "band_end": "613/750",
+  "factorization_other_root": "839/750",
+  "old_cutoff": "1058587/1362000",
+  "gain_polynomial_before_old_cutoff": {
+    "0": "3114457846881/16000000000000",
+    "1": "-3763846077/4000000000",
+    "2": "13196781/8000000",
+    "3": "-9801/8000",
+    "4": "81/256"
+  },
+  "gain_polynomial_after_old_cutoff": {
+    "0": "264511690249/1000000000000",
+    "1": "-560080323/500000000",
+    "2": "14116131/8000000",
+    "3": "-9801/8000",
+    "4": "81/256"
+  },
+  "one_sided_exact_gain": "472617707798758460108653/202125594240000000000000000000",
+  "exact_gain": "472617707798758460108653/101062797120000000000000000000",
+  "revenue_interval": [
+    "27642397104691039590048636740723/31582124100000000000000000000000",
+    "138211985523455197950243815346097/157910620500000000000000000000000"
+  ],
+  "gain_multiplier_scope": "both conditional menu changes; simultaneous feasibility proved separately",
+  "polygon_cases": [
+    {
+      "t": "7/10",
+      "delta": "1727/62500",
+      "beta": "3125/4852",
+      "lottery_cell_area": "15769/625000",
+      "conditional_gain": "554461281/16000000000000"
+    },
+    {
+      "t": "3/4",
+      "delta": "55853/4000000",
+      "beta": "500000/555853",
+      "lottery_cell_area": "555853/12800000",
+      "conditional_gain": "755565753/8000000000000"
+    },
+    {
+      "t": "1058587/1362000",
+      "delta": "25400785977/3297856000000",
+      "beta": "546931984000/572332769977",
+      "lottery_cell_area": "953170435445705501/17966719488000000000",
+      "conditional_gain": "645199928249359844529/10875854196736000000000000"
+    },
+    {
+      "t": "4/5",
+      "delta": "3107/1000000",
+      "beta": "200000/203107",
+      "lottery_cell_area": "609321/10000000",
+      "conditional_gain": "9653449/1000000000000"
+    },
+    {
+      "t": "434359/544800",
+      "delta": "47818118313/13191424000000",
+      "beta": "2584494880000/2632312998313",
+      "lottery_cell_area": "1724799401327608433/28746751180800000000",
+      "conditional_gain": "2286572438996065965969/174013667147776000000000000"
+    }
+  ],
+  "additional_rational_parameter_checks": 9,
+  "baseline_interval_dependency": "V4_02/certificate/split_cost_revenue.json"
+}

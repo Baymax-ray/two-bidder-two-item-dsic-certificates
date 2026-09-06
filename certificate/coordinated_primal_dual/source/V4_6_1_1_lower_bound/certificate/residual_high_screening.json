@@ -1,0 +1,69 @@
+{
+  "status": "RESIDUAL_HIGH_SCREENING_EXACT_PASS",
+  "theorem": {
+    "continuous_menu_identity_checks": 98,
+    "strict_gap_examples": 83,
+    "parameter_pairs": [
+      [
+        "2/3",
+        "2/3"
+      ],
+      [
+        "16/25",
+        "18/25"
+      ],
+      [
+        "7/10",
+        "4/5"
+      ],
+      [
+        "61/75",
+        "61/75"
+      ],
+      [
+        "3/4",
+        "1"
+      ],
+      [
+        "1",
+        "3/4"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ]
+  },
+  "actual_residual": {
+    "source": "V4_6_1_lower_bound/verifier/functional_exchange.py",
+    "source_sha256": "123e9ab71ad4e7a1a42ef0687a6ca828fe0bbd13e26b03c3b6f54fd6cddcda5b",
+    "complete_menu_profile_checks": 488,
+    "strict_interior_bundle_cases": 216,
+    "boundary_exception": {
+      "profile": [
+        "1",
+        "33/100",
+        "61/75",
+        "61/75"
+      ],
+      "allocations": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "meaning": "Normal marginal may be free on the own-report edge; the theorem uses only no-sale interior"
+    },
+    "high_region_area": "34/225",
+    "total_certified_opponent_area": "82501/135000",
+    "broader_endpoint_43_over_125_area": "84871/562500",
+    "actual_scope": "Preserved V4.6.1 final functional mechanism; newer mechanisms require separate applicability verification"
+  },
+  "identity": "R+u0=integral_G(((3x-1)a1+(3y-1)a2)/2)+integral_H((3y-2)a2)+(3k-1)/2*integral_p^1((1-y)a2(k,y))",
+  "scope": "Full randomized conditional optimum under an actual no-sale-interior capacity hole; no revenue gain or global auction upper claimed",
+  "proof": "research_log/residual_high_screening.md"
+}

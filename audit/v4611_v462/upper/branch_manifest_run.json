@@ -1,0 +1,13 @@
+{
+  "command": [
+    "D:\\Anaconda\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\\u6587\u6863\\ChatGPT\\AI4MATH\\output\\output\\two_bidder_two_item_full_dsic_exact_auction\\V4_6_2_upper\\verifier\\verify_manifest.py"
+  ],
+  "seconds": 0.0779999999795109,
+  "returncode": 0,
+  "script_sha256": "2789ac55c4771df04b3811d784da081d1e350657762ed77b464c41afc8597914",
+  "stdout_sha256": "943b83e96d7388b7dae6c912cb067905f8e59526efc67cbb27b12236f507602e"
+}

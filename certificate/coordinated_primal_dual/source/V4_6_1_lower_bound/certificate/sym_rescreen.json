@@ -1,0 +1,44 @@
+{
+  "status": "SYM_G_FULL_RANDOMIZED_RESCREEN_PASS",
+  "scope": "literal bidder-symmetrization of strongest V4.6; bidder 2 held pointwise fixed; full inner optimum on G only",
+  "exact_gain_pair": [
+    "30892611299/151875000000000",
+    "-180389/1265625000"
+  ],
+  "field": "sqrt(2)",
+  "gain_interval": [
+    "17473928915598179312841295464025799786715950544707855176439/9492187500000000000000000000000000000000000000000000000000000000",
+    "69895715662392717251365181856103199146863802178831421246923/37968750000000000000000000000000000000000000000000000000000000000"
+  ],
+  "conditional_gap": "(2/3-a)^2*(3*z-2+2*(2/3-a))/2",
+  "proof": "research_log/sym_rescreen.md",
+  "pointwise_checks": 60,
+  "witness": {
+    "profile": [
+      "13/20",
+      "1/10",
+      "11/25",
+      "11/25"
+    ],
+    "old": [
+      [
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "new": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+PASS: SHA256SUMS verifies all 62 stable files
+Excluded: LaTeX/build/**, LaTeX/qa/**, __pycache__ directories, *.pyc, SHA256SUMS

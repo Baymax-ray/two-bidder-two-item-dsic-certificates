@@ -1,0 +1,44 @@
+{
+  "status": "GAP_LOW_SQUARE_EXACT_PASS",
+  "revenue": {
+    "field_basis": [
+      "1",
+      "sqrt(2)"
+    ],
+    "gain_coefficients": [
+      "1291191981929/3164062500000000",
+      "-180389/632812500"
+    ],
+    "exact_gain_interval": [
+      "7824565207199393104280431821341933262238650181569285058813/1582031250000000000000000000000000000000000000000000000000000000",
+      "10432753609599190805707242428455911016318200242092380138547/2109375000000000000000000000000000000000000000000000000000000000"
+    ],
+    "bidder_one_below_b_pair": [
+      "30892611299/75937500000000",
+      "-180389/632812500"
+    ],
+    "each_bidder_above_b_gain": "2999883353/4746093750000000",
+    "integrated_polynomial_below_b": {
+      "0": "-384583/210937500",
+      "1": "244927/52734375",
+      "2": "-529/187500"
+    },
+    "integrated_polynomial_above_b": {
+      "0": "-177191969/1687500000",
+      "1": "2047119719/1687500000",
+      "2": "-2331079/750000",
+      "3": "3",
+      "4": "-1"
+    },
+    "polygon_checks": 12,
+    "conditional_gap": "3*(2/3-P)^2*(z-2/3)+2*(2/3-P)^3",
+    "old_singleton": "P=a for bidder1 z<=b; P=A for bidder2 z<=b; P=z-c for both z>b",
+    "full_inner_scope": "Both bidders: opponent max<=1/2 and sum<=1411/1500 after replacement, including inherited F"
+  },
+  "pointwise_cases": 288,
+  "occupied_trace_cases": 24,
+  "all_or_none_cases": 56,
+  "proof": "research_log/gap_low_square.md",
+  "baseline": "V4_6/verifier/price_joint_reallocation.py",
+  "scope": "Exact whole-menu improvement and full randomized conditional gap elimination; no full auction upper bound"
+}

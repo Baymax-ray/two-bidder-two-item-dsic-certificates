@@ -1,0 +1,58 @@
+{
+  "status": "PRICE_JOINT_REALLOCATION_EXACT_PASS",
+  "scope": "complete pointwise feasible DSIC/IR joint improvement; conservative exact gain bound",
+  "epsilon": "9/10000",
+  "cut_rectangle": [
+    "7/10",
+    "71/100",
+    "0",
+    "1/5"
+  ],
+  "fee_rectangle": [
+    "1741/2500",
+    "71/100",
+    "1361/5000",
+    "347/1250"
+  ],
+  "conditional_derivative_minimum": "1213/625000",
+  "second_bidder_gain_lower": "3123/1000000000000",
+  "first_bidder_loss_upper": "12135422511/12500000000000000000",
+  "above_strip_lambda_maxima": [
+    "-1949513/200000000",
+    "-2078141/200000000",
+    "-3023/3125000"
+  ],
+  "total_gain_lower": "26902077489/12500000000000000000",
+  "boundary_replays": 315,
+  "witness": {
+    "profile": [
+      "7/10",
+      "1/10",
+      "13991/20000",
+      "137/500"
+    ],
+    "old_allocations": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "new_allocations": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "3125/4852"
+      ]
+    ],
+    "new_payment": "2655177/3032500"
+  },
+  "exact_revenue_increment": "exact rational-plus-log increment in price_joint_revenue.json",
+  "upper_certificate": "reference predecessor is strictly suboptimal; final trial unrestricted optimality unresolved"
+}

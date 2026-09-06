@@ -1,0 +1,3 @@
+V4_6_1_1_LOWER_BOUND_CERTIFIED
+independent_coefficients_agree True
+conditional_areas {'Q': '1746937679191/4500000000000', 'E': '4867/62500', 'W': '438867/2500000', 'union': '2887322279191/4500000000000'}

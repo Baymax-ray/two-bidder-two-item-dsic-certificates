@@ -1,0 +1,78 @@
+{
+  "status": "RESIDUAL_SECOND_LOTTERY_EXACT_PASS",
+  "scope": "strict negative first variation for one anchored higher-slope family; opposite kink violates actual capacity; no full inner optimality claim",
+  "sign_formula": "-beta*(y0-c)*(Y-y0)^2/2",
+  "checks": [
+    {
+      "t": "7/10",
+      "anchor": "9169/31250",
+      "derivative": "-13242321/625000000000",
+      "feasible_higher_epsilon": "2374625/35514214"
+    },
+    {
+      "t": "7/10",
+      "anchor": "19551/62500",
+      "derivative": "-1471369/78125000000",
+      "feasible_higher_epsilon": "2374625/32571476"
+    },
+    {
+      "t": "7/10",
+      "anchor": "5191/15625",
+      "derivative": "-4414107/625000000000",
+      "feasible_higher_epsilon": "2374625/29628738"
+    },
+    {
+      "t": "3/4",
+      "anchor": "4939853/16000000",
+      "derivative": "-2780753018481/16384000000000000",
+      "feasible_higher_epsilon": "22564612000/1825176120827"
+    },
+    {
+      "t": "3/4",
+      "anchor": "2747853/8000000",
+      "derivative": "-308972557609/2048000000000000",
+      "feasible_higher_epsilon": "11282306000/758101781609"
+    },
+    {
+      "t": "3/4",
+      "anchor": "6051559/16000000",
+      "derivative": "-926917672827/16384000000000000",
+      "feasible_higher_epsilon": "22564612000/1207231005609"
+    },
+    {
+      "t": "4/5",
+      "anchor": "1299107/4000000",
+      "derivative": "-371272081041/640000000000000",
+      "feasible_higher_epsilon": "80782000/144880488347"
+    },
+    {
+      "t": "4/5",
+      "anchor": "751107/2000000",
+      "derivative": "-41252453449/80000000000000",
+      "feasible_higher_epsilon": "40391000/51814017449"
+    },
+    {
+      "t": "4/5",
+      "anchor": "1705321/4000000",
+      "derivative": "-123757360347/640000000000000",
+      "feasible_higher_epsilon": "80782000/62375581449"
+    }
+  ],
+  "actual_capacity_witness": {
+    "profile": [
+      "7/10",
+      "21/200",
+      "447/640",
+      "137/500"
+    ],
+    "old_bidder1_mask": 1,
+    "old_bidder1_payment": "447/640",
+    "added_allocation": [
+      "1",
+      "9375/19408"
+    ],
+    "added_payment": "160937/194080",
+    "added_utility": "1/640",
+    "old_bidder2_utility": "0"
+  }
+}

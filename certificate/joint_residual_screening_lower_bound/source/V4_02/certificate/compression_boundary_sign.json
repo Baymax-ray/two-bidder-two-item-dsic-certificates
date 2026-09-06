@@ -1,0 +1,27 @@
+{
+  "scope": "near-identity origin compression loses; no statement for all lambda<1",
+  "method": "exact polynomial integrals and nonnegative omitted terms; no grid",
+  "input_sha256": {
+    "base": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+    "V3": "3d1f899191c780d94263da5b83dca997a13f28a388ed286c211580a2dc499ac3",
+    "V3_1": "25ed34a320152bd66a1569f13828a5c5500a4fd41951bda2e175c929e73364a1"
+  },
+  "S2": "5509643569103/12000000000000",
+  "EC_base": "859549417/750000000",
+  "Eg2_base": "554158321/3000000000",
+  "edge_correction_1": "-123583082809/12000000000000",
+  "edge_correction_2": "-105073507349/1200000000000",
+  "S1_base": "3453946410567/2000000000000",
+  "S_edge_segments": [
+    "477691164497444647/405000000000000000000",
+    "26597509803773791589/16344000000000000000000"
+  ],
+  "S_edge_gain": "2064375095897180100457/735480000000000000000000",
+  "S1_lower": "1272218628117805760100457/735480000000000000000000",
+  "omitted_terms": "nonnegative joined Z edge gain and nonnegative inherited bundle-fee edge gains",
+  "bundle_fee_singleton_upper": "7643/10000",
+  "R_V3_upper_dependency": "87464888532101401/100000000000000000",
+  "R_V3_1_upper_dependency": "875243586975954394119021/1000000000000000000000000",
+  "derivative_lower": "10162433525363281121773373/9193500000000000000000000000",
+  "strict_comparison": "derivative_lower > 1/1000 > 0"
+}

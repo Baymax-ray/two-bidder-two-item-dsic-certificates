@@ -1,0 +1,272 @@
+{
+  "status": "INNER_DIAGONAL_AND_CONSTRAINED_Q_FULL_CERTIFICATE_PASS",
+  "scope": "full randomized global inner support for symmetric and coupled raised-Q menus; no common auction certificate",
+  "exact_polygon_gap_examples": [
+    {
+      "label": "symmetric_candidate",
+      "B": "2/3",
+      "C": "87/100",
+      "k": "61/300",
+      "mass": "679/60000",
+      "revenue": "29654381/54000000",
+      "priced_allocation": "29654381/54000000",
+      "sink": "0",
+      "options": 4
+    },
+    {
+      "label": "symmetric_empty",
+      "B": "2/3",
+      "C": "87/100",
+      "k": "61/300",
+      "mass": "679/60000",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "sink": "0",
+      "options": 1
+    },
+    {
+      "label": "symmetric_interior_lotteries",
+      "B": "2/3",
+      "C": "87/100",
+      "k": "61/300",
+      "mass": "679/60000",
+      "revenue": "8131/21000",
+      "priced_allocation": "25989799/54000000",
+      "sink": "35570593/378000000",
+      "options": 4
+    },
+    {
+      "label": "symmetric_cheap_deterministic",
+      "B": "2/3",
+      "C": "87/100",
+      "k": "61/300",
+      "mass": "679/60000",
+      "revenue": "1532/3375",
+      "priced_allocation": "29812519/54000000",
+      "sink": "5300519/54000000",
+      "options": 4
+    },
+    {
+      "label": "symmetric_candidate",
+      "B": "2/3",
+      "C": "89/100",
+      "k": "67/300",
+      "mass": "2311/60000",
+      "revenue": "29627363/54000000",
+      "priced_allocation": "29627363/54000000",
+      "sink": "0",
+      "options": 4
+    },
+    {
+      "label": "symmetric_empty",
+      "B": "2/3",
+      "C": "89/100",
+      "k": "67/300",
+      "mass": "2311/60000",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "sink": "0",
+      "options": 1
+    },
+    {
+      "label": "symmetric_interior_lotteries",
+      "B": "2/3",
+      "C": "89/100",
+      "k": "67/300",
+      "mass": "2311/60000",
+      "revenue": "8131/21000",
+      "priced_allocation": "26342257/54000000",
+      "sink": "38037799/378000000",
+      "options": 4
+    },
+    {
+      "label": "symmetric_cheap_deterministic",
+      "B": "2/3",
+      "C": "89/100",
+      "k": "67/300",
+      "mass": "2311/60000",
+      "revenue": "1532/3375",
+      "priced_allocation": "30228337/54000000",
+      "sink": "5716337/54000000",
+      "options": 4
+    },
+    {
+      "label": "symmetric_candidate",
+      "B": "2/3",
+      "C": "91/100",
+      "k": "73/300",
+      "mass": "3871/60000",
+      "revenue": "29571617/54000000",
+      "priced_allocation": "29571617/54000000",
+      "sink": "0",
+      "options": 4
+    },
+    {
+      "label": "symmetric_empty",
+      "B": "2/3",
+      "C": "91/100",
+      "k": "73/300",
+      "mass": "3871/60000",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "sink": "0",
+      "options": 1
+    },
+    {
+      "label": "symmetric_interior_lotteries",
+      "B": "2/3",
+      "C": "91/100",
+      "k": "73/300",
+      "mass": "3871/60000",
+      "revenue": "8131/21000",
+      "priced_allocation": "26693203/54000000",
+      "sink": "40494421/378000000",
+      "options": 4
+    },
+    {
+      "label": "symmetric_cheap_deterministic",
+      "B": "2/3",
+      "C": "91/100",
+      "k": "73/300",
+      "mass": "3871/60000",
+      "revenue": "1532/3375",
+      "priced_allocation": "30651283/54000000",
+      "sink": "6139283/54000000",
+      "options": 4
+    },
+    {
+      "label": "constrained_candidate",
+      "B": "926869/1500000",
+      "C": "1352869/1500000",
+      "k": "71/250",
+      "mass": "12131/750000",
+      "revenue": "3693248118449/6750000000000",
+      "priced_allocation": "3693248118449/6750000000000",
+      "sink": "0",
+      "options": 4
+    },
+    {
+      "label": "constrained_empty",
+      "B": "926869/1500000",
+      "C": "1352869/1500000",
+      "k": "71/250",
+      "mass": "12131/750000",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "sink": "0",
+      "options": 1
+    },
+    {
+      "label": "constrained_interior_lotteries",
+      "B": "926869/1500000",
+      "C": "1352869/1500000",
+      "k": "71/250",
+      "mass": "12131/750000",
+      "revenue": "8131/21000",
+      "priced_allocation": "16290995592653/33750000000000",
+      "sink": "22563219148571/236250000000000",
+      "options": 4
+    },
+    {
+      "label": "constrained_cheap_deterministic",
+      "B": "926869/1500000",
+      "C": "1352869/1500000",
+      "k": "71/250",
+      "mass": "12131/750000",
+      "revenue": "1532/3375",
+      "priced_allocation": "3746175141992050909/6750000000000000000",
+      "sink": "227391713997350303/2250000000000000000",
+      "options": 4
+    },
+    {
+      "label": "constrained_candidate",
+      "B": "225871/375000",
+      "C": "339871/375000",
+      "k": "38/125",
+      "mass": "1379/187500",
+      "revenue": "230384445269/421875000000",
+      "priced_allocation": "230384445269/421875000000",
+      "sink": "0",
+      "options": 4
+    },
+    {
+      "label": "constrained_empty",
+      "B": "225871/375000",
+      "C": "339871/375000",
+      "k": "38/125",
+      "mass": "1379/187500",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "sink": "0",
+      "options": 1
+    },
+    {
+      "label": "constrained_interior_lotteries",
+      "B": "225871/375000",
+      "C": "339871/375000",
+      "k": "38/125",
+      "mass": "1379/187500",
+      "revenue": "8131/21000",
+      "priced_allocation": "1014228374693/2109375000000",
+      "sink": "1382489247851/14765625000000",
+      "options": 4
+    },
+    {
+      "label": "constrained_cheap_deterministic",
+      "B": "225871/375000",
+      "C": "339871/375000",
+      "k": "38/125",
+      "mass": "1379/187500",
+      "revenue": "1532/3375",
+      "priced_allocation": "58366247356373311/105468750000000000",
+      "sink": "3497082452124437/35156250000000000",
+      "options": 4
+    },
+    {
+      "label": "constrained_candidate",
+      "B": "3567841/6000000",
+      "C": "5451841/6000000",
+      "k": "157/500",
+      "mass": "8159/3000000",
+      "revenue": "58908865891529/108000000000000",
+      "priced_allocation": "58908865891529/108000000000000",
+      "sink": "0",
+      "options": 4
+    },
+    {
+      "label": "constrained_empty",
+      "B": "3567841/6000000",
+      "C": "5451841/6000000",
+      "k": "157/500",
+      "mass": "8159/3000000",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "sink": "0",
+      "options": 1
+    },
+    {
+      "label": "constrained_interior_lotteries",
+      "B": "3567841/6000000",
+      "C": "5451841/6000000",
+      "k": "157/500",
+      "mass": "8159/3000000",
+      "revenue": "8131/21000",
+      "priced_allocation": "259124584773413/540000000000000",
+      "sink": "350292093413891/3780000000000000",
+      "options": 4
+    },
+    {
+      "label": "constrained_cheap_deterministic",
+      "B": "3567841/6000000",
+      "C": "5451841/6000000",
+      "k": "157/500",
+      "mass": "8159/3000000",
+      "revenue": "1532/3375",
+      "priced_allocation": "238729692598447216321/432000000000000000000",
+      "sink": "14211230866149072107/144000000000000000000",
+      "options": 4
+    }
+  ],
+  "actual_occupied_trace_checks": 45,
+  "proof": "research_log/inner_diagonal_capacity.md"
+}

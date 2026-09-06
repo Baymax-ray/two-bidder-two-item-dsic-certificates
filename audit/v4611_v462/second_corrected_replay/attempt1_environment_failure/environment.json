@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-09-06T06:45:42.445915+00:00",
+  "python_executable": "D:\\Anaconda\\python.exe",
+  "python_version": "3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)]",
+  "python_optimize": 0,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "command": [
+    "D:\\Anaconda\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\文档\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates\\certificate\\coordinated_primal_dual\\verify_coordinated.py"
+  ],
+  "cwd": "D:\\文档\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates\\certificate\\coordinated_primal_dual",
+  "process_TEMP": "\\\\?\\D:\\文档\\ChatGPT\\AI4MATH\\output\\output\\two_bidder_two_item_full_dsic_exact_auction\\V4_6_1_1_V4_6_2_archive_audit\\second_corrected_replay\\temp_root_20260906T064542_b1ed6fd7",
+  "process_TMP": "\\\\?\\D:\\文档\\ChatGPT\\AI4MATH\\output\\output\\two_bidder_two_item_full_dsic_exact_auction\\V4_6_1_1_V4_6_2_archive_audit\\second_corrected_replay\\temp_root_20260906T064542_b1ed6fd7",
+  "temporary_root": "D:\\文档\\ChatGPT\\AI4MATH\\output\\output\\two_bidder_two_item_full_dsic_exact_auction\\V4_6_1_1_V4_6_2_archive_audit\\second_corrected_replay\\temp_root_20260906T064542_b1ed6fd7",
+  "global_environment_modified": false,
+  "package": "D:\\文档\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates\\certificate\\coordinated_primal_dual",
+  "package_file_count": 162,
+  "runner_sha256": "0562c1eebb3271926b143479a0346ade4451de4af235d9b49155ec2f72105bbb",
+  "wrapper_sha256_before": "c105843778d48cb59e27901351fabbd55f3197ec6fcb635717dc083970e3331f"
+}

@@ -1,0 +1,85 @@
+{
+  "status": "OUTER_BUNDLE_EXCHANGE_EXACT_PASS",
+  "scope": "complete pointwise DSIC/IR genuine joint reallocation with exact positive total gain",
+  "revenue": {
+    "gain_coefficients": [
+      "-61265474244901887143940289321/3402000000000000000000000000000",
+      "155394217/12150000000",
+      "-12495509/797343750000"
+    ],
+    "field_basis": [
+      "1",
+      "sqrt(2)",
+      "sqrt(23)"
+    ],
+    "exact_gain_interval": [
+      "14763180586824594850258804678908417520182315726308048767749313/4252500000000000000000000000000000000000000000000000000000000000000",
+      "55361927200592230688470517545906565700683683973655203299541923/15946875000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "bidder_one_gain_pair": [
+      "-6270448598899/243000000000000",
+      "221749217/12150000000"
+    ],
+    "bidder_two_free_cost_pair": [
+      "93808494641/12150000000000",
+      "-13271/2430000"
+    ],
+    "bidder_two_constrained_cost_pair": [
+      "254427640204112856059710679/3402000000000000000000000000000",
+      "-12495509/797343750000"
+    ],
+    "free_cost_field": "sqrt(2)",
+    "constrained_cost_field": "sqrt(23)",
+    "constrained_integrand": {
+      "0": "-147575812582793321486243/324000000000000000000000000",
+      "1": "-45468620908144298221/9000000000000000000000",
+      "2": "347761918608878273/12000000000000000000",
+      "3": "670572320034893/4000000000000000",
+      "4": "-8873134997061/6400000000000",
+      "5": "55166476797/16000000000",
+      "6": "-240222069/64000000",
+      "7": "108459/64000",
+      "8": "-243/1024"
+    },
+    "constrained_upper_endpoint": "113/500 + sqrt(23)/15",
+    "exact_continuous_polygon_checks": 15,
+    "claim": "exact positive complete-menu gain, including both induced bidder-2 costs"
+  },
+  "pointwise_checks": 167,
+  "strict_transfer_box_volume": "1/62500000000",
+  "witness": {
+    "profile": [
+      "9/20",
+      "9/20",
+      "11/25",
+      "11/25"
+    ],
+    "prior_allocations": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "new_allocations": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "new_payments": [
+      "22/25",
+      "0"
+    ]
+  },
+  "proof": "research_log/outer_bundle_exchange.md",
+  "inner_scope": "F and Eplus certificates survive; Q is retained only where sum(w)<=C_Q(w)",
+  "full_auction_upper": "unresolved"
+}

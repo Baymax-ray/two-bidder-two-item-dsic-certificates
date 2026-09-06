@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the research preprint."
-title: "Exact Rational Stream-Dual Certificates for a Two-Bidder, Two-Item Auction"
+title: "Exact Primal-Dual Certificates for a Two-Bidder, Two-Item Auction"
 type: article
 authors:
   - family-names: Fang
@@ -8,22 +8,27 @@ authors:
     affiliation: Boston University
     email: baymin@bu.edu
     orcid: "https://orcid.org/0009-0006-9100-0445"
-version: 1.2.0
-date-released: 2026-09-03
+version: 1.4.0
+date-released: 2026-09-06
 repository-code: "https://github.com/Baymax-ray/two-bidder-two-item-dsic-certificates"
 license: CC-BY-4.0
 abstract: >-
-  An explicit rational continuous DSIC stream-dual witness and exact
-  Bernstein certificate give a global upper bound for the canonical
-  two-bidder, two-item independent-uniform auction; an exact layered
-  deterministic mechanism supplies a separate lower bound. The upper bound
-  has an independent full replay; lower-layer replays recompute added gains
-  while sharing one exact base-revenue verifier. The unrestricted optimum
-  remains open, and the deterministic mechanism earns at least 98.7408% of
-  the unrestricted optimal revenue.
+  Complete functional exchanges and a common capacity-price certificate
+  give a rigorous interval for the two-bidder, two-item independent-uniform
+  randomized pointwise-DSIC auction. The explicit mechanism has exact
+  algebraic revenue 0.8764641644717980499449... and the unrestricted upper
+  is 0.8829230532587169692606..., giving a gap below 0.006459 and more
+  than 99.2684% of optimal revenue. Occupied-region utility identities
+  solve full randomized conditional screening on specified actual residuals.
+  A reusable support and sparse long-range IC cycles reduce the total
+  common capacity price while preserving both unrestricted charged
+  inequalities. Independent full-revenue integration, two complete stream
+  majorant traversals, and a complete conditional subtraction with bounded
+  independent cross-checks support the endpoints.
+  The unrestricted optimum and a matching auction remain open.
 preferred-citation:
   type: article
-  title: "Exact Rational Stream-Dual Certificates for a Two-Bidder, Two-Item Auction"
+  title: "Exact Primal-Dual Certificates for a Two-Bidder, Two-Item Auction"
   authors:
     - family-names: Fang
       given-names: Jiarui

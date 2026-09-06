@@ -1,0 +1,43 @@
+{
+  "scope": "independent exact revenue and area audit, no outer optimality claim",
+  "method": "dictionary rational polynomials, dyadic square-root brackets, inherited independent binomial remainder; no primary logarithm evaluation",
+  "old_root_gain_subtraction": "one half of V3 Zroot: one changed bidder, both item orientations",
+  "integrand_coefficients": [
+    "71454143066033/21600000000000000",
+    "9393280981477/216000000000000",
+    "13858439/250000000",
+    "-4189543/4000000",
+    "8181/4000",
+    "-9/8"
+  ],
+  "polynomial_part_interval": [
+    "22073288531360360991/500000000000000000000000",
+    "44146577062720721983/1000000000000000000000000"
+  ],
+  "subtracted_root_half_interval": [
+    "4521704388738313729/200000000000000000000000",
+    "11304260971845784323/500000000000000000000000"
+  ],
+  "independent_gain_interval": [
+    "2692256889878644167/125000000000000000000000",
+    "21538055119029153337/1000000000000000000000000"
+  ],
+  "independent_free_V4_revenue_interval": [
+    "218805512230208841241421/250000000000000000000000",
+    "175044409784167072993137/200000000000000000000000"
+  ],
+  "independent_total_revenue_interval": [
+    "43762179348797719705951/50000000000000000000000",
+    "875243586975954394119021/1000000000000000000000000"
+  ],
+  "free_opponent_area": "246769/1000000",
+  "constrained_opponent_area": "972629/9000000",
+  "solved_opponent_area": "63871/180000",
+  "bidder_2_value_on_closed_Q": {
+    "rational": "3270005919999123155413/19440000000000000000000",
+    "sqrt2_coefficient": "246769/13500000"
+  },
+  "sqrt_bracket_bits": 160,
+  "binomial_order": 24,
+  "frozen_V3_replay_write_disabled": true
+}

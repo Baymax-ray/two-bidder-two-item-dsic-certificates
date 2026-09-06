@@ -1,0 +1,64 @@
+{
+  "status": "V4_6_EXACT_BOUNDS_LEDGER_PASS_NOT_CLOSED",
+  "strongest_mechanism": "verifier/price_joint_reallocation.py: mechanism(profile)",
+  "exact_expression": "R_V4.5 + a0 + a2*sqrt(2) + a23*sqrt(23) + j0 + sum(jq*log(q))",
+  "algebraic_addition_coefficients": [
+    "-1609541379668231661249547038251/159173905464000000000000000000000",
+    "57567793/7593750000",
+    "-12167/1328906250"
+  ],
+  "algebraic_basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(23)"
+  ],
+  "joint_rational_constant": "6578986777818169914603/10652675687500000000000000000000",
+  "joint_logarithms": [
+    {
+      "ratio": "161/176",
+      "coefficient": "6248637/282500000000000"
+    },
+    {
+      "ratio": "613/628",
+      "coefficient": "-61575471/282500000000000"
+    },
+    {
+      "ratio": "13/10",
+      "coefficient": "-9308601/5000000000000000000"
+    }
+  ],
+  "revenue_rational_interval": [
+    "87581985414842245534607651887213333/100000000000000000000000000000000000",
+    "43790992707421122767304025943606667/50000000000000000000000000000000000"
+  ],
+  "revenue_decimal_enclosure": [
+    "0.8758198541484224553460",
+    "0.8758198541484224553461"
+  ],
+  "refined_reference_decimal_enclosure": [
+    "0.8758198502322945132038",
+    "0.8758198502322945132039"
+  ],
+  "exact_joint_increment_decimal_enclosure": [
+    "0.00000000391612794214225366689702614",
+    "0.00000000391612794214225366689702615"
+  ],
+  "joint_independent_rational_lower": "26902077489/12500000000000000000",
+  "gain_over_V4_5_decimal_enclosure": [
+    "0.0005653267086091341752",
+    "0.0005653267086091341753"
+  ],
+  "inherited_unrestricted_upper": "3715139591287203/4194304000000000",
+  "upper_decimal_enclosure": [
+    "0.8857583025186545848846",
+    "0.8857583025186545848847"
+  ],
+  "remaining_gap_decimal_enclosure": [
+    "0.0099384483702321295385",
+    "0.0099384483702321295386"
+  ],
+  "prior_revenue_dependency": "V4_5/certificate/independent_lottery.json and its frozen exact V4.02 formula",
+  "upper_status": "inherited certificate identity preserved; full upper proof not re-executed this phase",
+  "conditional_scope": "full randomized inner certificates; no common full-auction matching support",
+  "conclusion": "strict lower improvement; unrestricted optimal revenue and attainment unresolved"
+}

@@ -1,0 +1,42 @@
+{
+  "scope": "exact bounded replay plus separately written all-real proof; no aggregate revenue claim",
+  "inverse_checks": 54,
+  "pointwise_checks": 1480,
+  "h_nodes": [
+    "29/100",
+    "17/50",
+    "39/100"
+  ],
+  "height": "1/1000",
+  "q": "113/500",
+  "witness_up": [
+    "1/100",
+    "1133/2000",
+    "1",
+    "17/50"
+  ],
+  "old_up": [
+    2,
+    1
+  ],
+  "new_up": [
+    0,
+    3
+  ],
+  "witness_down": [
+    "1/100",
+    "1131/2000",
+    "1",
+    "17/50"
+  ],
+  "old_down": [
+    0,
+    3
+  ],
+  "new_down": [
+    2,
+    1
+  ],
+  "exact_full_inner_region": "Q remains certified for both trial modes at actual changed residual",
+  "global_optimality_claim": false
+}

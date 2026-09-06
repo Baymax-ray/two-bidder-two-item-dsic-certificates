@@ -1,0 +1,66 @@
+{
+  "status": "FUNCTIONAL_GAP_AUDIT_EXACT_PASS",
+  "uniform_extra_floor_slack": "14/1875",
+  "epsilon_statistics": [
+    {
+      "epsilon": "0",
+      "independent_types": 187,
+      "independent_profile_pairs": 34969,
+      "region_pair_counts": {
+        "Q/Q": 5929,
+        "Eplus/Q": 616,
+        "Q/base": 16324,
+        "Eplus/Eplus": 16,
+        "Eplus/base": 848,
+        "base/base": 11236
+      },
+      "positive_argmax_tie_profiles": 830,
+      "source_menu_comparisons": 187,
+      "source_profile_comparisons": 561,
+      "occupied_top_junction_anchor_cases": 36
+    },
+    {
+      "epsilon": "1/2000",
+      "independent_types": 205,
+      "independent_profile_pairs": 42025,
+      "region_pair_counts": {
+        "Q/Q": 7921,
+        "Eplus/Q": 712,
+        "Q/base": 19936,
+        "Eplus/Eplus": 16,
+        "Eplus/base": 896,
+        "base/base": 12544
+      },
+      "positive_argmax_tie_profiles": 800,
+      "source_menu_comparisons": 205,
+      "source_profile_comparisons": 615,
+      "occupied_top_junction_anchor_cases": 36
+    },
+    {
+      "epsilon": "1/1000",
+      "independent_types": 205,
+      "independent_profile_pairs": 42025,
+      "region_pair_counts": {
+        "Q/Q": 7921,
+        "Eplus/Q": 712,
+        "Q/base": 19936,
+        "Eplus/Eplus": 16,
+        "Eplus/base": 896,
+        "base/base": 12544
+      },
+      "positive_argmax_tie_profiles": 800,
+      "source_menu_comparisons": 205,
+      "source_profile_comparisons": 615,
+      "occupied_top_junction_anchor_cases": 36
+    }
+  ],
+  "total_profile_pairs": 119019,
+  "scope": "Pointwise implementation audit; all-real feasibility and full conditional Q/E certificate extension in note",
+  "full_conditional_gap_map": "Both bidders: zero unrestricted conditional gap on all Q and Eplus for actual functional residual",
+  "excluded_claims": [
+    "optimal outer allocation",
+    "optimal h",
+    "unrestricted auction optimum"
+  ],
+  "proof": "research_log/functional_gap_audit.md"
+}

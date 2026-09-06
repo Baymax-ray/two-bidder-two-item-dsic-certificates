@@ -1,0 +1,372 @@
+{
+  "status": "OUTER_FEE_POLYGON_AUDIT_EXACT_PASS",
+  "epsilon": "9/10000",
+  "scope": "independent continuous-cell integration and actual baseline-menu audit; no type-grid optimality claim",
+  "method": "rational halfplane clipping and shoelace areas; no primary fee-integral coefficients imported",
+  "fee_formula": "e*(1-3*D0)-3*C*e^2/2-e^3/2",
+  "no_sale_formula": "D0(e)=D0+C*e+e^2/2",
+  "fee_fibers": 33,
+  "actual_mechanism_cell_checks": 140,
+  "branches": [
+    "B13.1",
+    "B14.1",
+    "Eplus",
+    "retained_y_equals_c",
+    "zero_fee"
+  ],
+  "details": [
+    {
+      "opponent": [
+        "1741/2500",
+        "1361/5000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "342025313529/1000000000000",
+      "bundle_price": "99912469/100000000",
+      "exact_fee_revenue_change": "-493652950533/20000000000000000"
+    },
+    {
+      "opponent": [
+        "1741/2500",
+        "2731/10000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "342025313529/1000000000000",
+      "bundle_price": "99912469/100000000",
+      "exact_fee_revenue_change": "-493652950533/20000000000000000"
+    },
+    {
+      "opponent": [
+        "1741/2500",
+        "137/500"
+      ],
+      "branch": "retained_y_equals_c",
+      "old_no_sale_area": "17091435191/50000000000",
+      "bundle_price": "19958451/20000000",
+      "exact_fee_revenue_change": "-96601362849/4000000000000000"
+    },
+    {
+      "opponent": [
+        "7/10",
+        "1361/5000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "107223/312500",
+      "bundle_price": "31301/31250",
+      "exact_fee_revenue_change": "-1381203369/50000000000000"
+    },
+    {
+      "opponent": [
+        "7/10",
+        "2731/10000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "107223/312500",
+      "bundle_price": "31301/31250",
+      "exact_fee_revenue_change": "-1381203369/50000000000000"
+    },
+    {
+      "opponent": [
+        "7/10",
+        "137/500"
+      ],
+      "branch": "retained_y_equals_c",
+      "old_no_sale_area": "13714789/40000000",
+      "bundle_price": "4001187/4000000",
+      "exact_fee_revenue_change": "-21571186041/800000000000000"
+    },
+    {
+      "opponent": [
+        "141/200",
+        "1361/5000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "4411368997/12800000000",
+      "bundle_price": "16082217/16000000",
+      "exact_fee_revenue_change": "-50791609053/1600000000000000"
+    },
+    {
+      "opponent": [
+        "141/200",
+        "2731/10000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "4411368997/12800000000",
+      "bundle_price": "16082217/16000000",
+      "exact_fee_revenue_change": "-50791609053/1600000000000000"
+    },
+    {
+      "opponent": [
+        "141/200",
+        "137/500"
+      ],
+      "branch": "retained_y_equals_c",
+      "old_no_sale_area": "275440757/800000000",
+      "bundle_price": "4014377/4000000",
+      "exact_fee_revenue_change": "-24665829111/800000000000000"
+    },
+    {
+      "opponent": [
+        "71/100",
+        "1361/5000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "553885003/1600000000",
+      "bundle_price": "4034693/4000000",
+      "exact_fee_revenue_change": "-28725476049/800000000000000"
+    },
+    {
+      "opponent": [
+        "71/100",
+        "2731/10000"
+      ],
+      "branch": "Eplus",
+      "old_no_sale_area": "553885003/1600000000",
+      "bundle_price": "4034693/4000000",
+      "exact_fee_revenue_change": "-28725476049/800000000000000"
+    },
+    {
+      "opponent": [
+        "71/100",
+        "137/500"
+      ],
+      "branch": "retained_y_equals_c",
+      "old_no_sale_area": "138286057/400000000",
+      "bundle_price": "4027567/4000000",
+      "exact_fee_revenue_change": "-27723698181/800000000000000"
+    },
+    {
+      "opponent": [
+        "1741/2500",
+        "2749/10000"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "255423/781250",
+      "bundle_price": "2437/2500",
+      "exact_fee_revenue_change": "32146731/2000000000000"
+    },
+    {
+      "opponent": [
+        "2793/4000",
+        "2749/10000"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "16393729/50000000",
+      "bundle_price": "19533/20000",
+      "exact_fee_revenue_change": "54206559/4000000000000"
+    },
+    {
+      "opponent": [
+        "7001/10000",
+        "2749/10000"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "8220193/25000000",
+      "bundle_price": "1957/2000",
+      "exact_fee_revenue_change": "5514957/500000000000"
+    },
+    {
+      "opponent": [
+        "3513/5000",
+        "2749/10000"
+      ],
+      "branch": "B14.1",
+      "old_no_sale_area": "4091573/12500000",
+      "bundle_price": "4891/5000",
+      "exact_fee_revenue_change": "30062709/2000000000000"
+    },
+    {
+      "opponent": [
+        "7051/10000",
+        "2749/10000"
+      ],
+      "branch": "B14.1",
+      "old_no_sale_area": "256703/781250",
+      "bundle_price": "9807/10000",
+      "exact_fee_revenue_change": "11642517/1000000000000"
+    },
+    {
+      "opponent": [
+        "14151/20000",
+        "2749/10000"
+      ],
+      "branch": "zero_fee",
+      "old_no_sale_area": "411401/1250000",
+      "bundle_price": "19649/20000",
+      "exact_fee_revenue_change": "8143839/800000000000"
+    },
+    {
+      "opponent": [
+        "71/100",
+        "2749/10000"
+      ],
+      "branch": "zero_fee",
+      "old_no_sale_area": "66069601/200000000",
+      "bundle_price": "9849/10000",
+      "exact_fee_revenue_change": "13726737/2000000000000"
+    },
+    {
+      "opponent": [
+        "1741/2500",
+        "1379/5000"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "65563833/200000000",
+      "bundle_price": "9757/10000",
+      "exact_fee_revenue_change": "27404829/2000000000000"
+    },
+    {
+      "opponent": [
+        "3489/5000",
+        "1379/5000"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "65705317/200000000",
+      "bundle_price": "9771/10000",
+      "exact_fee_revenue_change": "23581359/2000000000000"
+    },
+    {
+      "opponent": [
+        "437/625",
+        "1379/5000"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "65846801/200000000",
+      "bundle_price": "1957/2000",
+      "exact_fee_revenue_change": "19757889/2000000000000"
+    },
+    {
+      "opponent": [
+        "7017/10000",
+        "1379/5000"
+      ],
+      "branch": "B14.1",
+      "old_no_sale_area": "524407/1600000",
+      "bundle_price": "4891/5000",
+      "exact_fee_revenue_change": "1387431/100000000000"
+    },
+    {
+      "opponent": [
+        "3521/5000",
+        "1379/5000"
+      ],
+      "branch": "B14.1",
+      "old_no_sale_area": "526417/1600000",
+      "bundle_price": "9807/10000",
+      "exact_fee_revenue_change": "4191759/400000000000"
+    },
+    {
+      "opponent": [
+        "7071/10000",
+        "1379/5000"
+      ],
+      "branch": "zero_fee",
+      "old_no_sale_area": "824449/2500000",
+      "bundle_price": "9829/10000",
+      "exact_fee_revenue_change": "2100123/250000000000"
+    },
+    {
+      "opponent": [
+        "71/100",
+        "1379/5000"
+      ],
+      "branch": "zero_fee",
+      "old_no_sale_area": "16561741/50000000",
+      "bundle_price": "4929/5000",
+      "exact_fee_revenue_change": "8935749/2000000000000"
+    },
+    {
+      "opponent": [
+        "1741/2500",
+        "347/1250"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "65915409/200000000",
+      "bundle_price": "391/400",
+      "exact_fee_revenue_change": "17907903/2000000000000"
+    },
+    {
+      "opponent": [
+        "6969/10000",
+        "347/1250"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "65966119/200000000",
+      "bundle_price": "489/500",
+      "exact_fee_revenue_change": "8268759/1000000000000"
+    },
+    {
+      "opponent": [
+        "3487/5000",
+        "347/1250"
+      ],
+      "branch": "B13.1",
+      "old_no_sale_area": "66016829/200000000",
+      "bundle_price": "1957/2000",
+      "exact_fee_revenue_change": "15167133/2000000000000"
+    },
+    {
+      "opponent": [
+        "6999/10000",
+        "347/1250"
+      ],
+      "branch": "B14.1",
+      "old_no_sale_area": "65721803/200000000",
+      "bundle_price": "4891/5000",
+      "exact_fee_revenue_change": "5783391/500000000000"
+    },
+    {
+      "opponent": [
+        "439/625",
+        "347/1250"
+      ],
+      "branch": "B14.1",
+      "old_no_sale_area": "65973953/200000000",
+      "bundle_price": "9807/10000",
+      "exact_fee_revenue_change": "16319439/2000000000000"
+    },
+    {
+      "opponent": [
+        "3531/5000",
+        "347/1250"
+      ],
+      "branch": "zero_fee",
+      "old_no_sale_area": "827743/2500000",
+      "bundle_price": "4919/5000",
+      "exact_fee_revenue_change": "9683757/2000000000000"
+    },
+    {
+      "opponent": [
+        "71/100",
+        "347/1250"
+      ],
+      "branch": "zero_fee",
+      "old_no_sale_area": "1040659/3125000",
+      "bundle_price": "2469/2500",
+      "exact_fee_revenue_change": "-659349/2000000000000"
+    }
+  ],
+  "cut_checks": [
+    {
+      "t": "7/10",
+      "exact_payment_cut_gain": "481724932400037/291262597656250000000"
+    },
+    {
+      "t": "281/400",
+      "exact_payment_cut_gain": "150482946507515705438980983/81456164750097280000000000000000"
+    },
+    {
+      "t": "141/200",
+      "exact_payment_cut_gain": "659849568580145817508473/321826044723760000000000000000"
+    },
+    {
+      "t": "283/400",
+      "exact_payment_cut_gain": "187543155797970925079457243/82886763541402240000000000000000"
+    },
+    {
+      "t": "71/100",
+      "exact_payment_cut_gain": "12582911982141436058397/5064960289480000000000000000"
+    }
+  ],
+  "proof": "research_log/outer_fee_polygon_audit.md"
+}

@@ -1,0 +1,7 @@
+{
+  "listed_prior_identities": 993,
+  "listed_mismatches": [],
+  "preexisting_unlisted_archive_audit_files": 383,
+  "outer_manifest_start_status": "listed identities match; pre-existing archive-audit directory was unlisted",
+  "policy": "only new branch files; outer navigation and manifest may be refreshed at finalization"
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "status": "AUDITED_EXACT_LOWER_AND_CONDITIONAL_CERTIFICATES",
+  "mechanism": "source/V4_6/verifier/price_joint_reallocation.py:mechanism",
+  "exact_revenue": "R_V4.5 + a0 + a2*sqrt(2) + a23*sqrt(23) + j0 + sum(jq*log(q))",
+  "algebraic_coefficients": [
+    "-1609541379668231661249547038251/159173905464000000000000000000000",
+    "57567793/7593750000",
+    "-12167/1328906250"
+  ],
+  "algebraic_basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(23)"
+  ],
+  "joint_rational": "6578986777818169914603/10652675687500000000000000000000",
+  "joint_logs": [
+    {
+      "ratio": "161/176",
+      "coefficient": "6248637/282500000000000"
+    },
+    {
+      "ratio": "613/628",
+      "coefficient": "-61575471/282500000000000"
+    },
+    {
+      "ratio": "13/10",
+      "coefficient": "-9308601/5000000000000000000"
+    }
+  ],
+  "revenue_enclosure": [
+    "87581985414842245534607651887213333/100000000000000000000000000000000000",
+    "43790992707421122767304025943606667/50000000000000000000000000000000000"
+  ],
+  "revenue_decimal_enclosure": [
+    "0.8758198541484224553460",
+    "0.8758198541484224553461"
+  ],
+  "lower_floor": "437909927074211227673/500000000000000000000",
+  "upper": "3715139591287203/4194304000000000",
+  "strict_gap": {
+    "lower": "437909927074211227673/500000000000000000000",
+    "lower_decimal": "0.8758198541484224553460",
+    "upper_minus_lower": "10176971131117700647571/1024000000000000000000000",
+    "one_hundredth_minus_gap_upper": "63028868882299352429/1024000000000000000000000",
+    "positive_integer_numerator": 63028868882299352429,
+    "denominator": 1024000000000000000000000,
+    "conclusion": "0 < U-R <= U-L < 1/100"
+  },
+  "revenue_guarantee": "R/OPT > 0.988779",
+  "predecessor": "retained V4.5 exact integral and source-bound prior proofs",
+  "scope": "Complete pointwise randomized DSIC/IR feasible lower construction; unrestricted conditional supports on stated regions; no global optimality.",
+  "source_notes": "Frozen notes are retained verbatim. See ERRATA.md for two nonblocking wording clarifications adopted in the manuscript."
+}

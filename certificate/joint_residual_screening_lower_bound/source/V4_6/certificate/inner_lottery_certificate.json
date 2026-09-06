@@ -1,0 +1,255 @@
+{
+  "status": "INNER_LOTTERY_FULL_RANDOMIZED_CERTIFICATE_PASS",
+  "scope": "global capacity-support identity; full randomized inner optimality under candidate feasibility and H1/H2; no common auction support claimed",
+  "polynomial_equal_area_identity": true,
+  "uniform_sink_margin": "74693/500000",
+  "conditional_value_coefficients": [
+    "444895102249/1000000000000",
+    "34726677/500000000",
+    "6116131/8000000",
+    "-9801/8000",
+    "81/256"
+  ],
+  "exact_polygon_gap_examples": [
+    {
+      "label": "candidate",
+      "t": "67/100",
+      "revenue": "8478518177289/16000000000000",
+      "priced_allocation": "8478518177289/16000000000000",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 5
+    },
+    {
+      "label": "empty",
+      "t": "67/100",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 1
+    },
+    {
+      "label": "low_price_deterministic",
+      "t": "67/100",
+      "revenue": "1532/3375",
+      "priced_allocation": "8997337636261/16000000000000",
+      "trace_slack": "8921/450000000",
+      "monotonicity_slack": "163/500",
+      "sink_slack": "46422820460387/432000000000000",
+      "options": 4
+    },
+    {
+      "label": "both_marginals_interior",
+      "t": "67/100",
+      "revenue": "8131/21000",
+      "priced_allocation": "38634148740233/80000000000000",
+      "trace_slack": "20663/100000000",
+      "monotonicity_slack": "89/2500",
+      "sink_slack": "160319803985353/1680000000000000",
+      "options": 4
+    },
+    {
+      "label": "first_probability_below_one",
+      "t": "67/100",
+      "revenue": "5386341813656816279/12800000000000000000",
+      "priced_allocation": "2026385565195272788698521/4447564800000000000000000",
+      "trace_slack": "18769/250000000",
+      "monotonicity_slack": "247/625",
+      "sink_slack": "149479617162722858699507/4447564800000000000000000",
+      "options": 7
+    },
+    {
+      "label": "candidate",
+      "t": "7/10",
+      "revenue": "16371148107/31250000000",
+      "priced_allocation": "16371148107/31250000000",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 5
+    },
+    {
+      "label": "empty",
+      "t": "7/10",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 1
+    },
+    {
+      "label": "low_price_deterministic",
+      "t": "7/10",
+      "revenue": "1532/3375",
+      "priced_allocation": "2277069721/3906250000",
+      "trace_slack": "8921/45000000",
+      "monotonicity_slack": "163/500",
+      "sink_slack": "50304618593/421875000000",
+      "options": 4
+    },
+    {
+      "label": "both_marginals_interior",
+      "t": "7/10",
+      "revenue": "8131/21000",
+      "priced_allocation": "614019320057/1250000000000",
+      "trace_slack": "20663/10000000",
+      "monotonicity_slack": "89/2500",
+      "sink_slack": "2648996368597/26250000000000",
+      "options": 4
+    },
+    {
+      "label": "first_probability_below_one",
+      "t": "7/10",
+      "revenue": "164333903891263/390625000000000",
+      "priced_allocation": "518489432422643557/1100244140625000000",
+      "trace_slack": "18769/25000000",
+      "monotonicity_slack": "247/625",
+      "sink_slack": "336308540633194277/8801953125000000000",
+      "options": 7
+    },
+    {
+      "label": "candidate",
+      "t": "3/4",
+      "revenue": "8164622149609/16000000000000",
+      "priced_allocation": "8164622149609/16000000000000",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 5
+    },
+    {
+      "label": "empty",
+      "t": "3/4",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 1
+    },
+    {
+      "label": "low_price_deterministic",
+      "t": "3/4",
+      "revenue": "1532/3375",
+      "priced_allocation": "9950537947141/16000000000000",
+      "trace_slack": "8921/18000000",
+      "monotonicity_slack": "163/500",
+      "sink_slack": "61484274046307/432000000000000",
+      "options": 4
+    },
+    {
+      "label": "both_marginals_interior",
+      "t": "3/4",
+      "revenue": "8131/21000",
+      "priced_allocation": "40585597429673/80000000000000",
+      "trace_slack": "20663/4000000",
+      "monotonicity_slack": "89/2500",
+      "sink_slack": "188522793394633/1680000000000000",
+      "options": 4
+    },
+    {
+      "label": "first_probability_below_one",
+      "t": "3/4",
+      "revenue": "5381153337253145159/12800000000000000000",
+      "priced_allocation": "4853528328268325379893060319493/9688427074790400000000000000000",
+      "trace_slack": "85791432350509/44468240000000000",
+      "monotonicity_slack": "247/625",
+      "sink_slack": "838827694006040829040627/17429836800000000000000000",
+      "options": 7
+    },
+    {
+      "label": "candidate",
+      "t": "4/5",
+      "revenue": "492084265449/1000000000000",
+      "priced_allocation": "492084265449/1000000000000",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 5
+    },
+    {
+      "label": "empty",
+      "t": "4/5",
+      "revenue": "0",
+      "priced_allocation": "0",
+      "trace_slack": "0",
+      "monotonicity_slack": "0",
+      "sink_slack": "0",
+      "options": 1
+    },
+    {
+      "label": "low_price_deterministic",
+      "t": "4/5",
+      "revenue": "1532/3375",
+      "priced_allocation": "667032722551/1000000000000",
+      "trace_slack": "8921/11250000",
+      "monotonicity_slack": "163/500",
+      "sink_slack": "4588999127477/27000000000000",
+      "options": 4
+    },
+    {
+      "label": "both_marginals_interior",
+      "t": "4/5",
+      "revenue": "8131/21000",
+      "priced_allocation": "1236443861351730371/2328035000000000000",
+      "trace_slack": "20663/2500000",
+      "monotonicity_slack": "527/7500",
+      "sink_slack": "6185717800570565591/48888735000000000000",
+      "options": 4
+    },
+    {
+      "label": "first_probability_below_one",
+      "t": "4/5",
+      "revenue": "84009230874113681/200000000000000000",
+      "priced_allocation": "1224377036186015351372886923/2284791264400000000000000000",
+      "trace_slack": "8677240350349/2538837500000000",
+      "monotonicity_slack": "247/625",
+      "sink_slack": "687063904516424825763/11249200000000000000000",
+      "options": 7
+    }
+  ],
+  "exact_payment_cut_polynomial_identities": [
+    {
+      "t": "67/100",
+      "variation_coefficients": [
+        "0",
+        "168733/1600000000",
+        "-28470825289/1189864000000",
+        "-4803967763488837/884860211560000"
+      ]
+    },
+    {
+      "t": "7/10",
+      "variation_coefficients": [
+        "0",
+        "1213/625000",
+        "-2942738/26984375",
+        "-57112659104/9320403125"
+      ]
+    },
+    {
+      "t": "3/4",
+      "variation_coefficients": [
+        "0",
+        "555853/64000000",
+        "-308972557609/446824000000",
+        "-171743323064635477/3119557609000000"
+      ]
+    },
+    {
+      "t": "4/5",
+      "variation_coefficients": [
+        "0",
+        "203107/10000000",
+        "-41252453449/6214000000",
+        "-8378662062666043/3861379600000"
+      ]
+    }
+  ],
+  "actual_residual_boundary_checks": 63,
+  "trusted_continuum_proof": "research_log/inner_lottery_certificate.md"
+}

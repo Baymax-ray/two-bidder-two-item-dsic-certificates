@@ -1,0 +1,46 @@
+{
+  "status": "PRICE_JOINT_REVENUE_EXACT_PASS",
+  "scope": "exact rational-plus-log joint increment, all affected full menus included",
+  "rational_constant": "6578986777818169914603/10652675687500000000000000000000",
+  "logarithms": [
+    {
+      "ratio": "161/176",
+      "coefficient": "6248637/282500000000000"
+    },
+    {
+      "ratio": "613/628",
+      "coefficient": "-61575471/282500000000000"
+    },
+    {
+      "ratio": "13/10",
+      "coefficient": "-9308601/5000000000000000000"
+    }
+  ],
+  "increment_interval": [
+    "391612794214225366689702614233062113/100000000000000000000000000000000000000000000",
+    "3916127942142253666897026142330621131/1000000000000000000000000000000000000000000000"
+  ],
+  "second_bidder_rational_part": "1110803432734877157/1363542488000000000000000000",
+  "first_bidder_exact_increment": "-24631898853429/125000000000000000000000",
+  "entry_fee_parts": {
+    "below_c": "-92624010033429/125000000000000000000000",
+    "above_c": "3399605559/6250000000000000000",
+    "above_pieces": [
+      {
+        "fee": "7/2000",
+        "value": "3161434941/25000000000000000000"
+      },
+      {
+        "fee": "7/10000",
+        "value": "15610239/62500000000000000"
+      },
+      {
+        "fee": "0",
+        "value": "838578339/5000000000000000000"
+      }
+    ]
+  },
+  "independent_gain_lower": "26902077489/12500000000000000000",
+  "logarithm_terms": 40,
+  "evaluation_boundary": "exact polynomial identities and rational log series; no floating solver"
+}

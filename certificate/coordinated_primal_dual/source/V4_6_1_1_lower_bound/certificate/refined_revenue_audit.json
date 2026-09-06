@@ -1,0 +1,56 @@
+{
+  "status": "REFINED_CONTINUOUS_REVENUE_AUDIT_PASS",
+  "scope": "Independent direct integration of all continuous conditional menus, including capped safe price, jump plateau, and a>A strips; not an unrestricted upper bound",
+  "parameters": {
+    "a": "1025947/1500000",
+    "b": "1496947/1500000",
+    "c": "157/500",
+    "s": "1775947/1500000",
+    "q": "93/500",
+    "A": "2/3",
+    "d": "1/2",
+    "m": "165649/500000",
+    "u": "3421/10000",
+    "slope": "4/5",
+    "jump": "281/12500"
+  },
+  "base_exact": "33016262254015350834722212412993/37968750000000000000000000000000",
+  "base_positive_area_cells": 9,
+  "base_ordered_area": "1/2",
+  "conditional_polygon_checks": 45,
+  "extra_capacity_max_slack": "37/5000000",
+  "radicand": "246947/1125000",
+  "exact_revenue_coefficients_basis_1_sqrt2_sqrt_radicand": [
+    "35791404252341621852527735747861637/42525000000000000000000000000000000",
+    "31/1215",
+    "-15059524650320123/5537109375000000000"
+  ],
+  "exact_clean_coefficients_same_basis": [
+    "447388273875480753259951931184157/531562500000000000000000000000000",
+    "31/1215",
+    "-15059524650320123/5537109375000000000"
+  ],
+  "exact_gain_over_clean": "12679344561540434503009375151/1575000000000000000000000000000000",
+  "revenue_interval": [
+    "876464164471798049944906113027/1000000000000000000000000000000",
+    "219116041117949512486226528257/250000000000000000000000000000"
+  ],
+  "clean_revenue_interval": [
+    "876456114094298659192840710249/1000000000000000000000000000000",
+    "3505824456377194636771362841/4000000000000000000000000000"
+  ],
+  "audit_components": {
+    "Q_jump_plateau_single_ordered": "1006181514611470407863656387/168750000000000000000000000000",
+    "Q_slope_single_ordered": "109243555037418874348968109497683/75600000000000000000000000000000000",
+    "Q_unchanged_Ri_single_ordered": "14432923628419996267206281731/486000000000000000000000000000",
+    "E_lottery": "2305820450691/78125000000000000",
+    "E_missing_base_correction": "-153451475631227585043/31250000000000000000000000",
+    "base_functional_main": "-47379337126261483093/1406250000000000000000000",
+    "base_missing_strip": "30574928822962656977991/390625000000000000000000000000",
+    "Q_cap_total": "60117501122671659051249/781250000000000000000000000000",
+    "Q_cap_clean": "2244756833653211710749/156250000000000000000000000000",
+    "Q_cap_gain": "1527928654825175015547/24414062500000000000000000000"
+  },
+  "independence": "No constant_kernel/refined_candidate calculator imported; base Green polygon integration and direct Q t/rho decomposition, including inverse plateau.",
+  "proof": "research_log/refined_revenue_audit.md"
+}

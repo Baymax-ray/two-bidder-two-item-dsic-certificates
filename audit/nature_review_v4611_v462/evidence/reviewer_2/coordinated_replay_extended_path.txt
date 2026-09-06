@@ -1,0 +1,54 @@
+PASS V4_6_1_lower_bound/verifier/parameter_candidate.py
+PASS V4_6_1_lower_bound/verifier/parameter_revenue.py
+PASS V4_6_1_lower_bound/verifier/independent_family_revenue.py
+PASS V4_6_1_lower_bound/verifier/gap_low_square.py
+PASS V4_6_1_lower_bound/verifier/sym_rescreen.py
+PASS V4_6_1_lower_bound/verifier/sym_full_q_mirror.py
+PASS V4_6_1_lower_bound/verifier/gap_parameter_audit.py
+PASS V4_6_1_lower_bound/verifier/sym_parameter_q_audit.py
+PASS V4_6_1_lower_bound/verifier/functional_exchange.py
+PASS V4_6_1_lower_bound/verifier/independent_functional.py
+PASS V4_6_1_lower_bound/verifier/functional_gap_audit.py
+PASS V4_6_1_lower_bound/verifier/branch_summary.py
+PASS V4_6_1_1_lower_bound/verifier/functional_kernel.py
+PASS V4_6_1_1_lower_bound/verifier/functional_jump.py
+PASS V4_6_1_1_lower_bound/verifier/functional_star.py
+PASS V4_6_1_1_lower_bound/verifier/structural_reserve_candidate.py
+PASS V4_6_1_1_lower_bound/verifier/structural_reserve_candidate.py --cap
+PASS V4_6_1_1_lower_bound/verifier/structural_variation_audit.py
+PASS V4_6_1_1_lower_bound/verifier/structural_ic_trace.py
+PASS V4_6_1_1_lower_bound/verifier/residual_high_screening.py
+PASS V4_6_1_1_lower_bound/verifier/residual_wing_screening.py
+PASS V4_6_1_1_lower_bound/verifier/refined_candidate.py
+PASS V4_6_1_1_lower_bound/verifier/refined_revenue.py
+PASS V4_6_1_1_lower_bound/verifier/refined_revenue_audit.py
+PASS V4_6_1_1_lower_bound/verifier/refined_structure_audit.py
+PASS V4_6_1_1_lower_bound/verifier/branch_summary.py
+PASS V3_1/verifier/constrained_screening_verify.py
+PASS V4_5/verifier/dual_support_verify.py
+PASS V4_6_2_upper/flow_majorant.py
+PASS V4_6_2_upper/verifier/independent_majorant.py
+PASS V4_6_2_upper/flow_sign.py
+PASS V4_6_2_upper/flow_sign.py --cap 43/100 --output flow_sign_43_certificate.json
+PASS V4_6_2_upper/flow_half_counterexample.py
+PASS V4_6_2_upper/verifier/conditional_global_splice.py
+PASS V4_6_2_upper/verifier/independent_conditional_splice.py
+PASS V4_6_2_upper/verifier/conditional_lottery_redistribution.py
+PASS V4_6_2_upper/verifier/flatness_constraints.py
+PASS V4_6_2_upper/verifier/sparse_cycle.py
+PASS V4_6_2_upper/verifier/flatness_sparse_cycle_audit.py
+PASS V4_6_2_upper/verifier/remaining_lottery_slack.py
+PASS V4_6_2_upper/verifier/upper_ledger.py
+PASS V4_6_2_upper/verifier/current_bound_comparison.py
+PASS V4_6_2_upper/verifier/current_lower_flatness.py
+PASS V4_6_1_1_V4_6_2_archive_audit/lower_revenue/third_revenue_and_pairing.py
+PASS V4_6_1_1_V4_6_2_archive_audit/lower_structure/independent_structure_identities.py
+PASS V4_6_1_1_V4_6_2_archive_audit/upper/fresh_support_latest_flatness.py
+Traceback (most recent call last):
+  File "D:\文档\ChatGPT\AI4MATH\output\output\two_bidder_two_item_full_dsic_exact_auction\V4_6_1_1_V4_6_2_archive_audit\review_packet\archive\certificate\coordinated_primal_dual\verify_coordinated.py", line 54, in <module>
+    if __name__=='__main__':main()
+  File "D:\文档\ChatGPT\AI4MATH\output\output\two_bidder_two_item_full_dsic_exact_auction\V4_6_1_1_V4_6_2_archive_audit\review_packet\archive\certificate\coordinated_primal_dual\verify_coordinated.py", line 52, in main
+    for e in own:require(sha256(bound(auction,e['origin']).read_bytes()).hexdigest()==e['sha256'],'replay changed staged source '+e['origin'])
+  File "D:\文档\ChatGPT\AI4MATH\output\output\two_bidder_two_item_full_dsic_exact_auction\V4_6_1_1_V4_6_2_archive_audit\review_packet\archive\certificate\coordinated_primal_dual\verify_coordinated.py", line 16, in require
+    if not c:raise RuntimeError(m)
+RuntimeError: replay changed staged source V4_6_1_1_V4_6_2_archive_audit/upper/fresh_support_latest_flatness.json

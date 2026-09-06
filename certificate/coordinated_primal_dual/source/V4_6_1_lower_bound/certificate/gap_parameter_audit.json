@@ -1,0 +1,30 @@
+{
+  "status": "GAP_REBUILT_INTERACTION_AUDIT_EXACT_PASS",
+  "parameters": {
+    "a": "2/3",
+    "b": "49/50",
+    "c": "47/150",
+    "s": "7/6",
+    "q": "14/75",
+    "T": "178/225",
+    "U": "26/25"
+  },
+  "independently_reconstructed_menu_types": 178,
+  "profile_cases": 31684,
+  "cases_by_region_pair": {
+    "Q/Q": 2601,
+    "Eplus/Q": 2448,
+    "Q/base": 10506,
+    "Eplus/Eplus": 576,
+    "Eplus/base": 4944,
+    "base/base": 10609
+  },
+  "positive_argmax_tie_profiles": 1796,
+  "occupied_top_and_junction_cases": 15,
+  "independent_candidate_menu_comparisons": 178,
+  "independent_candidate_profile_comparisons": 890,
+  "E_certificate_mean_f_polynomial": "identically zero",
+  "E_certificate_uniform_sink_lower": "84/625",
+  "scope": "Exact named-profile and menu-interaction audit only; all-real proof is in the linked note",
+  "proof": "research_log/gap_parameter_audit.md"
+}
