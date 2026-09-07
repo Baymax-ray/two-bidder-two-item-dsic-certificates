@@ -1,0 +1,36 @@
+{
+  "status": "FRESH_BOUNDED_PRIMAL_STRUCTURE_PASS",
+  "project_imports": false,
+  "q_safe_price_floor": "525947/1000000",
+  "q_bundle_safe_upgrade_floor": "721841/3000000",
+  "e_zero_scarce_coordinate_exclusion_margin": "1364159/3000000",
+  "delta_A": "25947/1000000",
+  "bb_chart_margins": {
+    "transformed_above_half": "949/10000",
+    "transformed_high_sum": "19590749/50000000",
+    "old_fee_inactive": "1289/5000"
+  },
+  "bb_old_minimum_margin": "1/1250",
+  "bb_new_minimum_margin": "33/50000",
+  "bb_exact_affine_comparisons": 192,
+  "bb_box_volume": "1/625000000000000",
+  "face_count": 16,
+  "two_zero_face_classes": [
+    2,
+    2,
+    2
+  ],
+  "face_weights_sum_polynomial": [
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "revenue_derivative_coefficients": {
+    "R_group_0": -5,
+    "R_group_1": 1,
+    "N_group_0": 1
+  },
+  "scope": "Rational constants, affine whole-box witness, and symbolic mixture weights; universal proof in AUDIT.md; no source mechanism or face integration replay."
+}

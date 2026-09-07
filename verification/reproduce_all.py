@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -15,7 +16,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LEGACY_UPPER = Fraction(3715139591287203, 4194304000000000)
-ACTIVE_MANIFEST = json.loads((ROOT / "certificate/coordinated_primal_dual/manifest.json").read_text(encoding="utf-8"))
+PREDECESSOR_MANIFEST = json.loads((ROOT / "certificate/coordinated_primal_dual/manifest.json").read_text(encoding="utf-8"))
+PREDECESSOR_UPPER = Fraction(PREDECESSOR_MANIFEST["upper"])
+V5_PACKAGE = ROOT / "certificate/v5_primal_dual"
+V5_MANIFEST = json.loads((V5_PACKAGE / "manifest.json").read_text(encoding="utf-8"))
+RESERVE_PACKAGE = ROOT / "certificate/reserve_parameter"
+ACTIVE_MANIFEST = json.loads((RESERVE_PACKAGE / "manifest.json").read_text(encoding="utf-8"))
 UPPER = Fraction(ACTIVE_MANIFEST["upper"])
 LOWER = Fraction(83962078694672281756033, 96000000000000000000000)
 TEN_BAND_LOWER = Fraction(26237753173862063, 30000000000000000)
@@ -52,9 +58,15 @@ class Recorder:
 
 
 def run_checked(label: str, command: list[str], cwd: Path, recorder: Recorder) -> str:
+    environment={key:value for key,value in os.environ.items()
+                 if not key.upper().startswith("PYTHON")}
+    environment["PYTHONNOUSERSITE"]="1"
+    if Path(command[0]).resolve()==Path(sys.executable).resolve():
+        command=[command[0], "-E", "-s", *command[1:]]
     completed = subprocess.run(
         command,
         cwd=cwd,
+        env=environment,
         text=True,
         encoding="utf-8",
         errors="replace",
@@ -99,7 +111,7 @@ def check_certificates(recorder: Recorder) -> None:
             "predecessor lower endpoint missing from verifier output")
 
     output = run_checked(
-        "active piecewise-surcharge lower certificate",
+        "historical piecewise-surcharge lower certificate",
         [python, "-B", "verify_piecewise_surcharge.py"],
         surcharge,
         recorder,
@@ -166,7 +178,7 @@ def check_certificates(recorder: Recorder) -> None:
     )
     require("FINAL BUNDLE-PIVOT + ITEM-CONTAINMENT LOWER CERTIFICATE: PASS" in output
             and str(LOWER) in output,
-            "active lower verifier did not report the release endpoint")
+            "retained deterministic lower verifier did not report its endpoint")
 
     output = run_checked(
         "independent retained deterministic lower replay",
@@ -176,11 +188,11 @@ def check_certificates(recorder: Recorder) -> None:
     )
     require("FINAL COMBINED NON-IMPORTING DEMAND-POLYGON REPLAY: PASS" in output
             and str(LOWER) in output,
-            "independent active lower replay did not report the release endpoint")
+            "independent retained deterministic replay did not report its endpoint")
 
     joint = ROOT / "certificate" / "joint_residual_screening_lower_bound"
     output = run_checked(
-        "active joint residual-screening lower certificate and fresh audits",
+        "historical joint residual-screening lower certificate and fresh audits",
         [python, "-B", "-X", "utf8", "verify_joint_residual.py"],
         joint,
         recorder,
@@ -193,7 +205,7 @@ def check_certificates(recorder: Recorder) -> None:
     output = run_checked(
         "post-review independent joint revenue explanation",
         [python, "-B", "-X", "utf8", "joint_explanation_check.py"],
-        ROOT / "audit" / "nature_review_v46",
+        ROOT / "verification",
         recorder,
     )
     require("JOINT_EXPLANATION_INDEPENDENT_EXACT_PASS" in output,
@@ -201,11 +213,32 @@ def check_certificates(recorder: Recorder) -> None:
 
     paired = ROOT / "certificate/coordinated_primal_dual"
     output = run_checked(
-        "active coordinated primal-dual certificate and both full upper traversals",
+        "predecessor coordinated primal-dual certificate and both full upper traversals",
         [python, "-B", "-X", "utf8", "verify_coordinated.py"], paired, recorder)
     require("COORDINATED_PRIMAL_DUAL_CERTIFICATE_PASS 46" in output
-            and str(UPPER) in output and "STRICT_GAP_LT_1_100_PASS" in output,
-            "active coordinated replay did not certify current endpoints")
+            and str(PREDECESSOR_UPPER) in output and "STRICT_GAP_LT_1_100_PASS" in output,
+            "coordinated replay did not certify its predecessor endpoints")
+
+    output = run_checked(
+        "inherited full upper and intermediate reserve component at tau=1/100",
+        [python, "-B", "-X", "utf8", "verify_v5.py"], V5_PACKAGE, recorder)
+    require("V5_PORTABLE_CERTIFICATE_PASS" in output and str(UPPER) in output,
+            "portable V5 replay did not certify the active exact upper endpoint")
+
+    for line in output.splitlines():
+        if line.startswith(("RUNTIME_IDENTITY ", "COMPONENT_SCOPE ")):
+            recorder.say(line)
+
+    output = run_checked(
+        "selected reserve parameter and exact family certificate",
+        [python, "-B", "-X", "utf8", "verify_reserve.py"], RESERVE_PACKAGE, recorder)
+    require("EXACT_RESERVE_PARAMETER_CERTIFICATE_PASS" in output,
+            "reserve parameter certificate failed")
+    output = run_checked(
+        "rational reserve implementation boundary checks",
+        [python, "-B", "-X", "utf8", "check_implementation.py"], RESERVE_PACKAGE, recorder)
+    require("RESERVE_IMPLEMENTATION_CHECK_PASS" in output,
+            "reserve implementation checks failed")
 
 
 def check_text_consistency(recorder: Recorder) -> None:
@@ -223,7 +256,7 @@ def check_text_consistency(recorder: Recorder) -> None:
     require(Fraction(upper_manifest["expected"]["promoted"]["upper_fraction"]) == LEGACY_UPPER,
             "historical upper manifest mismatch")
     require(Fraction(lower_manifest["expected"]["final_expected_revenue"]) == LOWER,
-            "lower manifest differs from release theorem")
+            "historical deterministic lower manifest mismatch")
     joint_manifest = json.loads(
         (ROOT / "certificate" / "joint_residual_screening_lower_bound" / "manifest.json")
         .read_text(encoding="utf-8")
@@ -231,24 +264,57 @@ def check_text_consistency(recorder: Recorder) -> None:
     require(Fraction(joint_manifest["lower_floor"]) == JOINT_FLOOR,
             "historical joint lower floor mismatch")
     require(Fraction(joint_manifest["upper"]) == LEGACY_UPPER,
-            "joint manifest upper differs from release theorem")
+            "historical joint upper manifest mismatch")
     require(UPPER - LOWER_FLOOR < Fraction(1, 100),
             "exact endpoints do not certify a gap below 0.01")
-    require(LOWER_FLOOR / UPPER > Fraction(992684, 1000000),
-            "exact endpoints do not certify the stated 99.2684% guarantee")
+    require(Fraction(ACTIVE_MANIFEST["guarantee"]) == Fraction(993384, 1000000)
+            and LOWER_FLOOR / UPPER > Fraction(993384, 1000000),
+            "exact endpoints do not certify the stated 99.3384% guarantee")
+    v5_sources = V5_PACKAGE / "source"
+    phase = json.loads((v5_sources / "V5_gap_closure/certificate/phase_ledger.json")
+                       .read_text(encoding="utf-8"))
+    component_sources = {
+        "numerical_remainder_lower": ("V4_6_3_slack_atlas/certificate/numerical_remainder.json", "total_E", "lower"),
+        "master_gain_lower": ("V4_8A_frozen_primal/certificate/master_certificate.json", "exact_total_gain_lower"),
+        "splice_gain_lower": ("V5_gap_closure/certificate/global_duality.json", "global_gain_lower"),
+        "BB_gain": ("V5_gap_closure/certificate/bb_global.json", "exact_upper_decrease"),
+    }
+    components = {key: Fraction(value) for key, value in ACTIVE_MANIFEST["upper_components"].items()}
+    require(set(components) == {"predecessor_upper", *component_sources},
+            "V5 upper assembly has missing or unexpected components")
+    require(components["predecessor_upper"] == PREDECESSOR_UPPER,
+            "V5 upper assembly does not start from the coordinated predecessor")
+    for key, (relative, *fields) in component_sources.items():
+        value = json.loads((v5_sources / relative).read_text(encoding="utf-8"))
+        for field in fields:
+            value = value[field]
+        require(components[key] == Fraction(value), f"V5 assembly source mismatch: {key}")
+    require(UPPER == components["predecessor_upper"]
+            - sum((components[key] for key in component_sources), Fraction())
+            == Fraction(phase["new_exact_upper"]),
+            "V5 exact upper assembly differs from the accepted certificate")
+    exact_lower = Fraction(ACTIVE_MANIFEST["revenue_enclosure"][0])
+    exact_higher = Fraction(ACTIVE_MANIFEST["revenue_enclosure"][1])
+    require(LOWER_FLOOR <= exact_lower <= exact_higher
+            <= Fraction(ACTIVE_MANIFEST["lower_enclosure"][1]) < UPPER,
+            "V5 manifest revenue enclosure does not contain the exact certificate")
+    require(Fraction(ACTIVE_MANIFEST["upper_enclosure"][0]) <= UPPER
+            <= Fraction(ACTIVE_MANIFEST["upper_enclosure"][1]),
+            "V5 displayed upper enclosure is not outward rounded")
+    require(Fraction(ACTIVE_MANIFEST["gap_enclosure"][0]) <= UPPER - exact_higher
+            <= UPPER - exact_lower <= Fraction(ACTIVE_MANIFEST["gap_enclosure"][1]),
+            "V5 displayed gap enclosure is not outward rounded")
     for text, label in ((manuscript, "manuscript"), (readme, "README")):
-        require("99.2684" in text,
+        require("99.3384" in text,
                 f"certified revenue guarantee missing from {label}")
-        require("3715139591287203" in text and "4194304000000000" in text,
-                f"upper endpoint missing from {label}")
-        require("83962078694672281756033" in text
-                and "96000000000000000000000" in text,
-                f"lower endpoint missing from {label}")
-        require("0.876464164471798049944906113027" in text
-                and "0.876464164471798049944906113028" in text,
-                f"new exact revenue enclosure missing from {label}")
-        require("0.006458888786918919315720686828" in text,
-                f"remaining gap enclosure missing from {label}")
+        require(all(endpoint in text for endpoint in ACTIVE_MANIFEST["lower_enclosure"]),
+                f"active V5 revenue enclosure missing from {label}")
+        require(ACTIVE_MANIFEST["upper_enclosure"][1] in text,
+                f"active V5 upper endpoint missing from {label}")
+        require(all(endpoint in text for endpoint in ACTIVE_MANIFEST["gap_enclosure"]),
+                f"active V5 gap enclosure missing from {label}")
+        require("open" in text.lower() and "matching" in text.lower(),
+                f"open optimum and matching-certificate scope missing from {label}")
         require(text.count(AI_DECLARATION) == 1,
                 f"AI declaration must occur exactly once in {label}")
         require("The author retains responsibility" in text
@@ -258,54 +324,79 @@ def check_text_consistency(recorder: Recorder) -> None:
                 f"public repository URL missing from {label}")
         require(AUTHOR_EMAIL in text and AUTHOR_ORCID in text,
                 f"author metadata missing from {label}")
+    require("certificate/v5_primal_dual" in readme,
+            "active V5 certificate path missing from README")
     require("certificate/coordinated_primal_dual" in readme,
-            "active upper certificate path missing from README")
+            "coordinated dependency path missing from README")
     require("certificate/joint_residual_screening_lower_bound" in readme,
-            "active lower certificate path missing from README")
+            "joint dependency path missing from README")
     require("1445765276937161827" not in manuscript
             and "1445765276937161827" not in readme,
             "superseded exact gap remains active in publication text")
     require("0.8919" in manuscript and "0.876" in manuscript,
             "external benchmark values missing from manuscript")
-    run_checked("immutable self-review evidence packet",
-                [sys.executable, "-B", "audit/nature_review_v46/verify_review_snapshot.py"],
-                ROOT, recorder)
-    run_checked("immutable coordinated self-review evidence packet",
-                [sys.executable, "-B", "audit/nature_review_v4611_v462/verify_review_snapshot.py"],
-                ROOT, recorder)
-    active = json.loads((ROOT / "certificate/coordinated_primal_dual/manifest.json").read_text(encoding="utf-8"))
+    predecessor = json.loads((ROOT / "certificate/coordinated_primal_dual/manifest.json").read_text(encoding="utf-8"))
+    require(predecessor == PREDECESSOR_MANIFEST, "predecessor manifest changed during replay")
+    active = json.loads((RESERVE_PACKAGE / "manifest.json").read_text(encoding="utf-8"))
     require(active == ACTIVE_MANIFEST, "active manifest changed during replay")
-    require(active["revenue_coefficients"][0].split("/")[0] in manuscript,
-            "active algebraic revenue missing from manuscript")
+    require(predecessor["revenue_coefficients"][0].split("/")[0] in manuscript,
+            "retained predecessor algebraic revenue missing from manuscript")
+    import re
+    labels = re.findall(r"\\label\{([^}]+)\}", manuscript)
+    references = re.findall(r"\\(?:eqref|ref)\{([^}]+)\}", manuscript)
+    require(len(labels) == len(set(labels)), "duplicate manuscript label")
+    require(set(references) <= set(labels),
+            "unresolved manuscript reference: " + str(sorted(set(references)-set(labels))))
+    require(not re.search(r"\bV[345](?:[._]\d+)*\b|historical|predecessor", manuscript),
+            "development chronology remains in manuscript")
+    require(all(r"\label{" + name + "}" in manuscript for name in
+                ("app:compatibility", "app:stream", "app:integration")),
+            "final proof appendix missing")
+    from hashlib import sha256
+    require(sha256((RESERVE_PACKAGE / "manifest.json").read_bytes()).hexdigest()
+            in manuscript.replace("\\\\", "").replace("\n", ""),
+            "final parameter manifest identity missing from manuscript")
+    guide=(ROOT / "verification/README.md").read_text(encoding="utf-8")
+    require("99.3384%" in guide and "83/10000" in guide
+            and "99.2684" not in guide and "active coordinated" not in guide,
+            "verification guide does not identify the final result")
     recorder.say("PASS theorem, README, manifest, and declaration consistency")
 
 
 def compile_manuscript(recorder: Recorder) -> None:
     pdflatex = shutil.which("pdflatex")
     bibtex = shutil.which("bibtex")
-    require(pdflatex is not None, "pdflatex is required")
-    require(bibtex is not None, "bibtex is required")
+    tectonic = shutil.which("tectonic")
+    require((pdflatex is not None and bibtex is not None) or tectonic is not None,
+            "pdflatex and bibtex, or tectonic, must be available on PATH")
     source = ROOT / "manuscript"
     with tempfile.TemporaryDirectory(prefix="dsic-preprint-") as temporary:
         build = Path(temporary)
         for tex in source.glob("*.tex"):
             shutil.copy2(tex, build / tex.name)
         shutil.copy2(source / "references.bib", build / "references.bib")
-        latex = [
-            pdflatex,
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            "-file-line-error",
-            "manuscript.tex",
-        ]
-        run_checked("LaTeX pass 1", latex, build, recorder)
-        run_checked("BibTeX", [bibtex, "manuscript"], build, recorder)
-        run_checked("LaTeX pass 2", latex, build, recorder)
-        final_output = run_checked("LaTeX pass 3", latex, build, recorder)
-        if "Label(s) may have changed" in final_output:
-            final_output = run_checked("LaTeX cross-reference pass", latex, build, recorder)
+        if pdflatex is not None and bibtex is not None:
+            latex = [
+                pdflatex,
+                "-interaction=nonstopmode",
+                "-halt-on-error",
+                "-file-line-error",
+                "manuscript.tex",
+            ]
+            run_checked("LaTeX pass 1", latex, build, recorder)
+            run_checked("BibTeX", [bibtex, "manuscript"], build, recorder)
+            run_checked("LaTeX pass 2", latex, build, recorder)
+            final_output = run_checked("LaTeX pass 3", latex, build, recorder)
+            if "Label(s) may have changed" in final_output:
+                final_output = run_checked("LaTeX cross-reference pass", latex, build, recorder)
+        else:
+            run_checked("Tectonic manuscript build",
+                        [tectonic, "--keep-logs", "--keep-intermediates",
+                         "--outdir", str(build), "manuscript.tex"], build, recorder)
+            final_output = (build / "manuscript.log").read_text(encoding="utf-8", errors="replace")
         require("Label(s) may have changed" not in final_output
-                and "undefined references" not in final_output,
+                and "undefined references" not in final_output
+                and "undefined citations" not in final_output,
                 "manuscript references did not stabilize")
         pdf = build / "manuscript.pdf"
         require(pdf.is_file() and pdf.stat().st_size > 10_000,
@@ -316,25 +407,34 @@ def compile_manuscript(recorder: Recorder) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--transcript", type=Path)
+    parser.add_argument("--checks", choices=("all", "math", "release"), default="all",
+                        help="Separate mathematical replay from release consistency")
     arguments = parser.parse_args()
     recorder = Recorder()
     try:
         require(sys.version_info >= (3, 10), "Python 3.10 or newer is required")
         require(sys.flags.optimize == 0, "optimized Python mode is not supported")
-        check_certificates(recorder)
-        check_text_consistency(recorder)
-        compile_manuscript(recorder)
-        run_checked(
-            "root SHA-256 manifest",
-            [sys.executable, "-B", "verification/verify_hashes.py"],
-            ROOT,
-            recorder,
-        )
-        recorder.say(
-            "PUBLICATION_REPRODUCTION_PASS "
-            f"lower_floor={LOWER_FLOOR} upper={UPPER} formal=PASS independent=PASS "
-            "paper=compiled hashes=verified"
-        )
+        if arguments.checks in ("all", "math"):
+            run_checked("portable-runner path and import-isolation tests",
+                        [sys.executable, "-B", "-X", "utf8",
+                         "verification/test_portable_runner.py"], ROOT, recorder)
+        if arguments.checks in ("all", "release"):
+            recorder.say("RELEASE_PREFLIGHT_START")
+            check_text_consistency(recorder)
+            compile_manuscript(recorder)
+        if arguments.checks in ("all", "math"):
+            recorder.say("MATHEMATICAL_REPLAY_START")
+            check_certificates(recorder)
+            recorder.say("MATHEMATICAL_REPRODUCTION_PASS")
+        if arguments.checks in ("all", "release"):
+            run_checked("root SHA-256 manifest",
+                        [sys.executable, "-B", "verification/verify_hashes.py"],
+                        ROOT, recorder)
+            recorder.say("RELEASE_CONSISTENCY_PASS")
+        if arguments.checks == "all":
+            recorder.say("PUBLICATION_REPRODUCTION_PASS "
+                         f"lower_floor={LOWER_FLOOR} upper={UPPER} "
+                         "mathematics=PASS release=PASS")
         if arguments.transcript is not None:
             recorder.write(arguments.transcript)
         return 0

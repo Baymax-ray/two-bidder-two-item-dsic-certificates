@@ -1,59 +1,78 @@
-# Publication verification
+# Reproducing the current revenue bracket
 
-`reproduce_all.py` reruns the retained exact lower-certificate chain and V4.6
-joint package, then the active coordinated package's 46 explicit mathematical
-entrypoints. The latter include two complete V4.6.2 upper traversals, two
-source lower integrators and the present third full-revenue reconstruction.
-Frozen source bytes are copied to an isolated temporary mirror and checked
-before and after execution. The original research workspace is not required.
-The older stream integration remains available in its retained directory but
-is not needed by the active upper, which reconstructs the same rational
-field and performs a new continuous-majorant traversal. The runner also
-checks theorem/README consistency, builds a clean PDF and verifies hashes.
+The final mechanism uses `tau=83/10000`. The authoritative mathematical record
+is [reserve_parameter/manifest.json](../certificate/reserve_parameter/manifest.json),
+with revenue in `[0.876514341027067549900397423113,
+0.876514355424052828335888359874]`, unrestricted upper below
+`0.882351585488796576205586892264`, gap below `0.005837245`, and a guarantee
+strictly above **99.3384%** of unrestricted randomized DSIC optimal revenue.
+The exact revenue is the manuscript's sixteen-face integral, not an endpoint
+of its numerical enclosure. The unrestricted optimum and a matching mechanism
+remain open.
 
-The historical lower replays independently recompute added revenue layers, not a second
-from-scratch integral of the base mechanism. They share the exact base
-revenue certified by the single affine-polytope verifier. Finite differences
-are consistency checks; analytic menu formulas and exact price-region checks
-supply the degree bounds that justify Boole quadrature.
+## Entry points
 
-The two complete active stream-majorant traversals are independent at the
-implementation level: they share the rational field and Bernstein enclosure
-principle. The conditional subtraction has one complete 1024-partition
-accumulation, plus an independent all-coefficient reconstruction,
-classification cross-checks through size 64 and selected cell integrals.
-That second check reuses the primary classifier and integral tables and is
-not a second complete subtraction accumulation. The four IC cycles have
-separate whole-box sign and exact decrement checks.
-The analytic weak-duality theorem is a separate manuscript argument. The
-computational trusted base includes Python integers, `fractions.Fraction`,
-checked NumPy integer operations, JSON parsing, SHA-256, and file I/O.
+From the publication-package root, use Python 3.10 or newer with NumPy.
 
-The supported entry point checks Python 3.10 or newer and rejects optimized
-execution using an explicit runtime condition, returning a nonzero exit code
-before running any certificate. Retained kernels use executable assertions,
-so direct invocations must also omit `-O`, `-OO`, and `PYTHONOPTIMIZE`.
-This restriction is not a claim that the kernels themselves are safe under
-optimization. The source-consistency check also verifies the exact inequality
-behind the manuscript's rounded-down 99.2684% revenue guarantee.
+```
+python -E -s -B -X utf8 verification/reproduce_all.py
+```
 
-`make_hashes.py` creates `../SHA256SUMS`; `verify_hashes.py` requires exact
-coverage of every stable file. Generated clean-run transcripts under
-`generated/` and temporary LaTeX build products are intentionally excluded
-from the root manifest. The release PDF and all frozen certificate transcripts
-are included.
+The default runs both mathematics and release consistency. `--checks math`
+runs the mathematical dependency chain; `--checks release` checks the current
+text and manifests, builds a clean temporary PDF and checks full SHA-256
+coverage. In the default mode, text and TeX preflight precede long mathematics.
+Optional transcripts must be placed under `verification/generated/`, which
+is temporary and excluded from the release manifest.
 
-The active revenue is the explicit algebraic expression in manuscript
-Section 6, independently reconstructed in full. The historical V4.6 revenue
-retains its earlier reference-integral formulation. `lower_floor` is a
-rational enclosure, not the exact mechanism revenue. The active manifest
-pairs V4.6.1.1 with V4.6.2; frozen branch comparison ledgers keep older
-pairings. All gap and ratio claims are checked in exact rational arithmetic.
-Q/E/W conditional coverage concerns the actual residual and arbitrary
-randomized competitors, not unrestricted outer optimality.
+The mathematical chain retains the base and intermediate exact certificates,
+the coordinated component's 46 explicit entrypoints, the portable upper and
+face-moment component's thirteen replays plus exact assembly, and the final
+reserve arithmetic and rational-report implementation checks. Old directory
+names identify dependencies, not the current headline. In particular,
+`certificate/v5_primal_dual/verify_v5.py` reports the intermediate `tau=1/100`
+lower alongside the still-current upper. Continue through the final reserve
+checker to obtain the paper's selected mechanism and final revenue enclosure.
 
-The post-review author calculation in `audit/nature_review_v46/` independently
-checks the joint revenue decomposition and the fee identity for actual rows
-with bundle price above one. The release runner executes it as well as the
-immutable self-review snapshot check. These author checks are separate from
-the three frozen reviewer reports.
+The original research workspace is unnecessary. Portable wrappers stage the
+frozen inputs in disposable directories and check their hashes before and
+after replay. `source_bindings.json` distinguishes mathematical inputs,
+independent checks, source/accounting provenance and unused candidates.
+Retained nonexecuted candidates do not establish any deduction in the final upper.
+
+## Scope and trust
+
+The seed revenue has independent full reconstructions. The stream majorant
+has two complete implementations. The conditional subtraction has one full
+1024-partition accumulation, independent coefficient reconstruction and bounded
+cross-checks. The shared-cell master system has a separate complete replay.
+The opposing-excess tree has a full directed-arithmetic replay and bounded
+independent cross-checks, not a second complete independently implemented tree.
+See the manuscript's reproducibility section for the precise independence levels.
+
+Runtime identity and actual imported module paths are emitted during the portable
+replay. Child Python processes ignore ambient Python overrides and user-site
+imports; installed interpreter and library code remain trusted. Proof kernels
+use assertions. `-O`, `-OO` and nonzero `PYTHONOPTIMIZE` are unsupported and
+explicitly rejected at the entrypoints. Path and environment regression checks
+are in `test_portable_runner.py`.
+
+`joint_explanation_check.py` preserves the separate rational polygon and fee
+identity check formerly stored with internal review notes. The three current
+mathematical packages already contain their independent source checks; duplicate
+audit copies and historical reviewer snapshots are not runtime dependencies.
+
+## Release files
+
+`make_hashes.py` writes the root manifest and `verify_hashes.py` requires exact
+stable-file coverage. The current build, runtime and replay receipts in this
+directory are verification evidence. `reproduction_all.txt` records the full
+reader-copy run; `reproduction_release.txt` records the final-directory checks. Hash agreement establishes identity,
+not mathematical validity. The all-report proofs remain in the manuscript
+and the included analytic sources.
+
+`tools/build_paper.py` and `tools/render_paper.py` retain the configured local
+TinyTeX and Poppler build/QA helpers. They write temporary material beneath
+`generated/`; the portable publication runner supports the environment described
+in [ENVIRONMENT.md](../ENVIRONMENT.md). Old review reports and transient authoring
+outputs are not part of the reader-facing reproduction chain.

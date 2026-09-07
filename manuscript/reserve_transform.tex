@@ -1,0 +1,70 @@
+\subsection{A distribution-independent reserve transformation}\label{sec:reserve-general}
+Let $M_*$ be any Borel, jointly feasible, pointwise DSIC and ex-post IR
+mechanism on $[0,1]^4$, with allocations in $[0,1]^2$ and bounded expected
+payments. Assume that its selected allocation excludes zero-valued items,
+\[
+ z_{ij}=0\quad\Longrightarrow\quad x^*_{ij}(z)=0
+ \qquad\text{at every profile, including ties}.
+\]
+Borel measurability and bounded payments ensure that clamping onto boundary
+faces preserves measurability and integrability. The incentive argument
+itself uses no distributional assumption and no finite allocation range.
+For $0\le\tau<1$ put $s_\tau=1-\tau$ and
+$T_\tau(t)=\max\{(t-\tau)/s_\tau,0\}$, coordinatewise on the full profile.
+Define
+\begin{equation}\label{eq:reserve-transform}
+ x^\tau_{ij}(v)=x^*_{ij}(T_\tau v),\qquad
+ p_i^\tau(v)=s_\tau p_i^*(T_\tau v)+\tau\sum_jx^*_{ij}(T_\tau v).
+\end{equation}
+Use the seed's given allocation and payment selection at the transformed
+profile, including its tie rule. There is no additional allocation gate.
+
+\begin{proposition}[Reserve preservation]\label{prop:reserve-preservation}
+For every $\tau\in[0,1)$, \eqref{eq:reserve-transform} defines a Borel,
+pointwise DSIC, ex-post IR and jointly feasible mechanism on $[0,1]^4$.
+
+\end{proposition}
+\begin{proof}
+Fix an arbitrary opponent report, a true type $v_i$, and a report $r_i$.
+Its deviation utility is bounded by
+\begin{align*}
+ &\sum_j(v_{ij}-\tau)x^*_{ij}(T_\tau r_i,T_\tau v_{-i})
+       -s_\tau p_i^*(T_\tau r_i,T_\tau v_{-i})\\
+ &\quad\le s_\tau\big[T_\tau v_i\cdot x_i^*(T_\tau r_i,T_\tau v_{-i})
+       -p_i^*(T_\tau r_i,T_\tau v_{-i})\big]\\
+ &\quad\le s_\tau u_i^*(T_\tau v).
+\end{align*}
+The first inequality uses nonnegative allocations; the second is DSIC
+of $M_*$. At truth the first inequality is equality by
+the zero-value-exclusion hypothesis, including $v_{ij}=\tau$ and $v_{ij}<\tau$.
+Hence truthful utility is $s_\tau u_i^*(T_\tau v)\ge0$.
+Both allocations come from the same feasible transformed profile, so
+capacity holds pointwise. The map is continuous and the selected base
+rule is Borel. Bounded seed payments keep transformed payments bounded,
+so integrability also holds. All assertions include exceptional reports and ties and
+use the expected-utility convention of Section~\ref{sec:model}.
+\end{proof}
+
+
+\begin{figure}[t]
+\centering\small
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+Reports $v\in[0,1]^4$
+$\ \xrightarrow{\ T_\tau\ }\ $
+one transformed profile $z$
+$\ \xrightarrow{\ M_*\ }\ $
+$(x^*(z),p^*(z))$
+\[
+ x^\tau(v)=x^*(z),\qquad
+ p_i^\tau(v)=(1-\tau)p_i^*(z)+\tau\sum_jx^*_{ij}(z).
+\]
+Both bidders use the same feasible allocation. Zero-valued transformed
+items receive zero allocation. Under independent uniform reports,
+each coordinate has law $\tau\delta_0+(1-\tau)\operatorname{Unif}[0,1]$.
+\end{minipage}}
+\caption{One common report transformation preserves supply and creates the
+boundary atoms used in the exact revenue calculation. The seed is fully
+specified by the three menus in Section~\ref{sec:refined-mechanism}.}
+\label{fig:reserve-map}
+\end{figure}

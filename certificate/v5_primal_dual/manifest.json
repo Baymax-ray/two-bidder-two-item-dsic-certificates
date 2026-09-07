@@ -1,0 +1,161 @@
+{
+  "status": "V5_PORTABLE_MATHEMATICAL_PACKAGE",
+  "entrypoint": "verify_v5.py",
+  "entrypoints": [
+    {
+      "kind": "source",
+      "path": "V5_gap_closure/verifier/global_duality.py",
+      "label": "V5 global_duality"
+    },
+    {
+      "kind": "source",
+      "path": "V5_gap_closure/verifier/bb_global.py",
+      "label": "V5 bb_global"
+    },
+    {
+      "kind": "source",
+      "path": "V5_gap_closure/verifier/primal_face_integrals.py",
+      "label": "V5 primal_face_integrals"
+    },
+    {
+      "kind": "source",
+      "path": "V5_gap_closure/verifier/primal_global.py",
+      "label": "V5 primal_global"
+    },
+    {
+      "kind": "source",
+      "path": "V5_gap_closure/verifier/primal_independent.py",
+      "label": "V5 primal_independent"
+    },
+    {
+      "kind": "adapter",
+      "adapter": "upper_splice_audit",
+      "label": "V5 upper_splice_audit (provenance adapter)"
+    },
+    {
+      "kind": "adapter",
+      "adapter": "upper_bb_audit",
+      "label": "V5 upper_bb_audit (provenance adapter)"
+    },
+    {
+      "kind": "source",
+      "path": "V4_8A_frozen_primal/verifier/master_certificate.py",
+      "label": "V4.8A master_certificate"
+    },
+    {
+      "kind": "source",
+      "path": "V4_8A_frozen_primal/verifier/master_independent.py",
+      "label": "V4.8A master_independent"
+    },
+    {
+      "kind": "adapter",
+      "adapter": "fresh_structure",
+      "label": "fresh_structure (original audit and receipt comparison)"
+    },
+    {
+      "kind": "adapter",
+      "adapter": "fresh_upper",
+      "label": "fresh_upper (original audit and receipt comparison)"
+    },
+    {
+      "kind": "adapter",
+      "adapter": "fresh_face_cubature",
+      "label": "fresh_face_cubature (original audit and receipt comparison)"
+    },
+    {
+      "kind": "adapter",
+      "adapter": "numerical_remainder",
+      "label": "V4.6.3 numerical_remainder --depth-b 20 --depth-d 20 --depth-avg 26"
+    }
+  ],
+  "lower_enclosure": [
+    "0.876512208776757709245241140006",
+    "0.876512226027595234048128153175"
+  ],
+  "upper": "41633573878672737296912156242885809141291624901751643754645460524439983259963071676800128256714387374860011650292126107236569442723605126535991001222821586655459704406343244109848287029385046825910755834261455583338689259236046105040688037504806530577591936832188897881637798170386815238309015117176824853562214416583537007713942251912079261294386646706048576482553528195953/47184789559378389637399332661811400305800073101086982571642952271339370841545994999311325392862801043601551124190197512907122247091094190388965346229914862531301157400354556042255530841235254951630396642645415904876400810608838628951127883272699388025250477805316397921574293466240151490746004749870334600976567348096532480000000000000000000000000000000000000000000000000000",
+  "upper_enclosure": [
+    "0.882351585488796576205586892263",
+    "0.882351585488796576205586892264"
+  ],
+  "gap_enclosure": [
+    "0.005839359461201342157458739089",
+    "0.005839376712038866960345752257"
+  ],
+  "guarantee": "0.993382",
+  "upper_formula": "U_V462 - E_lower - G_master - G_splice - G_BB",
+  "upper_components": {
+    "predecessor_upper": "13567868514857895377422588406542072007419811564286894575878522410727788846371952817118058918329875423712283695826717748044723616278183916405286408466921019145566408172251659463/15366988623506010839300830964448254142215307259735475230302635058848387209170137623759432896455546120917565820755151689314984524762582018568697850980189516580519936000000000000",
+    "numerical_remainder_lower": "43257276992365621821946985834299140440180362070838253415590227363781531890801820436160147993292363939087342798956640562797160928828130691790552942633483016316179311800730699984159505591444990279/357790585223259656673782294719672159809044265647779107799349237672248557423477471427978782366391879527772912307529516734997381567083811819755887868352921600000000000000000000000000000000000000000000",
+    "master_gain_lower": "1145431332256568623154646916890835707534637718328387521627233193333763458983868966595200506216736402870879177188487736895858323809924685018208979383032330527095051475623375026171540998855436303963369498809297630104645321209317153089/118208382240569218115459645158594486841732084996270969114929361871557713332247614948252878071663119462494974783360978577343753326897574640756972717034351996721877793864564300902637556577116502689816464498164672851562500000000000000000000000",
+    "splice_gain_lower": "8262246819901529360710917153446068033269526723060361038513366813346284714615632232143140808023839788015611629422124786215278219261745197300668474830701535053652205068861113276930760549344679098453529783427/18349197442922920146574987892162486503014900787162982468108964895482119902354879799645268409682513925206483728598398546575700033017462003256702213311177031680000000000000000000000000000000000000000000000000000",
+    "BB_gain": "4786305147/17179869184000000"
+  },
+  "unrestricted_optimum": "OPEN",
+  "workspace_preservation_replayed": false,
+  "source_files": 54,
+  "archive_dependencies": 16,
+  "package_files": {
+    "dependencies.json": "73f28f82e7bbb9d139a27648e2949398c22fb07eae70d8d77671cc558d0f3aff",
+    "portable_assembly.py": "96cd5acbdb57cc502757c6612fabe8e8eaf4c85d56fd99f1cd7f32f63f08fb3a",
+    "provenance_adapter.py": "20aa05c6b352149a097fec149c3c80c570b9beba18f1c68082ebc0595eca12c1",
+    "README.md": "9bfdca82f75b6a1a06b8ac8dbeea735aaec2dfce0ba93c036a40dc3f8d27b3c7",
+    "source/V4_6_3_slack_atlas/certificate/atlas_ledger.json": "1cdddd43a39f51887f39cdfcd07f214a8b802cb738e8ac9def1fcab0bb8e6cc9",
+    "source/V4_6_3_slack_atlas/certificate/numerical_remainder.json": "bdce00dcf8c5e57258804f39d4a2410f75d5d9bf5626f810c34aafbbcdffef92",
+    "source/V4_6_3_slack_atlas/research_log/numerical_remainder.md": "9d30987f531f2c9ca0385abb97dc8fbf12d97d8f79b952cd26b5a84e5dfeec93",
+    "source/V4_6_3_slack_atlas/verifier/independent_lifted_fields.py": "5cf85c967a2840c8e258c69b0f8aeb8a07fe5883614f6acb7a3de4e7f6ad08a9",
+    "source/V4_6_3_slack_atlas/verifier/independent_menu_classifier.py": "e71a388aeb3ec49c829303826f67381cc1ad1eba5daf7b6c5c68067c6e6c8855",
+    "source/V4_6_3_slack_atlas/verifier/numerical_remainder.py": "ba6cf595f57a622cc9e16333fa9a1bcec7959f339312148f9278df30f63dba9f",
+    "source/V4_7/certificate/psd_local_certificate.json": "2daf5b6de57a9a85ce772fc70a3bd867ad95b77e7bafb299b25e669bcceffc31",
+    "source/V4_7/verifier/independent_psd_first_event.py": "8017ad245f240beeecd592b12515e1cf615b4cc235e1e4798ad54a51570fff79",
+    "source/V4_7/verifier/psd_polynomials.py": "c6fcc40272f44c7f8207c28c7150e0d8a50ce9411d4cd323cd654184c89ea872",
+    "source/V4_8A_frozen_primal/certificate/first_event_gain.json": "b82540f34c3bf9e82b0104faa00843475446d30e9d4be549966d624ddf4d906a",
+    "source/V4_8A_frozen_primal/certificate/master_certificate.json": "9da374813b2d7e02c845f0a6050ad155fc60cb77d09241f85a81616a687304f7",
+    "source/V4_8A_frozen_primal/certificate/master_independent.json": "704ca2b7f83cac9fe9bafc9bf7931c6ef3768a6328379e704870cee41936191c",
+    "source/V4_8A_frozen_primal/research_log/global_master_theorem.md": "44d557fe8c3d4ad88b8d6fe78d046e025596e3bb2689ef3a42ff7ca72e2e1d98",
+    "source/V4_8A_frozen_primal/verifier/master_algebra.py": "77d064166f2007744904200c47b8db0d9c2978a1439394cf7efd38e0fd34a5fd",
+    "source/V4_8A_frozen_primal/verifier/master_certificate.py": "f08852cf2a3a18093118e6fc74b27338ab2a6606bc83a9663e5bdafdd8873111",
+    "source/V4_8A_frozen_primal/verifier/master_independent.py": "9f5b0d131eb425cf8b7ff4f32e5d2f323c0e8e465742691e51ed5203d2c1a8bb",
+    "source/V4_8B_support_redesign/certificate/phase_ledger.json": "ed1bb968e0840e20f2692e6a925ea5188ae8affcdee324c5aa89f47ea1d30bde",
+    "source/V5_archive_audit/primal_structure/fresh_structure_check.py": "5a6d5a310a9146a8cb1b59ed5f97d99c77ca6b6a8d3c13c8bc73f3cbc291cc2c",
+    "source/V5_archive_audit/primal_structure/fresh_structure_receipt.json": "b7432956b9bb2487ee14e8b86555651d4c921312a957b3cbe5afece1a707eb6f",
+    "source/V5_archive_audit/replay_revenue/independent_face_cubature.json": "6f4a7baa6512b2a8cbe7379f4280afa8b59b66057fe5dc5a4516acf1d7d05f7b",
+    "source/V5_archive_audit/replay_revenue/independent_face_cubature.py": "94903bfb7f202d32642242d9c081f22bd5f68441687f3577e276fdd148259af2",
+    "source/V5_archive_audit/upper/independent_upper_checks.json": "329daaf1fb1f25fc383e4ad0e9cc5391c20d96c0add124f554b1b96a7b35b614",
+    "source/V5_archive_audit/upper/independent_upper_checks.py": "5c10f8b239c81f84c4ec8c5f25f4de5bd4feb0c65577341149b00a0bd79c5d44",
+    "source/V5_gap_closure/certificate/bb_global.json": "9d16a186c7545d05b127ef1a27804d4bbb173faf96d1fb79bf0810f6f8f1a0ff",
+    "source/V5_gap_closure/certificate/bb_global_input.json": "92383922fd941feeb70b8d356d5acacb429709d6626d134379fefcdf2ae9fe42",
+    "source/V5_gap_closure/certificate/global_duality.json": "3efa9cae0d08c44e43a64f798f03d7b3b0f653c75714a2318ecae6d4b519fe3d",
+    "source/V5_gap_closure/certificate/phase_ledger.json": "95500dd9dad6517f635bbaffa17277d15456a99e128c226a0257cd68bb528645",
+    "source/V5_gap_closure/certificate/primal_face_integrals.json": "f27a18d668070da8056d08cec3f3953da1b2c88ee76984be499462ded82f50c8",
+    "source/V5_gap_closure/certificate/primal_global.json": "4be85b8a6e44009d063b3f027ad70827bbd998b22f8eb83889ac529dabcd2457",
+    "source/V5_gap_closure/certificate/primal_independent.json": "abe4c470cfdc35eb560e0e65a9f51be685484ffb3a49c7179f3f63403aef9656",
+    "source/V5_gap_closure/certificate/upper_global.json": "47731d5e9785197d2e759ff8c316c8ebf8f6599732dfba2ef9302854da19320e",
+    "source/V5_gap_closure/discovery/bb_center_fields.py": "a9b2fa4583e28e0cce76de67c74f5cd369298afa5c99706240ab6205cf50da1e",
+    "source/V5_gap_closure/discovery/bb_centered_fields.json": "840ac343813eb3d5d96107c27252c85147e9bc667fedefbedf7995b65a0ea1cb",
+    "source/V5_gap_closure/discovery/bb_translation_intervals.py": "bab0b5e656befc3d2f514187024bf87bd5c08aba676ebd2d2e483d07ccf56fb5",
+    "source/V5_gap_closure/discovery/upper_bb_audit.json": "764344c3ff6a58384b4498bb85e35196060d551f332d5584ff102cda9381a0df",
+    "source/V5_gap_closure/discovery/upper_bb_audit.py": "ae4c5db0c5592b23afe705af0cf2397121cefec91d375d336038f7118713eb41",
+    "source/V5_gap_closure/discovery/upper_splice_audit.json": "4003088f1214a4f7700c8d4712a23931fc8eb2311e629390cb18f55971090673",
+    "source/V5_gap_closure/discovery/upper_splice_audit.py": "10cdf19ccf01866826639392f65584f3927ab31b77d678dc340def73294b950f",
+    "source/V5_gap_closure/README.md": "833492517a8999cb0f4a8b1fd00f80b7cd8a27cba92c8a24e0a41e57ee22be97",
+    "source/V5_gap_closure/REPORT.md": "8b084787e62b0dc2cfd36794c53c29af9cd5178e075bc450f026cffef975ffbe",
+    "source/V5_gap_closure/research_log/bb_global.md": "f7cd6192478dfcf3a21b9d96321daaaad877d4a55a07c6737871e765dae1f1ea",
+    "source/V5_gap_closure/research_log/gap_ledger.md": "b0c775291da830b2867b0863a892e145f48d7dd34fba1f544d5f464f2dc822ec",
+    "source/V5_gap_closure/research_log/global_duality.md": "008c30c6258c20b8bcfce97ad792ac245a5617205fdb55c11cd5ecd1fda49229",
+    "source/V5_gap_closure/research_log/primal_global.md": "380c83e05647c9c99a0392c48c3687aeebc76d98ca0ae45fda53615939ad710d",
+    "source/V5_gap_closure/research_log/primal_independent_review.md": "c83d9a58d0e1483d0958ad0bd87eb38f3857714cc9716948c8b454f71c59b676",
+    "source/V5_gap_closure/research_log/upper_global.md": "e4f6d932aacc795adf8eb57502550df7d7a468c5196ad5774a56cf84822309b4",
+    "source/V5_gap_closure/VERIFICATION.md": "5eb86844e9583a16a27cf4efa08f2f6f4efe9483a2015136baa012e3fc298ffb",
+    "source/V5_gap_closure/verifier/bb_global.py": "89e936aafcc925d61d19f09ca0778e9d7c7186e841235f233c14be7f7e5d029b",
+    "source/V5_gap_closure/verifier/global_duality.py": "ceb56adf3dc6359d3c9800ea29a15ee33543e31f3085c2771098f915ce6ea639",
+    "source/V5_gap_closure/verifier/phase_ledger.py": "f5bab1d237cd7629c2925ad77073b022b3c8b2d96c6bfd3775da96241f75ccde",
+    "source/V5_gap_closure/verifier/primal_face_integrals.py": "c77c876f3ada2ec3b78441d0efbdc623206af5067a46705a7ae07b65af3352fd",
+    "source/V5_gap_closure/verifier/primal_global.py": "ddf0fb4d64b860771aa96cb60a39377142f287b54f411cae0e9fde4accf7c6cb",
+    "source/V5_gap_closure/verifier/primal_independent.py": "ac2233b8fa4bc3d4e79fadafcb4d3b6fffb4e401080675289e422452546d339a",
+    "source/V5_gap_closure/verifier/run_all.py": "445b30fc1c494be7fafd56206325f7e02d9c919f90d511f26ed834a2296a43df",
+    "source_bindings.json": "838d8000907fd69662a1a1ff3010c3f8d3fe701772a77cb558ec93ed30d9136d",
+    "verify_v5.py": "a4201adc9fef33d4f61d4ee0d670af21c26ac4e3b8d416c01493e8cdc223da87"
+  },
+  "component_scope": "Inherited unrestricted upper and face moments; intermediate lower at tau=1/100, not the final publication lower.",
+  "final_lower_record": "../reserve_parameter/manifest.json"
+}

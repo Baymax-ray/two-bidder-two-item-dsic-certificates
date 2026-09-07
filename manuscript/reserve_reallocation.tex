@@ -1,0 +1,135 @@
+\subsection{The specified transformed mechanism}\label{sec:v5-primal}
+We apply Proposition~\ref{prop:reserve-preservation} to the complete seed
+of Section~\ref{sec:refined-mechanism}.
+\begin{lemma}[Zero-value exclusion]\label{lem:zero-item}
+At every profile $z$, the selected allocation of $M_*$ satisfies
+$z_{ij}=0\Rightarrow x^*_{ij}(z)=0$, including all ties.
+\end{lemma}
+\begin{proof}
+In a base menu each singleton costs at least $1/2$, and each bundle
+upgrade costs at least $c=157/500$. In a free $Q$ menu both upgrades
+cost at least $b_0-A>0$. In a constrained $Q$ menu, $k\ge c$ and
+$C\ge5/6+3k^2/4$, with safe price $B=\min(A,C-k)$.
+These imply positive singleton prices and positive bundle upgrades on
+the complete certified region. The uniform safe-price and safe-upgrade
+lower bounds can be taken as $525947/10^6$ and $721841/3000000$.
+In an $E$ lottery, positive safe allocation requires safe value at least
+$c$, and positive scarce allocation requires scarce value at least
+$A-q-\delta(A)\ge1364159/3000000>0$.
+Thus any row allocating a zero-valued item is strictly dominated by an
+available row deleting that item. The empty row is selected whenever
+maximum utility is zero; positive ties remain between maximizing rows
+that have the same exclusion property. The base, $Q$ and $E$ cases cover
+the complete mechanism.
+\end{proof}
+
+
+\begin{proposition}[Complete specified mechanism]\label{prop:v5-feasible}
+Use $\tau=83/10000$ in \eqref{eq:reserve-transform}, with the seed menus
+and joint tie rule of Section~\ref{sec:refined-mechanism}. This defines
+a Borel, pointwise DSIC, ex-post IR and jointly feasible mechanism.
+\end{proposition}
+\begin{proof}
+The seed satisfies Proposition~\ref{prop:refined-feasible} and
+Lemma~\ref{lem:zero-item}. Its nonnegative payments are at most two by IR.
+Proposition~\ref{prop:reserve-preservation} therefore applies at every report.
+\end{proof}
+
+This change need not retain a subset of the original allocation at the
+same report. Throughout the closed box of halfwidth $10^{-4}$ centered at
+\[
+ (v_{11},v_{12},v_{21},v_{22})=(1577/2000,123/200,3/5,4/5),
+\]
+$M_*$ gives both items to bidder 1, whereas $M_\tau$ gives item 1 to
+bidder 1 and item 2 to bidder 2. Exact branch inequalities first place
+the entire box in the stated base-menu regime. All remaining utility
+differences are affine there; their vertex bounds are at least $1/1250$
+before the change and $1719/5000000$ after it. The box has volume
+$1/625000000000000$. This is a jointly feasible ownership transfer,
+not a sampled allocation comparison.
+
+\subsection{Exact revenue through face moments}
+For $S\subseteq\{1,2,3,4\}$ let $R_S$ and $N_S$ be the integrals of
+the total payment and total expected number of allocated items of $M_*$
+on the face where coordinates in $S$ are zero, with all remaining
+coordinates independent uniform. Each transformed coordinate has law
+$\tau\delta_0+s_\tau\operatorname{Unif}[0,1]$. Independence gives the exact
+degree-five polynomial
+\begin{equation}\label{eq:v5-revenue}
+ R_\tau=R(M_\tau)=
+ \sum_{S\subseteq\{1,2,3,4\}}\tau^{|S|}s_\tau^{4-|S|}
+                 (s_\tau R_S+\tau N_S),\qquad \tau=83/10000.
+\end{equation}
+This formula, together with the complete menus, is an exact revenue
+characterization. The numerical value is certified by an interval;
+neither its midpoint nor an endpoint is asserted to be the exact revenue.
+Boundary faces cannot be dropped: they have positive probability after
+transformation, even though they had zero four-dimensional volume before it.
+
+For clarity, the sums over faces of each codimension are
+\[
+\begin{split}
+ (\mathcal R_0,\ldots,\mathcal R_4)
+   &=(R_*,4R_3,2(R_{\rm SB}+R_{\rm same}+R_{\rm cross}),4R_1,0),\\
+ (\mathcal N_0,\ldots,\mathcal N_4)
+   &=(N_4,4N_3,2(N_{\rm SB}+N_{\rm same}+N_{\rm cross}),4N_1,0).
+\end{split}
+\]
+Here $R_3,N_3$ refer to one fixed zero coordinate; $R_1,N_1$ to one
+remaining nonzero coordinate. Of the two-dimensional faces, one bidder
+alone yields $R_{\rm SB}=4/9+2\sqrt2/27$ and
+$N_{\rm SB}=(8+2\sqrt2)/9$; the same-item face yields
+$R_{\rm same}=31/81$, $N_{\rm same}=5/9$; and the cross-item face
+retains the two opposing singleton menus. Also $R_1=2/9$, $N_1=1/3$.
+The remaining coefficients reduce to conditional-menu integrals as follows.
+Let $\mathcal T=\{(t,\rho):0\le\rho\le t\le1\}$. Write
+$r_c(t,\rho)$ and $n_c(t,\rho)$ for the expected payment and expected
+item count of the single bidder facing $(t,\rho)$ under $M_*$, including
+its lottery options, with its own two coordinates uniform. Let $P(t,\rho)$
+and $B(t,\rho)$ be the scarce and safe singleton prices clipped at one.
+With $g_R=P(1-P)+B(1-B)$ and $g_N=2-P-B$, the exact reductions are
+\begin{equation}\label{eq:v5-face-reductions}
+\begin{aligned}
+ N_4&=4\int_{\mathcal T}n_c(t,\rho)\,dt\,d\rho,\\
+ R_3&=\int_0^1r_c(t,0)\,dt+\int_{\mathcal T}g_R(t,\rho)\,dt\,d\rho,\\
+ N_3&=\int_0^1n_c(t,0)\,dt+\int_{\mathcal T}g_N(t,\rho)\,dt\,d\rho,\\
+ R_{\rm cross}&=2\int_0^1 B(t,0)(1-B(t,0))\,dt,\\
+ N_{\rm cross}&=2\int_0^1(1-B(t,0))\,dt.
+\end{aligned}
+\end{equation}
+On a one-zero face, the full two-coordinate bidder gives the line
+integral, and the other bidder's singleton sales under the two opponent
+orientations give $g_R$ and $g_N$. On a cross face only the safe singleton
+threshold remains. Zero-coordinate exclusion removes any competing bundle
+or lottery allocating the zero-valued item. The formulas and polynomial
+branch integrands are also specified in
+\path{verifier/primal_face_integrals.py} in the certificate package.
+
+The pointwise tie rule need not be symmetric. The face integrals nevertheless have the required symmetries:
+zero-coordinate exclusion handles fixed zero coordinates, ties involving
+positive free coordinates lie on null own-type menu interfaces, and a
+bidder whose two coordinates are fixed at zero selects empty. These facts
+justify the face symmetries without changing the selected pointwise rule.
+
+The verification partitions the opponent triangle into 296 fully resolved
+strips and 15 wholly enclosed unresolved strips. Polynomial branch
+conditions are certified over entire cells before exact integration;
+unresolved strips receive valid global payment and allocation bounds.
+The single-buyer radical is bracketed rationally, with a conservative
+$10^{-12}$ face error allowance justified by the utility revenue identity.
+An independent standard-library implementation reconstructs 1,372
+polynomial cells and checks 63,184 exact Bernstein predicates before
+integrating them. It agrees on every face enclosure and on the full
+16-face expansion. It shares the analytic menu formulas and enclosure
+principle, but imports no source calculator.
+
+The same exact identity gives a global admissible first variation,
+\[
+ \left.\frac{d}{d\tau}R(M_\tau)\right|_{0+}
+       =N_4+4R_3-5R_*
+       \in[0.0120503811119742,0.0120521625636254].
+\]
+Thus this necessary optimality condition fails at $M_*$. The selected finite change at $\tau=83/10000$ gains more than $3/62500$
+over the seed, as follows from the certified revenue and seed integral. Appendix~\ref{app:reserve-parameter} certifies the unique maximum within
+this fixed-seed family and explains the selected rational parameter.
+It does not identify an unrestricted optimal auction.

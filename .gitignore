@@ -10,3 +10,5 @@ manuscript/build/
 *.out
 *.synctex.gz
 *.toc
+
+verification/generated/

@@ -1,0 +1,182 @@
+\subsection{Analytic weak duality}\label{subsec:analytic}
+
+For own type \(v_i=(x,y)\) and \(r=\max(x,y)\), define the radial field
+\[
+F^0(x,y)=\frac{3r^2-1}{2r^2}(x,y),\qquad F^0(0,0)=0.
+\]
+Its value at the origin is immaterial to integration.  Since
+\(|F^0|=O(1/r)\), the field is integrable on the square.
+
+\begin{theorem}[Stream weak duality]\label{thm:stream}
+For each bidder \(i\), let \(G_i\) be a jointly \(C^1\) vector field on
+\([0,1]^4\).  Suppose that, for each opponent report, its own-type divergence
+is zero and its normal component vanishes on every side of the own-type
+square.  Put \(F_i(v)=F^0(v_i)+G_i(v)\).  Every admissible mechanism \(M\)
+satisfies
+\begin{equation}\label{eq:stream-envelope}
+\operatorname{Rev}(M)\leq
+\mathcal E(F):=\int_{[0,1]^4}\sum_{j=1}^2
+\max\{0,F_{1j}(v),F_{2j}(v)\}\,dv.
+\end{equation}
+Consequently \(\OPT\leq\mathcal E(F)\).
+\end{theorem}
+
+\begin{proof}
+Fix bidder \(i\) and an opponent report on a full-measure set for which the
+conditional expected-payment slice is integrable.  Write truthful utility as
+\(u(v)\), expected allocation as \(X(v)\in[0,1]^2\), and expected payment as
+\(p(v)\).  Pointwise DSIC gives
+\[
+u(v)\geq u(r)+(v-r)\cdot X(r)\qquad\text{for every }v,r.
+\]
+Thus \(u\) is convex and \(X(r)\in\partial u(r)\).  These inequalities and
+\(0\leq X_j\leq1\) also make \(u\) Lipschitz.  At every differentiability
+point, \(X=\nabla u\).  At nonsmooth points we retain the mechanism's given
+jointly measurable subgradient selection; its pointwise feasibility is part
+of the model, not inferred from an almost-everywhere gradient.
+
+Joint measurability and the assumed integrability of the payment, together
+with boundedness of \(v\cdot X\), make \(u=v\cdot X-p\) measurable and
+integrable.  Thus the conditional identities below apply on this full-measure
+set of opponent reports and may then be integrated by Fubini.
+
+We retain the origin utility explicitly. For jointly completed-Lebesgue
+measurable input, measurability of its restriction to a null slice does not
+follow merely by restriction. Instead, continuity on each own-type fiber gives
+\[
+ u_i(0;w)=\lim_{n\to\infty}
+ n^2\int_{[0,1/n]^2}u_i(v;w)\,dv.
+\]
+Fubini supplies measurable versions of these averages outside a common
+opponent null set. Completeness makes the actual origin trace measurable
+as well, including its values on that exceptional set. The Lipschitz bound
+$|u_i(v;w)-u_i(0;w)|\le2$ then implies
+$|u_i(0;w)|\le\int|u_i(v;w)|\,dv+2$, proving its integrability.
+Ex-post IR gives $u_i(0;w)\ge0$.
+
+Partition the square into the two radial charts
+\[
+v=s(1,t)\quad\text{and}\quad v=s(t,1),
+\qquad 0\leq s,t\leq1,
+\]
+each with Jacobian \(s\).  On a fixed ray set \(q=(1,t)\) or \((t,1)\) and
+\(g(s)=u(sq)\).  Convexity makes \(g\) absolutely continuous and
+\(g'(s)=q\cdot X(sq)\) almost everywhere and \(g(0)=u(0)\).  Since
+\(p(sq)=s g'(s)-g(s)\),
+\[
+\int_0^1p(sq)s\,ds
+=\int_0^1\frac{3s^2-1}{2}\,g'(s)\,ds-\frac{u(0)}2.
+\]
+Combining the two charts gives the conditional revenue identity
+\[
+\int_{[0,1]^2}p(v)\,dv
+=\int_{[0,1]^2}F^0(v)\cdot X(v)\,dv-u(0).
+\]
+The correction is bounded, and \(u\in W^{1,\infty}\).  Weak Green integration,
+zero own-type divergence, and the zero normal trace therefore give
+\[
+\int_{[0,1]^2}G_i\cdot\nabla u=0.
+\]
+Thus replacing \(F^0\) by \(F_i\) preserves the conditional identity.
+
+Apply this identity to both bidders and then integrate over opponent reports.
+Fubini is justified by the integrability established above.  Dropping the
+nonpositive origin terms leaves the sum of the field-allocation pairings.
+For every profile and item \(j\), feasibility gives
+\(X_{1j}+X_{2j}\leq1\), with both allocations nonnegative.  Hence
+\[
+\sum_i F_{ij}X_{ij}
+\leq
+\max\{0,F_{1j},F_{2j}\}.
+\]
+This pointwise relaxation is valid for arbitrary expected allocations and
+therefore for arbitrary internal randomization.  Integrating proves
+\eqref{eq:stream-envelope}; the maximizing allocation in its integrand need
+not itself be implementable by a DSIC mechanism.
+\end{proof}
+
+\paragraph{Boundary interpretation.}
+The radial identity can also be checked by integration by parts.  The
+classical divergence of \(F^0\) is \(3\) in each open triangle \(x>y>0\) and
+\(y>x>0\), hence almost everywhere.  Continuity across the diagonal away
+from the origin makes the interface fluxes cancel.  The outer boundary flux
+is \(2\), while the flux around a puncture at the corner \((0,0)\) tends to
+\(1\), with the normal pointing into the removed square.  Applying Green's
+formula to the two triangles outside \([0,\varepsilon]^2\) and letting
+\(\varepsilon\downarrow0\) gives
+\[
+\int F^0\cdot\nabla u
+=\int_{x=1}u+\int_{y=1}u-3\int_{[0,1]^2}u+u(0).
+\]
+Lipschitz continuity replaces the trace at the puncture by \(u(0)\) with
+vanishing error.  This accounts for the corner term without treating a
+boundary corner as an interior distributional source.
+
+\subsection{The rational stream witness}\label{subsec:witness}
+
+The correction is an opponent-dependent curl.  For an exponent
+\(e=(e_0,e_1,e_2,e_3)\), put
+\[
+m_e=x^{e_0}y^{e_1}z^{e_2}w^{e_3},\qquad
+\sigma(e)=(e_1,e_0,e_3,e_2).
+\]
+Let \(E\) be the lexicographically smaller member of every nontrivial
+\(\sigma\)-pair of total degree at most four.  Define
+\[
+h(x,y,z,w)=\sum_{e\in E}\theta_e(m_e-m_{\sigma(e)}),
+\quad
+\psi=x(1-x)y(1-y)h,
+\quad
+G=(\partial_y\psi,-\partial_x\psi).
+\]
+The thirty-two rational coefficients are listed below in the exact basis
+order used by the verifier.  A convex quasi-Monte Carlo search was used only
+to discover them; the proof defines the field by the following rational
+numbers and does not trust the numerical optimization.
+\[
+\begin{array}{cl@{\qquad}cl}
+\toprule
+e&\theta_e&e&\theta_e\\
+\midrule
+(0,0,0,1)&-2995385/993184&(0,0,0,2)&2337131/676164\\
+(0,0,0,3)&5724621/964727&(0,0,0,4)&-4591777/714341\\
+(0,0,1,2)&-834567/846478&(0,0,1,3)&6291553/970203\\
+(0,1,0,0)&2762675/446201&(0,1,0,1)&206964/961681\\
+(0,1,0,2)&-6090207/979156&(0,1,0,3)&6862090/913753\\
+(0,1,1,0)&-5206994/854575&(0,1,1,1)&515889/117356\\
+(0,1,1,2)&-3346363/843816&(0,1,2,0)&-125263/465506\\
+(0,1,2,1)&3005651/895053&(0,1,3,0)&-1043238/468269\\
+(0,2,0,0)&1660919/994155&(0,2,0,1)&1276309/943222\\
+(0,2,0,2)&-2075136/255347&(0,2,1,0)&404816/59269\\
+(0,2,1,1)&250988/352269&(0,2,2,0)&3825425/994154\\
+(0,3,0,0)&-5383501/354845&(0,3,0,1)&3312081/940771\\
+(0,3,1,0)&-4885471/759831&(0,4,0,0)&7648954/974695\\
+(1,1,0,1)&-603823/508896&(1,1,0,2)&417332/188831\\
+(1,2,0,0)&17884893/955196&(1,2,0,1)&992961/785407\\
+(1,2,1,0)&2761171/712822&(1,3,0,0)&-3841999/611370\\
+\bottomrule
+\end{array}
+\]
+
+Give bidder 2 the same construction with \((x,y)\) and \((z,w)\) swapped,
+and put \(F_i=F_i^0+G_i\).
+
+\begin{lemma}[Rational witness feasibility]\label{lem:witness}
+These fields satisfy Theorem~\ref{thm:stream}.  They are equivariant under
+bidder exchange and simultaneous item exchange.
+\end{lemma}
+
+\begin{proof}
+The corrections are polynomials.  Equality of mixed partial derivatives gives
+\(\operatorname{div}_{x,y}G=0\).  Moreover \(G\cdot n=0\) on each side of
+the own-type square: on a vertical side \(\partial_y\psi=0\), and on a
+horizontal side \(-\partial_x\psi=0\), because of the boundary factors in
+\(\psi\).  Bidder symmetry follows from the definition of \(G_2\).  Finally,
+\(h(y,x,w,z)=-h(x,y,z,w)\), hence the same antisymmetry holds for \(\psi\).
+Differentiation gives
+\[
+G(y,x,w,z)=(G_y(x,y,z,w),G_x(x,y,z,w)),
+\]
+where \(G_x,G_y\) denote the two components.  The radial field has the same
+item-exchange property, proving the claim.
+\end{proof}

@@ -1,0 +1,389 @@
+{
+  "scope": "Frozen source inventory for the portable component. Roles distinguish proof/replay inputs, independent checks, source/accounting provenance, and unused candidates. The entrypoint list is in manifest.json; not every bound file is executed or contributes to the final upper.",
+  "role_definitions": {
+    "required": "Primary mathematical input, checker, helper or analytic reference.",
+    "independent_check": "Separate implementation or its frozen comparison input; independence scope is documented in the manuscript.",
+    "provenance": "Retained only where replay checks an accounting identity or source binding.",
+    "unused_candidate": "A preserved, source-bound attempt with no accepted contribution to the final upper; not an entrypoint."
+  },
+  "files": [
+    {
+      "path": "source/V4_6_3_slack_atlas/certificate/atlas_ledger.json",
+      "origin": "V4_6_3_slack_atlas/certificate/atlas_ledger.json",
+      "sha256": "1cdddd43a39f51887f39cdfcd07f214a8b802cb738e8ac9def1fcab0bb8e6cc9",
+      "role": "provenance",
+      "status": "required_accounting_input"
+    },
+    {
+      "path": "source/V4_6_3_slack_atlas/certificate/numerical_remainder.json",
+      "origin": "V4_6_3_slack_atlas/certificate/numerical_remainder.json",
+      "sha256": "bdce00dcf8c5e57258804f39d4a2410f75d5d9bf5626f810c34aafbbcdffef92",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_6_3_slack_atlas/research_log/numerical_remainder.md",
+      "origin": "V4_6_3_slack_atlas/research_log/numerical_remainder.md",
+      "sha256": "9d30987f531f2c9ca0385abb97dc8fbf12d97d8f79b952cd26b5a84e5dfeec93",
+      "role": "required",
+      "status": "analytic_reference"
+    },
+    {
+      "path": "source/V4_6_3_slack_atlas/verifier/independent_lifted_fields.py",
+      "origin": "V4_6_3_slack_atlas/verifier/independent_lifted_fields.py",
+      "sha256": "5cf85c967a2840c8e258c69b0f8aeb8a07fe5883614f6acb7a3de4e7f6ad08a9",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_6_3_slack_atlas/verifier/independent_menu_classifier.py",
+      "origin": "V4_6_3_slack_atlas/verifier/independent_menu_classifier.py",
+      "sha256": "e71a388aeb3ec49c829303826f67381cc1ad1eba5daf7b6c5c68067c6e6c8855",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_6_3_slack_atlas/verifier/numerical_remainder.py",
+      "origin": "V4_6_3_slack_atlas/verifier/numerical_remainder.py",
+      "sha256": "ba6cf595f57a622cc9e16333fa9a1bcec7959f339312148f9278df30f63dba9f",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_7/certificate/psd_local_certificate.json",
+      "origin": "V4_7/certificate/psd_local_certificate.json",
+      "sha256": "2daf5b6de57a9a85ce772fc70a3bd867ad95b77e7bafb299b25e669bcceffc31",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_7/verifier/independent_psd_first_event.py",
+      "origin": "V4_7/verifier/independent_psd_first_event.py",
+      "sha256": "8017ad245f240beeecd592b12515e1cf615b4cc235e1e4798ad54a51570fff79",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_7/verifier/psd_polynomials.py",
+      "origin": "V4_7/verifier/psd_polynomials.py",
+      "sha256": "c6fcc40272f44c7f8207c28c7150e0d8a50ce9411d4cd323cd654184c89ea872",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/certificate/first_event_gain.json",
+      "origin": "V4_8A_frozen_primal/certificate/first_event_gain.json",
+      "sha256": "b82540f34c3bf9e82b0104faa00843475446d30e9d4be549966d624ddf4d906a",
+      "role": "provenance",
+      "status": "required_accounting_input"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/certificate/master_certificate.json",
+      "origin": "V4_8A_frozen_primal/certificate/master_certificate.json",
+      "sha256": "9da374813b2d7e02c845f0a6050ad155fc60cb77d09241f85a81616a687304f7",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/certificate/master_independent.json",
+      "origin": "V4_8A_frozen_primal/certificate/master_independent.json",
+      "sha256": "704ca2b7f83cac9fe9bafc9bf7931c6ef3768a6328379e704870cee41936191c",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/research_log/global_master_theorem.md",
+      "origin": "V4_8A_frozen_primal/research_log/global_master_theorem.md",
+      "sha256": "44d557fe8c3d4ad88b8d6fe78d046e025596e3bb2689ef3a42ff7ca72e2e1d98",
+      "role": "required",
+      "status": "analytic_reference"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/verifier/master_algebra.py",
+      "origin": "V4_8A_frozen_primal/verifier/master_algebra.py",
+      "sha256": "77d064166f2007744904200c47b8db0d9c2978a1439394cf7efd38e0fd34a5fd",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/verifier/master_certificate.py",
+      "origin": "V4_8A_frozen_primal/verifier/master_certificate.py",
+      "sha256": "f08852cf2a3a18093118e6fc74b27338ab2a6606bc83a9663e5bdafdd8873111",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_8A_frozen_primal/verifier/master_independent.py",
+      "origin": "V4_8A_frozen_primal/verifier/master_independent.py",
+      "sha256": "9f5b0d131eb425cf8b7ff4f32e5d2f323c0e8e465742691e51ed5203d2c1a8bb",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V4_8B_support_redesign/certificate/phase_ledger.json",
+      "origin": "V4_8B_support_redesign/certificate/phase_ledger.json",
+      "sha256": "ed1bb968e0840e20f2692e6a925ea5188ae8affcdee324c5aa89f47ea1d30bde",
+      "role": "provenance",
+      "status": "required_accounting_input"
+    },
+    {
+      "path": "source/V5_archive_audit/primal_structure/fresh_structure_check.py",
+      "origin": "V5_archive_audit/primal_structure/fresh_structure_check.py",
+      "sha256": "5a6d5a310a9146a8cb1b59ed5f97d99c77ca6b6a8d3c13c8bc73f3cbc291cc2c",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_archive_audit/primal_structure/fresh_structure_receipt.json",
+      "origin": "V5_archive_audit/primal_structure/fresh_structure_receipt.json",
+      "sha256": "b7432956b9bb2487ee14e8b86555651d4c921312a957b3cbe5afece1a707eb6f",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_archive_audit/replay_revenue/independent_face_cubature.json",
+      "origin": "V5_archive_audit/replay_revenue/independent_face_cubature.json",
+      "sha256": "6f4a7baa6512b2a8cbe7379f4280afa8b59b66057fe5dc5a4516acf1d7d05f7b",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_archive_audit/replay_revenue/independent_face_cubature.py",
+      "origin": "V5_archive_audit/replay_revenue/independent_face_cubature.py",
+      "sha256": "94903bfb7f202d32642242d9c081f22bd5f68441687f3577e276fdd148259af2",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_archive_audit/upper/independent_upper_checks.json",
+      "origin": "V5_archive_audit/upper/independent_upper_checks.json",
+      "sha256": "329daaf1fb1f25fc383e4ad0e9cc5391c20d96c0add124f554b1b96a7b35b614",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_archive_audit/upper/independent_upper_checks.py",
+      "origin": "V5_archive_audit/upper/independent_upper_checks.py",
+      "sha256": "5c10f8b239c81f84c4ec8c5f25f4de5bd4feb0c65577341149b00a0bd79c5d44",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/README.md",
+      "origin": "V5_gap_closure/README.md",
+      "sha256": "833492517a8999cb0f4a8b1fd00f80b7cd8a27cba92c8a24e0a41e57ee22be97",
+      "role": "provenance",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/REPORT.md",
+      "origin": "V5_gap_closure/REPORT.md",
+      "sha256": "8b084787e62b0dc2cfd36794c53c29af9cd5178e075bc450f026cffef975ffbe",
+      "role": "provenance",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/VERIFICATION.md",
+      "origin": "V5_gap_closure/VERIFICATION.md",
+      "sha256": "5eb86844e9583a16a27cf4efa08f2f6f4efe9483a2015136baa012e3fc298ffb",
+      "role": "provenance",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/bb_global.json",
+      "origin": "V5_gap_closure/certificate/bb_global.json",
+      "sha256": "9d16a186c7545d05b127ef1a27804d4bbb173faf96d1fb79bf0810f6f8f1a0ff",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/bb_global_input.json",
+      "origin": "V5_gap_closure/certificate/bb_global_input.json",
+      "sha256": "92383922fd941feeb70b8d356d5acacb429709d6626d134379fefcdf2ae9fe42",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/global_duality.json",
+      "origin": "V5_gap_closure/certificate/global_duality.json",
+      "sha256": "3efa9cae0d08c44e43a64f798f03d7b3b0f653c75714a2318ecae6d4b519fe3d",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/phase_ledger.json",
+      "origin": "V5_gap_closure/certificate/phase_ledger.json",
+      "sha256": "95500dd9dad6517f635bbaffa17277d15456a99e128c226a0257cd68bb528645",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/primal_face_integrals.json",
+      "origin": "V5_gap_closure/certificate/primal_face_integrals.json",
+      "sha256": "f27a18d668070da8056d08cec3f3953da1b2c88ee76984be499462ded82f50c8",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/primal_global.json",
+      "origin": "V5_gap_closure/certificate/primal_global.json",
+      "sha256": "4be85b8a6e44009d063b3f027ad70827bbd998b22f8eb83889ac529dabcd2457",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/primal_independent.json",
+      "origin": "V5_gap_closure/certificate/primal_independent.json",
+      "sha256": "abe4c470cfdc35eb560e0e65a9f51be685484ffb3a49c7179f3f63403aef9656",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/certificate/upper_global.json",
+      "origin": "V5_gap_closure/certificate/upper_global.json",
+      "sha256": "47731d5e9785197d2e759ff8c316c8ebf8f6599732dfba2ef9302854da19320e",
+      "role": "unused_candidate",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/bb_center_fields.py",
+      "origin": "V5_gap_closure/discovery/bb_center_fields.py",
+      "sha256": "a9b2fa4583e28e0cce76de67c74f5cd369298afa5c99706240ab6205cf50da1e",
+      "role": "provenance",
+      "status": "required_source_binding"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/bb_centered_fields.json",
+      "origin": "V5_gap_closure/discovery/bb_centered_fields.json",
+      "sha256": "840ac343813eb3d5d96107c27252c85147e9bc667fedefbedf7995b65a0ea1cb",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/bb_translation_intervals.py",
+      "origin": "V5_gap_closure/discovery/bb_translation_intervals.py",
+      "sha256": "bab0b5e656befc3d2f514187024bf87bd5c08aba676ebd2d2e483d07ccf56fb5",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/upper_bb_audit.json",
+      "origin": "V5_gap_closure/discovery/upper_bb_audit.json",
+      "sha256": "764344c3ff6a58384b4498bb85e35196060d551f332d5584ff102cda9381a0df",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/upper_bb_audit.py",
+      "origin": "V5_gap_closure/discovery/upper_bb_audit.py",
+      "sha256": "ae4c5db0c5592b23afe705af0cf2397121cefec91d375d336038f7118713eb41",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/upper_splice_audit.json",
+      "origin": "V5_gap_closure/discovery/upper_splice_audit.json",
+      "sha256": "4003088f1214a4f7700c8d4712a23931fc8eb2311e629390cb18f55971090673",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/discovery/upper_splice_audit.py",
+      "origin": "V5_gap_closure/discovery/upper_splice_audit.py",
+      "sha256": "10cdf19ccf01866826639392f65584f3927ab31b77d678dc340def73294b950f",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/research_log/bb_global.md",
+      "origin": "V5_gap_closure/research_log/bb_global.md",
+      "sha256": "f7cd6192478dfcf3a21b9d96321daaaad877d4a55a07c6737871e765dae1f1ea",
+      "role": "required",
+      "status": "analytic_reference"
+    },
+    {
+      "path": "source/V5_gap_closure/research_log/gap_ledger.md",
+      "origin": "V5_gap_closure/research_log/gap_ledger.md",
+      "sha256": "b0c775291da830b2867b0863a892e145f48d7dd34fba1f544d5f464f2dc822ec",
+      "role": "provenance",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/research_log/global_duality.md",
+      "origin": "V5_gap_closure/research_log/global_duality.md",
+      "sha256": "008c30c6258c20b8bcfce97ad792ac245a5617205fdb55c11cd5ecd1fda49229",
+      "role": "required",
+      "status": "analytic_reference"
+    },
+    {
+      "path": "source/V5_gap_closure/research_log/primal_global.md",
+      "origin": "V5_gap_closure/research_log/primal_global.md",
+      "sha256": "380c83e05647c9c99a0392c48c3687aeebc76d98ca0ae45fda53615939ad710d",
+      "role": "required",
+      "status": "analytic_reference"
+    },
+    {
+      "path": "source/V5_gap_closure/research_log/primal_independent_review.md",
+      "origin": "V5_gap_closure/research_log/primal_independent_review.md",
+      "sha256": "c83d9a58d0e1483d0958ad0bd87eb38f3857714cc9716948c8b454f71c59b676",
+      "role": "required",
+      "status": "analytic_reference"
+    },
+    {
+      "path": "source/V5_gap_closure/research_log/upper_global.md",
+      "origin": "V5_gap_closure/research_log/upper_global.md",
+      "sha256": "e4f6d932aacc795adf8eb57502550df7d7a468c5196ad5774a56cf84822309b4",
+      "role": "unused_candidate",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/bb_global.py",
+      "origin": "V5_gap_closure/verifier/bb_global.py",
+      "sha256": "89e936aafcc925d61d19f09ca0778e9d7c7186e841235f233c14be7f7e5d029b",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/global_duality.py",
+      "origin": "V5_gap_closure/verifier/global_duality.py",
+      "sha256": "ceb56adf3dc6359d3c9800ea29a15ee33543e31f3085c2771098f915ce6ea639",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/phase_ledger.py",
+      "origin": "V5_gap_closure/verifier/phase_ledger.py",
+      "sha256": "f5bab1d237cd7629c2925ad77073b022b3c8b2d96c6bfd3775da96241f75ccde",
+      "role": "provenance",
+      "status": "not_executed_not_in_final_assembly"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/primal_face_integrals.py",
+      "origin": "V5_gap_closure/verifier/primal_face_integrals.py",
+      "sha256": "c77c876f3ada2ec3b78441d0efbdc623206af5067a46705a7ae07b65af3352fd",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/primal_global.py",
+      "origin": "V5_gap_closure/verifier/primal_global.py",
+      "sha256": "ddf0fb4d64b860771aa96cb60a39377142f287b54f411cae0e9fde4accf7c6cb",
+      "role": "required",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/primal_independent.py",
+      "origin": "V5_gap_closure/verifier/primal_independent.py",
+      "sha256": "ac2233b8fa4bc3d4e79fadafcb4d3b6fffb4e401080675289e422452546d339a",
+      "role": "independent_check",
+      "status": "replayed_or_imported"
+    },
+    {
+      "path": "source/V5_gap_closure/verifier/run_all.py",
+      "origin": "V5_gap_closure/verifier/run_all.py",
+      "sha256": "445b30fc1c494be7fafd56206325f7e02d9c919f90d511f26ed834a2296a43df",
+      "role": "provenance",
+      "status": "not_executed_not_in_final_assembly"
+    }
+  ]
+}

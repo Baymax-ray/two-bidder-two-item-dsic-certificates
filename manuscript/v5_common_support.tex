@@ -1,0 +1,173 @@
+\subsection{Enlarged conditional support and coupled incentive flows}\label{sec:v5-upper}
+We specify the common measure and certify its total mass.
+The essential change is to account for the opposing stream field when
+enlarging the replacement region; its sign need not remain negative.
+
+Put $J=(43/100,1/2]\times[0,7/20]$ and
+$D^\sharp=W_0\cup J\cup J^{\rm swap}$. The reusable support
+\eqref{eq:reusable-Psi} and its item swap both vanish on $D^\sharp\subset D_0$.
+Let $\sigma(t_1,t_2)=(t_2,t_1)$ and $J^{\rm swap}=\sigma J$.
+Set $o_i(w)=\sigma$ on $J^{\rm swap}$ and $o_i(w)=\mathrm{id}$ elsewhere,
+with $\Psi^{\mathrm{id}}=\Psi$ and $\Psi^\sigma(t)=\sigma\Psi(\sigma t)$.
+Thus $o_i$ depends only on the opponent report and the density is expressed
+in physical item coordinates. The no-sale set $D_0$ is invariant under
+$\sigma$. For $\theta_i=\mathbf1_{\{v_{-i}\in D^\sharp\}}$, the conditional
+identity, valid for almost every opponent report in the stated jointly
+measurable class, is
+\begin{equation}\label{eq:v5-conditional}
+ R_i(v_{-i})=\int\big[(1-\theta_i)\phi_i+
+                   \theta_i\Psi^{o_i}\big]\cdot a_i
+ -(1-\theta_i)u_i(0;v_{-i})-3\theta_i\int_{D_0}u_i.
+\end{equation}
+The mixing coefficient depends only on the opponent; consequently the
+identity introduces no own-type interface derivative. All source terms
+are nonnegative under IR, including for unnormalized utilities.
+
+\paragraph{Actual IC inequalities on shared endpoint cells.}
+Combine the four sparse cycles with a coupled system of 129 nonnegative
+two-way translated IC columns. Column $\ell$ fixes bidder $i$, an opponent
+rectangle $J_\ell$, a common own-offset rectangle $K_\ell$, two own centers
+$A_\ell,B_\ell$ and a density $\lambda_\ell\ge0$. With
+$d_\ell=A_\ell-B_\ell$, the two truthful inequalities give
+\[
+ K_\ell(a)=\lambda_\ell\int_{K_\ell\times J_\ell}
+ d_\ell\cdot[a_i(A_\ell+s,w)-a_i(B_\ell+s,w)]\,ds\,dw\ge0.
+\]
+The induced allocation coefficients are $+\lambda_\ell d_\ell$ on the
+first box and $-\lambda_\ell d_\ell$ on the second. Densities refer to
+Lebesgue measure, not normalized probabilities. Every column
+admits this direct IC proof; no Hessian-density product or singular
+positive-semidefinite representation is needed here.
+
+In the base chart the system has 159 distinct endpoint cells, of which 54 are shared.
+On a cell $Q_c$, sum every column correction before taking the itemwise
+maximum. If $L_{cjk}\le\max_l\phi_{lj}-\phi_{kj}$ for the old alternatives
+$k=0,1,2$ (seller included), then
+\[
+ \max_k(\phi_{kj}+\delta_{cjk})-\max_k\phi_{kj}
+       \le\max_k(\delta_{cjk}-L_{cjk}).
+\]
+Exact whole-cell bounds therefore certify
+\[
+ G_{\rm master}=-2\sum_c|Q_c|\sum_j
+                   \max_k(\delta_{cjk}-L_{cjk})>0.
+\]
+The factor two is simultaneous item exchange only. The original and
+independent master verifiers reconstruct the cells, shared incidences
+and aggregate epigraph. The rational centers, widths, columns and
+amplitudes are given in \texttt{master\_certificate.json}
+within the portable source closure.
+
+A further translated IC construction uses 64 selected box pairs and
+four symmetry copies, hence 512 endpoint boxes. Their entire old and
+new virtual winner regions are verified before integration, giving
+\begin{equation}\label{eq:v5-BB-gain}
+ G_{\rm BB}=\frac{4786305147}{17179869184000000}.
+\end{equation}
+All added supports avoid profiles with either bidder in $D^\sharp$;
+the sparse, master and BB supports are mutually disjoint except for
+the explicitly aggregated master endpoints. The independent audit
+checks all 130,816 pairwise separations among the BB endpoint boxes.
+The correction is a nonnegative sum of actual IC inequalities regardless
+of whether those inequalities bind at the proposed mechanism.
+
+Let $\bar\phi$ be the full radial-plus-stream field with these sparse,
+master and BB corrections. Define, in physical item coordinates,
+\begin{equation}\label{eq:v5-Pi}
+ \alpha_i=(1-\theta_i)\bar\phi_i+\theta_i\Psi^{o_i},\qquad
+ \Pi_j=\max(0,\alpha_{1j},\alpha_{2j}).
+\end{equation}
+Disjointness ensures that the opponent switch does not cut any IC flow.
+Integrating \eqref{eq:v5-conditional} and adding the nonnegative IC
+terms proves $\operatorname{Rev}_i(M_i)\le\langle\Pi,a_i\rangle$ for each complete
+DSIC/IR mechanism. Thus both unrestricted charged values are zero
+(empty attains zero), and joint capacity gives $\OPT\le\int\sum_j\Pi_j$.
+This proof applies to arbitrary randomized allocations in the stated
+measurable class; it places no finite-menu restriction on competitors.
+
+\paragraph{Paying the opposing field on the enlarged region.}
+For $w\in J$, write $a=\phi_j(v;w)$, $b=\phi_j(w;v)$ and
+$p=\Psi_j(v)\ge0$. On a single-replacement profile,
+\[
+ \max(0,a,b)-\max(p,b)
+ \ge a_+-p-(b-p)_+,
+\]
+because $\max(p,b)=p+(b-p)_+$ and the old maximum is at least $a_+$.
+On double-replacement profiles the two directed
+bounds cancel, and the old nonnegative price covers them. On $W_0$
+the extra directed contribution is nonpositive and remains a valid
+lower bound. Consequently the complete splice improvement satisfies
+\begin{equation}\label{eq:v5-splice-gain}
+ G_{\rm splice}\ge4\left[L_- -\frac{49}{2000}R_{{\rm SB},+}-E_+\right],
+\end{equation}
+where $L=\int_J\int\sum_j(\phi_j(v;w))_+$ and
+$E=\int_J\int\sum_j(\phi_j(w;v)-\Psi_j(v))_+$.
+The subscripts denote directed bounds, so the right side is rational.
+The factor four counts the two bidder directions and the two oriented
+added rectangles $J,J^{\rm swap}$. The item sum is already inside $L$
+and $E$, so it contributes no further multiplicity. The low-square and
+double-replacement cases are expanded in Lemma~\ref{lem:overlap} of Appendix~\ref{app:overlap}.
+The certificate obtains
+\[
+ L_-=\frac{119448693432877}{8796093022208000},\qquad
+ E_+<0.000011750019244,
+\]
+yielding a guaranteed reduction exceeding $0.00045027837569$. Opposing excess and overlap are both included.
+
+The $L$ calculation uses continuous Jensen bounds on 49 opponent cells
+and $128^2$ own-chart cells. The $E$ certificate covers 294 roots with
+12,000 splits and 12,294 leaves. Its interval arithmetic starts with
+exact rational input brackets and expands every binary64 operation
+outward using \texttt{nextafter}; final dyadic bounds are accumulated
+with integers. IEEE binary64 round-to-nearest semantics and NumPy's
+\texttt{nextafter} are therefore additional trusted assumptions.
+The full tree was freshly replayed. The separate splice audit rebuilds
+the identity and selected exact checks but reuses the primary tree
+implementation; it is not a second independently implemented full tree.
+
+\paragraph{The exact endpoint and its remaining slack.}
+The reference enclosure remainder is
+$E_*=(B_{20}-B)+(D-\Delta_{1024})\ge0$.
+A fresh fixed-point traversal at depths $(20,20,26)$ recovers a rational
+lower bound $E_-\le E_*$, approximately $0.00012090110466538207$.
+This contracts numerical enclosure; it is not another decrease in the
+actual measure. With the rational lower bound in
+\eqref{eq:v5-splice-gain} denoted by $G_{{\rm splice},-}$, set
+\begin{equation}\label{eq:v5-upper}
+ U=U_{\rm ref}-E_- -G_{\rm master}-G_{{\rm splice},-}-G_{\rm BB}.
+\end{equation}
+Every rational is exported in the final manifest and checked by separate
+exact endpoint assembly. Equation~\eqref{eq:v5-upper} contains every term
+used in the final upper, with no additional unlisted gain.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{p{0.27\textwidth}rp{0.40\textwidth}}
+\toprule
+Certified component & Approximate size & Mathematical role\\
+\midrule
+$E_-$ & $1.2090110\times10^{-4}$ & Recovered integration remainder\\
+$G_{\rm master}$ & $9.6899332\times10^{-9}$ & Common-price decrease from aggregated IC columns\\
+$G_{{\rm splice},-}$ & $4.5027838\times10^{-4}$ & Common-price decrease paying opposing excess\\
+$G_{\rm BB}$ & $2.7859963\times10^{-7}$ & Common-price decrease from translated IC pairs\\
+\midrule
+$U_{\rm ref}-U$ & $5.7146777\times10^{-4}$ & Exact sum of the four subtractions\\
+\bottomrule
+\end{tabular}
+\caption{Components assembling the final upper from the reference
+majorant $U_{\rm ref}$. The table uses descriptive rounded decimals; the
+exact manifest rationals satisfy \eqref{eq:v5-upper}. The first row
+contracts numerical enclosure. The other rows certify decreases in the
+actual common measure, with the enlarged splice giving the largest change.}
+\label{tab:v5-upper-components}
+\end{table}
+
+For any candidate, $\int\Pi-R$ separates into the source terms in
+\eqref{eq:v5-conditional}, nonnegative IC residuals, unused priced
+capacity, and virtual-allocation mismatch. The reported $U$ also
+includes nonnegative integration remainders. At $M_\tau$ the source
+terms vanish: $T_\tau\le\mathrm{id}$ keeps the relevant no-sale types
+at zero utility and the origin utility is zero. This equality is not
+conditional optimality of its residual menus. The other terms have not
+been made zero or fully localized for $M_\tau$. Conditional screening at the seed residuals does not
+establish equality at the transformed mechanism. A matching certificate remains open.

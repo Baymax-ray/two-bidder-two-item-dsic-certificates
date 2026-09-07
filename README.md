@@ -1,204 +1,150 @@
-# Exact primal-dual certificates for a two-bidder, two-item auction
+# Exact Primal-Dual Certificates for a Two-Bidder, Two-Item Auction
 
-**Research preprint; not yet peer reviewed.**
+**Research preprint; not yet externally peer reviewed.**
 
-For two additive bidders, two items and four independent uniform values on
-`[0,1]`, the selected V4.6.1.1 mechanism is pointwise DSIC, ex-post IR,
-measurable and jointly feasible, with exact revenue
+This package specifies one final mechanism and one unrestricted upper
+certificate for two additive bidders, two items and four independent
+uniform values on `[0,1]`. The mechanism is measurable, pointwise DSIC,
+ex-post IR and jointly feasible, with utility averaged over its internal
+randomization. The optimal mechanism and a matching upper bound remain **open**.
 
-$$
-R_*=
-\frac{35791404252341621852527735747861637}{42525000000000000000000000000000000}
-+\frac{31}{1215}\sqrt2
--\frac{15059524650320123}{8305664062500000000000}\sqrt{493894}.
-$$
+## Certified result
 
-The independently certified interval is
+The exact revenue is characterized by the sixteen-face integral formula
+in the manuscript, with certified enclosure
 
-$$
-0.876464164471798049944906113027<R_*
-<0.876464164471798049944906113028.
-$$
+```
+0.876514341027067549900397423113 <= R_tau <= 0.876514355424052828335888359874
+```
 
-The V4.6.2 upper covers the **unrestricted randomized DSIC class**:
+The final rational upper satisfies
 
-$$
-R_*\le\mathrm{OPT}\le U_*<0.882923053259,
-$$
+```
+OPT <= U < 0.882351585488796576205586892264
+```
 
-where the explicit rational certificate is
+The gap enclosure is
 
-$$
-U_*=
-\frac{231831916327659047}{262144000000000000}
--\Delta_{1024}-\frac{81}{10^{10}}.
-$$
+```
+0.005837230064743747869698532390 <= U - R_tau <= 0.005837244461729026305189469151
+```
 
-The full exact rational subtraction and endpoint are in
-[the active manifest](certificate/coordinated_primal_dual/manifest.json).
-The certified gap is **below 0.006459, hence below 0.01**:
+Thus **gap < 0.005837245 < 0.01**, and the mechanism earns more than
+**99.3384%** of unrestricted randomized DSIC optimal revenue. The revenue
+interval's midpoint or endpoint is not substituted for its exact integral
+characterization. Exact rational upper components and outward-rounded
+enclosures are specified by the [final manifest](certificate/reserve_parameter/manifest.json).
 
-$$
-0.006458888786918919315720686827<U_*-R_*
-<0.006458888786918919315720686828.
-$$
+## Mechanism and theoretical content
 
-The mechanism earns **more than 99.2684% of unrestricted optimal revenue**.
-The optimal auction and a matching certificate remain open. A fresh exact
-lottery-box test proves that the present common price does not match the
-selected mechanism.
+The manuscript defines the seed mechanism directly by its base, Q and E
+conditional menus, including lotteries, region boundaries and a joint tie
+rule. At reserve `tau = 83/10000`, apply `T_tau(t) = max((t-tau)/(1-tau),0)`
+coordinatewise, select the seed's complete joint allocation at that profile,
+and charge `(1-tau) p_i^*(T_tau v) + tau sum_j x_ij^*(T_tau v)`.
 
-The theoretical advances are:
+- Zero-value exclusion at every selected tie makes the transform globally
+  DSIC and IR; both bidders use the same transformed profile, ensuring capacity.
+- The transform transfers ownership on a whole certified box. Its revenue
+  includes all sixteen faces because clamping creates atoms at zero.
+- Conditional supports pay the opposing virtual field, and translated IC
+  corrections are aggregated on shared endpoint cells before taking a common
+  itemwise maximum. The resulting bound covers the unrestricted randomized class.
+- Exact integration remainders are distinguished from changes to the actual
+  capacity measure and from the mechanism's incentive and capacity slacks.
 
-- **Complete joint exchange.** A monotone threshold with a jump and its
-  generalized-inverse plateau change ownership on a positive-volume region.
-  The mechanism specifies both menus and joint selection for every report,
-  including ties. Three continuous revenue integrations recover the same
-  algebraic coefficients; alternative experiments are not added together.
-- **Incentive restrictions implied by occupied regions.** Utility traces
-  yield full randomized conditional screening certificates on Q, E and an
-  occupied wing. Their union covers 64.1627% of opponent-report space.
-  This is a map of conditional problems solved at actual residual capacity,
-  not a percentage of the global gap closed. The E/W rent elimination does
-  not supply a support for arbitrary capacity changes.
-- **Strictly less total common capacity price.** A
-  universal conditional identity, an opposing virtual-value sign certificate
-  and four sparse long-range IC cycles decrease its total mass while
-  preserving both unrestricted charged inequalities. The original stream
-  maximum already gives zero charged values; their existence alone is not
-  the advance. An exact gap identity separates screening,
-  unused capacity, virtual allocation and IC/IR slack from numerical
-  enclosure remainders. Solving the charged values alone does not establish
-  an equality auction.
+The chosen mechanism, numerical bounds and certificate are specific to this
+instance. The analytic transform has the stated general seed hypotheses;
+no universal convergence or finite-menu optimality claim is made.
 
-These are explicit instance-specific constructions and identities. Convex
-utility, transport duality and complementary slackness are prior foundations;
-we make no first-in-literature or general convergence claim.
+## Reading the paper
 
-## External benchmarks and our improvements
+[Manuscript PDF](manuscript/manuscript.pdf) and [LaTeX source](manuscript/manuscript.tex).
+The main text follows the final argument: model and theorem, complete
+mechanism, exact revenue, common capacity certificate, verification and
+remaining gap. Three appendices supply menu compatibility and seed revenue,
+the radial/stream proof and coefficients, and certified integral components.
+Version chronology and intermediate performance comparisons are omitted.
 
-Jiang, Parkes and Wang report a continuous upper bound `0.8919` in Table 2
-and GemNet revenue approximately `0.876` in Table 3. We rechecked these
-printed values in [their source](https://arxiv.org/html/2606.10112v1#S5).
-The new local upper improves the printed external upper by more than
-`0.008976946741`. The new exact revenue exceeds the printed `0.876`, but
-that rounded report alone cannot establish superiority to GemNet's
-unrounded revenue. We did not replay its mechanism or underlying dual array.
+The original research remains under the workspace's `output` directory;
+this revision creates no additional research archive. Frozen proof inputs and the current verification evidence remain in the package.
 
-The retained stream endpoint is
-`3715139591287203/4194304000000000 = 0.8857583025186545848846435546875`.
-The new upper improves it by approximately `0.002835249259937616`.
-Of this decrease, approximately `0.00138972521893` tightens the enclosure
-of the same stream integral, `0.00144551594101` comes from conditional
-support replacement, and exactly `0.0000000081` comes from the four IC
-cycles. The cycles demonstrate additional admissible incentive directions;
-their current numerical contribution is small.
-The previous V4.6 lower was in
-`(0.8758198541484224553460, 0.8758198541484224553461)` and the retained
-fully deterministic lower is
-`83962078694672281756033/96000000000000000000000`.
-These remain reproducible historical results. The active lower exceeds
-V4.6.1 by more than `0.0000085`.
+The general reserve proposition explicitly assumes a Borel seed with bounded
+payments and zero-value exclusion. These hypotheses ensure measurability and
+integrability after clamping. The selected seed satisfies them.
 
-The new [independent audit](audit/V4611_V462_RELEASE_AUDIT.md) reconstructs
-all-real compatibility arguments, the full algebraic revenue and the common
-support, and repeats both complete upper traversals. Source identity checks
-are reported separately from mathematical replays. The new lower does not
-rely on merely adding an audited increment to an unevaluated historical
-reference integral.
+## Certificate map
 
-A [three-report internal self-review and revision](audit/nature_review_v4611_v462/README.md)
-corrected a temporary-path metadata defect, calibrated the theoretical
-contribution and clarified componentwise replay independence. Both complete
-corrected portable runs passed from distinct temporary roots; frozen
-pre-revision reports remain available alongside the author corrections.
+Stable source directory names are retained so existing hashes and mathematical
+replays remain valid. They are file identifiers, not steps readers must follow
+to reconstruct the final mechanism.
 
-## Repository layout
+| Mathematical component | Location |
+|---|---|
+| Selected reserve parameter, exact family checks and rational-report mechanism | certificate/reserve_parameter/ |
+| Frozen face bounds, coupled IC and opposing-excess certificates | `certificate/v5_primal_dual/` |
+| Complete seed menus and all-real compatibility proof | `certificate/coordinated_primal_dual/source/V4_6_1_1_lower_bound/`; `verifier/refined_candidate.py` and `research_log/refined_structure_audit.md` |
+| Seed revenue by independent full integrals | Same source directory; `research_log/refined_revenue_audit.md`, with the independent audit material in the coordinated package |
+| Reusable conditional density, low-square sign bound, sparse cycles and exact `B20`/`Delta1024` components | `certificate/coordinated_primal_dual/source/V4_6_2_upper/` |
+| Rational stream coefficients and core polynomial construction | `certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/` |
+| Shared-cell master certificate | `certificate/v5_primal_dual/source/V4_8A_frozen_primal/certificate/master_certificate.json` |
+| Pointwise opposing-field splice proof | `certificate/v5_primal_dual/source/V5_gap_closure/research_log/global_duality.md` |
+| Exact face calculator | `certificate/v5_primal_dual/source/V5_gap_closure/verifier/primal_face_integrals.py` |
 
-- `certificate/coordinated_primal_dual/`: active paired endpoints, portable
-  source closure, both complete new upper traversals and fresh independent
-  structure, full-revenue and support audits.
-- `manuscript/`: LaTeX source, the residual-screening theory and stable
-  mechanism/revenue specification,
-  bibliography and release PDF.
-- `certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/`:
-  retained rational upper-bound manifest, polynomial construction, formal
-  verifier, non-importing replay, and deterministic transcripts.
-- `certificate/continuous_stream_degree4_nonuniform_upper_bound/`,
-  `certificate/continuous_stream_upper_bound/`, and
-  `certificate/independent_stream_upper_bound/`: superseded but retained upper
-  certificates and independent audit.
-- `certificate/ama_lower_bound/`: exact rational base-mechanism verifier.
-- `certificate/joint_residual_screening_lower_bound/`: retained V4.6 randomized lower
-  mechanism, portable source closure, exact revenue and conditional supports,
-  fresh independent audits and source bindings.
-- `certificate/refined_item_containment_bundle_pivot_lower_bound/`: retained
-  deterministic lower certificate with eight item-containment cells and complete
-  SHA-256 bindings to its predecessor chain.
-- `certificate/piecewise_surcharge_bundle_pivot_lower_bound/` and
-  `certificate/piecewise_surcharge_twenty_band_lower_bound/`: independently
-  replayed 41-cell bundle-pivot and twenty-band predecessors.
-- `certificate/piecewise_surcharge_lower_bound/`: retained exact ten-band
-  predecessor, non-importing replay, and hash binding to the base certificate.
-- `certificate/menu_surcharge_lower_bound/`: superseded two-rectangle lower
-  certificate, retained as a reproducible predecessor.
-- `verification/`: publication-level orchestrator, hash tools, release
-  transcript, and theorem-to-certificate consistency checks.
-- `audit/`: independent proof/revenue audits, fresh full upper replays,
-  claim-to-evidence ledger and the three-report internal Nature-style
-  self-assessment with post-review synthesis and revision record.
-- `provenance/`: bounded final-sprint report and clearly segregated
-  discovery-only numerical experiments.
+The reserve-family optimum is uniquely in (0.008297,0.008299), and the entire
+fixed-seed family has revenue below 0.87651436. This is not an unrestricted
+upper bound. The selected simple rational is not claimed to be family-optimal.
 
-The proof path consists of the analytic arguments in `manuscript/`, the
-exact kernels in `certificate/`, and the explicitly invoked supplementary
-audit checks in `audit/`. Files under `provenance/discovery_only/` record how
-witnesses were found or why alternatives stalled; sampled or floating-point
-values there are not theorem claims.
+The driver also verifies the frozen dependency packages, including
+`certificate/joint_residual_screening_lower_bound/`. Their presence does not
+introduce additional headline results into the paper.
+
+The [verification guide](verification/README.md) identifies the final mechanism,
+all mathematical entrypoints and their independence boundaries. The current
+[validation record](verification/VALIDATION.md) reports actual replay and build
+scope. Internal reviewer packets and duplicate historical audit trees are not
+required by the publication runner.
+
+The mathematical record is `certificate/reserve_parameter/manifest.json`.
+Its content hash is printed in the manuscript. No new public release tag or
+repository commit is asserted by this local revision.
+
+## External comparison
+
+Jiang, Parkes and Wang print a continuous upper certificate of `0.8919` and
+approximately `0.876` GemNet revenue for this instance ([Tables 2 and 3](https://arxiv.org/html/2606.10112v1#S5)).
+Our final upper improves the printed upper certificate. The external dual
+array is not replayed here, and the rounded GemNet revenue does not certify
+a ranking against its unrounded value.
 
 ## Reproduction
 
-Requirements are Python 3.10 or newer, NumPy for the upper traversal,
-`pdflatex`, and `bibtex`. The new lower package uses Python standard-library
-exact arithmetic; the original upper release environment is retained in
-ENVIRONMENT.md. Install the pinned Python
-dependency if needed:
+Use Python 3.10 or newer with NumPy, and pdfLaTeX with BibTeX (or the
+documented Tectonic fallback). From the package root:
 
 ```powershell
-python -m pip install -r requirements.txt
+python -B verification/reproduce_all.py --transcript verification/generated/reproduction.txt
 ```
 
-From the archive root, run the complete publication-facing replay:
+Use `--checks math` for mathematical replay alone, or `--checks release` for
+text, metadata, compilation and hash consistency alone.
+The default complete run checks text and compilation before long calculations.
+
+This runs the complete certificate dependency chain, the final mathematical
+assembly, manuscript and metadata consistency, a clean temporary-directory build and complete SHA-256 coverage.
+Do not use `-O`, `-OO` or `PYTHONOPTIMIZE`: proof kernels contain executable
+assertions and the supported driver rejects optimized mode.
+
+The upper opposing-excess traversal trusts IEEE binary64 round-to-nearest
+semantics and outward expansion using NumPy `nextafter`. Its full tree has a
+primary replay and bounded independent cross-checks, not a second independently
+implemented full tree. Other independence boundaries are stated in the paper.
+See [ENVIRONMENT.md](ENVIRONMENT.md) for runtime details.
+
+For compilation alone on the configured Windows installation:
 
 ```powershell
-python -B verification\reproduce_all.py
-```
-
-The command reruns the base and complete lower-certificate dependency chain,
-the retained V4.6 lower, the active coordinated certificate with both new
-complete upper traversals and independent audits, a clean manuscript build, exact
-theorem-value consistency checks, and release-hash verification. The two
-upper traversals are the runtime-dominant steps; wall time is
-machine-dependent.
-
-The two complete upper traversals independently implement the stream
-majorant `B20`. The conditional subtraction has one complete `1024`
-partition accumulation, plus an independent reconstruction of all averaged
-coefficients, classification cross-checks through size `64` and selected
-cell integrals. That second check reuses the primary classifier and
-integral tables; it is not a second full subtraction accumulation. The IC
-cycles have separate whole-box sign and exact decrement checks.
-
-The entry point explicitly rejects optimized Python execution. Do not use
-`-O`, `-OO`, or `PYTHONOPTIMIZE` for direct certificate commands: retained
-proof kernels use executable assertions. The supported entry point fails with
-a nonzero exit status before launching those kernels in optimized mode.
-
-Individual proof checks can be run from their certificate directories using
-the commands documented in their local `README.md` files. To compile only the
-paper:
-
-```powershell
+$env:PATH = 'C:\Users\FangJ\TinyTeX\bin\windows;' + $env:PATH
 cd manuscript
 pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex
 bibtex manuscript
@@ -206,11 +152,8 @@ pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex
 pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex
 ```
 
-## Exact status and citation
-
-The archive proves a rigorous interval, not an exact solution of the open
-optimization problem. Until a DOI or arXiv identifier is assigned, use the
-provisional citation in `CITATION.cff`.
+Until a DOI or arXiv identifier is assigned, use the provisional citation in
+`CITATION.cff`.
 
 ## Data, code, and materials availability
 
@@ -218,7 +161,8 @@ The public project repository is
 [Baymax-ray/two-bidder-two-item-dsic-certificates](https://github.com/Baymax-ray/two-bidder-two-item-dsic-certificates).
 The accompanying release archive contains the exact certificate data,
 verification code, transcripts, environment information, and SHA-256 manifests.
-Discovery-only experiments are separate from the trusted proof artifacts.
+The research workspace retains discovery-only experiments; they are not needed
+by the reader-facing proof entrypoints.
 
 ## AI-assisted tools declaration
 

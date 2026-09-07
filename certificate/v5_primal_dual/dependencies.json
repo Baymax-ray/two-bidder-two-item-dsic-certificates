@@ -1,0 +1,82 @@
+[
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_1_1_lower_bound/verifier/refined_candidate.py",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_1_lower_bound/verifier/refined_candidate.py",
+    "sha256": "a96febdad8ca1e0ddb320a59ab9520891a25ae9542d0a866396bbb6f35b75852"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_1_1_lower_bound/certificate/refined_revenue.json",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_1_lower_bound/certificate/refined_revenue.json",
+    "sha256": "312a1d5d07cb46a0529839ef74ae09ad275fcedc942cc8c10f7e95d4ac5c70f6"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/verifier/sparse_cycle.py",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/verifier/sparse_cycle.py",
+    "sha256": "339583d940378f27889444ce7ae22e20ff510b6e99e8bec0e57362898fb4a324"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/flow_majorant_certificate.json",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/flow_majorant_certificate.json",
+    "sha256": "27a4f3209256ab8208214f8f677197ed562b4a1e02faa84742a42e9938c3d86b"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/certificate/conditional_global_splice.json",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/certificate/conditional_global_splice.json",
+    "sha256": "ee8ed95e8d43035923b40c106067264a110d2dbf1daed02837caee654f6c254c"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/certificate/sparse_cycle.json",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/certificate/sparse_cycle.json",
+    "sha256": "602062305701b2abad5f73e16204886b19aabc9eb19f68e8a0f6eecab6ca16e7"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/certificate/upper_ledger.json",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/certificate/upper_ledger.json",
+    "sha256": "bc0ec1029a75d87609009fb7626bc3749b062c0218c123c00175aef5e16e0426"
+  },
+  {
+    "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/research_log/conditional_global_splice.md",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/research_log/conditional_global_splice.md",
+    "sha256": "2f87b728d4beee1308c66547f5b1794a084aef9f8314f59250a630423cb2d5e5"
+  },
+  {
+    "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/joined_threshold.py",
+    "sha256": "286e093c0a600d92a77d4f009e82f573658e8c6c3d75766c85d4607c7a960c43",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/joined_threshold.py"
+  },
+  {
+    "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/baseline_mechanism.py",
+    "sha256": "5c2b50701f9b7403222853d974f9aa1178ead5572b288dbd678a596081906c6b",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/baseline_mechanism.py"
+  },
+  {
+    "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/stationary_s.py",
+    "sha256": "214a2d8c2cbc13ee2ded64e74d48c6d6f5e2cbf6af9312c7f6e00f333e705cc0",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/stationary_s.py"
+  },
+  {
+    "path": "certificate/joint_residual_screening_lower_bound/source/V3/certificate/baseline_mechanism.json",
+    "sha256": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+    "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/certificate/baseline_mechanism.json"
+  },
+  {
+    "path": "certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/manifest.json",
+    "stage": "research/closed/two-bidder-two-item-dsic-certificates/certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/manifest.json",
+    "sha256": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4"
+  },
+  {
+    "path": "certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/independent_replay.py",
+    "stage": "research/closed/two-bidder-two-item-dsic-certificates/certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/independent_replay.py",
+    "sha256": "0ef2377a11fe0a490e925bb9f0af28b90cf24110239becbb4467f5e3b7e17fbe"
+  },
+  {
+    "path": "certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/verify_stream_dual.py",
+    "stage": "research/closed/two-bidder-two-item-dsic-certificates/certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/verify_stream_dual.py",
+    "sha256": "7e6cdc6834bc28c7e9878ea76077fc62dbd3b9743a79b676a19aa441d1557e29"
+  },
+  {
+    "path": "certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/dual_polynomials.py",
+    "stage": "research/closed/two-bidder-two-item-dsic-certificates/certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/dual_polynomials.py",
+    "sha256": "4b5665490f70576efd0e93dc8fbfcbab084362cfabfc6ed035db5a65f7822481"
+  }
+]

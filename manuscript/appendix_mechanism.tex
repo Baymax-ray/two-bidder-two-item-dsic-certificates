@@ -1,0 +1,231 @@
+\subsection{Threshold bounds}
+We use exactly the parameters and menus of Section~\ref{sec:refined-mechanism}.
+Put $K=A-q=721/1500$, $\rho_*=b-A=165649/500000$ and
+$B_0(k)=C_0(k)-k$. On constrained $Q$, $c\le k\le K<d$ and
+\[
+ d<B_0(K)\le B_0(k)\le B_0(c)<A,\qquad
+ B_0(K)-h(\rho_*)=\frac{37}{5000000}>0.
+\]
+The function $B_0$ decreases on this interval. Outside the fee support,
+$t-k\ge q$ gives $z\ge k+h(\rho)$. On its support, $Q$ implies
+$k\le\min(K,b-\rho-q)$. For $\rho\le\rho_*$, the displayed slack
+bounds $B_0(k)-h(\rho)$ below. For $\rho\ge\rho_*$, its sufficient
+lower bound $B_0(b-\rho-q)-h(\rho)$ has derivative at least
+$\lambda-3K/2=79/1000>0$, so the same bound applies. Consequently
+\[
+ C=\max(C_0(k),z)
+\]
+on every constrained $Q$ report. If $B$ is capped at $A$, then $C=z>b_0$.
+This argument includes the fee face and does not assume $C_0(k)\le1$.
+
+A second bound needed below is
+\[
+ C_0(k)-k-d\ge g(k).
+\]
+Off the support it follows from $B_0(k)>d$. On $[c,\bar u]$, the
+difference has positive derivative $3k/2-1+\lambda$ and minimum
+$212401/3000000$. Since $t\le h(k)$, this also proves $C_0(k)\ge t+c$.
+The inverse implications $x<k(t)\Rightarrow h(x)<t$ and
+$x\ge k(t)\Rightarrow h(x)\ge t$ hold through the whole plateau;
+an identity $h(k(t))=t$ is not used.
+
+\subsection{Base/base compatibility}
+Before the fee, the base menus are the pivot-normalized menus of a common
+nine-outcome affine maximizer. Its costs are zero for empty, $a$ for either
+singleton allocated to one bidder, $b$ for either bidder's bundle, and $s$
+for either split allocation. Selecting a maximizer of total reported value
+minus cost supplies a jointly feasible pair of menu maximizers. Deleting
+any zero-utility allocation preserves such a pair with the stated empty rule.
+
+The prices satisfy the strict bundle-discount inequality
+\[
+ P_{\rm scarce}+P_{\rm safe}-P_B\ge q>0.
+\]
+If both opponent coordinates are at most $d$, the left side is at least
+$a-c>q$. If exactly one exceeds $d$, use $H\ge t-a$ to obtain $q$;
+if both exceed $d$, use $H\ge z-b$ to obtain $2q$.
+
+Adding the same nonnegative fee to safe and bundle preserves a maximizing
+subset of every uncharged maximizer. Indeed, if safe maximizes, comparison
+with bundle gives $x\le P_B-P_{\rm safe}<P_{\rm scarce}$ for the own
+scarce value $x$. The scarce singleton has negative utility, and the
+bundle-minus-safe comparison is unchanged by the fee, leaving safe or empty
+as a maximizer. A scarce or empty maximizer remains a maximizer because
+its price is unchanged. A bundle contains every possible new allocation.
+Applying this argument to the jointly feasible uncharged pair proves
+base/base compatibility, including positive ties.
+
+\subsection{Q/base and Q/Q compatibility}
+Fix a $Q$ report $w=(t,\rho)$, with physical item 1 high, and write the
+other report as $v=(x,y)$. A base singleton costs at least $d$ and its bundle
+at least $b$. Since $t+\rho\le b$, an own type $w$ can buy only its high
+item positively in a base menu; if $t\le d$ it must be empty.
+
+For $y\le d$, its item-1 base price is at least $\max(x,x+y-c)$.
+An opposing $Q$ scarce purchase with positive utility requires $x>A\ge t$.
+A selected opposing bundle has $x+y\ge C\ge C_0(k)\ge t+c$.
+Whenever the $Q$ bidder consumes item 1, the base high price is therefore
+at least $t$, so the base bidder has no positive utility and selects empty.
+
+For $y>d$, the base price is at least $x+q$. A positive high purchase by
+$w$ would require $x<t-q\le K<d<y$. Thus $x$ is the low coordinate of
+the base report and the fee on that physical item gives a price at least
+$h(x)$. The opposing $Q$ scarce singleton requires $x\ge A>k$;
+a bundle requires $x\ge C-B\ge k$ by comparison with safe. In either
+case $h(x)\ge t$, contradicting the positive base purchase. The inequalities
+include the inverse knots, the fee face and capped bundle rows.
+
+For $Q/Q$, each own coordinate is at most $A$. Neither a scarce singleton
+at $A$ nor a capped safe singleton at $A$ has positive utility. An uncapped
+singleton costs more than $d$, while a constrained $Q$ type's low coordinate
+is below $d$. Positive singletons can therefore only be distinct own high
+items under opposite orientations. Two positive bundles are impossible,
+because each bundle price is at least the opposing report's total value.
+
+For a possible bundle/safe conflict under opposite orientations, a positive
+safe buyer with high value $y$ and opposing low value $\rho$ requires
+$y>B\ge h(\rho)$. A conflicting bundle in the reverse menu requires
+$\rho\ge k(y)$; the cap only increases this upgrade threshold. Hence
+$h(\rho)\ge y$, a contradiction. The strictness comes from the safe
+buyer's positive utility, so a tied bundle/safe comparison on the other
+side is covered. Same orientations have no positive singleton. Free $Q$
+types cannot buy either singleton positively and cannot buy the opposite
+constrained safe option positively. Empty at zero completes the tie cases.
+
+\subsection{Compatibility of lottery menus}
+For an $E$ menu put $L=\delta+\alpha/2$, $Y=c+L$ and $j=1-t/2$.
+The factored formula for $\delta$ gives, throughout $A<t<T$,
+\[
+ \beta L=\alpha/2,\quad t+c+\delta-Y=j,\quad
+ c<Y<d<d+\delta<A,\quad d<j<A<t,
+\]
+with $0<\beta<1$ and bundle upgrade threshold $t-q>c$.
+
+Consider $E$ against an uncharged base menu first. An own $E$ type
+$w=(t,\rho)$, $\rho<c$, cannot buy its low base singleton; its base
+bundle is dominated by high because $P_B-P_1\ge c>\rho$. Only item 1
+can conflict. If the other report $(x,y)$ has $y\le d$, the base high
+price is at least $\max(x,x+y-c)$. An $E$ scarce purchase requires
+$x\ge t$, a bundle requires $x+y\ge t+c+\delta$, and a lottery requires
+$x+\beta(y-c)\ge t$. For a lottery, $y\ge c$ implies $x+y-c\ge t$,
+while $y<c$ implies $x\ge t$. Thus every allocation consuming item 1
+makes the opposing base bidder empty. If $y>d$, the base high price is
+at least $x+q$, the lottery cannot win because $y>Y$, and a bundle
+requires $x\ge t-q$. Again the base bidder is empty. The maximizing-subset
+argument permits the actual base fee without changing the $E$ allocation.
+
+For $E/Q$, an own $Q$ report has coordinates at most $A$ and sum at most
+$b=a+c$. Its $E$ scarce singleton has negative utility. Its lottery utility
+is at most $A-t+\beta(a-A)$: for safe value $y\ge c$, write the lottery
+value as $(1-\beta)x+\beta(x+y-c)$; for $y<c$, scarce dominates lottery.
+Now
+\[
+ (t-A)/\beta=t-A+2\delta/3
+\]
+is strictly increasing, with derivative at least $d+c>0$ and infimum
+$q^2/2=a-A$ at $A$. The lottery utility is strictly negative on the open
+$E$ interval. Bundle utility is at most $a-t-\delta<0$, because
+$t-A+\delta$ increases and $\delta(A)=3q^2/4>a-A$.
+
+Only safe can be purchased positively. Its value $y>d$ is the own $Q$
+high coordinate. The reverse $Q$ menu has scarce-upgrade threshold at least
+$k(y)\ge c$, so its own $E$ low value $\rho<c$ cannot obtain the
+conflicting item as scarce or bundle. This covers the inverse plateau using
+the weak inequality $k(y)\ge c$.
+
+For $E/E$ with the same physical orientation, an own low value below $c$
+makes bundle and lottery dominated by scarce. Only the larger high value
+can buy that item; equal high values give zero utility. Under opposite
+orientations, each scarce value is below $c$, the bundle upgrade $t-q$ and
+the lottery cell's minimum scarce value $j>d$. Only the disjoint own high
+items can be allocated. These cases exhaust all menu pairs. Closed $Q$,
+open $E$ and the remaining base rule cover all report boundaries.
+
+\subsection{Exact integration of the seed}
+For a fixed opponent report $(t,\rho)$ on
+$\mathcal T=\{0\le\rho\le t\le1\}$, each menu option has an affine
+utility in the own type. Its demand region is the intersection of its
+utility-comparison half-planes with the unit square. Therefore its payment
+contribution is its price times that polygon's area; lottery probabilities
+enter both the half-planes and the item-count integrand. With $r_c$ as
+defined in \eqref{eq:v5-face-reductions},
+\[
+ R_*=4\int_{\mathcal T}r_c(t,\rho)\,dt\,d\rho.
+\]
+The factor four is two bidders and two opponent orientations. The integral
+includes the entire inverse plateau, the strip $A<t<a$ in $E$, and the
+fee strip $c\le\rho\le b-A$, $A<t<b-\rho$.
+
+Exact polynomial/simplex integration and a separate decomposition using
+Green boundary integrals agree on all three algebraic coefficients in
+\eqref{eq:refined-revenue}. An implementation importing neither calculator
+reconstructs the full integral by vertical slicing and obtains the same
+coefficients. These are complete evaluations of the stated seed menus;
+no revenue from a different parameter choice is added. Positive-coordinate
+tie interfaces have zero own-type area, while the pointwise argument above
+defines the mechanism on those interfaces. The package README identifies
+the structural proof and each independent integral implementation.
+
+\subsection{Certified reserve choice and family boundary}\label{app:reserve-parameter}
+For the fixed seed, the face formula is a polynomial $R(t)$ of degree
+at most five. Write it as $\sum_m m w_m(t)$, where the twelve fixed moments
+$m$ have rational enclosures and $w_m$ are the explicit polynomial weights
+in \eqref{eq:v5-revenue}. To bound $R(t_1)-R(t_2)$, form
+$w_m(t_1)-w_m(t_2)$ first and then choose the appropriate endpoint of each
+moment interval according to that coefficient's sign. This retains the
+common-moment dependence instead of subtracting two independent revenue intervals.
+It gives
+\[
+ R(83/10000)-R(1/100)>0.0000021293,
+\]
+while
+\[
+ -0.002506136<R'(1/100)<-0.002504465<0.
+\]
+
+The family optimum can also be localized exactly. If a polynomial on
+$[a,b]$ is expanded as $p(a+(b-a)z)=\sum_{k=0}^n c_kz^k$, its Bernstein
+coefficients are
+\[
+ b_i=\sum_{k=0}^i c_k\frac{\binom{i}{k}}{\binom{n}{k}},
+ \qquad 0\le i\le n.
+\]
+Each coefficient here is a linear form in the same fixed moments. Exact
+interval bounds for every coefficient prove
+\[
+\begin{aligned}
+ R'(t)&>0 &&(0\le t\le0.008297),\\
+ R'(t)&<0 &&(0.008299\le t\le1),\\
+ R''(t)&<0 &&(0.008297\le t\le0.008299).
+\end{aligned}
+\]
+The polynomial extends continuously to $R(1)=0$, although the mechanism
+is defined only for $t<1$. The derivative signs and strict concavity on
+the middle interval imply a unique global family maximizer
+\[
+ 0.008297<\tau_*<0.008299.
+\]
+Bernstein bounds on that middle interval also give
+$\max_{0\le t<1}R(t)<0.87651436$. This is a fixed-seed family ceiling,
+not an unrestricted auction upper. The selected simple rational
+$\tau=83/10000$ is near the family maximizer and is not asserted to be
+family-optimal or globally optimal.
+
+The complete outward-rounded endpoints used by the release are
+\[
+\begin{aligned}
+ R_\tau&\in[0.876514341027067549900397423113,\\[-2pt]
+       &\hspace{2.5em}0.876514355424052828335888359874],\\
+ U&\in[0.882351585488796576205586892263,\\[-2pt]
+       &\hspace{2.5em}0.882351585488796576205586892264],\\
+ U-R_\tau&\in[0.005837230064743747869698532390,\\[-2pt]
+       &\hspace{2.5em}0.005837244461729026305189469151].
+\end{aligned}
+\]
+The endpoint strings record rational bounds; their printed length is not
+the precision of the unknown revenue. The parameter checker uses only
+standard-library rational arithmetic and imports no face calculator.
+Its input hashes, all Bernstein coefficient intervals, exact gain and
+updated ownership-box margins are in the reserve-parameter manifest.
+Finite implementation checks cover reserve faces, inverse knots and menu
+boundaries separately from the all-real preservation theorem.

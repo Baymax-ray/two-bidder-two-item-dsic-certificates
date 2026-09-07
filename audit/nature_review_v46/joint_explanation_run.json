@@ -1,6 +1,0 @@
-{
-  "exit_code": 0,
-  "source_sha256": "6f4e2152ece8cc99c8aa6b7227b0b9f0eaeab4db529e32416027bd2416758eb8",
-  "output_sha256": "279b7958411e793af1236a63cf9da256eea0b852f6a6941902ea45b99bba3784",
-  "scope": "Post-review author calculation; no source verifier imports; explicit non-optimized guard added in the archived copy."
-}

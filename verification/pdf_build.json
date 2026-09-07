@@ -1,0 +1,22 @@
+{
+  "status": "PDF_BUILD_PASS",
+  "timestamp_utc": "2026-09-07T18:19:53.838332+00:00",
+  "source_sha256": {
+    "appendix_mechanism.tex": "8c55d9ed6d991fdf14ef49a801338bf90bf731d26bbeb2462e28bf9578616278",
+    "appendix_stream.tex": "1b6cc3b5bbc669b0ca6604ae40a7f76e1c7cd363e3d5fc5df4395876cd9738f3",
+    "common_capacity_upper.tex": "dadd9029d1d9ffd7e34bad9a7a4f00d770fb81032c0d778653ba02277017ab50",
+    "functional_exchange_mechanism.tex": "c6753bca408bf3e7344e1743e136a92dd6716898e9e1b25b44e6e2e7df767220",
+    "joint_residual_screening.tex": "ee2ee911b11ab1bc3530c556a41c40006ba41c0cba2f89cf79f7a86521eba4ab",
+    "manuscript.tex": "7e5b803454cc68e80eb823189cd9412aec4c2a8fd971aab38bd92022db0449ea",
+    "reserve_reallocation.tex": "2e1896a25d8639e0142238ac7a47a0982e14a1d374cd0b198bb5d68bfb5ef364",
+    "reserve_transform.tex": "b80de5113b6673d74f213a502cf330881d79506b3f3b18a7b6a5c2c175a74963",
+    "v5_common_support.tex": "3e2e36d445365206dff1b192c0130a04f768c409bf9390ff7b70900a14500588",
+    "references.bib": "c788fd8916994e3ef308b0785aaae512d7643b42509b50eeb8b5823ff06c20da"
+  },
+  "pdf_sha256": "17562222dd19a526a724a8e48b84c468f46232484853e070189149a9f9e8a1da",
+  "engine": "C:\\Users\\FangJ\\TinyTeX\\bin\\windows\\pdflatex.exe",
+  "passes": 5,
+  "warnings": [
+    "Output written on manuscript.pdf (23 pages, 388353 bytes)."
+  ]
+}

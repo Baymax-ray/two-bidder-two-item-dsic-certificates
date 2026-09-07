@@ -1,0 +1,18 @@
+{
+  "status": "BB_FULL_ENVELOPE_ALGEBRA_AND_SOURCE_AUDIT_PASS",
+  "scope": "Independent source reconstruction and exact algebra; selected continuous positive cells need separate full replay.",
+  "reconstructed_exact_polynomial_coefficients": 1576,
+  "scalar_first_event_cases": 2592,
+  "positive_scalar_cases": 64,
+  "exact_radial_chart_point_checks": 648,
+  "interval_multiplication_cases": 225,
+  "single_copy_gain": "lambda/40",
+  "four_copy_gain": "lambda/10",
+  "incumbent_IC_slack": "Nonnegative and retained; not asserted zero.",
+  "sources": {
+    "V5_gap_closure\\discovery\\bb_centered_fields.json": "840ac343813eb3d5d96107c27252c85147e9bc667fedefbedf7995b65a0ea1cb",
+    "V5_gap_closure\\discovery\\bb_translation_intervals.py": "bab0b5e656befc3d2f514187024bf87bd5c08aba676ebd2d2e483d07ccf56fb5",
+    "V5_gap_closure\\discovery\\bb_center_fields.py": "a9b2fa4583e28e0cce76de67c74f5cd369298afa5c99706240ab6205cf50da1e",
+    "D:\\\u6587\u6863\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates\\certificate\\continuous_stream_degree4_two_level_nonuniform_upper_bound\\manifest.json": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4"
+  }
+}

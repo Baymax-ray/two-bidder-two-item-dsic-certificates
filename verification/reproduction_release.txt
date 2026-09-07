@@ -1,0 +1,9 @@
+RELEASE_PREFLIGHT_START
+PASS theorem, README, manifest, and declaration consistency
+PASS LaTeX pass 1
+PASS BibTeX
+PASS LaTeX pass 2
+PASS LaTeX pass 3
+PASS clean temporary-directory manuscript compilation
+PASS root SHA-256 manifest
+RELEASE_CONSISTENCY_PASS

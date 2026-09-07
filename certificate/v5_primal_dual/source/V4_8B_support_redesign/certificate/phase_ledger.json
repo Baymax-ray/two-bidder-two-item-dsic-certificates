@@ -1,0 +1,76 @@
+{
+  "status": "V4_8B_ANALYTIC_COMPATIBILITY_PASS_BOUNDS_PRESERVED_GAP_OPEN",
+  "new_upper_accepted": false,
+  "new_lower_accepted": false,
+  "frozen_predecessor_files": 798,
+  "preserved_upper_source": "V4_8A_frozen_primal/certificate/upper_ledger.json",
+  "preserved_upper_source_sha256": "4c5f1af0c4dbdfca7988a00b817ea391cdc235c349c5d6c6ab310eea3b16ca94",
+  "preserved_exact_upper": "126896911512118815143751798253644387821387247931459587853787829908059874949397360252298779973929141951397383947847826535681711510600848165862930501426345159917011921545439735376782799006448468920822162285020116364307531992121835185634233204549449591057481657330472700929353195516018181462289823993963054381539495283982222992579879330103430126935474368969476837801654966491939292457241370362029698428929091578786298566619287044642037575556611/143743388441469140619012560631465810756706262801243075592116594362132219219834559281657603916741433440317684697275731365679239704104458549636808423152583023881015881375108137800632404991452403332313007211309266742032696562159874504740135352337667003406832671904691807801468394986776577559759490680625475127856721916082957949923227139418300275397850525696000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "preserved_upper_decimal_enclosure": [
+    "0.882801726660214072163699538303",
+    "0.882801726660214072163699538304"
+  ],
+  "preserved_lower_basis": [
+    "1",
+    "sqrt(2)",
+    "sqrt(493894)"
+  ],
+  "preserved_lower_coefficients": [
+    "35791404252341621852527735747861637/42525000000000000000000000000000000",
+    "31/1215",
+    "-15059524650320123/8305664062500000000000"
+  ],
+  "preserved_lower_decimal_enclosure": [
+    "0.876464164471798049944906113027",
+    "0.876464164471798049944906113028"
+  ],
+  "preserved_gap_decimal_enclosure": [
+    "0.006337562188416022218793425276",
+    "0.006337562188416022218793425277"
+  ],
+  "accepted_analytic_results": [
+    "Selected-option directed tight IC relation and finite source-balance obstruction",
+    "Compact signed curl changes the old whole-cell moment with its full universal identity retained",
+    "Explicit stream-jump/reflection-IC completions, including BB full allocation and QQ unused profiles",
+    "Aggregate facet covector, marginal balance, and ordering conditions",
+    "Quantitative junction flux budget with nonlocal IC crossing defect",
+    "Activity-dependent coupled primal boundary equations and scoped high-sum feasibility rigidity"
+  ],
+  "inherited_revalidated_structure": "Q exchange max branch is never strictly active for the frozen parameters; this is not a new V4.8B discovery.",
+  "rejected_primal_trial": "Localized high-sum singleton-price tent causes a strict positive-volume joint conflict; no revenue counted.",
+  "global_scope": "Every proposed complete support identity is valid for unrestricted randomized pointwise DSIC/IR; no numerical global envelope decrease was certified in this phase.",
+  "limitations": [
+    "No matching unrestricted global support",
+    "No evidence that primal movement is necessary",
+    "No closed-patch obstruction when its normal/source/transport hypotheses fail",
+    "No unaccounted singular pairings or free boundary flux"
+  ],
+  "certificate_statuses": {
+    "tight_ic_relation": "DIRECTED_TIGHT_IC_RELATION_PASS",
+    "support_redesign": "COMPACT_CURL_AND_SINGULAR_SUPPORT_ACCOUNTING_PASS",
+    "facet_flow_compatibility": "FACET_FLOW_COMPATIBILITY_PASS",
+    "boundary_support_conditions": "BOUNDARY_SUPPORT_AND_COMMON_CAPACITY_CONDITIONS_PASS",
+    "junction_flux_budget": "EXACT_JUNCTION_FLUX_AND_TRANSPORT_BUDGET_PASS",
+    "primal_interfaces": "EXACT_PRIMAL_INTERFACE_ALGEBRA_PASS"
+  },
+  "new_source_hashes": {
+    "certificate/tight_ic_relation.json": "fa93de5a0eaa35e43ee896e7a2269fb50d565a682ded7e13b2fda9bbd22c75ef",
+    "verifier/tight_ic_relation.py": "3d2e167c8b55a6e07b126f229ea949718067dd6502d1f4016644bda17d5f648d",
+    "research_log/tight_ic_relation.md": "e9e6e688f0adf0b110e15f53c06556254d8030682ff237445140b276f732fda3",
+    "certificate/support_redesign.json": "ee50a4af1f69656ad9f220d95fdec4267a88c958a64fa5f178f32a242dc3c576",
+    "verifier/support_redesign.py": "d492528b53a305cfbc08c6ba59e35bd1e54b4b8ca18a4ec54c49d70b40c836cf",
+    "research_log/support_redesign.md": "88301f40e9a6edad691e41d3daae436e7a02c3fb80314cac90ac9cce0e8d322b",
+    "certificate/facet_flow_compatibility.json": "11df584aa6efca529198539be12c256e5aa5e0b137ba94474b140eab46df66e3",
+    "verifier/facet_flow_compatibility.py": "f9c3dc9077a742ce20629fa7e0dbae2ac0a01b8b80474ac5c3c9f04756dc4fa5",
+    "research_log/facet_flow_compatibility.md": "db3e4ef6816407d4a96f8a3104a467b1946d17e3a7a36c7412016dd1791253c4",
+    "certificate/boundary_support_conditions.json": "500a1f8cda7cbf27f1ea664b504361866af9d301477848e3bcb5ebfaf3a21541",
+    "verifier/boundary_support_conditions.py": "df94895db77ac9de9050ca9ebc24aca2fbfb7f0624ad368c9be8b19e1a6cae9f",
+    "research_log/boundary_support_conditions.md": "5847d2f40abff529bc3f5f885e7ea70f2dd64d90b26d677c76d9c75d712f3d7a",
+    "certificate/junction_flux_budget.json": "cc3d1d6ff9c7f618d6a1b52305e632cbf76ee03e168bd3e0b0d91d4fd4923782",
+    "verifier/junction_flux_budget.py": "09a32b9cc7d4996567c21fb29e1f3483e0734079ecaacb301941a526abbf0298",
+    "research_log/junction_flux_budget.md": "b6c4928271574f7a49e1e288afb82e3ad56d10d0b077831b61c5775c5dec2942",
+    "certificate/primal_interfaces.json": "ddb8c153c47e5d83688e6aecc70cd3595ad777816007128f98f8788d47070819",
+    "verifier/primal_interfaces.py": "37845a5c8579120a9976f1b4977e9f37f5131c63904fc202eb7d7343f38cab6a",
+    "research_log/primal_interfaces.md": "bc072a86b48eae4a66a3fb133bfcbb5110c43a7341c7cad53f265f9107c55ef7"
+  }
+}

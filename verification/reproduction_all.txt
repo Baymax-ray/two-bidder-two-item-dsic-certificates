@@ -1,0 +1,31 @@
+PASS portable-runner path and import-isolation tests
+RELEASE_PREFLIGHT_START
+PASS theorem, README, manifest, and declaration consistency
+PASS LaTeX pass 1
+PASS BibTeX
+PASS LaTeX pass 2
+PASS LaTeX pass 3
+PASS clean temporary-directory manuscript compilation
+MATHEMATICAL_REPLAY_START
+PASS exact base lower certificate
+PASS predecessor surcharge lower certificate
+PASS historical piecewise-surcharge lower certificate
+PASS independent piecewise-surcharge replay
+PASS twenty-band lower certificate
+PASS independent twenty-band lower replay
+PASS bundle-pivot lower certificate
+PASS independent bundle-pivot lower replay
+PASS retained deterministic item-containment lower certificate
+PASS independent retained deterministic lower replay
+PASS historical joint residual-screening lower certificate and fresh audits
+PASS post-review independent joint revenue explanation
+PASS predecessor coordinated primal-dual certificate and both full upper traversals
+PASS inherited full upper and intermediate reserve component at tau=1/100
+RUNTIME_IDENTITY {"python": "3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)]", "executable": "D:\\Anaconda\\python.exe", "prefix": "D:\\Anaconda", "numpy": "2.0.1", "modules": {"numpy": "D:\\Anaconda\\lib\\site-packages\\numpy\\__init__.py", "fractions": "D:\\Anaconda\\lib\\fractions.py", "json": "D:\\Anaconda\\lib\\json\\__init__.py", "hashlib": "D:\\Anaconda\\lib\\hashlib.py", "decimal": "D:\\Anaconda\\lib\\decimal.py", "numpy._core._multiarray_umath": "D:\\Anaconda\\lib\\site-packages\\numpy\\_core\\_multiarray_umath.cp310-win_amd64.pyd"}, "ignore_environment": 1, "no_user_site": 1, "optimize": 0}
+COMPONENT_SCOPE intermediate component at tau=1/100; final lower: ../reserve_parameter/verify_reserve.py
+PASS selected reserve parameter and exact family certificate
+PASS rational reserve implementation boundary checks
+MATHEMATICAL_REPRODUCTION_PASS
+PASS root SHA-256 manifest
+RELEASE_CONSISTENCY_PASS
+PUBLICATION_REPRODUCTION_PASS lower_floor=876514341027067549900397423113/1000000000000000000000000000000 upper=41633573878672737296912156242885809141291624901751643754645460524439983259963071676800128256714387374860011650292126107236569442723605126535991001222821586655459704406343244109848287029385046825910755834261455583338689259236046105040688037504806530577591936832188897881637798170386815238309015117176824853562214416583537007713942251912079261294386646706048576482553528195953/47184789559378389637399332661811400305800073101086982571642952271339370841545994999311325392862801043601551124190197512907122247091094190388965346229914862531301157400354556042255530841235254951630396642645415904876400810608838628951127883272699388025250477805316397921574293466240151490746004749870334600976567348096532480000000000000000000000000000000000000000000000000000 mathematics=PASS release=PASS

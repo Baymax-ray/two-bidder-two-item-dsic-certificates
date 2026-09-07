@@ -1,19 +1,15 @@
-\subsection{A common capacity measure from conditional supports and IC cycles}\label{sec:common-upper}
-The stronger upper certificate retains the rational stream coefficients
-but changes their integration and their use in the whole-auction bound.
-A full-capacity conditional support can replace stream prices on a region
-where the other bidder's virtual values have a verified sign. Sparse
-long-range incentive cycles make a further compatible reduction.
-The common price is specified independently of any finite allocation
-range or finite report domain.
-
+\label{sec:common-upper}
 \paragraph{A reusable conditional inequality.}
 Set $A=2/3$, $b_0=(4-\sqrt2)/3$, $k_0=b_0-A$, $Z=3/4$ and
 \[
- \ell(x)=\begin{cases} A,&x<k_0,\\ b_0-x,&k_0<x<A,\end{cases}
+ \ell(x)=\begin{cases}
+ A,&0\le x\le k_0,\\
+ b_0-x,&k_0<x<A,\\
+ k_0,&A\le x\le1,
+ \end{cases}
  \quad D_0=\{x<A,\ y<\ell(x)\}.
 \]
-Let $f(x)=3\ell(x)-2$ below $A$ and $f(x)=1$ above $A$,
+Let $f(x)=3\ell(x)-2$ for $0\le x<A$ and $f(x)=1$ for $A\le x\le1$,
 $F(x)=\int_x^1 f(s)ds$ and $H_Z(y)=4(y-Z)_+$. Define
 \begin{equation}\label{eq:reusable-Psi}
 \begin{split}
@@ -21,25 +17,26 @@ $F(x)=\int_x^1 f(s)ds$ and $H_Z(y)=4(y-Z)_+$. Define
  \Psi_2(x,y)&=3(y-\ell(x))_+\mathbf1_{x<A}+f(x)H_Z(y).
 \end{split}
 \end{equation}
-The first term of $\Psi_2$ is zero above $A$. Integration-boundary values
-may be chosen Borel. Both densities are bounded and nonnegative. For
+The first term of $\Psi_2$ is zero for $x\ge A$. These formulas fix a
+Borel version on all boundaries. Both densities are bounded and nonnegative. For
 example, above $Z$ and below $A$ the second density is
 $(1-H_Z)3(y-\ell)+H_Z(3y-2)\ge0$.
 The edge-transfer envelope gives the universal identity
 \begin{equation}\label{eq:Psi-identity}
  \langle\Psi,a\rangle-R=3\int_{D_0}u\ge0
 \end{equation}
-for every full randomized DSIC/IR conditional mechanism, including
-unnormalized utility. Equivalently, $\operatorname{div}\Psi=3$ outside
+for every measurable, integrable randomized DSIC/IR conditional mechanism,
+including unnormalized utility. Applied to a complete jointly measurable
+mechanism, it holds on almost every opponent fiber and yields the integrated
+inequality by Fubini. Equivalently, $\operatorname{div}\Psi=3$ outside
 $D_0$ and zero inside, with the required top/right boundary flux.
 The menu $\max(0,x-A,y-A,x+y-b_0)$ attains equality and saturates every
 positive price, so $\int(\Psi_1+\Psi_2)=R_{\rm SB}=4/9+2\sqrt2/27$.
-Unlike the occupied-wing identity, \eqref{eq:Psi-identity} is valid
-without freezing the residual's occupation constraints.
+Identity~\eqref{eq:Psi-identity} holds without imposing
+occupation constraints on the residual.
 
 \paragraph{Compatibility with the opposite bidder.}
-Write $W_0=[0,43/100]^2$, distinct from $W_{\rm wing}$ in the lower
-construction. The support $\Psi$ vanishes on $W_0$. For the inherited
+Write $W_0=[0,43/100]^2$, for the support switch. The support $\Psi$ vanishes on $W_0$. For the specified
 stream field $\phi_i$, exact rational Bernstein subdivision on both
 radial charts proves
 \[
@@ -74,7 +71,9 @@ Define a common nonnegative capacity density, in physical item coordinates,
 \begin{theorem}[A common unrestricted charged support]\label{thm:common-support}
 For the full class of complete single-bidder DSIC/IR mechanisms with
 marginal allocations in $[0,1]^2$, define
-$H_i(\Pi)=\sup_{M_i}\{R_i-\langle\Pi,a_i\rangle\}$.
+\[
+H_i(\Pi)=\sup_{M_i}\{\operatorname{Rev}_i(M_i)-\langle\Pi,a_i\rangle\}.
+\]
 Then $H_1(\Pi')=H_2(\Pi')=0$ and
 $\OPT\le\int\sum_j\Pi'_j$.
 \end{theorem}
@@ -85,24 +84,24 @@ nonnegative IC inequalities bound revenue by the $\phi'_i$ allocation
 pairing minus nonnegative IC/IR slack. If the own report is in $W_0$,
 its virtual coefficients are nonpositive and the cycle correction is zero;
 otherwise \eqref{eq:common-Pi} dominates them. Thus
-$R_i-\langle\Pi',a_i\rangle\le0$ for every complete $M_i$.
+$\operatorname{Rev}_i(M_i)-\langle\Pi',a_i\rangle\le0$ for every complete $M_i$.
 The empty mechanism attains zero. Integrating joint capacity gives the
 auction bound. This argument applies directly to jointly measurable
 mechanisms with integrable payments and bounded allocations; it never
 interchanges an uncountable supremum with an integral. Positive field
 parts are integrable, and the absolutely continuous pairings cover the
-Lebesgue-measurable class stated in Section 3.
+Lebesgue-measurable class stated in Section~\ref{sec:model}.
 \end{proof}
-\paragraph{What is improved relative to the stream measure.}
-The original field $\phi_i=F_i$ of Lemma~\ref{lem:witness} already defines
+\paragraph{Common price and its mass.}
+The field $\phi_i=F_i$ of Lemma~\ref{lem:witness} already defines
 a common density $\Pi^0_j=\max(0,\phi_{1j},\phi_{2j})$. The stream identity gives
 \[
- R_i=\int\sum_j\phi_{ij}a_{ij}-\int u_i(0;v_{-i})
+ \operatorname{Rev}_i(M_i)=\int\sum_j\phi_{ij}a_{ij}-\int u_i(0;v_{-i})
  \le\langle\Pi^0,a_i\rangle,
 \]
 and the empty mechanism attains equality. Hence
 $H_1(\Pi^0)=H_2(\Pi^0)=0$ as well. Existence of a common measure and
-zero charged values are already consequences of the retained stream
+zero charged values are already consequences of the specified stream
 argument. The conditional replacements and compatible IC cycles below
 instead prove a strict decrease in its total mass,
 $\int\Pi'<\int\Pi^0$, while preserving validity for both unrestricted
@@ -158,39 +157,14 @@ a second complete 1024-partition accumulation.
 On every sparse-cycle box, exact polynomial bounds keep the old and new
 virtual winners strict. Integration then gives the exact combined
 reduction $81/10^{10}$. Disjointness from the conditional replacement
-regions makes the two improvements compatible. Thus the active endpoint is
+regions makes the two improvements compatible. Define the reference accounting constant
 \begin{equation}\label{eq:common-upper-endpoint}
- U_*=B_{20}-\Delta_{1024}-\frac{81}{10^{10}},\qquad \OPT\le U_*.
+ U_{\rm ref}=B_{20}-\Delta_{1024}-\frac{81}{10^{10}},\qquad \OPT\le U_{\rm ref}.
 \end{equation}
 Here $\Delta_{1024}$ is the final exact rational \texttt{delta} in
-\path{V4_6_2_upper/certificate/conditional_global_splice.json};
-its full numerator and denominator and those of $U_*$ are exported in
-\path{certificate/coordinated_primal_dual/manifest.json}.
-Directed rational arithmetic gives
-\[
- 0.8829230532587169692606<U_*<0.8829230532587169692607.
-\]
-The sixteen-stage ledger is strictly decreasing. It is not a proof that
-this fixed certificate architecture converges to the optimum.
-
-\begin{table}[ht]
-\centering\small
-\begin{tabular}{p{0.35\textwidth}rp{0.32\textwidth}}
-\toprule
-Certified reduction & Approximate size & Source of improvement\\
-\midrule
-$\Ustream-B_{20}$ & $0.00138972521893$ & Tighter enclosure of the same stream integral\\
-$\Delta_{1024}$ & $0.00144551594101$ & Compatible conditional support replacement\\
-$81/10^{10}$ & $0.0000000081$ & Four nonlocal balanced IC cycles\\
-\bottomrule
-\end{tabular}
-\caption{The three contributions to the active upper-bound decrease.
-The first improves numerical enclosure; the other two certify decreases
-in common price mass. The cycles expose additional usable IC directions,
-but their present numerical contribution is small.}
-\label{tab:upper-reductions}
-\end{table}
-
+\texttt{conditional\_global\_splice.json};
+its full numerator and denominator and those of $U_{\rm ref}$ are exported in
+the coordinated component manifest.
 \paragraph{Which equality conditions remain unsatisfied.}
 Put $O_i=\{v_{-i}\in W_0\}$. The exact gap for the measure is the sum
 of four nonnegative mechanism slacks,
@@ -207,27 +181,52 @@ utility terms are not counted again in $S_{\rm IC}$.
 The reported rational endpoint additionally includes
 \[
  E_{\rm cert}=(B_{20}-B)+(D-\Delta_{1024})\ge0,
- \qquad U_*-R=\sum S+E_{\rm cert}.
+ \qquad U_{\rm ref}-R=\sum S+E_{\rm cert}.
 \]
 Numerical majorization slack is thus separated from mechanism equality.
-The archived lottery-box tests show positive slack against the historical
-V4.6 and V4.6.1 candidates. Such a test diagnoses the tested certificate;
-it does not establish an admissible primal improvement or suboptimality
-of a candidate. The fresh audit also checks the selected mechanism on the box centered
-at $(151/200,3/40,9/10,63/200)$ with halfwidth $10^{-4}$. Its base fee
-is active, but bidder 1 remains uniquely empty and bidder 2 uniquely
-chooses $(1,\beta)$, with $9/10<\beta<49/50$. An independently
-reconstructed whole-box bound makes its safe virtual value strictly
-negative. Consequently the safe capacity-plus-virtual slack is at least
-$-\beta\phi'_{2,\rm safe}>0$ there. The exact positive integrated
-rational lower bound is sealed in the fresh audit certificate. This
-establishes that the common measure does not match the latest mechanism,
-without inferring its primal suboptimality.
+The final certificate adds the terms in Section~\ref{sec:v5-upper}.
+The reference decomposition above identifies the numerical remainder used
+there, while the final measure has its own source, incentive and capacity
+slacks. Neither decomposition alone supplies a matching allocation.
 
-The exported combined proof, sign certificate, sparse-cycle proof and
-independent exact checks are under
-\texttt{V4\_6\_2\_upper/} in the coordinated source package.
-A residual-specific theorem alone need not provide a price for arbitrary
-capacity changes. Here the reusable identity \eqref{eq:Psi-identity}
-and the opposing sign certificate are precisely the additional conditions
-that make the support common.
+\subsection{The overlap-safe support splice}\label{app:overlap}
+Let $K=J\cup J^{\rm swap}$, $D^\sharp=W_0\cup K$, and let $\Pi^W$
+be the common price with only the $W_0$ switch. The added rectangles satisfy
+$\max(w)\le1/2$ and $\sum_jw_j\le17/20<b_0$; also $2(43/100)<b_0$.
+Thus both orientations of $\Psi$ vanish on $D^\sharp\subset D_0$.
+All IC corrections used in the final certificate avoid profiles where
+either bidder belongs to $D^\sharp$.
+
+\begin{lemma}[Complete splice decrement]\label{lem:overlap}
+For $L,E$ and $J$ as in \eqref{eq:v5-splice-gain},
+\[
+ \int\sum_j(\Pi^W_j-\Pi_j)
+ \ge4\left[L-|J|R_{\rm SB}-E\right],\qquad |J|=49/2000,
+\]
+with the same inequality after adding the disjoint IC corrections.
+\end{lemma}
+\begin{proof}
+For one oriented added opponent $w\in J$, set
+$a=\phi_j(v;w)$, $b=\phi_j(w;v)$ and $p=\Psi_j(v)\ge0$.
+If $v\notin D^\sharp$, the prices are $\max(0,a,b)$ and
+$\max(p,b)$, so their difference is at least
+$a_+-p-(b-p)_+$.
+
+If $v\in W_0$, both actual prices are zero. The low-square sign
+certificate gives $a\le0$, and both supports vanish. The directed
+expression equals $-b_+\le0$, so it is still a valid lower bound.
+
+If both reports belong to $K$, both replacement supports vanish.
+The two directed expressions, using the respective support orientations,
+are $a_+-b_+$ and $b_+-a_+$. Their sum is zero, while the actual
+old price is nonnegative and the new price is zero. The two replacements
+are therefore charged together, without assuming disjoint bidder events.
+
+If neither report belongs to $K$, neither the price nor the directed sum
+changes. These cases exhaust the report space, including cross-orientation
+overlaps. Integration of each directed expression gives
+$L-|J|R_{\rm SB}-E$. Bidder exchange and the two oriented rectangles give
+factor four; the item sum is already inside $L$ and $E$. Disjoint IC
+supports are unaffected by every switch, so their certified decrements
+add separately. This proves the claim.
+\end{proof}

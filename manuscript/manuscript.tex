@@ -15,11 +15,6 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newcommand{\OPT}{\operatorname{OPT}}
-\newcommand{\Li}{\operatorname{Li}_2}
-\newcommand{\Ustream}{U_{\rm stream}}
-\newcommand{\LowerBound}{\frac{83962078694672281756033}{96000000000000000000000}}
-\newcommand{\UpperBound}{\frac{3715139591287203}{4194304000000000}}
-\newcommand{\UpperDecimal}{0.8857583025186545848846435546875}
 
 \title{Exact Primal-Dual Certificates for a\\
 Two-Bidder, Two-Item Auction}
@@ -27,7 +22,7 @@ Two-Bidder, Two-Item Auction}
 Boston University, Boston, Massachusetts, USA\\
 \texttt{baymin@bu.edu}\\
 ORCID: \href{https://orcid.org/0009-0006-9100-0445}{0009-0006-9100-0445}}
-\date{6 September 2026}
+\date{7 September 2026}
 
 \begin{document}
 \maketitle
@@ -35,95 +30,73 @@ ORCID: \href{https://orcid.org/0009-0006-9100-0445}{0009-0006-9100-0445}}
 \begin{abstract}
 Multidimensional incentives couple allocations across reports and across bidders.
 For two additive bidders and two items with independent uniform values, we
-combine complete joint menu changes with a common capacity-price certificate.
-An explicit randomized, pointwise DSIC and ex-post IR mechanism has exactly
-integrated algebraic revenue $0.8764641644718\ldots$. An unrestricted
-upper bound of $0.8829230532587\ldots$ leaves a certified gap below
-$0.006459$, hence below $0.01$, and guarantees more than $99.2684\%$ of optimal
-revenue. On the primal side, a monotone exchange threshold with a jump and
-an inverse plateau changes ownership on a region of positive measure.
-Occupation constraints and convex-utility traces solve full randomized
-conditional screening on $64.1627\%$ of opponent-report space. On the dual
-side, a reusable conditional support and four sparse long-range IC cycles
-strictly reduce the total common capacity price while preserving validity
-for both bidders. An exact slack identity separates information rents,
-unused capacity and incentive losses from numerical enclosure remainders.
-Independent implementations reconstruct the entire new revenue and the
-stream integral's continuous majorant; the conditional subtraction has a
-full exact calculation and separate bounded cross-checks. The final measure has strictly positive slack against the
-selected mechanism. The unrestricted optimum and a matching auction remain open.
+construct a randomized auction satisfying dominant-strategy incentive
+compatibility (DSIC), ex-post individual rationality (IR) and joint feasibility
+at every report. Its revenue lies between $0.876514341027$ and
+$0.876514355425$. A common capacity-price certificate, a mathematical charge
+on allocation used to bound every admissible auction's revenue, gives an
+unrestricted upper below $0.8823515854888$. The gap is below $0.005837245$,
+hence below $0.01$, and the auction earns more than $99.3384\%$ of optimal
+revenue. A global reserve transformation moves both bidders' menus together,
+transfers ownership on a region of positive measure, and yields an exact
+sixteen-face revenue formula. Its incentive-preservation argument is
+independent of the value distribution, and its positive revenue derivative
+identifies a profitable variation for the specified seed. The upper
+certificate combines conditional bounds under one capacity price, accounting
+for the other bidder's virtual value and for overlapping incentive constraints.
+Continuous computational certificates separate price reductions from
+integration remainders and state their implementation and arithmetic trust
+boundaries. The unrestricted optimum and a matching mechanism remain open.
 \end{abstract}
 
 \section{Introduction}
-
 Optimal auction design is completely understood for a single item under the
-classical regularity conditions of Myerson~\citep{myerson1981}.  With several
+classical regularity conditions of Myerson~\citep{myerson1981}. With several
 items, bidder types become multidimensional and dominant-strategy incentive
-compatibility imposes global cross-type restrictions.  Even the canonical
-case of two additive bidders, two items, and independent uniform values has
-resisted an exact characterization~\citep{sandholm2015,jiang2026duality}.
+compatibility links allocations across all reports. Even the canonical case
+of two additive bidders, two items and independent uniform values lacks an
+exact optimal mechanism~\citep{sandholm2015,jiang2026duality}.
 
-Computational work has produced strong feasible mechanisms and rigorous upper
-bounds.  Affine-maximizer searches provide transparent deterministic
-benchmarks~\citep{sandholm2015}, while GemNet constructs fully
-strategyproof menu mechanisms after a compatibility transformation
-\citep{wang2024gemnet}.  Jiang, Parkes, and Wang report approximately $0.876$
-revenue for that GemNet benchmark on the present instance.  On the dual side,
-the same paper develops flow-conserving DSIC kernels and a continuous lifting
-theorem; its strict $50\times50$ uniform continuous certificate is $0.8919$
-\citep{jiang2026duality}.  These are external benchmarks.  The GemNet value is
-a reported computational revenue, whereas $0.8919$ is a rigorous upper
-certificate. We improve that upper benchmark and provide an explicitly
-specified mechanism with independently integrated exact revenue. Its value
-exceeds the printed $0.876$, but that rounded external report does not prove
-a ranking against GemNet's unrounded revenue.
+The difficulty is joint: changing one bidder's menu changes the capacity and
+information rents available to the other. A locally profitable price change
+can violate supply at a different profile. Conversely, a conditional revenue
+bound supports the whole auction only if the same capacity price controls
+both bidders. We construct a feasible mechanism and an unrestricted upper
+certificate that address these two compatibility requirements directly.
 
-Our approach treats feasibility and information rents together. Fixing one
-bidder leaves a full multidimensional screening problem under the residual
-capacity supplied by its allocation. Convex utility traces turn some occupied
-regions into restrictions on all admissible conditional menus. We use these
-restrictions to prove full randomized screening bounds and to identify which
-changes must involve both bidders. A jump in a monotone exchange threshold
-and the corresponding inverse plateau then implement a positive-volume
-ownership transfer with exact revenue accounting.
+The mechanism applies a common reserve transformation to an explicitly
+specified system of three conditional menus. It selects both allocations
+at the same transformed profile, preserving joint supply. Nonnegative
+allocations and exclusion of zero-valued items at every selected tie preserve
+DSIC and individual rationality. The transformation transfers ownership on
+a region of positive measure. Its exact revenue includes all sixteen faces
+of the transformed distribution, because the reserve creates atoms at zero.
 
-A conditional certificate alone does not bound the whole auction unless
-its capacity price also controls the opposing bidder. We construct such a
-lower-cost common price by combining a universal single-buyer support with a continuous
-sign certificate for the opposing stream field. Four nonnegative long-range
-IC cycles preserve flow balance and decrease the integrated virtual maximum.
-Exact tensor-Bernstein integration supplies a rational upper bound for the
-resulting continuous measure. The original stream maximum already gives
-zero charged screening values for both bidders. The advance is to reduce
-its total price while preserving those inequalities; an equality allocation
-remains missing.
+The upper certificate combines a radial revenue identity, a tangent stream
+field, conditional screening supports and nonnegative translated incentive
+inequalities. Conditional replacements explicitly pay the opposing bidder's
+virtual-value excess. Corrections on shared endpoint cells are summed before
+taking the common itemwise maximum. This yields a smaller valid capacity
+price without imposing a finite-menu restriction on competitors.
 
-\paragraph{Contributions.}
-The paper develops four connected components:
-\begin{enumerate}
-\item a complete jointly feasible functional-exchange mechanism with a
-jump/inverse-plateau pair, an explicit rule for all reports and ties, and
-an independently reconstructed algebraic revenue;
-\item full randomized screening certificates on specified actual residuals,
-including an occupied-wing identity that charges a boundary information rent
-over the strip on which incentives force it to persist;
-\item a reusable conditional support and sparse long-range IC cycles that
-strictly decrease a common capacity measure's total mass while preserving
-both unrestricted charged inequalities,
-and an exact separation of mechanism slack from numerical remainder; and
-\item certified endpoints of $0.87646416447\ldots$ and
-$0.88292305326\ldots$, gap below $0.006459$, and a revenue guarantee
-exceeding $99.2684\%$ of unrestricted optimal revenue.
-\end{enumerate}
-The retained stream weak-duality proof, deterministic predecessors and earlier
-residual-support constructions explain the infrastructure. The active lower
-mechanism is specified in Section~\ref{sec:refined-mechanism}, and the common
-upper certificate in Section~\ref{sec:common-upper}. Finite menus describe
-our constructions and equality cases only. No finite-range restriction is
-imposed on competing mechanisms, and conditional optimality is not promoted
-to global optimality.
+The resulting theorem gives an explicit mechanism and certified endpoints
+for the full continuous randomized DSIC problem. The incentive-preservation
+argument applies to any Borel seed with bounded payments satisfying its stated hypotheses on this report
+domain; uniformity is needed for the displayed face revenue formula.
+The support identities and shared-cell accounting are analytic tools, while
+the chosen menus, fields and quantitative savings are specific to this
+instance. We do not claim general convergence or identify an optimal auction.
 
-\section{Relation to prior dual formulations}
+\subsection{Relation to prior work}
+Computational affine-maximizer searches provide transparent deterministic
+benchmarks~\citep{sandholm2015}. GemNet constructs fully strategyproof menu
+mechanisms through a compatibility transformation~\citep{wang2024gemnet}.
+Jiang, Parkes and Wang report approximately $0.876$ revenue for that benchmark
+and a strict $50\times50$ continuous uniform upper certificate of $0.8919$
+\citep{jiang2026duality}. We improve the printed upper certificate and give an
+independently certified revenue enclosure for our explicitly specified auction.
+The rounded GemNet report does not establish a ranking against its unrounded
+revenue; its mechanism and the external dual array are not replayed here.
 
 Rochet's cyclic-monotonicity characterization turns DSIC into convexity of
 truthful utility and identifies allocation vectors with subgradients
@@ -156,13 +129,13 @@ field is generated by a nonnegative deviation kernel, or conversely.  The
 contribution is an explicit rational witness for this canonical DSIC instance,
 an exact Bernstein certificate for its continuous objective, and explicit
 conditional capacity supports that guide feasible two-bidder reallocations.
-The convex-mixture concavity of residual value is standard infrastructure;
+The convex-mixture concavity of residual value is standard;
 the new theorem content is the displayed residual-specific measures, their
 full-class slack identities, and the resulting complete primal variations.
 We make no first-in-literature priority claim for the general use of convex
 potentials, transport, or complementary slackness.
 
-\section{Setting and proved bounds}
+\section{Model and certified bounds}\label{sec:model}
 
 Write a report profile as
 \[
@@ -183,860 +156,163 @@ Our constructed mechanisms are Borel. The upper argument also covers joint
 Lebesgue measurability with integrable payments: on every opponent fiber,
 DSIC supplies a convex Lipschitz utility and the selected allocation equals
 its gradient off an own-type null set; Fubini supplies the integrated
-inequality. No pointwise Borel-representative repair is asserted. For the
-coordinate-line supports below, tangential selections are monotone and their
-line integrals are well-defined. Residual functions are kept pointwise, not
-identified modulo area-null sets.
+inequality. No pointwise Borel-representative repair is asserted. The measurable origin trace is justified in Appendix~\ref{app:stream}.
+Residual functions are kept pointwise, not identified modulo area-null sets.
 
-\begin{theorem}[Audited coordinated bracket]\label{thm:bracket}
-The complete mechanism in Proposition~\ref{prop:refined-feasible} has exact
-revenue $R_*$ in \eqref{eq:refined-revenue}, with
+\begin{theorem}[Certified revenue bracket]\label{thm:bracket}
+The complete mechanism in Proposition~\ref{prop:v5-feasible} has exact
+revenue $R_\tau$ given by \eqref{eq:v5-revenue}, with
 \[
- 0.876464164471798049944906113027<R_*<
- 0.876464164471798049944906113028.
+ 0.876514341027<R_\tau<0.876514355425.
 \]
 For the unrestricted randomized class,
 \[
- R_*\le\OPT\le U_*<0.882923053259,
+ R_\tau\le\OPT\le U<0.882351585489,\qquad
+ U-R_\tau<0.005837245<\frac1{100},
 \]
-where the rational $U_*$ is specified in \eqref{eq:common-upper-endpoint}.
-In particular,
+where the rational $U$ is specified by \eqref{eq:v5-upper}. Moreover,
 \[
- 0.006458888786918919315720686827<U_*-R_*<
- 0.006458888786918919315720686828<\frac1{100},
+ R_\tau/\OPT\ge R_\tau/U>0.993384.
 \]
-\[
- \frac{R_*}{\OPT}\ge\frac{R_*}{U_*}>0.992684.
-\]
-Thus the mechanism earns more than $99.2684\%$ of unrestricted optimal
-revenue. These bounds do not identify $\OPT$ or decide its attainment.
+The mechanism therefore earns more than $99.3384\%$ of unrestricted
+optimal revenue. Its revenue enclosure has width less than $1.44\times10^{-8}$.
+Full outward-rounded endpoints appear in Appendix~\ref{app:reserve-parameter};
+the exact revenue is defined by the face integrals, not a decimal endpoint.
+This paper neither identifies the optimal revenue nor specifies an optimal mechanism.
 \end{theorem}
 
-\begin{table}[ht]
-\centering\small
-\begin{tabular}{p{0.25\textwidth}p{0.65\textwidth}}
-\toprule
-Current claim & Proof location and role\\
-\midrule
-Complete mechanism & Proposition~\ref{prop:refined-feasible} specifies
-all menus, exceptional reports and jointly feasible tie selection.\\
-Exact revenue & Equation~\eqref{eq:refined-revenue} and
-Section~\ref{sec:refined-mechanism} integrate the final mechanism in full.\\
-Conditional screening & Section~\ref{sec:wing-screening} proves full
-randomized optimality on Q/E/W under the actual residual capacities.\\
-Unrestricted upper & Theorem~\ref{thm:common-support} and
-\eqref{eq:common-upper-endpoint} give the common measure and rational endpoint.\\
-\bottomrule
-\end{tabular}
-\caption{Proof roadmap for the active bracket. Earlier constructions are
-retained as infrastructure; their revenue layers are not the definition of
-the current $R_*$.}
-\label{tab:active-roadmap}
-\end{table}
-Conditional screening fixes the other bidder's allocation. Its optimality
-does not rule out joint changes that also alter the residual capacity.
 
-The lower follows from the complete pointwise construction and exact
-continuous integration; the upper follows from the common measure, sign
-and cycle proofs and the componentwise checks described below. The historical
-stream endpoint remains
-\[
- \Ustream=\UpperBound=\UpperDecimal,
-\]
-but the active $U_*$ is strictly smaller. Relative to the external continuous
-upper $0.8919$ reported by Jiang, Parkes and Wang~\citep{jiang2026duality},
-$U_*$ is lower by more than $0.008976946741$. This compares exact local
-certificates with their printed upper decimal, not a replay of their dual
-array. The same source's GemNet revenue $\approx0.876$ remains a rounded
-computational benchmark; the new exact revenue exceeds that printed number
-but cannot by itself establish superiority to the unrounded mechanism.
+The proof has two independent parts. Section~\ref{sec:mechanism} specifies
+the mechanism, proves its pointwise properties and derives its revenue.
+Section~\ref{sec:upper} constructs a common capacity price valid for every
+admissible competitor. Appendices~\ref{app:compatibility}--\ref{app:integration}
+supply the menu compatibility cases, analytic field proofs and exact
+integration components. The displayed interval certifies the stated
+mechanism's revenue; its midpoint is not an exact revenue value.
 
-\section{An exact base affine maximizer}\label{sec:base}
+\section{A complete mechanism and its exact revenue}\label{sec:mechanism}
+We first prove the reserve transformation for a general seed satisfying
+explicit hypotheses, then give the seed menus and the selected parameter.
+Together these define the final mechanism at every report.
 
-Set
-\[
-a=\frac{159}{250},\qquad b=\frac{91}{100},\qquad
-s=\frac{1137}{1000}.
-\]
-For each feasible outcome \(A\), let \(c_A\) and the affine score be as follows.
-The row number is also the tie-breaking priority.
-\[
-\begin{array}{cclc}
-\toprule
-\text{id}&\text{allocation}&\text{score}&c_A\\
-\midrule
-0&\text{seller keeps both}&0&0\\
-1&1\to1&x-a&a\\
-2&2\to1&y-a&a\\
-3&\{1,2\}\to1&x+y-b&b\\
-4&1\to2&z-a&a\\
-5&2\to2&w-a&a\\
-6&\{1,2\}\to2&z+w-b&b\\
-7&1\to1,\ 2\to2&x+w-s&s\\
-8&2\to1,\ 1\to2&y+z-s&s\\
-\bottomrule
-\end{array}
-\]
-The base outcome \(A^0(v)\) is the smallest-id maximizer of the nine scores.
-This defines the outcome on every equality surface.
+\input{reserve_transform}
+\input{functional_exchange_mechanism}
+\input{reserve_reallocation}
 
-Let
-\[
-H_1(z,w)=\max\{0,z-a,w-a,z+w-b\},
-\quad
-H_2(x,y)=\max\{0,x-a,y-a,x+y-b\}.
-\]
-If \(V_i(A)\) is bidder \(i\)'s reported value for the items assigned in
-\(A\), the base payments are
-\[
-p_1^0=H_1-V_2(A^0)+c_{A^0},\qquad
-p_2^0=H_2-V_1(A^0)+c_{A^0}.
-\]
-
-\begin{lemma}\label{lem:base}
-The base mechanism is feasible, pointwise DSIC, and pointwise ex-post IR.
-\end{lemma}
-
-\begin{proof}
-Every listed outcome is feasible.  Fix bidder 2's report.  Apart from the
-constant \(H_1\), bidder 1's utility from an induced outcome \(A\), evaluated
-at the true type, is
-\[
-V_1(A)+V_2(A)-c_A-H_1.
-\]
-Truthful reporting selects a maximizer of the expression preceding \(H_1\);
-no report can give greater utility.  The same argument applies to bidder 2.
-It remains valid on ties because the selected row is still a maximizer.
-The outcomes excluding bidder 1 attain \(H_1\), so the winning score is at
-least \(H_1\), and bidder 1's truthful utility is nonnegative.  The symmetric
-argument proves bidder 2's IR.
-\end{proof}
-
-For a bidder facing opponent report \(q=(q_1,q_2)\), define
-\[
-H(q)=\max\{0,q_1-a,q_2-a,q_1+q_2-b\}.
-\]
-The base taxation menu has prices
-\begin{equation}\label{eq:base-menu}
-A_0(q)=H(q)+\min\{a,s-q_2\},\quad
-B_0(q)=H(q)+\min\{a,s-q_1\},\quad
-C_0(q)=H(q)+b
-\end{equation}
-for item 1, item 2, and the bundle, respectively; opt-out costs zero.
-These formulas follow directly by minimizing the outcome cost net of the
-opponent's value among outcomes assigning the indicated bundle.
-
-\section{The deterministic entry-surcharge predecessor}\label{sec:surcharge}
-
-Opponent-conditioned taxation menus ensure each bidder's DSIC, but their
-separate choices need not be simultaneously feasible.  The following
-containment principle supplies that link.
-
-\begin{lemma}[Deletion containment]\label{lem:containment}
-Let a deterministic predecessor mechanism have feasible allocations
-\(S_i^0(v)\).  For each bidder and opponent report, fix a finite taxation
-menu containing opt-out at price zero.  Suppose its declared tie rule selects
-a utility-maximizing bundle \(S_i(v)\subseteq S_i^0(v)\) at every report
-profile.  Then the resulting mechanism is pointwise DSIC, ex-post IR, and
-ex-post feasible.
-\end{lemma}
-
-\begin{proof}
-Fixing the opponent report fixes all available bundles and prices.  A
-truthful utility maximizer cannot gain by reporting another type, and opt-out
-guarantees nonnegative utility.  Containment preserves the predecessor's
-disjoint item allocations.  The assumptions concern the selected bundles,
-including ties, so all three conclusions hold pointwise.
-\end{proof}
-
-For an opponent report \(q=(q_1,q_2)\), set
-\[
-t=\max\{q_1,q_2\},\qquad \rho=\min\{q_1,q_2\}.
-\]
-The retained deterministic predecessor is the finite rational rule frozen in
-\begin{center}
-\path{certificate/refined_item_containment_bundle_pivot_lower_bound/manifest.json}.
-\end{center}
-The complete evaluable tables and endpoint conventions are specified by this
-manifest and its hash-bound predecessor manifests.  That predecessor manifest
-contains the eight item-containment rows.  The twenty Z/S rows and 41
-bundle-pivot rows are specified, respectively, in
-\begin{center}\small
-\path{certificate/piecewise_surcharge_twenty_band_lower_bound/manifest.json}\\
-\path{certificate/piecewise_surcharge_bundle_pivot_lower_bound/manifest.json}.
-\end{center}
-We summarize the three-layer construction here.
-
-First, twenty rational Z/S half-bands add a common fee \(F(q)\) to all three
-nonempty prices in \eqref{eq:base-menu}.  If none matches, set
-\[
-u=t+\rho,\qquad c=b-a=137/500,\qquad d=s-a=501/1000,
-\]
-and first test the bundle-pivot region
-\[
-91/100\leq u\leq1,\qquad c\leq\rho\leq u-d.
-\]
-Only inside this region define \(r=(\rho-c)/(u-c-d)\), whose denominator
-satisfies \(u-c-d\geq27/200>0\), and test the 41 positive cells in \((u,r)\).
-Outside the region no bundle-pivot fee is applied and \(r\) need not be
-evaluated.  Those cells also add one common fee to all nonempty prices.  The Z/S rows have
-priority on shared boundaries.  Their interiors are disjoint from the bundle
-cells: Z support has \(u\leq b\) and S support has \(\rho\leq c\), whereas a
-bundle-cell interior has \(u>b\) and \(\rho>c\).
-
-Finally, eight rows inside the two S5 half-bands add \(\delta(q)\) to the
-singleton corresponding to the opponent's low coordinate and to the grand
-bundle, leaving the other singleton unchanged.  This coordinate is unique:
-on every item row, \(t>139/200>137/500\geq\rho\).  Each row is left-open and
-right-closed in \(t\); at \(t=139/200\), \(\delta=0\).  If maximum utility is
-zero, choose opt-out.  At a positive tie, retain the predecessor-selected
-outcome whenever it remains maximizing; otherwise choose the maximizing
-itemwise subset with smallest id under the fixed predecessor order.
-
-\begin{proposition}\label{prop:surcharge-valid}
-The refined surcharge mechanism is deterministic, measurable, ex-post
-feasible, pointwise DSIC, and pointwise ex-post IR on the entire cube,
-including all menu, band, cell, and item-surcharge boundaries.
-\end{proposition}
-
-\begin{proof}
-Every common fee preserves the ranking among nonempty bundles, so its selected
-bundle is the base bundle or opt-out.  On an item row, orient the predecessor
-prices as
-\[
-(A,B,C)=(d+F,t+F,t+c+F).
-\]
-The row changes them to \((A+\delta,B,C+\delta)\), and its exact verifier
-checks
-\[
-0<\delta<A+B-C=d-c+F.
-\]
-If the changed singleton was selected, its utility lead over the unchanged
-singleton is at least \(A+B-C\), and hence remains positive after the change;
-its ranking against the bundle is unchanged.  The unchanged singleton remains
-selected when it was selected, a bundle buyer can move only to a subset, and
-an opt-out cannot enter because no nonempty price falls.  Thus every final
-bundle is an itemwise subset of its predecessor bundle, which is itself a
-subset of the feasible base allocation.
-
-For each fixed opponent report the declared rule selects a utility maximizer
-from a taxation menu independent of the bidder's report, with opt-out at
-price zero.  Lemma~\ref{lem:containment} therefore proves DSIC, ex-post IR,
-and simultaneous feasibility at each layer.  The finite rational
-semialgebraic tables and literal endpoint priority are Borel measurable.
-Numerical searches selected rational rows and fees, but no discovery file is a
-verifier input.
-\end{proof}
-
-\section{Exact revenue and residual screening}\label{sec:revenue}
-
-\begin{lemma}[Revenue of a four-option menu]\label{lem:menu-revenue}
-Suppose
-\[
-0\leq A,B\leq C\leq1,\qquad C\leq A+B.
-\]
-Let an additive type be uniform on \([0,1]^2\).  The expected payment from
-the four-option menu is
-\[
-\begin{split}
-r(A,B,C)={}&A(1-A)(C-A)+B(1-B)(C-B)\\
-&+C\left[(1-C+B)(1-C+A)-\frac{(A+B-C)^2}{2}\right].
-\end{split}
-\]
-\end{lemma}
-
-\begin{proof}
-The strict item-1 region has area \((1-A)(C-A)\), and the strict item-2
-region has area \((1-B)(C-B)\).  The bundle region starts with the rectangle
-\([C-B,1]\times[C-A,1]\) and removes a right triangle of side
-\(A+B-C\).  Multiplying the three areas by their prices proves the formula.
-Ties have area zero for this integral; their pointwise allocation was already
-fixed in Proposition~\ref{prop:surcharge-valid}.
-\end{proof}
-
-Suppose both \((A,B,C)\) and \((A+e,B+e,C+e)\) satisfy
-Lemma~\ref{lem:menu-revenue}.  For the nonnegative common surcharges used here,
-the original price conditions together with \(C+e\leq1\) ensure this.
-Direct expansion then gives the actual revenue change
-\begin{equation}\label{eq:delta-general}
-r(A+e,B+e,C+e)-r(A,B,C)
-=eG-\frac{3C}{2}e^2-\frac12e^3,
-\end{equation}
-where
-\[
-\begin{split}
-G={}&(C-A)(1-2A)+(C-B)(1-2B)
- +(1-C+A)(1-C+B)\\
-&-\frac{(A+B-C)^2}{2}-C(A+B-C).
-\end{split}
-\]
-For a Z-band orientation the prices and cross-section length are
-\[
-(A,B,C)=(s-t,a,b),\qquad b-t,
-\]
-and for an S-band orientation they are
-\[
-(A,B,C)=(t,s-a,t+b-a),\qquad b-a.
-\]
-Exact integration of the twenty frozen half-bands gives
-\[
-G_Z=\frac{113291698497241117}{1000000000000000000000},\qquad
-G_S=\frac{2400553481931223}{31250000000000000000},
-\]
-and therefore the common-fee gain
-\[
-G_Z+G_S=
-\frac{190109409919040253}{1000000000000000000000}.
-\]
-
-On a bundle-pivot cell the prices are
-\[
-(A,B,C)=(u-c,\rho+227/1000,u).
-\]
-The normalized map has Jacobian \(u-31/40\); including both orientations and
-both bidders gives symmetry factor four.  Direct bivariate integration of the
-41 positive cells gives
-\[
-G_B=\frac{70946101529751}{10240000000000000000}.
-\]
-The eight item-containment rows give
-\[
-G_I=\frac{3963982653557301}{800000000000000000000}.
-\]
-
-The base mechanism's exact expected revenue is
-\[
-R_0=\frac{26232089810531183}{30000000000000000}.
-\]
-The exact verifier in \texttt{certificate/ama\_lower\_bound} reconstructs the
-\(9\cdot4\cdot4=144\) affine/pivot cells using rational arithmetic, finds 39
-full-dimensional cells, triangulates them into 16,336 rational four-simplices,
-checks total volume one, and integrates the affine payments.
-
-The added gains are integrated layer by layer.  The Z/S and bundle-pivot
-supports have disjoint interiors.  Item-containment rows lie within the
-S5 support, but \(G_I\) is the change relative to the already surcharged
-predecessor menu, not relative to the base.  Thus the revenue sum telescopes
-without double counting.
-
-The deterministic predecessor checker binds every input by SHA-256, directly
-reconstructs the eight
-item-containment price regimes, checks their deletion slack and coverage, and
-integrates their exact symbolic polynomials.  Its non-importing replay
-intersects the linear utility-comparison half-planes with \([0,1]^2\).
-At rational prices, the resulting demand polygons have rational vertices,
-so their areas and conditional revenues are computed exactly.  On each item
-row, the prices are affine in \(t\) and the
-price-regime inequalities hold throughout the interval by exact endpoint
-checks.  Lemma~\ref{lem:menu-revenue} therefore makes each conditional revenue
-a polynomial of degree at most three in \(t\).  Boole's rule, which integrates
-polynomials of degree at most five exactly, then gives the row integral in
-rational arithmetic.  The common-fee rows remain within that degree range
-after multiplication by their affine cross-section lengths.  On bundle cells,
-the prices are affine in each of \(u,r\); including the Jacobian gives degree
-at most four in \(u\) and three in \(r\), so tensor Boole quadrature is exact.
-Finite differences at the sampled rational points are consistency checks,
-not proofs of a polynomial degree bound on the whole interval.
-The hash-bound sealed predecessors separately
-recompute the 20 common-fee rows and 41 positive bundle-pivot cells; the bundle
-predecessor has its own direct bivariate integration and independent scalar
-tensor-quadrature replay.  These replays independently recompute the added
-gains, but share the base value \(R_0\) certified by the single polytope
-verifier.  Table~\ref{tab:lower-components} summarizes the dependencies.
-SHA-256 bindings establish the identity of these shared inputs.
-
-\begin{table}[ht]
-\centering\small
-\begin{tabular}{@{}lll@{}}
-\toprule
-Component & Revenue term & Exact integration and replay \\
-\midrule
-Affine base & \(R_0\) & One rational polytope verifier \\
-Twenty common-fee rows & \(G_Z+G_S\) & Polynomial integral; scalar replay \\
-41 bundle-pivot cells & \(G_B\) & Bivariate integral; tensor replay \\
-Eight item rows & \(G_I\) & Polynomial integral; polygon replay \\
-\bottomrule
-\end{tabular}
-\caption{Revenue decomposition.  Each added term is measured against its
-predecessor; all added-gain replays share the same certified base revenue.}
-\label{tab:lower-components}
-\end{table}
-
-Therefore
-\[
-R_0+G_Z+G_S+G_B+G_I
-=
-L_{\rm det}=\LowerBound,
-\]
-certifying the retained deterministic predecessor.
-
-The bundle-pivot, twenty-band, ten-band, and former two-rectangle certificates
-are retained as reproducible predecessors in their separate directories.
-The construction below is the retained V4.6 lower mechanism and its
-residual-screening infrastructure. The active mechanism follows in
-Section~\ref{sec:refined-mechanism}.
-
+\section{A common capacity certificate for all randomized mechanisms}\label{sec:upper}
 \input{joint_residual_screening}
 
-\input{functional_exchange_mechanism}
-
-\section{Exact upper bounds for all randomized mechanisms}\label{sec:upper}
-
-The proof has three layers: an analytic weak-duality theorem, an explicit
-rational witness satisfying its hypotheses, and a finite exact enclosure of
-the witness objective.  The analytic theorem does not depend on polynomial
-degree, subdivision depth, or arithmetic scale.
-
-\subsection{Analytic weak duality}\label{subsec:analytic}
-
-For own type \(v_i=(x,y)\) and \(r=\max(x,y)\), define the radial field
+\subsection{Revenue fields and the certificate components}
+For each bidder, the integrable radial field
 \[
-F^0(x,y)=\frac{3r^2-1}{2r^2}(x,y),\qquad F^0(0,0)=0.
+ F^0(x,y)=\frac{3r^2-1}{2r^2}(x,y),\qquad r=\max(x,y),
+ \quad F^0(0,0)=0,
 \]
-Its value at the origin is immaterial to integration.  Since
-\(|F^0|=O(1/r)\), the field is integrable on the square.
+and the divergence-free tangent correction $G_i$ define
+$\phi_i(v)=F^0(v_i)+G_i(v)$. The rational witness $G_i$ is specified in
+Appendix~\ref{app:stream}. The resulting conditional identity is
+\[
+ R_i(v_{-i})=\int_{[0,1]^2}\phi_i(v_i;v_{-i})\cdot a_i(v_i;v_{-i})\,dv_i
+               -u_i(0;v_{-i}).
+\]
+Appendix~\ref{app:stream} proves the identity for Lipschitz convex utilities
+and specifies every rational stream coefficient. A second nonnegative field
+$\Psi$ satisfies $\langle\Psi,a\rangle-R=3\int_{D_0}u\ge0$ for
+every conditional DSIC/IR mechanism. Its formula, no-sale region $D_0$ and
+the square $W_0=[0,43/100]^2$ are given in Appendix~\ref{app:integration}.
 
-\begin{theorem}[Stream weak duality]\label{thm:stream}
-For each bidder \(i\), let \(G_i\) be a jointly \(C^1\) vector field on
-\([0,1]^4\).  Suppose that, for each opponent report, its own-type divergence
-is zero and its normal component vanishes on every side of the own-type
-square.  Put \(F_i(v)=F^0(v_i)+G_i(v)\).  Every admissible mechanism \(M\)
-satisfies
-\begin{equation}\label{eq:stream-envelope}
-\operatorname{Rev}(M)\leq
-\mathcal E(F):=\int_{[0,1]^4}\sum_{j=1}^2
-\max\{0,F_{1j}(v),F_{2j}(v)\}\,dv.
-\end{equation}
-Consequently \(\OPT\leq\mathcal E(F)\).
-\end{theorem}
+Write $B$ for the integral of the stream maximum, $B_{20}$ for its certified
+Bernstein majorant and $D$ for the reduction obtained by switching to $\Psi$
+on opposing reports in $W_0$. The exact lower bound $\Delta_{1024}\le D$
+and four compatible incentive cycles define the reference accounting constant
+\[
+ U_{\rm ref}=B_{20}-\Delta_{1024}-81/10^{10}.
+\]
+This constant is used only to assemble the final upper $U$. The certificate
+below includes all support replacements and all incentive corrections at once.
 
-\begin{proof}
-Fix bidder \(i\) and an opponent report on a full-measure set for which the
-conditional expected-payment slice is integrable.  Write truthful utility as
-\(u(v)\), expected allocation as \(X(v)\in[0,1]^2\), and expected payment as
-\(p(v)\).  Pointwise DSIC gives
-\[
-u(v)\geq u(r)+(v-r)\cdot X(r)\qquad\text{for every }v,r.
-\]
-Thus \(u\) is convex and \(X(r)\in\partial u(r)\).  These inequalities and
-\(0\leq X_j\leq1\) also make \(u\) Lipschitz.  At every differentiability
-point, \(X=\nabla u\).  At nonsmooth points we retain the mechanism's given
-jointly measurable subgradient selection; its pointwise feasibility is part
-of the model, not inferred from an almost-everywhere gradient.
+\input{v5_common_support}
 
-Joint measurability and the assumed integrability of the payment, together
-with boundedness of \(v\cdot X\), make \(u=v\cdot X-p\) measurable and
-integrable.  Thus the conditional identities below apply on this full-measure
-set of opponent reports and may then be integrated by Fubini.
+\section{Reproducibility and trusted computations}\label{sec:reproduction}
+The certificate package specifies the full continuous mechanism, all rational
+coefficients and the exact component assembly. Discovery optimizations are
+not proof inputs. Polynomial cells are accepted only after inequalities are
+certified over their whole domains; finite report checks serve implementation
+validation and do not establish continuous incentive compatibility.
 
-We retain the origin utility explicitly.  The Lipschitz bound gives
-\(|u(v)-u(0)|\leq2\), so the opponent-dependent value \(u(0)\) is integrable
-as well.  Ex-post IR gives \(u(0)\geq0\).
+The mechanism's DSIC, IR and feasibility follow from the all-real arguments
+in Section~\ref{sec:mechanism} and Appendix~\ref{app:compatibility}. Its seed
+revenue is independently reconstructed by polynomial/simplex integration,
+polygon boundary integrals and vertical slicing. A separate implementation,
+importing no source calculator, reconstructs every face enclosure used by the
+reserve formula. These calculations share the analytic menu specification.
 
-Partition the square into the two radial charts
-\[
-v=s(1,t)\quad\text{and}\quad v=s(t,1),
-\qquad 0\leq s,t\leq1,
-\]
-each with Jacobian \(s\).  On a fixed ray set \(q=(1,t)\) or \((t,1)\) and
-\(g(s)=u(sq)\).  Convexity makes \(g\) absolutely continuous and
-\(g'(s)=q\cdot X(sq)\) almost everywhere and \(g(0)=u(0)\).  Since
-\(p(sq)=s g'(s)-g(s)\),
-\[
-\int_0^1p(sq)s\,ds
-=\int_0^1\frac{3s^2-1}{2}\,g'(s)\,ds-\frac{u(0)}2.
-\]
-Combining the two charts gives the conditional revenue identity
-\[
-\int_{[0,1]^2}p(v)\,dv
-=\int_{[0,1]^2}F^0(v)\cdot X(v)\,dv-u(0).
-\]
-The correction is bounded, and \(u\in W^{1,\infty}\).  Weak Green integration,
-zero own-type divergence, and the zero normal trace therefore give
-\[
-\int_{[0,1]^2}G_i\cdot\nabla u=0.
-\]
-Thus replacing \(F^0\) by \(F_i\) preserves the conditional identity.
+The upper verification reconstructs the stream polynomials and complete
+Bernstein coverage. The $B_{20}$ majorant has two complete implementations.
+The $\Delta_{1024}$ subtraction has one full accumulation, with a separate
+reconstruction of averaged coefficients, classifications through size 64 and
+selected cell integrals. The master system has a separate complete replay
+of its shared cells and aggregate bounds. The opposing-excess tree has a full
+directed-arithmetic replay and bounded independent cross-checks, rather than
+a second independently implemented full tree.
 
-Apply this identity to both bidders and then integrate over opponent reports.
-Fubini is justified by the integrability established above.  Dropping the
-nonpositive origin terms leaves the sum of the field-allocation pairings.
-For every profile and item \(j\), feasibility gives
-\(X_{1j}+X_{2j}\leq1\), with both allocations nonnegative.  Hence
-\[
-\sum_i F_{ij}X_{ij}
-\leq
-\max\{0,F_{1j},F_{2j}\}.
-\]
-This pointwise relaxation is valid for arbitrary expected allocations and
-therefore for arbitrary internal randomization.  Integrating proves
-\eqref{eq:stream-envelope}; the maximizing allocation in its integrand need
-not itself be implementable by a DSIC mechanism.
-\end{proof}
+Rational polynomial arithmetic, integer accumulation and directed error
+bounds support the numerical enclosures. The opposing-excess traversal also
+assumes IEEE binary64 round-to-nearest arithmetic and outward expansion by
+NumPy's \texttt{nextafter}. The trusted components are the written analytic
+arguments, the stated arithmetic semantics and the verification programs.
+This is a computer-assisted proof package, not a proof-assistant formalization.
 
-\paragraph{Boundary interpretation.}
-The radial identity can also be checked by integration by parts.  The
-classical divergence of \(F^0\) is \(3\) in each open triangle \(x>y>0\) and
-\(y>x>0\), hence almost everywhere.  Continuity across the diagonal away
-from the origin makes the interface fluxes cancel.  The outer boundary flux
-is \(2\), while the flux around a puncture at the corner \((0,0)\) tends to
-\(1\), with the normal pointing into the removed square.  Applying Green's
-formula to the two triangles outside \([0,\varepsilon]^2\) and letting
-\(\varepsilon\downarrow0\) gives
-\[
-\int F^0\cdot\nabla u
-=\int_{x=1}u+\int_{y=1}u-3\int_{[0,1]^2}u+u(0).
-\]
-Lipschitz continuity replaces the trace at the puncture by \(u(0)\) with
-vanishing error.  This accounts for the corner term without treating a
-boundary corner as an interior distributional source.
+The package README maps the manuscript's mathematical components to their
+machine-readable files and gives a single reproduction command. It checks
+the certificate dependencies, exact endpoint assembly, manuscript consistency,
+clean compilation and complete SHA-256 coverage. Existing source directory
+names are implementation identifiers; they do not specify an additional
+auction or change the final theorem. Hashes establish file identity,
+separately from analytic validity and computational replay.
 
-\subsection{An uncorrected radial benchmark}
-
-Taking \(G_i=0\) gives a useful analytic benchmark.  In the radial charts,
-\(F^0(sq)=\phi(s)q\), where \(\phi(s)=(3s^2-1)/(2s)\).
-
-For completeness, the remaining scalar expectation can be evaluated exactly.
-Under the two radial charts, a uniform type can be generated by taking \(S\)
-with density \(2s\), an independent fair choice of which coordinate is
-maximal, and an independent \(T\sim U[0,1]\).  For one fixed item its radial
-coordinate therefore has distribution
-\[
-Q\sim\frac12\delta_1+\frac12U[0,1].
-\]
-Set \(Y=\max\{0,\phi(S)\}\), independently of \(Q\).  For two bidders let
-\(a=\max(Y_1,Y_2)\) and \(b=\min(Y_1,Y_2)\).  Conditioning on the four
-atom/uniform cases for \(Q_1,Q_2\) gives
-\[
-\mathbb E_{Q_1,Q_2}\max\{Y_1Q_1,Y_2Q_2\}
-=\frac34a+\frac{b^2}{6a},
-\]
-where \(b^2/a\) is defined as zero when \(a=0\).  Since the two items are
-symmetric,
-\begin{equation}\label{eq:radial-moments}
-U_{\rm rad}
-=\frac32\mathbb E[a]+\frac13\mathbb E\!\left[\frac{b^2}{a}\right].
-\end{equation}
-
-Put \(r=1/\sqrt3\).  The function \(\phi\) is increasing from zero to one on
-\([r,1]\), while \(Y=0\) below \(r\).  The larger of two independent \(S\)'s
-has density \(4s^3\), hence
-\[
-\mathbb E[a]
-=\int_r^1 4s^3\phi(s)\,ds
-=\frac8{15}+\frac4{45\sqrt3}.
-\]
-Ordering the two \(S\)'s gives the second moment as the explicit integral
-\[
-\mathbb E\!\left[\frac{b^2}{a}\right]
-=8\int_r^1\frac{s}{\phi(s)}
-  \left(\int_r^s t\phi(t)^2\,dt\right)ds.
-\]
-The inner integral is
-\[
-J(s)=
-\frac9{16}s^4-\frac34s^2+\frac14\log s
-+\frac3{16}+\frac18\log3,
-\]
-so the last display equals
-\[
-16\int_r^1\frac{s^2J(s)}{3s^2-1}\,ds.
-\]
-Set \(x=\sqrt3s\).  The cancellation of the \(\log3\) terms in \(J\)
-reduces this integral to
-\[
-\frac1{3\sqrt3}\int_1^{\sqrt3}x^2(x^2-3)\,dx
-+\frac4{3\sqrt3}\int_1^{\sqrt3}\frac{x^2\log x}{x^2-1}\,dx.
-\]
-Use \(x^2/(x^2-1)=1+1/(x^2-1)\).  For the only non-elementary term, the
-substitution \(y=(x-1)/(x+1)\) has upper endpoint
-\(d=2-\sqrt3\) and gives
-\[
-\int_1^{\sqrt3}\frac{\log x}{x^2-1}\,dx
-=\frac12\int_0^d\frac{\log(1+y)-\log(1-y)}{y}\,dy
-=\frac12[\Li(d)-\Li(-d)],
-\]
-where
-\[
-\frac{d}{dz}\Li(z)=-\frac{\log(1-z)}{z}
-\]
-was used in the last equality.  The remaining polynomial and
-\(\int\log x\,dx\) terms then give
-\[
--\frac{26}{15}+\frac8{5\sqrt3}+\frac43\log\sqrt3
-+\frac2{3\sqrt3}\bigl[\Li(d)-\Li(-d)\bigr].
-\]
-Substitution in \eqref{eq:radial-moments} gives
-\[
-U_{\rm rad}
-=
-\frac{2}{9}+\frac{2}{3\sqrt3}+\frac{4}{9}\log\sqrt3
-+\frac{2}{9\sqrt3}
-\left[\Li(2-\sqrt3)-\Li(\sqrt3-2)\right].
-\]
-This gives \(\OPT\leq U_{\rm rad}=0.920577474278749\ldots\).  We next improve
-this benchmark with a rational stream correction.
-
-\subsection{The rational stream witness}\label{subsec:witness}
-
-We now add an opponent-dependent curl.  For an exponent
-\(e=(e_0,e_1,e_2,e_3)\), put
-\[
-m_e=x^{e_0}y^{e_1}z^{e_2}w^{e_3},\qquad
-\sigma(e)=(e_1,e_0,e_3,e_2).
-\]
-Let \(E\) be the lexicographically smaller member of every nontrivial
-\(\sigma\)-pair of total degree at most four.  Define
-\[
-h(x,y,z,w)=\sum_{e\in E}\theta_e(m_e-m_{\sigma(e)}),
-\quad
-\psi=x(1-x)y(1-y)h,
-\quad
-G=(\partial_y\psi,-\partial_x\psi).
-\]
-The thirty-two rational coefficients are listed below in the exact basis
-order used by the verifier.  A convex quasi-Monte Carlo search was used only
-to discover them; the proof defines the field by the following rational
-numbers and does not trust the numerical optimization.
-\[
-\begin{array}{cl@{\qquad}cl}
-\toprule
-e&\theta_e&e&\theta_e\\
-\midrule
-(0,0,0,1)&-2995385/993184&(0,0,0,2)&2337131/676164\\
-(0,0,0,3)&5724621/964727&(0,0,0,4)&-4591777/714341\\
-(0,0,1,2)&-834567/846478&(0,0,1,3)&6291553/970203\\
-(0,1,0,0)&2762675/446201&(0,1,0,1)&206964/961681\\
-(0,1,0,2)&-6090207/979156&(0,1,0,3)&6862090/913753\\
-(0,1,1,0)&-5206994/854575&(0,1,1,1)&515889/117356\\
-(0,1,1,2)&-3346363/843816&(0,1,2,0)&-125263/465506\\
-(0,1,2,1)&3005651/895053&(0,1,3,0)&-1043238/468269\\
-(0,2,0,0)&1660919/994155&(0,2,0,1)&1276309/943222\\
-(0,2,0,2)&-2075136/255347&(0,2,1,0)&404816/59269\\
-(0,2,1,1)&250988/352269&(0,2,2,0)&3825425/994154\\
-(0,3,0,0)&-5383501/354845&(0,3,0,1)&3312081/940771\\
-(0,3,1,0)&-4885471/759831&(0,4,0,0)&7648954/974695\\
-(1,1,0,1)&-603823/508896&(1,1,0,2)&417332/188831\\
-(1,2,0,0)&17884893/955196&(1,2,0,1)&992961/785407\\
-(1,2,1,0)&2761171/712822&(1,3,0,0)&-3841999/611370\\
-\bottomrule
-\end{array}
-\]
-
-Give bidder 2 the same construction with \((x,y)\) and \((z,w)\) swapped,
-and put \(F_i=F_i^0+G_i\).
-
-\begin{lemma}[Rational witness feasibility]\label{lem:witness}
-These fields satisfy Theorem~\ref{thm:stream}.  They are equivariant under
-bidder exchange and simultaneous item exchange.
-\end{lemma}
-
-\begin{proof}
-The corrections are polynomials.  Equality of mixed partial derivatives gives
-\(\operatorname{div}_{x,y}G=0\).  Moreover \(G\cdot n=0\) on each side of
-the own-type square: on a vertical side \(\partial_y\psi=0\), and on a
-horizontal side \(-\partial_x\psi=0\), because of the boundary factors in
-\(\psi\).  Bidder symmetry follows from the definition of \(G_2\).  Finally,
-\(h(y,x,w,z)=-h(x,y,z,w)\), hence the same antisymmetry holds for \(\psi\).
-Differentiation gives
-\[
-G(y,x,w,z)=(G_y(x,y,z,w),G_x(x,y,z,w)),
-\]
-where \(G_x,G_y\) denote the two components.  The radial field has the same
-item-exchange property, proving the claim.
-\end{proof}
-
-\subsection{Finite exact enclosure}\label{subsec:enclosure}
-
-\begin{proposition}[Certified envelope]\label{prop:enclosure}
-For the fields in Lemma~\ref{lem:witness},
-\(\mathcal E(F)\leq\Ustream\).
-\end{proposition}
-
-\begin{proof}[Computer-assisted proof]
-It remains to bound the integral in \eqref{eq:stream-envelope} exactly.  Split
-each bidder square into \((s,st)\) and \((st,s)\).  In each of the four chart
-pairs, multiplication by the Jacobian \(s_1s_2\) turns both item-1 competitors
-into exact rational polynomials in \((s_1,t_1,s_2,t_2)\).  The antisymmetry of
-\(h\) under \((x,y,z,w)\mapsto(y,x,w,z)\) exchanges the two field components;
-invariance of the uniform distribution therefore makes the item-2 integral
-identical.  The two charts overlap only on the diagonal and at the origin,
-which are null sets.
-
-The certificate converts each polynomial and their exact difference to tensor
-Bernstein form.  A polynomial lies in the convex hull of its Bernstein control
-coefficients, and its box integral is the box volume times their mean.  Every
-exact initial control \(c\) is stored as an integer \(m=\lfloor10^9c\rfloor\)
-with error radius one.  A degree-\(n\) de Casteljau half-box split makes \(n\)
-floor averages, so the rigorous radius update is \(E\leftarrow E+n\).  Lower
-bounds for a competitor and for the exact competitor difference certify a
-fixed winner; otherwise the maximum upper control gives a valid supremum
-charge.
-
-The tree uses the maximum-variation axis above the final four levels of a
-depth-21 base partition and exact one-step child-bound lookahead in those final
-four levels.  Each unresolved depth-21 leaf is split once along the best exact
-child-bound axis if and only if that split saves at least one integer
-accumulator unit; otherwise its depth-21 charge is retained.  Each unresolved
-child of an accepted depth-22 split is then tested independently: its best
-depth-23 split is accepted if and only if it saves at least one further unit,
-and otherwise its depth-22 charge is retained.  Taking the minimum of several
-valid upper bounds is valid.  All contributions are accumulated over the
-common depth-23 dyadic denominator.  Each accepted split replaces its parent
-charge by charges on two children with disjoint interiors; a retained box is
-charged once.  The coverage check sums the leaf volumes over all four chart
-pairs to \(4\cdot2^{23}=33554432\) common-denominator units.
-
-The manifest-driven verifier reconstructs the polynomials and reports
-\[
-\begin{array}{rl}
-\text{boxes fixed before unresolved depth-21 leaves}:&404804,\\
-\text{unresolved depth-21 leaves}:&462796,\\
-\text{leaves refined to depth 22}:&391618,\\
-\text{depth-21 leaves retained}:&71178,\\
-\text{fixed depth-22 children}:&173198,\\
-\text{unresolved depth-22 children}:&610038,\\
-\text{depth-22 children refined}:&609951,\\
-\text{depth-22 children retained}:&87,\\
-\text{fixed depth-23 children}:&249438,\\
-\text{unresolved depth-23 children}:&970464,\\
-\text{integer accumulator}:&3715139591287203.
-\end{array}
-\]
-After the four chart pairs and the item-symmetry factor two, this gives
-\[
-\int\sum_j\max\{0,F_{1j},F_{2j}\}
-\leq
-\frac{2\cdot3715139591287203}{10^9\,2^{23}}
-=\boxed{\UpperBound}.
-\]
-\end{proof}
-Together with Theorem~\ref{thm:stream} and Lemma~\ref{lem:witness}, this proves
-the retained stream endpoint. Section~\ref{sec:common-upper} strengthens
-this to the active upper half of Theorem~\ref{thm:bracket}.  The verifier and its
-clean transcript are in the following certificate directory:
-\begin{center}
-\path{certificate/continuous_stream_degree4_two_level_nonuniform_upper_bound/}
+The final parameter and endpoint record is
+\path{certificate/reserve_parameter/manifest.json}, identified by SHA-256
+\begin{center}\small\ttfamily
+e38672592b2a702079339f7b178fd53a\\
+876c3d84f6c08a3b0e679ed16fe43447
 \end{center}
-
-\input{common_capacity_upper}
-
-\subsection{Reproducibility and trusted computations}
-
-The publication archive separates the proof inputs from the numerical search
-that found them.  The trusted upper-bound directory contains the rational
-coefficient manifest, polynomial constructor, exact verifier, non-importing
-replay, and captured transcripts; the root SHA-256 manifest covers these
-files.  The verifier checks all manifest expectations and fails closed on any
-mismatch.  Before fixed-point conversion, every polynomial and Bernstein
-coefficient is constructed with \texttt{fractions.Fraction}.  The largest axis
-degree is eight, the maximum initial absolute control is \(1475346733\), and
-the maximum observed directed-rounding radius is 181 fixed-point units.
-Signed array operations are checked against \(2^{63}-1\); child charges and
-the global accumulator use arbitrary-precision Python integers.
-
-The non-importing iterative replay independently reconstructs the basis, chart
-maps, polynomial arithmetic, Bernstein conversion, subdivision, winner tests,
-selective-refinement rule, and coverage accounting.  Both implementations
-visit 3,738,334 retained-tree nodes and reproduce all refinement counts, with
-\[
-\text{accumulator}=3715139591287203,\qquad
-\text{coverage}=33554432/33554432.
-\]
-The independence is at the implementation level: both programs share the
-rational input manifest and the Bernstein enclosure principle.  They audit
-the finite arithmetic; Theorem~\ref{thm:stream} supplies the analytic
-weak-duality argument. The lower endpoint and remaining-gap fields printed
-inside those unchanged upper manifests and transcripts are historical
-comparisons. The active bracket uses the new majorant, conditional subtraction and
-cycles in Section~\ref{sec:common-upper}, paired with $R_*$.
-
-The lower-bound chain reconstructs the 144 affine/pivot cells with one exact
-base verifier.  Separate replays recompute the added gains from twenty
-common-fee rows, 41 positive bundle-pivot cells, and eight item-containment
-rows, while retaining the shared base revenue.  They use scalar rational
-arithmetic, finite-difference consistency checks, exact Boole quadrature,
-and, for the final non-common perturbation, exact demand-polygon clipping.
-The degree bounds needed for exact quadrature follow from the analytic menu
-formula and the verified price regions, not from finite sampling.
-The retained V4.6 source-bound lower package separately replays the 29 declared
-mathematical entry points and independent audits of the final menu,
-coordinate-line supports, and exact radical/logarithmic increments. It
-retains the earlier certified reference integral explicitly. This is not a
-claim of a second from-scratch integration of every historical base layer.
-The active coordinated package separately invokes 46 mathematical entrypoints,
-including the new mechanism, two source revenue integrations, the present
-third reconstruction, conditional identities, both complete upper traversals,
-and a latest-candidate slack audit. It materializes a sealed temporary mirror
-and needs no original research workspace. The old slower upper traversal is
-retained for historical reproduction. For the active upper, $B_{20}$ has
-two complete independently implemented traversals. The subtraction
-$\Delta_{1024}$ has one complete partition accumulation, plus independent
-reconstruction of every averaged polynomial coefficient, classification
-cross-checks for partition sizes up to 64 and selected exact cell-integral
-checks. That second check reuses the primary classifier and integral-table
-functions; it is not a second complete 1024-partition accumulation.
-The four IC cycles have separate whole-box strict-sign and exact decrement
-proofs. The supported release entry point is
-\texttt{python -B verification/reproduce\_all.py}.  It reruns all
-publication-facing checks,
-compares their structured outputs with the theorem endpoints, and verifies the
-archive hash manifest.  The computational trusted base comprises Python's
-integer semantics, \texttt{fractions.Fraction}, the checked NumPy integer
-operations, JSON parsing, SHA-256, and file I/O.  The entry point rejects
-optimized Python execution with an explicit runtime check and a nonzero exit
-status; this protects the executable assertions retained in predecessor
-kernels.  Direct kernel invocations also require non-optimized Python.
-No optimizer output is read on the trusted proof path.
+This content identifier fixes the selected reserve, face-input bindings and
+upper assembly independently of the repository's mutable default branch.
+The accompanying \texttt{SHA256SUMS} covers the complete release files.
 
 \section{Discussion and open problem}
+An explicit jointly feasible mechanism earns more than $99.3384\%$ of optimal
+revenue, and its certified gap to an unrestricted upper is below $0.005837245$.
+The construction prices both physical scarcity and the incentive restrictions
+that accompany a change in capacity. The remaining gap is mathematical;
+it is not a sampling error or an optimization tolerance.
 
-The coordinated search produces a certified gap of
-$0.0064588887869189193157\ldots$, below $0.01$, and a mechanism earning
-more than $99.2684\%$ of unrestricted optimal revenue. The numerical
-advance has two distinct sources. Complete joint menu changes increase the
-lower revenue, while reusable conditional screening and long-range IC
-constraints reduce the global upper. Exact continuous calculations,
-with the componentwise independence specified above, support both endpoints;
-no finite type model substitutes for the auction.
+The reserve transformation provides a globally admissible revenue variation.
+Its validity includes exceptional reports and ties, and its revenue includes
+the positive-probability faces created by clamping. The positive derivative
+at the seed and the separately certified finite gain show what this variation
+accomplishes. Neither result proves optimality of the chosen reserve or of
+the transformed mechanism.
 
-The theoretical link is the information-rent effect of capacity. In the
-occupied-wing theorem, a marginal unavailable on a strip makes utility
-constant in one coordinate. A left-edge rent can then be integrated over
-all reports forced by incentives to share it. This solves a full randomized
-conditional problem even where a pointwise scarcity price alone would miss
-the constraint. On the primal side, an inverse plateau moves a positive-volume
-set of menus together. Its revenue effect must include every induced switch
-and payment change. These statements explain how a joint reallocation can
-improve a mechanism even where isolated conditional replacements cannot.
+On the upper side, opposing-field charges and shared-cell aggregation make
+conditional replacements and incentive flows compatible in one common price.
+Zero charged screening values alone do not supply an equality auction: the
+same allocation must also use priced capacity and satisfy the virtual and
+incentive equalities. Numerical enclosure remainders are kept separate from
+these mechanism slacks.
 
-A different conditional identity is reusable at arbitrary residuals. Together
-with an opposing sign condition, it decreases the total common capacity
-price; compatible IC cycles reduce it further. The stream maximum already
-has both unrestricted charged values zero, so their solvability alone is
-not a new conclusion. The smaller common price still falls short of an
-equality auction. The explicit gap decomposition separates four mechanism slacks
-from the Bernstein and omitted-cell remainders. A strict lottery-box slack
-against the selected mechanism proves that this particular measure does not
-match it; it does not prove the mechanism suboptimal.
+The reusable content consists of the incentive-preserving transformation,
+exact face accounting and common-price compatibility arguments under their
+stated hypotheses. The quantitative mechanism and certificate are specific
+to the uniform two-bidder, two-item instance. Convex utility, transport duality
+and complementary slackness are established principles; no first-in-literature
+or cross-instance performance claim is made. The rounded external GemNet
+benchmark does not resolve the comparison with its unrounded revenue.
 
-Convex potentials, transport duality and complementary slackness are established
-ideas. The instance-specific contributions are the displayed complete exchange,
-the occupied-region screening identities, the compatible reductions in
-common price mass and
-its exact arithmetic certification. We make no claim of first use of the
-underlying principles. The formulas depend on the uniform distribution and
-the stated capacity geometry; general success on other distributions or larger
-auctions has not been established. The external reported GemNet revenue is
-rounded, so the numerical comparison alone does not certify a ranking.
-
-The remaining problem is to make allocations, information rents and common
-capacity prices satisfy equality simultaneously. The conditional coverage
-map identifies frozen-residual directions that cannot help, while the slack
-identities identify what a prospective joint change or dual representation
-must alter. Neither finite-family stationarity, a fixed decreasing sequence
-of bounds nor failure of one certificate proves unrestricted optimality.
-The optimal auction and a matching global upper bound remain open.
+The optimal mechanism and a matching global upper bound remain open.
+Stationarity in a restricted family and failure to find a certificate in
+one representation do not establish unrestricted optimality.
 
 \section*{Data, code, and materials availability}
 
@@ -1048,8 +324,8 @@ The accompanying release archive contains all exact certificate data, determinis
 verification code, transcripts, environment information, and SHA-256
 manifests needed to reproduce the stated bounds.  Manuscript, certificate
 data, and other textual materials are released under CC BY 4.0.  Verification
-software is separately released under the MIT License.  Discovery-only
-experiments are segregated from the trusted proof artifacts.
+software is separately released under the MIT License.  The separate research workspace retains discovery-only experiments; the
+publication entrypoints use the bundled proof inputs.
 
 \section*{AI-assisted tools declaration}
 
@@ -1063,6 +339,17 @@ and numerical search outputs were not treated as proofs; the stated results
 are supported by the analytic arguments and exact certificates described
 here.  The author retains responsibility for the content, correctness, and
 final presentation of this work.
+
+
+\appendix
+\section{Pointwise menu compatibility and seed revenue}\label{app:compatibility}
+\input{appendix_mechanism}
+
+\section{The radial identity and rational stream field}\label{app:stream}
+\input{appendix_stream}
+
+\section{Conditional support and certified integral components}\label{app:integration}
+\input{common_capacity_upper}
 
 \bibliographystyle{plainnat}
 \begingroup
