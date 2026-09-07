@@ -2,10 +2,10 @@
   "status": "FRESH_V46_REVENUE_RECONSTRUCTION_AND_STRICT_GAP_PASS",
   "boundary": "Fresh reconstruction of all V4.6 algebraic and logarithmic additions; V4.5 baseline interval retained. Mechanism all-real proof and inherited upper proof are separate dependencies.",
   "source_sha256": {
-    "V4_5/certificate/independent_lottery.json": "2f3adf5ee77e858be029e5a35ec6119712ff0ae9b2855edc96ababeff45bd12c",
-    "V4_6/certificate/consolidated_bounds.json": "b1f1ea198be1d0fa8d3a61ff1f5b0fd9c0ee4024d1c2bf89d886bb41600f0e47",
-    "V4_6/certificate/price_joint_revenue.json": "9d870c8a641515145edef1b1695304b7cb8079d04b9635ddca8fe793b2cd822a",
-    "V3/certificate/baseline_mechanism.json": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5"
+    "V4_5/certificate/independent_lottery.json": "3443ec9478765c03b8a75ca2609d3f6e0c5ec00f2be474cd4d074620e86b40d3",
+    "V4_6/certificate/consolidated_bounds.json": "f13b3aee4ed0768be813a439b8ccffd87645c8948ca563b790db4363e79208e3",
+    "V4_6/certificate/price_joint_revenue.json": "6a1c1f7c13c494a54558e8ba2e54c77b87e70ec3f75f9b930ae1fdf1af062443",
+    "V3/certificate/baseline_mechanism.json": "98baccdc7fdfc79df31bd0acb0e3b16ae90334e40b5e9e9dc457d7deeb482fdc"
   },
   "algebraic_coefficients": [
     "-1609541379668231661249547038251/159173905464000000000000000000000",

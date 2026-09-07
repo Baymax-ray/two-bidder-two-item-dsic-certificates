@@ -125,8 +125,8 @@
   "dependencies": "Python standard library only; no imports from proof packages",
   "arithmetic_scope": "Revenue independently reintegrated; upper formula reconciled but upper validity separately audited",
   "source_sha256": {
-    "V4_6_1_1_lower_bound/certificate/refined_revenue.json": "312a1d5d07cb46a0529839ef74ae09ad275fcedc942cc8c10f7e95d4ac5c70f6",
-    "V4_6_1_lower_bound/certificate/branch_summary.json": "0becb29ac68791a2b73a9df4dd951cb2d8dead758b8dca1c4f729467d2a671e4",
-    "V4_6_2_upper/certificate/upper_ledger.json": "bc0ec1029a75d87609009fb7626bc3749b062c0218c123c00175aef5e16e0426"
+    "V4_6_1_1_lower_bound/certificate/refined_revenue.json": "17dcac71c6642f66ed273931e03de4af21840a787a2ed86828f2a95c90afccc1",
+    "V4_6_1_lower_bound/certificate/branch_summary.json": "809115aeecb86a79bec1ded51503c4ff30983e7d29cb98b330fb1d60c97087e0",
+    "V4_6_2_upper/certificate/upper_ledger.json": "05656b35cc57bfbc761a829fd264e5b9b50b2f4b5d993206e7b5aebc8bc6f625"
   }
 }

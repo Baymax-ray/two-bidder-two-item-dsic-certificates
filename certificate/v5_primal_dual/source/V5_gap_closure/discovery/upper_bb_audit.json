@@ -10,9 +10,9 @@
   "four_copy_gain": "lambda/10",
   "incumbent_IC_slack": "Nonnegative and retained; not asserted zero.",
   "sources": {
-    "V5_gap_closure\\discovery\\bb_centered_fields.json": "840ac343813eb3d5d96107c27252c85147e9bc667fedefbedf7995b65a0ea1cb",
-    "V5_gap_closure\\discovery\\bb_translation_intervals.py": "bab0b5e656befc3d2f514187024bf87bd5c08aba676ebd2d2e483d07ccf56fb5",
-    "V5_gap_closure\\discovery\\bb_center_fields.py": "a9b2fa4583e28e0cce76de67c74f5cd369298afa5c99706240ab6205cf50da1e",
+    "V5_gap_closure\\discovery\\bb_centered_fields.json": "9e4543b2dae1b0f46a3dc13dca20e0506a47c843b4a1008602dbd81672c451cf",
+    "V5_gap_closure\\discovery\\bb_translation_intervals.py": "04fc7abc87014d1ab9ff065c1ba59f72b69b9fa96392c425590ff58a07100f38",
+    "V5_gap_closure\\discovery\\bb_center_fields.py": "0bd1bb4ae947997725d8ef968cfc8b64ce23113f75616c2bee5023d223815f84",
     "D:\\\u6587\u6863\\ChatGPT\\AI4MATH\\research\\closed\\two-bidder-two-item-dsic-certificates\\certificate\\continuous_stream_degree4_two_level_nonuniform_upper_bound\\manifest.json": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4"
   }
 }

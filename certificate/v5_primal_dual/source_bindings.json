@@ -10,14 +10,14 @@
     {
       "path": "source/V4_6_3_slack_atlas/certificate/atlas_ledger.json",
       "origin": "V4_6_3_slack_atlas/certificate/atlas_ledger.json",
-      "sha256": "1cdddd43a39f51887f39cdfcd07f214a8b802cb738e8ac9def1fcab0bb8e6cc9",
+      "sha256": "748b00ec586e503dea0e3085ef11a2f8bd3b4debdc3349fb0fe7eae2e02b9364",
       "role": "provenance",
       "status": "required_accounting_input"
     },
     {
       "path": "source/V4_6_3_slack_atlas/certificate/numerical_remainder.json",
       "origin": "V4_6_3_slack_atlas/certificate/numerical_remainder.json",
-      "sha256": "bdce00dcf8c5e57258804f39d4a2410f75d5d9bf5626f810c34aafbbcdffef92",
+      "sha256": "29b73101a91327157118e7d3191b099d5b6c8f1030ec158db3a14f09414b01d9",
       "role": "required",
       "status": "replayed_or_imported"
     },
@@ -31,14 +31,14 @@
     {
       "path": "source/V4_6_3_slack_atlas/verifier/independent_lifted_fields.py",
       "origin": "V4_6_3_slack_atlas/verifier/independent_lifted_fields.py",
-      "sha256": "5cf85c967a2840c8e258c69b0f8aeb8a07fe5883614f6acb7a3de4e7f6ad08a9",
+      "sha256": "c26e287d522a89d5e0da93b734eb0a27379ee67340f88e95de9ccfc0616bc96c",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_6_3_slack_atlas/verifier/independent_menu_classifier.py",
       "origin": "V4_6_3_slack_atlas/verifier/independent_menu_classifier.py",
-      "sha256": "e71a388aeb3ec49c829303826f67381cc1ad1eba5daf7b6c5c68067c6e6c8855",
+      "sha256": "d994da87071f76db19c409261bd09893c1b76410f0748e5969115761204d23cf",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
@@ -52,77 +52,77 @@
     {
       "path": "source/V4_7/certificate/psd_local_certificate.json",
       "origin": "V4_7/certificate/psd_local_certificate.json",
-      "sha256": "2daf5b6de57a9a85ce772fc70a3bd867ad95b77e7bafb299b25e669bcceffc31",
+      "sha256": "b0621a0f42d8ab0470c7b8ab34c8945b96e75731585b146859a2070170465200",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_7/verifier/independent_psd_first_event.py",
       "origin": "V4_7/verifier/independent_psd_first_event.py",
-      "sha256": "8017ad245f240beeecd592b12515e1cf615b4cc235e1e4798ad54a51570fff79",
+      "sha256": "8ccf719cccb63117aba9ee43deebb1057080eaf4a4311dd2aafe40a9e15f0c04",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_7/verifier/psd_polynomials.py",
       "origin": "V4_7/verifier/psd_polynomials.py",
-      "sha256": "c6fcc40272f44c7f8207c28c7150e0d8a50ce9411d4cd323cd654184c89ea872",
+      "sha256": "3e5671d87cc7acf9d46390db795a8257b459a443c1bec0dc0c971d69dce8b7de",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_8A_frozen_primal/certificate/first_event_gain.json",
       "origin": "V4_8A_frozen_primal/certificate/first_event_gain.json",
-      "sha256": "b82540f34c3bf9e82b0104faa00843475446d30e9d4be549966d624ddf4d906a",
+      "sha256": "132f653790b8d66be9f0cb97eef702e0379462c05d7f1005f4f5cc447379924d",
       "role": "provenance",
       "status": "required_accounting_input"
     },
     {
       "path": "source/V4_8A_frozen_primal/certificate/master_certificate.json",
       "origin": "V4_8A_frozen_primal/certificate/master_certificate.json",
-      "sha256": "9da374813b2d7e02c845f0a6050ad155fc60cb77d09241f85a81616a687304f7",
+      "sha256": "6658caaeb077bda3f1f403a24a242d15716509d4d182797e856062417b1e2f8f",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_8A_frozen_primal/certificate/master_independent.json",
       "origin": "V4_8A_frozen_primal/certificate/master_independent.json",
-      "sha256": "704ca2b7f83cac9fe9bafc9bf7931c6ef3768a6328379e704870cee41936191c",
+      "sha256": "4c19e684ee316da9c1cea75a06c950c17786476642e4f32e26255a460c6b5db5",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_8A_frozen_primal/research_log/global_master_theorem.md",
       "origin": "V4_8A_frozen_primal/research_log/global_master_theorem.md",
-      "sha256": "44d557fe8c3d4ad88b8d6fe78d046e025596e3bb2689ef3a42ff7ca72e2e1d98",
+      "sha256": "0e0e131b124b6a89107b3cddc3e163a3298aa2900da986ded02793b5697ac485",
       "role": "required",
       "status": "analytic_reference"
     },
     {
       "path": "source/V4_8A_frozen_primal/verifier/master_algebra.py",
       "origin": "V4_8A_frozen_primal/verifier/master_algebra.py",
-      "sha256": "77d064166f2007744904200c47b8db0d9c2978a1439394cf7efd38e0fd34a5fd",
+      "sha256": "8b25dcafe56f51d0e3f9fb8b4f231509e84b162b0816f62d6e398c5bb3eced44",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_8A_frozen_primal/verifier/master_certificate.py",
       "origin": "V4_8A_frozen_primal/verifier/master_certificate.py",
-      "sha256": "f08852cf2a3a18093118e6fc74b27338ab2a6606bc83a9663e5bdafdd8873111",
+      "sha256": "a06d54e80b781da704bee5171c62b7629968a46ddfed5ec2c73be277de081a31",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_8A_frozen_primal/verifier/master_independent.py",
       "origin": "V4_8A_frozen_primal/verifier/master_independent.py",
-      "sha256": "9f5b0d131eb425cf8b7ff4f32e5d2f323c0e8e465742691e51ed5203d2c1a8bb",
+      "sha256": "a3f694f153456c19f90049253913f68c3d9911e8ada8e21d570677d87c92b531",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V4_8B_support_redesign/certificate/phase_ledger.json",
       "origin": "V4_8B_support_redesign/certificate/phase_ledger.json",
-      "sha256": "ed1bb968e0840e20f2692e6a925ea5188ae8affcdee324c5aa89f47ea1d30bde",
+      "sha256": "2ccefd604fc294055e4c5c65fccd891694603d6a1ed25ede710360dc9c88d833",
       "role": "provenance",
       "status": "required_accounting_input"
     },
@@ -136,14 +136,14 @@
     {
       "path": "source/V5_archive_audit/primal_structure/fresh_structure_receipt.json",
       "origin": "V5_archive_audit/primal_structure/fresh_structure_receipt.json",
-      "sha256": "b7432956b9bb2487ee14e8b86555651d4c921312a957b3cbe5afece1a707eb6f",
+      "sha256": "8cba0385c719c2227f03999c9a7ce9aca7c4711203f841b37f09a0f3850bd046",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_archive_audit/replay_revenue/independent_face_cubature.json",
       "origin": "V5_archive_audit/replay_revenue/independent_face_cubature.json",
-      "sha256": "6f4a7baa6512b2a8cbe7379f4280afa8b59b66057fe5dc5a4516acf1d7d05f7b",
+      "sha256": "9d10529f90017b8bd6170018630dad1a4a60ac7cf54ca13afb6d1c71f4418470",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
@@ -157,7 +157,7 @@
     {
       "path": "source/V5_archive_audit/upper/independent_upper_checks.json",
       "origin": "V5_archive_audit/upper/independent_upper_checks.json",
-      "sha256": "329daaf1fb1f25fc383e4ad0e9cc5391c20d96c0add124f554b1b96a7b35b614",
+      "sha256": "77eea3c3aac5b47048d1f538c3f83331db83a0b1d51756799fe19fb0f035a54a",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
@@ -192,84 +192,84 @@
     {
       "path": "source/V5_gap_closure/certificate/bb_global.json",
       "origin": "V5_gap_closure/certificate/bb_global.json",
-      "sha256": "9d16a186c7545d05b127ef1a27804d4bbb173faf96d1fb79bf0810f6f8f1a0ff",
+      "sha256": "53c2ae563ff137bd90afc8962bca1d9e5132d87847b18076693ecf148ed429e1",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/bb_global_input.json",
       "origin": "V5_gap_closure/certificate/bb_global_input.json",
-      "sha256": "92383922fd941feeb70b8d356d5acacb429709d6626d134379fefcdf2ae9fe42",
+      "sha256": "2fa2dc7a15a8bcf7e5bd3c22415574585ffa5b06571f3224819067b0e703277b",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/global_duality.json",
       "origin": "V5_gap_closure/certificate/global_duality.json",
-      "sha256": "3efa9cae0d08c44e43a64f798f03d7b3b0f653c75714a2318ecae6d4b519fe3d",
+      "sha256": "10594c74bd2f40c2aea6f8878f600809e93e8922a4eff268298b541f34b291f7",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/phase_ledger.json",
       "origin": "V5_gap_closure/certificate/phase_ledger.json",
-      "sha256": "95500dd9dad6517f635bbaffa17277d15456a99e128c226a0257cd68bb528645",
+      "sha256": "57512ea060ac5dd89e31a67db310a9a7184e78b198bbf0d86cde0e7767707280",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/primal_face_integrals.json",
       "origin": "V5_gap_closure/certificate/primal_face_integrals.json",
-      "sha256": "f27a18d668070da8056d08cec3f3953da1b2c88ee76984be499462ded82f50c8",
+      "sha256": "76b945d181bfac652c7c0446e2355ea78005fdf291b36671e8f79f1cce1bae12",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/primal_global.json",
       "origin": "V5_gap_closure/certificate/primal_global.json",
-      "sha256": "4be85b8a6e44009d063b3f027ad70827bbd998b22f8eb83889ac529dabcd2457",
+      "sha256": "b4eba45b977a6640373f8c51f6a23f05be966d9cd8468ecc6bea3c7789af53fb",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/primal_independent.json",
       "origin": "V5_gap_closure/certificate/primal_independent.json",
-      "sha256": "abe4c470cfdc35eb560e0e65a9f51be685484ffb3a49c7179f3f63403aef9656",
+      "sha256": "94367e8c6c7020c22c535afa49e791f54222a3393f931ee4730f23de34bf2075",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/certificate/upper_global.json",
       "origin": "V5_gap_closure/certificate/upper_global.json",
-      "sha256": "47731d5e9785197d2e759ff8c316c8ebf8f6599732dfba2ef9302854da19320e",
+      "sha256": "37a9038d18569538b4d1f824de715a641b6fe597bab76bea5e2cadb624bec2ab",
       "role": "unused_candidate",
       "status": "not_executed_not_in_final_assembly"
     },
     {
       "path": "source/V5_gap_closure/discovery/bb_center_fields.py",
       "origin": "V5_gap_closure/discovery/bb_center_fields.py",
-      "sha256": "a9b2fa4583e28e0cce76de67c74f5cd369298afa5c99706240ab6205cf50da1e",
+      "sha256": "0bd1bb4ae947997725d8ef968cfc8b64ce23113f75616c2bee5023d223815f84",
       "role": "provenance",
       "status": "required_source_binding"
     },
     {
       "path": "source/V5_gap_closure/discovery/bb_centered_fields.json",
       "origin": "V5_gap_closure/discovery/bb_centered_fields.json",
-      "sha256": "840ac343813eb3d5d96107c27252c85147e9bc667fedefbedf7995b65a0ea1cb",
+      "sha256": "9e4543b2dae1b0f46a3dc13dca20e0506a47c843b4a1008602dbd81672c451cf",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/discovery/bb_translation_intervals.py",
       "origin": "V5_gap_closure/discovery/bb_translation_intervals.py",
-      "sha256": "bab0b5e656befc3d2f514187024bf87bd5c08aba676ebd2d2e483d07ccf56fb5",
+      "sha256": "04fc7abc87014d1ab9ff065c1ba59f72b69b9fa96392c425590ff58a07100f38",
       "role": "required",
       "status": "replayed_or_imported"
     },
     {
       "path": "source/V5_gap_closure/discovery/upper_bb_audit.json",
       "origin": "V5_gap_closure/discovery/upper_bb_audit.json",
-      "sha256": "764344c3ff6a58384b4498bb85e35196060d551f332d5584ff102cda9381a0df",
+      "sha256": "d17b47ef63b5a389e3c4e5b2f9fb4c81492c00d23abdf11bf893d993307b9c0c",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
@@ -283,7 +283,7 @@
     {
       "path": "source/V5_gap_closure/discovery/upper_splice_audit.json",
       "origin": "V5_gap_closure/discovery/upper_splice_audit.json",
-      "sha256": "4003088f1214a4f7700c8d4712a23931fc8eb2311e629390cb18f55971090673",
+      "sha256": "456e9289a07e3e802005ba5504aa3073f0bba80fca967f9d2307857c5192b287",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },
@@ -297,7 +297,7 @@
     {
       "path": "source/V5_gap_closure/research_log/bb_global.md",
       "origin": "V5_gap_closure/research_log/bb_global.md",
-      "sha256": "f7cd6192478dfcf3a21b9d96321daaaad877d4a55a07c6737871e765dae1f1ea",
+      "sha256": "27b4cc23b07bf65236af8385e54d20423251b398c0036332834e68afffdeb8c2",
       "role": "required",
       "status": "analytic_reference"
     },
@@ -325,7 +325,7 @@
     {
       "path": "source/V5_gap_closure/research_log/primal_independent_review.md",
       "origin": "V5_gap_closure/research_log/primal_independent_review.md",
-      "sha256": "c83d9a58d0e1483d0958ad0bd87eb38f3857714cc9716948c8b454f71c59b676",
+      "sha256": "922ec8049e7923bc82bcd3d25e6cc837551e84ee4d79647f142f610efbabb7f7",
       "role": "required",
       "status": "analytic_reference"
     },
@@ -339,7 +339,7 @@
     {
       "path": "source/V5_gap_closure/verifier/bb_global.py",
       "origin": "V5_gap_closure/verifier/bb_global.py",
-      "sha256": "89e936aafcc925d61d19f09ca0778e9d7c7186e841235f233c14be7f7e5d029b",
+      "sha256": "9ac59ce04f29af66cdda844a97a70df17f16f146a49ab5c94ad4480ad3322664",
       "role": "required",
       "status": "replayed_or_imported"
     },
@@ -353,7 +353,7 @@
     {
       "path": "source/V5_gap_closure/verifier/phase_ledger.py",
       "origin": "V5_gap_closure/verifier/phase_ledger.py",
-      "sha256": "f5bab1d237cd7629c2925ad77073b022b3c8b2d96c6bfd3775da96241f75ccde",
+      "sha256": "b1a7ef9f5cfe4c72e3b0a51d03c658dc47d1b19d0468e020f96c708ca0ee26b8",
       "role": "provenance",
       "status": "not_executed_not_in_final_assembly"
     },
@@ -374,7 +374,7 @@
     {
       "path": "source/V5_gap_closure/verifier/primal_independent.py",
       "origin": "V5_gap_closure/verifier/primal_independent.py",
-      "sha256": "ac2233b8fa4bc3d4e79fadafcb4d3b6fffb4e401080675289e422452546d339a",
+      "sha256": "ba30800b8923acbbe4c5ca505b2bff059a87ccfefc570b7fdd7b937d3e792ee1",
       "role": "independent_check",
       "status": "replayed_or_imported"
     },

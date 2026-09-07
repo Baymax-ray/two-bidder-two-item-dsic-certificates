@@ -6,11 +6,11 @@
   "sources": {
     "frozen_manifests": {
       "V4_6_1_1_lower_bound": {
-        "manifest_sha256": "92740d2c7771260cdd6050d729b35885e444106b356a6f12f0e1adc0aa13b0ea",
+        "manifest_sha256": "25c4d7433d4a12d3afb8505d3fa2d2ec4a460f9392a2e7a1b71bba66e6637759",
         "verified_files": 53
       },
       "V4_6_2_upper": {
-        "manifest_sha256": "eea06efffe2b37703b2e0c87b5c4637cf68f1459184249e6793c88782bdcb044",
+        "manifest_sha256": "a3dd80d27940c5ac6604fc4a94d98e5ecd8f41dfa8f2cbba3bd27fc90badb7d7",
         "verified_files": 62
       }
     },
@@ -5976,7 +5976,7 @@
   "ranking_scope": "Display order is not a theorem of full ordering. A strict comparison is certified only where one lower endpoint exceeds the other upper endpoint; mixed-semantic mass is kept in its single separate row.",
   "dependencies": {
     "certificate\\trace_slacks.json": "dfa7a10a45135925b008deca65502ea9c45a291cc4ae0ae351ac99257f51c567",
-    "certificate\\numerical_remainder.json": "bdce00dcf8c5e57258804f39d4a2410f75d5d9bf5626f810c34aafbbcdffef92",
+    "certificate\\numerical_remainder.json": "29b73101a91327157118e7d3191b099d5b6c8f1030ec158db3a14f09414b01d9",
     "certificate\\numerical_remainder_audit.json": "ad4744006f3b8a94fe3418f4c2ed38763798b17e1316d41f307d43104f9dfe3b",
     "certificate\\regional_final.json": "60b13864db6718177302d460b81b59168b005c24de35319074f900b126c71eae"
   }

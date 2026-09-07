@@ -72709,7 +72709,7 @@
   "virtual_mismatch_decrease": "at least exact_total_gain_lower; exact additional numerical enclosure kept separate",
   "source_stream_manifest_sha256": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
   "frozen_primal_sha256": "a96febdad8ca1e0ddb320a59ab9520891a25ae9542d0a866396bbb6f35b75852",
-  "reserved_V47_certificate_sha256": "2daf5b6de57a9a85ce772fc70a3bd867ad95b77e7bafb299b25e669bcceffc31",
-  "reserved_V462_cycle_sha256": "602062305701b2abad5f73e16204886b19aabc9eb19f68e8a0f6eecab6ca16e7",
+  "reserved_V47_certificate_sha256": "b0621a0f42d8ab0470c7b8ab34c8945b96e75731585b146859a2070170465200",
+  "reserved_V462_cycle_sha256": "4797a412b882dec7d86e39925f8300c6b446e76b1d5604c6928f184c719d39df",
   "scope": "unrestricted randomized pointwise DSIC/IR upper decrease; finite master optimality is not global mechanism optimality"
 }

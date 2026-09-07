@@ -2,9 +2,9 @@
   "scope": "near-identity origin compression loses; no statement for all lambda<1",
   "method": "exact polynomial integrals and nonnegative omitted terms; no grid",
   "input_sha256": {
-    "base": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
-    "V3": "3d1f899191c780d94263da5b83dca997a13f28a388ed286c211580a2dc499ac3",
-    "V3_1": "25ed34a320152bd66a1569f13828a5c5500a4fd41951bda2e175c929e73364a1"
+    "base": "98baccdc7fdfc79df31bd0acb0e3b16ae90334e40b5e9e9dc457d7deeb482fdc",
+    "V3": "188deeda1fd5d7e7cb01ef6353fe1b5a2758907543564aa7a47990a76badbbcd",
+    "V3_1": "b43ed1315b3dc19ab5754dc35aa9d426aca50f7eeb329efb79350357ce5df4c0"
   },
   "S2": "5509643569103/12000000000000",
   "EC_base": "859549417/750000000",

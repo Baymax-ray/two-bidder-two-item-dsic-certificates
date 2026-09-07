@@ -36,7 +36,7 @@
   },
   "actual_residual": {
     "source": "V4_6_1_lower_bound/verifier/functional_exchange.py",
-    "source_sha256": "123e9ab71ad4e7a1a42ef0687a6ca828fe0bbd13e26b03c3b6f54fd6cddcda5b",
+    "source_sha256": "45b3efc0444dcded81f2b6394f33a0873bc82520223745fd3f6d8f4459224040",
     "complete_menu_profile_checks": 488,
     "strict_interior_bundle_cases": 216,
     "boundary_exception": {

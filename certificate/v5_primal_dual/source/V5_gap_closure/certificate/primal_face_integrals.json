@@ -1648,6 +1648,6 @@
     ]
   ],
   "polynomial_regions": "Source menu branches; exact vertical polynomial integration with certified cut ordering. Only algebraic crossing strips use range bounds.",
-  "source_revenue_certificate_sha256": "312a1d5d07cb46a0529839ef74ae09ad275fcedc942cc8c10f7e95d4ac5c70f6",
+  "source_revenue_certificate_sha256": "17dcac71c6642f66ed273931e03de4af21840a787a2ed86828f2a95c90afccc1",
   "source_primal_sha256": "a96febdad8ca1e0ddb320a59ab9520891a25ae9542d0a866396bbb6f35b75852"
 }

@@ -20,10 +20,10 @@
   "gain_upper": "4635708509693272561011/922337203685477580800000000",
   "reserved_endpoint_separations": 3208,
   "sources": {
-    "V4_7/verifier/psd_polynomials.py": "c6fcc40272f44c7f8207c28c7150e0d8a50ce9411d4cd323cd654184c89ea872",
-    "V4_6_2_upper/verifier/sparse_cycle.py": "339583d940378f27889444ce7ae22e20ff510b6e99e8bec0e57362898fb4a324",
-    "V4_7/certificate/psd_local_certificate.json": "2daf5b6de57a9a85ce772fc70a3bd867ad95b77e7bafb299b25e669bcceffc31",
-    "V4_6_2_upper/certificate/sparse_cycle.json": "602062305701b2abad5f73e16204886b19aabc9eb19f68e8a0f6eecab6ca16e7",
+    "V4_7/verifier/psd_polynomials.py": "3e5671d87cc7acf9d46390db795a8257b459a443c1bec0dc0c971d69dce8b7de",
+    "V4_6_2_upper/verifier/sparse_cycle.py": "d38af061f319f8b54758d0b022fb434478def623a02cfe51eb543aaac4f2420d",
+    "V4_7/certificate/psd_local_certificate.json": "b0621a0f42d8ab0470c7b8ab34c8945b96e75731585b146859a2070170465200",
+    "V4_6_2_upper/certificate/sparse_cycle.json": "4797a412b882dec7d86e39925f8300c6b446e76b1d5604c6928f184c719d39df",
     "V4_8A_frozen_primal/certificate/master_candidate.json": "ec78e7bd99da02ad71463d77ec7992813130b69a0f4b770c7285d9cb41f6a731",
     "V4_8A_frozen_primal/certificate/upper_ledger.json": "4c5f1af0c4dbdfca7988a00b817ea391cdc235c349c5d6c6ab310eea3b16ca94"
   },

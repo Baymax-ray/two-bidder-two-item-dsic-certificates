@@ -64,11 +64,6 @@ The main text follows the final argument: model and theorem, complete
 mechanism, exact revenue, common capacity certificate, verification and
 remaining gap. Three appendices supply menu compatibility and seed revenue,
 the radial/stream proof and coefficients, and certified integral components.
-Version chronology and intermediate performance comparisons are omitted.
-
-The original research remains under the workspace's `output` directory;
-this revision creates no additional research archive. Frozen proof inputs and the current verification evidence remain in the package.
-
 The general reserve proposition explicitly assumes a Borel seed with bounded
 payments and zero-value exclusion. These hypotheses ensure measurability and
 integrability after clamping. The selected seed satisfies them.
@@ -100,14 +95,10 @@ The driver also verifies the frozen dependency packages, including
 introduce additional headline results into the paper.
 
 The [verification guide](verification/README.md) identifies the final mechanism,
-all mathematical entrypoints and their independence boundaries. The current
-[validation record](verification/VALIDATION.md) reports actual replay and build
-scope. Internal reviewer packets and duplicate historical audit trees are not
-required by the publication runner.
+the executable checks and their independence boundaries.
 
 The mathematical record is `certificate/reserve_parameter/manifest.json`.
-Its content hash is printed in the manuscript. No new public release tag or
-repository commit is asserted by this local revision.
+Its content hash is printed in the manuscript.
 
 ## External comparison
 
@@ -123,8 +114,12 @@ Use Python 3.10 or newer with NumPy, and pdfLaTeX with BibTeX (or the
 documented Tectonic fallback). From the package root:
 
 ```powershell
-python -B verification/reproduce_all.py --transcript verification/generated/reproduction.txt
+python -E -s -B -X utf8 verification/reproduce_all.py
 ```
+
+To save a transcript, add `--transcript verification/generated/reproduction.txt`.
+This optional flag writes a temporary log; the canonical command above needs no
+transcript file.
 
 Use `--checks math` for mathematical replay alone, or `--checks release` for
 text, metadata, compilation and hash consistency alone.
@@ -141,10 +136,9 @@ primary replay and bounded independent cross-checks, not a second independently
 implemented full tree. Other independence boundaries are stated in the paper.
 See [ENVIRONMENT.md](ENVIRONMENT.md) for runtime details.
 
-For compilation alone on the configured Windows installation:
+For compilation alone, with pdfLaTeX and BibTeX on `PATH`:
 
 ```powershell
-$env:PATH = 'C:\Users\FangJ\TinyTeX\bin\windows;' + $env:PATH
 cd manuscript
 pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex
 bibtex manuscript

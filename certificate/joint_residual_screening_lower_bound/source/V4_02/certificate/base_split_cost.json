@@ -38,7 +38,7 @@
     "-612392179/1000000000"
   ],
   "total_base_revenue_at_s0": "26232089810531183/30000000000000000",
-  "calibration_input_sha256": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+  "calibration_input_sha256": "98baccdc7fdfc79df31bd0acb0e3b16ae90334e40b5e9e9dc457d7deeb482fdc",
   "total_base_change_at_lower_endpoint": "-1401666113/2000000000000000",
   "conclusion": "the base term loses for every s in [1.136,1.137); other correction terms must be included separately"
 }

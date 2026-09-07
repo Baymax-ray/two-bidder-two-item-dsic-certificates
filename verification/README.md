@@ -1,78 +1,53 @@
-# Reproducing the current revenue bracket
+# Reproducing the revenue certificate
 
-The final mechanism uses `tau=83/10000`. The authoritative mathematical record
-is [reserve_parameter/manifest.json](../certificate/reserve_parameter/manifest.json),
-with revenue in `[0.876514341027067549900397423113,
-0.876514355424052828335888359874]`, unrestricted upper below
-`0.882351585488796576205586892264`, gap below `0.005837245`, and a guarantee
-strictly above **99.3384%** of unrestricted randomized DSIC optimal revenue.
-The exact revenue is the manuscript's sixteen-face integral, not an endpoint
-of its numerical enclosure. The unrestricted optimum and a matching mechanism
-remain open.
+The final mechanism uses `tau=83/10000` and guarantees more than **99.3384%**
+of unrestricted randomized DSIC optimal revenue. The exact expressions and
+certified intervals are in the [final manifest](../certificate/reserve_parameter/manifest.json).
+The optimal mechanism and a matching upper bound remain open.
 
-## Entry points
-
-From the publication-package root, use Python 3.10 or newer with NumPy.
+From the package root, with Python 3.10 or newer, NumPy and a supported TeX
+installation (see [ENVIRONMENT.md](../ENVIRONMENT.md)), run:
 
 ```
 python -E -s -B -X utf8 verification/reproduce_all.py
 ```
 
-The default runs both mathematics and release consistency. `--checks math`
-runs the mathematical dependency chain; `--checks release` checks the current
-text and manifests, builds a clean temporary PDF and checks full SHA-256
-coverage. In the default mode, text and TeX preflight precede long mathematics.
-Optional transcripts must be placed under `verification/generated/`, which
-is temporary and excluded from the release manifest.
+The default checks the text and compilation first, then runs the mathematical
+certificates and verifies the complete file-hash inventory. Use `--checks math`
+for the mathematical checks alone, or `--checks release` for text, compilation
+and hashes. To save your own log, add
+`--transcript verification/generated/reproduction.txt`; this optional directory
+is created when needed and excluded from the hash inventory.
 
-The mathematical chain retains the base and intermediate exact certificates,
-the coordinated component's 46 explicit entrypoints, the portable upper and
-face-moment component's thirteen replays plus exact assembly, and the final
-reserve arithmetic and rational-report implementation checks. Old directory
-names identify dependencies, not the current headline. In particular,
-`certificate/v5_primal_dual/verify_v5.py` reports the intermediate `tau=1/100`
-lower alongside the still-current upper. Continue through the final reserve
-checker to obtain the paper's selected mechanism and final revenue enclosure.
+## Files
 
-The original research workspace is unnecessary. Portable wrappers stage the
-frozen inputs in disposable directories and check their hashes before and
-after replay. `source_bindings.json` distinguishes mathematical inputs,
-independent checks, source/accounting provenance and unused candidates.
-Retained nonexecuted candidates do not establish any deduction in the final upper.
+| File | Purpose |
+|---|---|
+| `reproduce_all.py` | Runs the certificate dependency chain and checks the final numerical claims. |
+| `verify_hashes.py` | Checks every supplied stable file against the root `SHA256SUMS`. |
+| `joint_explanation_check.py` | Independently checks the rational polygon integrals and fee identities used in the joint mechanism's revenue derivation. |
+| `test_portable_runner.py` | Checks the runner's path handling, Python import isolation, rejection of optimized mode and exact zero-value margins. |
 
-## Scope and trust
+The mathematical chain includes the seed certificates, coupled IC and capacity
+certificates, face moments, final reserve arithmetic and rational-report boundary
+checks. The intermediate upper/face package reports `tau=1/100`; the final
+reserve checker supplies the paper's selected `83/10000` mechanism and revenue.
+The original research workspace is unnecessary: the wrappers stage the supplied
+inputs in temporary directories and verify their identities.
 
-The seed revenue has independent full reconstructions. The stream majorant
-has two complete implementations. The conditional subtraction has one full
-1024-partition accumulation, independent coefficient reconstruction and bounded
-cross-checks. The shared-cell master system has a separate complete replay.
-The opposing-excess tree has a full directed-arithmetic replay and bounded
-independent cross-checks, not a second complete independently implemented tree.
-See the manuscript's reproducibility section for the precise independence levels.
+## Scope of verification
 
-Runtime identity and actual imported module paths are emitted during the portable
-replay. Child Python processes ignore ambient Python overrides and user-site
-imports; installed interpreter and library code remain trusted. Proof kernels
-use assertions. `-O`, `-OO` and nonzero `PYTHONOPTIMIZE` are unsupported and
-explicitly rejected at the entrypoints. Path and environment regression checks
-are in `test_portable_runner.py`.
+Hash agreement establishes file identity. The pointwise DSIC, IR, feasibility
+and unrestricted upper-bound arguments are in the manuscript and its analytic
+sources. Finite implementation checks do not replace these continuous proofs.
 
-`joint_explanation_check.py` preserves the separate rational polygon and fee
-identity check formerly stored with internal review notes. The three current
-mathematical packages already contain their independent source checks; duplicate
-audit copies and historical reviewer snapshots are not runtime dependencies.
+The seed revenue and stream majorant have independent full reconstructions.
+The conditional subtraction combines a full accumulation with independent
+coefficient and bounded checks. The shared-cell master system has a separate
+complete replay. The opposing-excess tree has one full directed-arithmetic
+implementation and bounded independent checks. The manuscript specifies these
+independence levels and the arithmetic assumptions.
 
-## Release files
-
-`make_hashes.py` writes the root manifest and `verify_hashes.py` requires exact
-stable-file coverage. The current build, runtime and replay receipts in this
-directory are verification evidence. `reproduction_all.txt` records the full
-reader-copy run; `reproduction_release.txt` records the final-directory checks. Hash agreement establishes identity,
-not mathematical validity. The all-report proofs remain in the manuscript
-and the included analytic sources.
-
-`tools/build_paper.py` and `tools/render_paper.py` retain the configured local
-TinyTeX and Poppler build/QA helpers. They write temporary material beneath
-`generated/`; the portable publication runner supports the environment described
-in [ENVIRONMENT.md](../ENVIRONMENT.md). Old review reports and transient authoring
-outputs are not part of the reader-facing reproduction chain.
+Proof kernels use assertions: do not use `-O`, `-OO` or `PYTHONOPTIMIZE`.
+The runner checks the execution environment and emits Python/NumPy versions
+and module locations. The installed interpreter and libraries remain trusted.

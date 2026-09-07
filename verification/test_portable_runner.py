@@ -13,12 +13,21 @@ ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('portable_runner',ROOT/'certificate/v5_primal_dual/verify_v5.py')
 runner=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(runner)
+resolvers={'v5':runner.safe}
+for label,path in (
+    ('joint','certificate/joint_residual_screening_lower_bound/verify_joint_residual.py'),
+    ('coordinated','certificate/coordinated_primal_dual/verify_coordinated.py')):
+    spec=importlib.util.spec_from_file_location(label,ROOT/path)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    resolvers[label]=module.bound
 
 class PortableRunnerTests(unittest.TestCase):
     def test_inside_path(self):
         root=ROOT/'certificate/v5_primal_dual'
-        self.assertEqual(runner.safe(root,'source/V5_gap_closure/certificate/primal_global.json'),
-                         (root/'source/V5_gap_closure/certificate/primal_global.json').resolve())
+        for label,resolve in resolvers.items():
+            with self.subTest(wrapper=label):
+                self.assertEqual(resolve(root,'source/V5_gap_closure/certificate/primal_global.json'),
+                                 (root/'source/V5_gap_closure/certificate/primal_global.json').resolve())
 
     def test_windows_anchored_and_escaping_names(self):
         # Both Windows cases passed the former is_absolute plus '..' test.
@@ -28,9 +37,10 @@ class PortableRunnerTests(unittest.TestCase):
             self.assertNotIn('..',old.parts)
         for name in ('C:foo',r'C:\foo',r'\foo',r'\\server\share\foo',
                      '/foo','../foo','inside/../../foo','','.'):
-            with self.subTest(name=name):
-                with self.assertRaises(RuntimeError):
-                    runner.safe(ROOT,name)
+            for label,resolve in resolvers.items():
+                with self.subTest(name=name,wrapper=label):
+                    with self.assertRaises(RuntimeError):
+                        resolve(ROOT,name)
 
     def test_clean_import_environment(self):
         with tempfile.TemporaryDirectory(prefix='dsic-import-') as directory:
@@ -50,7 +60,9 @@ class PortableRunnerTests(unittest.TestCase):
                     self.assertFalse(Path(origin).resolve().is_relative_to(shadow))
 
     def test_optimized_entrypoints_reject_before_replay(self):
-        paths=('certificate/v5_primal_dual/verify_v5.py',
+        paths=('certificate/joint_residual_screening_lower_bound/verify_joint_residual.py',
+               'certificate/coordinated_primal_dual/verify_coordinated.py',
+               'certificate/v5_primal_dual/verify_v5.py',
                'certificate/reserve_parameter/verify_reserve.py',
                'certificate/reserve_parameter/mechanism.py',
                'certificate/reserve_parameter/check_implementation.py',
@@ -61,7 +73,7 @@ class PortableRunnerTests(unittest.TestCase):
                     cwd=ROOT,env=runner.child_environment(),stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,text=True,encoding='utf-8',errors='replace')
                 self.assertNotEqual(result.returncode,0)
-                self.assertIn('optimiz',result.stdout.lower())
+                self.assertTrue('optimiz' in result.stdout.lower() or 'without -o' in result.stdout.lower())
 
     def test_retained_zero_value_margins(self):
         # Exact inequalities retained from the former author revision check.

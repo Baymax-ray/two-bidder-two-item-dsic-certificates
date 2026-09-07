@@ -5,7 +5,7 @@ No original workspace or search/discovery script is used. All script outputs
 are compared to frozen certificates by their own entrypoints, then source
 identities and independent endpoint reconciliation are checked again.
 """
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from fractions import Fraction as F
 from hashlib import sha256
 import json,subprocess,sys,tempfile,shutil
@@ -16,8 +16,12 @@ def require(c,m):
     if not c:raise RuntimeError(m)
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def bound(root,name):
-    rel=Path(name);require(not rel.is_absolute() and '..' not in rel.parts,'unsafe path '+name)
-    return root/rel
+    rel=Path(name);windows=PureWindowsPath(name)
+    require(name and not windows.drive and not windows.root
+            and not rel.is_absolute() and '..' not in rel.parts,'unsafe path '+name)
+    root=root.resolve();result=(root/rel).resolve()
+    require(result!=root and result.is_relative_to(root),'path escapes root '+name)
+    return result
 def inputs():
     own=read(PKG/'source_bindings.json')['files'];deps=read(PKG/'dependencies.json')
     require({e['path'] for e in own}=={p.relative_to(PKG).as_posix() for p in (PKG/'source').rglob('*') if p.is_file() and '__pycache__' not in p.parts},'source inventory differs')

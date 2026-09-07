@@ -112,17 +112,17 @@
   "unrestricted_optimum": "OPEN",
   "matching_certificate": "NOT_ESTABLISHED",
   "source_hashes": {
-    "V4_8B_support_redesign/certificate/phase_ledger.json": "ed1bb968e0840e20f2692e6a925ea5188ae8affcdee324c5aa89f47ea1d30bde",
-    "V4_8A_frozen_primal/certificate/first_event_gain.json": "b82540f34c3bf9e82b0104faa00843475446d30e9d4be549966d624ddf4d906a",
-    "V5_gap_closure/certificate/primal_global.json": "4be85b8a6e44009d063b3f027ad70827bbd998b22f8eb83889ac529dabcd2457",
-    "V5_gap_closure/certificate/primal_face_integrals.json": "f27a18d668070da8056d08cec3f3953da1b2c88ee76984be499462ded82f50c8",
-    "V5_gap_closure/certificate/primal_independent.json": "abe4c470cfdc35eb560e0e65a9f51be685484ffb3a49c7179f3f63403aef9656",
-    "V5_gap_closure/certificate/global_duality.json": "3efa9cae0d08c44e43a64f798f03d7b3b0f653c75714a2318ecae6d4b519fe3d",
-    "V5_gap_closure/certificate/bb_global.json": "9d16a186c7545d05b127ef1a27804d4bbb173faf96d1fb79bf0810f6f8f1a0ff",
+    "V4_8B_support_redesign/certificate/phase_ledger.json": "2ccefd604fc294055e4c5c65fccd891694603d6a1ed25ede710360dc9c88d833",
+    "V4_8A_frozen_primal/certificate/first_event_gain.json": "132f653790b8d66be9f0cb97eef702e0379462c05d7f1005f4f5cc447379924d",
+    "V5_gap_closure/certificate/primal_global.json": "b4eba45b977a6640373f8c51f6a23f05be966d9cd8468ecc6bea3c7789af53fb",
+    "V5_gap_closure/certificate/primal_face_integrals.json": "76b945d181bfac652c7c0446e2355ea78005fdf291b36671e8f79f1cce1bae12",
+    "V5_gap_closure/certificate/primal_independent.json": "94367e8c6c7020c22c535afa49e791f54222a3393f931ee4730f23de34bf2075",
+    "V5_gap_closure/certificate/global_duality.json": "10594c74bd2f40c2aea6f8878f600809e93e8922a4eff268298b541f34b291f7",
+    "V5_gap_closure/certificate/bb_global.json": "53c2ae563ff137bd90afc8962bca1d9e5132d87847b18076693ecf148ed429e1",
     "V5_gap_closure/verifier/global_duality.py": "ceb56adf3dc6359d3c9800ea29a15ee33543e31f3085c2771098f915ce6ea639",
-    "V5_gap_closure/verifier/bb_global.py": "89e936aafcc925d61d19f09ca0778e9d7c7186e841235f233c14be7f7e5d029b",
+    "V5_gap_closure/verifier/bb_global.py": "9ac59ce04f29af66cdda844a97a70df17f16f146a49ab5c94ad4480ad3322664",
     "V5_gap_closure/verifier/primal_face_integrals.py": "c77c876f3ada2ec3b78441d0efbdc623206af5067a46705a7ae07b65af3352fd",
     "V5_gap_closure/verifier/primal_global.py": "ddf0fb4d64b860771aa96cb60a39377142f287b54f411cae0e9fde4accf7c6cb",
-    "V5_gap_closure/verifier/primal_independent.py": "ac2233b8fa4bc3d4e79fadafcb4d3b6fffb4e401080675289e422452546d339a"
+    "V5_gap_closure/verifier/primal_independent.py": "ba30800b8923acbbe4c5ca505b2bff059a87ccfefc570b7fdd7b937d3e792ee1"
   }
 }

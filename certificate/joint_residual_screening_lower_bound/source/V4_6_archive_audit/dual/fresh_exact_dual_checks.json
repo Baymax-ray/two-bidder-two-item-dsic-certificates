@@ -1,10 +1,10 @@
 {
   "status": "FRESH_INDEPENDENT_DUAL_ALGEBRA_PASS",
   "source_hashes": {
-    "research_log/inner_lottery_certificate.md": "c3a35ef09fc4d28146df876f867d72686cc176060700ca2202b4770721ec3fa2",
-    "research_log/inner_diagonal_capacity.md": "fe3876ba8bd20203c1f35dff816ac1fbe5fab99d494b7ee610e6e5116b691365",
-    "research_log/conditional_coverage.md": "f07e553ab60a5e6e10bf489f587b3620764ae4cdc73fc6db17fb9aaa6226dd9c",
-    "verifier/price_joint_reallocation.py": "d597ff806e54f7e6c01c739f946d02ed3dc0dfdac02f6e26451c9fb4a3e5f72c"
+    "research_log/inner_lottery_certificate.md": "dbef2d5225a58fe15fd3d0da496e1a585deee00f1bf64be6ab4eb0dfea47183a",
+    "research_log/inner_diagonal_capacity.md": "292ca833ea4740538dddedce9106518a36239b72c40c334e2aaf19783df46098",
+    "research_log/conditional_coverage.md": "1b17d8fc538445104f66588b217b6942c5d6395bd8793d274a2682bfa20450a2",
+    "verifier/price_joint_reallocation.py": "dffa5684e7451aede598278d65dd2241e34fd235a6c14f2c1ebc3ed6b2e3276e"
   },
   "symbolic_identities": [
     "lottery delta factorization",

@@ -12405,9 +12405,9 @@
   "screening_class": "All randomized pointwise DSIC/IR mechanisms; complete conditional support identities.",
   "interval_arithmetic": "Binary64 basic arithmetic with outward nextafter at every operation; rational input enclosures and dyadic integer final sums.",
   "stream_manifest_sha256": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
-  "source_polynomial_sha256": "c6fcc40272f44c7f8207c28c7150e0d8a50ce9411d4cd323cd654184c89ea872",
-  "conditional_support_proof_sha256": "2f87b728d4beee1308c66547f5b1794a084aef9f8314f59250a630423cb2d5e5",
-  "conditional_support_certificate_sha256": "ee8ed95e8d43035923b40c106067264a110d2dbf1daed02837caee654f6c254c",
+  "source_polynomial_sha256": "3e5671d87cc7acf9d46390db795a8257b459a443c1bec0dc0c971d69dce8b7de",
+  "conditional_support_proof_sha256": "132b799e89696ba1f1cb52ba336f7d1ddd6da3629b1af6332a77292e8c473678",
+  "conditional_support_certificate_sha256": "fee205278dcabdfbd0ca273846e4fd40b17a109bc5e94c464bff68ce93ec3058",
   "no_sale_area": "1/3",
   "overlap_accounting": "JxJ superadditivity; low-W intersections retained conservatively; inherited QQ first-event improvement must not be subtracted again.",
   "mechanism_changed": false

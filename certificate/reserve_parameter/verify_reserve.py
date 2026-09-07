@@ -16,7 +16,7 @@ if sys.flags.optimize:
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 BASE=ROOT/'certificate/v5_primal_dual'
-BASE_HASH='819244ddf546d89e50ee2bf30c88d31ef944dd9f3f71d3ad581f81c7afe1f9d5'
+BASE_HASH='204fe57d5ed28a67030f571b1254cc25135df2cb083c1f8444a45afdd3cc5fce'
 FACE='source/V5_gap_closure/certificate/primal_face_integrals.json'
 TAU=F(83,10000)
 
@@ -140,7 +140,7 @@ def main():
     result=calculate()
     path=HERE/'manifest.json'
     if sys.argv[1:]==['--write']:
-        path.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+        path.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
     else:
         assert not sys.argv[1:],'Unknown arguments'
         assert json.loads(path.read_text(encoding='utf-8'))==result,'Derived reserve manifest differs'

@@ -99,7 +99,7 @@
     "manifest.json": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
     "independent_replay.py": "0ef2377a11fe0a490e925bb9f0af28b90cf24110239becbb4467f5e3b7e17fbe"
   },
-  "primary_certificate_sha256": "27a4f3209256ab8208214f8f677197ed562b4a1e02faa84742a42e9938c3d86b",
+  "primary_certificate_sha256": "fc09a0d0de3d1ebd00912e92cc7157f13d7e97a61f5475c11d1625b37e9f84cd",
   "import_boundary": "Imports neither flow_majorant.py nor archive verify_stream_dual.py; uses archive independent polynomial builder and midpoint subdivision only.",
   "scope": "Full replay of all four continuous chart trees through depth 20; compares every saved accumulator, coverage, and tree statistic."
 }

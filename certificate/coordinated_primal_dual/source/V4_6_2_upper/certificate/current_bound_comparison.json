@@ -1,7 +1,7 @@
 {
   "status": "EXACT_CROSS_BRANCH_BOUND_COMPARISON_PASS",
   "lower_source": "V4_6_1_lower_bound/certificate/branch_summary.json",
-  "lower_source_sha256": "0becb29ac68791a2b73a9df4dd951cb2d8dead758b8dca1c4f729467d2a671e4",
+  "lower_source_sha256": "809115aeecb86a79bec1ded51503c4ff30983e7d29cb98b330fb1d60c97087e0",
   "exact_lower_coefficients_basis_1_sqrt2_sqrt11": [
     "309078860435260513361/367416000000000000000",
     "31/1215",

@@ -7,7 +7,7 @@ optimum or replace the report's stated analytic dependencies.
 Audited `LaTeX/main.tex`, SHA256
 `8300db3f13adc5ad78f93bf80c135128c775d8d458b4cb9124dc17b6568faf1c`.
 Compared the appendix with preserved `V3/certificate/joined_threshold.json`,
-SHA256 `3d1f899191c780d94263da5b83dca997a13f28a388ed286c211580a2dc499ac3`.
+SHA256 `188deeda1fd5d7e7cb01ef6353fe1b5a2758907543564aa7a47990a76badbbcd`.
 The report source was not modified.
 
 ## Scope and normalization

@@ -1,27 +1,27 @@
 [
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/certificate/baseline_mechanism.json",
-    "sha256": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+    "sha256": "98baccdc7fdfc79df31bd0acb0e3b16ae90334e40b5e9e9dc457d7deeb482fdc",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/certificate/baseline_mechanism.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/certificate/joined_independent.json",
-    "sha256": "e952cc9671f6c712ebfd83de385e136037ac98a592d0a23abcf1bdc84d414f09",
+    "sha256": "0a2c7a90d7b9054b99ffea4626e0e7c7cede9aaf16321d0213d53a547e0ee7cb",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/certificate/joined_independent.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/certificate/joined_threshold.json",
-    "sha256": "3d1f899191c780d94263da5b83dca997a13f28a388ed286c211580a2dc499ac3",
+    "sha256": "188deeda1fd5d7e7cb01ef6353fe1b5a2758907543564aa7a47990a76badbbcd",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/certificate/joined_threshold.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/certificate/stationary_s.json",
-    "sha256": "c133fce95c8e3b29f0ccc02e1320c20842ed2b495ccc5a7808f7f77406e0c3e4",
+    "sha256": "eca060bec042537f3ff8b7ecf4c91e824291f938a31fbaacde1c0d83db2684dc",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/certificate/stationary_s.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/research_log/admissible_variations.md",
-    "sha256": "5a8fd6d59dbe57e2e19e6cc25d6df348d60409c5238286a07130c92091672773",
+    "sha256": "350e4961200ef72e652e4fea94a5e1dc0768a6a4a79b03ee8cccda7ebfbc5f85",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/research_log/admissible_variations.md"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/research_log/candidate_certificate.md",
-    "sha256": "3758fa475bd190aa2aedeca3a798ac29b577677806200d69afd59ddc5729e209",
+    "sha256": "596f169d77f3fdfa85623a5c28ea3bc207ae9643e89f7c9c82057977757a17fd",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/research_log/candidate_certificate.md"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/research_log/gap_ledger.md",
-    "sha256": "8ce4827acc3123b683d68ae5d5435c5bcbfc3236d97d6518407bb0609d812fe7",
+    "sha256": "f917358fded821c1281d7a0c7087dc7d3ae548cafe39e976e81be66a524b3d19",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/research_log/gap_ledger.md"
   },
   {
@@ -61,17 +61,17 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/research_log/joined_threshold_candidate.md",
-    "sha256": "6757beb3aa8f8783ba3b5ccc64b4a5dc326a8dc38bf35ff7448f81de4e467bbc",
+    "sha256": "104c18035f9a1aaf80c5c938532d1223121c926abb80a676dcbef10ea7bfbda6",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/research_log/joined_threshold_candidate.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/research_log/retrieval_tickets.md",
-    "sha256": "39623e3f5802c12e08ab5979ec8ea78f68ad8ff854d4b3f0f249e4f2b27fa2fe",
+    "sha256": "1e869b4c6407ccd4f2e19430fe4be93793f46c52764d18152f4091113251cf0d",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/research_log/retrieval_tickets.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/research_log/route_ledger.md",
-    "sha256": "35123956fb2c504dd6fa422b3a5e2519aa65393aa6a8997417e4c63728fee37d",
+    "sha256": "fb3039275d9503e3c009bc672aa4b254e0982ac2e7a428d6091f091e11bb742c",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/research_log/route_ledger.md"
   },
   {
@@ -91,32 +91,32 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/joined_threshold.py",
-    "sha256": "286e093c0a600d92a77d4f009e82f573658e8c6c3d75766c85d4607c7a960c43",
+    "sha256": "b8c36f6c342dbc60008873a727dd3bca8012c6030e72db20c323679c43de404f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/joined_threshold.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/stationary_s.py",
-    "sha256": "214a2d8c2cbc13ee2ded64e74d48c6d6f5e2cbf6af9312c7f6e00f333e705cc0",
+    "sha256": "e55464b1bfdf45eb87fe4d85aede622ec23fa160d9669e34e10a5bcf361b7c77",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/stationary_s.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3_1/REPORT.md",
-    "sha256": "de3d4fe4759d899919ee21d2d234e3bff87bfa9dbc271ca89a573905f89821ba",
+    "sha256": "797762ee98899fcd456d8bdb37d8edf715371b8c3deddb0ed06b4c01654bdae9",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3_1/REPORT.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3_1/certificate/constrained_candidate.json",
-    "sha256": "9dfa581938811442389eca3e3bcd048bbac901de1ae77b81a21c678b5ec6fdae",
+    "sha256": "a36b54898d7614b4473479a13ada3a00a59b66e01970494f202223bf1264d322",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3_1/certificate/constrained_candidate.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3_1/certificate/constrained_screening.json",
-    "sha256": "97fe123b0b4ad2f6d728e9c3539932a3b3a6c1188e1d5f1ddb73ecf42a0d2199",
+    "sha256": "1d7321bd13a9188628e93aec10edd32a9dc1622f210f09cd1e7cfdb63476ce08",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3_1/certificate/constrained_screening.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3_1/certificate/independent_revenue.json",
-    "sha256": "25ed34a320152bd66a1569f13828a5c5500a4fd41951bda2e175c929e73364a1",
+    "sha256": "b43ed1315b3dc19ab5754dc35aa9d426aca50f7eeb329efb79350357ce5df4c0",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3_1/certificate/independent_revenue.json"
   },
   {
@@ -146,7 +146,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3_1/research_log/trial_scope.md",
-    "sha256": "83f900dfd067f482055e2ffc2ebc6b369440a856114a732232143f92c81dc78e",
+    "sha256": "769fbbd6b37a20860c6035ef7c44879f493a79597daf2eeb7673589114566eb5",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3_1/research_log/trial_scope.md"
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3_1/verifier/constrained_candidate.py",
-    "sha256": "5987a273ce3fc326fb7d1235fa28710fc25a82e8b271f3635e513a40307ad150",
+    "sha256": "b775f8104c21ef778fa04c7f113826005206fb4fae43dfeeefc5e8b993d53f04",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3_1/verifier/constrained_candidate.py"
   },
   {
@@ -171,12 +171,12 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/certificate/combined_revenue.json",
-    "sha256": "f14dd456b575f2f754169898f94d0fc4433266451f0e087251fedb5b12f61cd4",
+    "sha256": "43e5bc42d9fa31436706d6a01a9512b7a430fed202034bcad9b9db438bdb0ce2",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/certificate/combined_revenue.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/certificate/free_capacity_fibers.json",
-    "sha256": "b35cf164d851035249a0a335be34f915f09f22e76a0fe73db882b9a56503168d",
+    "sha256": "4946f02f1a60d7969e25670455cbef4afca8e034dc02eedf4d02e9973339bd05",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/certificate/free_capacity_fibers.json"
   },
   {
@@ -191,12 +191,12 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/research_log/gap_ledger.md",
-    "sha256": "78f2e962ee8b0207c37882511cba253e205008a36be18aca207a9dbdc887497c",
+    "sha256": "970d2f6dfa43abc1c500a5a1f80b603d92c46bb9475524011d23ffb01786cf78",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/research_log/gap_ledger.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/research_log/joint_release.md",
-    "sha256": "78a18498d364c7b4c68580dc1ac73b32404eb013c69eee9a32bbbcf48e214940",
+    "sha256": "eb667ed061253425c4bc14dc33a6c255b1f99c6c1259016b817a3c93b900becd",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/research_log/joint_release.md"
   },
   {
@@ -206,7 +206,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/research_log/report_independent_audit.md",
-    "sha256": "c66c7570c5d7bd44f746c20aa96e6c7270c6eb070c0dd48ac979a5dfbec7d12c",
+    "sha256": "084805d7569469542044695df63416a630639712aadacffa9bc9048c16a87197",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/research_log/report_independent_audit.md"
   },
   {
@@ -216,12 +216,12 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/research_log/retrieval_tickets.md",
-    "sha256": "35a5f6f8fd60258cc11ad3f7a6512f39fb18fe7c400b62a22f7888182aaf1c94",
+    "sha256": "5236af5c916a76cef6f948f71ebd16d10efbaac16a35931e4c1ee38ba7255663",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/research_log/retrieval_tickets.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/research_log/route_ledger.md",
-    "sha256": "77430c44997b6d7d3ea399773013867be7ed7263b8e3903521aa80cc1c161f2a",
+    "sha256": "372f68010d214cd003530d69c0e8ad2aff7396a666c770fa676dc306a866bc4f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/research_log/route_ledger.md"
   },
   {
@@ -236,7 +236,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4/research_log/verification.md",
-    "sha256": "286727b0d9f7953355b6e219bdd05455320e827a159e154f537268fd2bc2c743",
+    "sha256": "da41030a512c4a16d01e38b39f34a45121ebf3c9b00f703574d85c2c623cd38a",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4/research_log/verification.md"
   },
   {
@@ -251,27 +251,27 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/certificate/base_split_cost.json",
-    "sha256": "d6bc573cd5b0e1e494d664cd989b3ecbad2ac78b6ac131a3df7469d15fefc7a5",
+    "sha256": "c3ee09aa39f93ad7dc07a94eef746ad36cf3f59ef90ec2a7210f0db007c50e7e",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/certificate/base_split_cost.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/certificate/compression_boundary_sign.json",
-    "sha256": "2e374288d4ca924de0c98e6966a3f3183c39f23cf1c82877781a93536a9bb310",
+    "sha256": "a2a788797f2d9cf640161267f67ce51ed0c88888ae665133710f5cb1faf0e15f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/certificate/compression_boundary_sign.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/certificate/independent_split_revenue.json",
-    "sha256": "265bfc152077ed12e8e4014060e2f12554e5af3321fcbc16e093d12197e9e61b",
+    "sha256": "23100ec654e9059a319f9128d493d612cb2f3b4a0842ddd9983936b0a9f60b5b",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/certificate/independent_split_revenue.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/certificate/joint_geometry.json",
-    "sha256": "c526d3a44a73817b28ef573c52d2f65fab8181f7861656e3ec5819cbcc5fbcf4",
+    "sha256": "2a88f5b3ff4437aff2863478af699ee8ce26ca0b68433522231c7354d96fcded",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/certificate/joint_geometry.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/certificate/split_cost_revenue.json",
-    "sha256": "e5512a4fa47bedba1dabc4f1bc453b34b0214b9f5fc14fcfe2c58c2d7e60f67d",
+    "sha256": "862a11487d19241365f1c8820d50b3db0c3777ce46b036e77f380e65633a5be5",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/certificate/split_cost_revenue.json"
   },
   {
@@ -321,12 +321,12 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/research_log/split_cost_revenue_derivation.md",
-    "sha256": "303915cd465af0f47c94fb3cb44044ef4d4cee81564cb06352f31706af61cf69",
+    "sha256": "e05aec61cc40b18ab0266d47acc5b7b3c7c9b76305a7fb3b65598fdce0ba337d",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/research_log/split_cost_revenue_derivation.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/verification.md",
-    "sha256": "edf4c4e440cad7b5645d542bdbe1eb0b13c7642b2ef34dec8b30f47dd5d50dbc",
+    "sha256": "b7e261187094109eb43f65fe1ebc5b9ed611d94d2e7916a77dbe5b5bf6e124bb",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/verification.md"
   },
   {
@@ -366,37 +366,37 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_02/verifier/split_cost_revenue.py",
-    "sha256": "64687881d86ed2e2206f6efad6dcb5f6d2b081dd75dc374c288bcac66defebbe",
+    "sha256": "ca2ab53f21a70a0ca968b1a449cca645f614f2d8bb971a9ca4a26c26a90ff9c3",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_02/verifier/split_cost_revenue.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/REPORT.md",
-    "sha256": "f1b76c7f7b36bc324ce7b34021d4812c64373a01c9cbeb0ec2223d25220810f4",
+    "sha256": "85ca687f347d669be249200f05883614c32f6ba4fec82a8374485d6efe78ddb8",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/REPORT.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/certificate/dual_support.json",
-    "sha256": "3392f5cca54e1b3a92ea1c6f3393cef89f648c15a3d42148b8a93d79a6a71fd0",
+    "sha256": "7626ceb818dc931be3225a9332322c84bb923e9371dfbf1da817408cba807d52",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/certificate/dual_support.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/certificate/functional_exchange.json",
-    "sha256": "400d49b8ea7957b9935a8d5878e2e5d0630cb438cfcf55685ff0a1c7d0833895",
+    "sha256": "eccedd76e1e84fbcd356b4874613a4fa5f5ef98ceae1ea19497d2f795a32a965",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/certificate/functional_exchange.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/certificate/independent_lottery.json",
-    "sha256": "2f3adf5ee77e858be029e5a35ec6119712ff0ae9b2855edc96ababeff45bd12c",
+    "sha256": "3443ec9478765c03b8a75ca2609d3f6e0c5ec00f2be474cd4d074620e86b40d3",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/certificate/independent_lottery.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/certificate/residual_lottery.json",
-    "sha256": "849eb1b3af0b667c4e094d6e6018e32bf89b33aeb09ed3f3e960efd673e50a7b",
+    "sha256": "9a202ea5ed2dec4a15600ad50c6a1956cdbb07eb8481fe7eda306c87aa15e35e",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/certificate/residual_lottery.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/certificate/residual_second_lottery.json",
-    "sha256": "ecc2f507ca03ddacca792b8bdf8a6a1f2c692c47bd749f708fd80d0cd32f59be",
+    "sha256": "88d650212c8c5d62286486ccd364e59fadc8fc232eef761021a84e4b2c299c41",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/certificate/residual_second_lottery.json"
   },
   {
@@ -406,17 +406,17 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/research_log/functional_exchange.md",
-    "sha256": "8433ad8bec99991a24b3ca5ed2a0de2898e2e843fcde21b1890965a2569b7c01",
+    "sha256": "c36a691e46828b3fe9d9dc99ca4a6e69d6a100d951d80f3a495a852e4d96d15f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/research_log/functional_exchange.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/research_log/functional_independent_lottery_audit.md",
-    "sha256": "50af5bbe50a73f2df0f4537365dbad10bc7aab10bd33172448addb72300ff21b",
+    "sha256": "c7516b77b9848de4e93dc1a333ec5d3386766e65ec5de6d733aefdfd768e6bcc",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/research_log/functional_independent_lottery_audit.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/research_log/gap_and_route_ledger.md",
-    "sha256": "5268dd13c79af52f811cc5593fafc3e802ee14b0f12dfe9ffce38761bd0e9af4",
+    "sha256": "2afd24e01798a70d0e0ef5878e6da437c4d123f70841aebdc78b76e0c7dd4a67",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/research_log/gap_and_route_ledger.md"
   },
   {
@@ -441,7 +441,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/verification.md",
-    "sha256": "a49130dbc63299c5083038abdac99504088debb49e1f973a178bd33816c670e3",
+    "sha256": "230fb7794c515243c8c5e051a8347f2b4bf62eab4aa121b58b7b6bf30258fabe",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/verification.md"
   },
   {
@@ -451,7 +451,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_5/verifier/functional_exchange.py",
-    "sha256": "267133f7b9a5e3157671f39a8c2bf44beeb9c938f4b749ecb2cc05f4191ecda9",
+    "sha256": "6fa526b097aeb797b47644c123baaa61d8e78e035c906c8d1d9f519842533715",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_5/verifier/functional_exchange.py"
   },
   {
@@ -471,87 +471,87 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/REPORT.md",
-    "sha256": "ec527a5d46ec486c367d7695d590196f7a4f5fa7e3583009cc03a499acd211e7",
+    "sha256": "0819fd3000a0c993f55e49799a5af3033b3b6fc6e8008c00ccb6f13e12008481",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/REPORT.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/VERIFICATION.md",
-    "sha256": "88fdb124c1ddd3178e673c337a86cb997c34775a81e3b78cf331d21010ff494c",
+    "sha256": "f021e1b8aadf8a188b8d63e57e686f5789e557cc47a8ab0e645808084276d240",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/VERIFICATION.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/consolidated_bounds.json",
-    "sha256": "b1f1ea198be1d0fa8d3a61ff1f5b0fd9c0ee4024d1c2bf89d886bb41600f0e47",
+    "sha256": "f13b3aee4ed0768be813a439b8ccffd87645c8948ca563b790db4363e79208e3",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/consolidated_bounds.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/free_bidder_one.json",
-    "sha256": "000ca4da6e31db0197486f3a60e605dc85422111472ecbf7fe2f161cf409981c",
+    "sha256": "2226bb4e0a05104378c4e2782b586ea4861133ce6c65e4d4065b9ea361d6057a",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/free_bidder_one.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/independent_revenue.json",
-    "sha256": "30dec4dbd7ef86ce90eb4fce6bae0afb9cd7be5895f048605e57b9bdd23636e8",
+    "sha256": "144329c0586a7371e5f788542e53ac500a86f2c2205de54aeb508d79684ad138",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/independent_revenue.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/inner_diagonal_capacity.json",
-    "sha256": "ee24fe4796ab45015ab10d8f0bd51c13a43389ed051e1afa723347b4508f4de5",
+    "sha256": "ec50253a67319f292825e50ed782b8cbf9a84030bb1a3a055e22ac7263aa2d22",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/inner_diagonal_capacity.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/inner_lottery_certificate.json",
-    "sha256": "cb74dfd76f8ae0c4aee6882a072cf1d7d3c6c3ee9643431cca6d8d039180cb95",
+    "sha256": "ef20317f292e16bd65f3e1d723037041092b243fcd1405694a0510a532852171",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/inner_lottery_certificate.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/outer_bundle_exchange.json",
-    "sha256": "0ff2e9ae3f83d8f54cc95c1c17d793a44f6a0bd739bf18b3bdb97f85c03036cf",
+    "sha256": "15df1287b2c3d4ad40136ce3b3d562bdc5f16d517a415c3820bf7993872c0689",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/outer_bundle_exchange.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/outer_bundle_reoptimized.json",
-    "sha256": "e815a4278ba866c5484bf1e12c43205ed3228ba23d02e37086061994f6cd0ace",
+    "sha256": "37f2d9866526eec37ce14e9b428d7a0f233dd05e80f08837f95e760d4dad1c8d",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/outer_bundle_reoptimized.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/outer_fee_polygon_audit.json",
-    "sha256": "5f159198f99804e400220de21c670b0c6aad6e184467a9e21fca463f8110972f",
+    "sha256": "539855d8af709113ec1ef2db3c36658690d3e4b43cb2619dbafa0ea8b1928fed",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/outer_fee_polygon_audit.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/outer_lottery_strip.json",
-    "sha256": "b710b9b63f9a8bffb2fffc861cbe1946740b26d56a74590738bccb066e60b6db",
+    "sha256": "fe09da5b81ca06daee1a1cf5434175f61ea50757b91db2c61cf480a80ef30ded",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/outer_lottery_strip.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/price_joint_reallocation.json",
-    "sha256": "ce63991fbb52d0c75ac66ba30f0abb233c5bc27e7ccc22c74a9d9c84caf5d6cb",
+    "sha256": "d3ebbe8ebef84b9d7f806c1628b3da61af0d69a8f6193c66e4bda59b6daf4496",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/price_joint_reallocation.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/certificate/price_joint_revenue.json",
-    "sha256": "9d870c8a641515145edef1b1695304b7cb8079d04b9635ddca8fe793b2cd822a",
+    "sha256": "6a1c1f7c13c494a54558e8ba2e54c77b87e70ec3f75f9b930ae1fdf1af062443",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/certificate/price_joint_revenue.json"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/conditional_coverage.md",
-    "sha256": "f07e553ab60a5e6e10bf489f587b3620764ae4cdc73fc6db17fb9aaa6226dd9c",
+    "sha256": "1b17d8fc538445104f66588b217b6942c5d6395bd8793d274a2682bfa20450a2",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/conditional_coverage.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/free_bidder_one.md",
-    "sha256": "45ac16113042e168f812cb2a6a629599d270f9e6db278401c18198865d937b20",
+    "sha256": "c33aa6c47f0a384dd8a2c896baac14c9671cbde75ee3c8c887d573f0eda92522",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/free_bidder_one.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/independent_inner_audit.md",
-    "sha256": "e56df0267e9f361d79988ad58f062558f6972b0fa8ecbbdeb1b52ff898d95ef8",
+    "sha256": "caf952a31bc6e24bcbe2574fffd12a55e3e88566939f20eb833d03ccc4c2b43b",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/independent_inner_audit.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/inner_diagonal_capacity.md",
-    "sha256": "fe3876ba8bd20203c1f35dff816ac1fbe5fab99d494b7ee610e6e5116b691365",
+    "sha256": "292ca833ea4740538dddedce9106518a36239b72c40c334e2aaf19783df46098",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/inner_diagonal_capacity.md"
   },
   {
@@ -561,7 +561,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/inner_lottery_certificate.md",
-    "sha256": "c3a35ef09fc4d28146df876f867d72686cc176060700ca2202b4770721ec3fa2",
+    "sha256": "dbef2d5225a58fe15fd3d0da496e1a585deee00f1bf64be6ab4eb0dfea47183a",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/inner_lottery_certificate.md"
   },
   {
@@ -581,7 +581,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/outer_fee_polygon_audit.md",
-    "sha256": "f0a5bfd6fc96b6e4dbd03e439708ecf99cea2d0ac7ce137f407464ce9820fd49",
+    "sha256": "976a5862352b792ff39f102793017fc9d8cc453ea7b9eae0491f759369236aaa",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/outer_fee_polygon_audit.md"
   },
   {
@@ -591,7 +591,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/phase_delta.md",
-    "sha256": "a01d2f6eacaa8deea385b5e551103676f5da2ff15212a805a9b2107d0c203e49",
+    "sha256": "ae1150961bec34b3095e38b08b48580ea5a960ecd9c0ea5d6eddab60b95bbad4",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/phase_delta.md"
   },
   {
@@ -606,22 +606,22 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/research_log/report_audit.md",
-    "sha256": "5125301be2eb7d12252ce0d6ba9787e2a753db3125de95c02b93c66bc7f785bf",
+    "sha256": "5eb6e44525e8c64bbf439aa302b18c1cb92a95caa90fa303481fc903b2b35e47",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/research_log/report_audit.md"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/verifier/consolidated_bounds.py",
-    "sha256": "3d25fcdfca04331265f1c1e52b84eb33a31699c0c83faf02846421c7c9a3bd30",
+    "sha256": "a329d1cc709e3a62d9446bcd2df428e5f4e9f52122b76686714e607472e82b67",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/verifier/consolidated_bounds.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/verifier/free_bidder_one.py",
-    "sha256": "4106a3e86c9ab1bc27fb1ded5474c7c8106926d3b3ca4c4bc9507d7aa3b438f2",
+    "sha256": "ea5ff87b4d313a2ad5d048698e5e46b9239937150271a0bd78b3e58115f5f48f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/verifier/free_bidder_one.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/verifier/independent_revenue.py",
-    "sha256": "324a0d4c93ccf6dcc95480a10d82fd16608f978096cababb5ba8e9b554055126",
+    "sha256": "9c39186b4dee4acb8ec25071a0c7ad8f2b552bb6225b32b4094ddc3b2ecf1f47",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/verifier/independent_revenue.py"
   },
   {
@@ -631,7 +631,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/verifier/inner_lottery_certificate.py",
-    "sha256": "8f60377caae677f8f97adbb327691cb963c73c74508678248ef4a74da48c3845",
+    "sha256": "497f584470794f45aafd871cda4880d15b8c1908fa76cc3343b5299129144845",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/verifier/inner_lottery_certificate.py"
   },
   {
@@ -651,12 +651,12 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/verifier/outer_lottery_strip.py",
-    "sha256": "4f61523e8c95d7860b20716d163347a130efc10739e83c23980c3ce2e8934e86",
+    "sha256": "4337b5f467c7163c8b58ed3dc6074c42fa573f494a9455c7bb98c0eea287564f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/verifier/outer_lottery_strip.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6/verifier/price_joint_reallocation.py",
-    "sha256": "d597ff806e54f7e6c01c739f946d02ed3dc0dfdac02f6e26451c9fb4a3e5f72c",
+    "sha256": "dffa5684e7451aede598278d65dd2241e34fd235a6c14f2c1ebc3ed6b2e3276e",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6/verifier/price_joint_reallocation.py"
   },
   {
@@ -671,7 +671,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6_archive_audit/revenue/fresh_exact_gap.json",
-    "sha256": "1d8fe767e6a56da040b888778d7814c932367890b90aa87764d67910993d0247",
+    "sha256": "79e4dfdffcbf98f8760bc06948bd84754a5fde4987102bb11e93b35f21024a40",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_archive_audit/revenue/fresh_exact_gap.json"
   },
   {
@@ -691,7 +691,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6_archive_audit/dual/fresh_exact_dual_checks.json",
-    "sha256": "8dec18916c7a34bc758f453d98dbc4879805b1af6855aef8ed487082da33b470",
+    "sha256": "c59c0d1deeb64adfc8ae03bcf4df4bd13b0a0b281074c53ee1f691c555a6bc8a",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_archive_audit/dual/fresh_exact_dual_checks.json"
   },
   {
@@ -701,7 +701,7 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V4_6_archive_audit/dual/fresh_final_residual_checks.json",
-    "sha256": "6041ab17785d9b5631b77a4e3a1643fa30d1cefe7312904d757b4fbbf25fb39c",
+    "sha256": "67c99d87d6c940ad18270bb61e2d4bbbce0aa49958897de1b42665c2c7cdbd07",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_archive_audit/dual/fresh_final_residual_checks.json"
   },
   {

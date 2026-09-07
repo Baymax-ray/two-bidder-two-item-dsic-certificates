@@ -1833,7 +1833,7 @@
     ]
   ],
   "source_manifest_sha256": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
-  "predecessor_upper_ledger_sha256": "bc0ec1029a75d87609009fb7626bc3749b062c0218c123c00175aef5e16e0426",
+  "predecessor_upper_ledger_sha256": "05656b35cc57bfbc761a829fd264e5b9b50b2f4b5d993206e7b5aebc8bc6f625",
   "scope": "two compact continuous PSD stresses; exact whole-profile-box inequalities and rational integral reductions; full randomized DSIC upper",
   "arithmetic": "Python Fraction; no floating solver in verification; exact corrected B0 lower floor 861/1000"
 }

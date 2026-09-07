@@ -1,5 +1,5 @@
 """Read-only portable exact lower replay, source identity and strict bracket."""
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from hashlib import sha256
 from fractions import Fraction as F
 import json
@@ -10,14 +10,21 @@ if not __debug__ or sys.flags.optimize:
     raise RuntimeError('Run without -O.')
 ROOT=Path(__file__).resolve().parent
 
+def bound(root,name):
+    rel=Path(name);windows=PureWindowsPath(name)
+    if not name or windows.drive or windows.root or rel.is_absolute() or '..' in rel.parts:
+        raise RuntimeError('Unsafe source path '+name)
+    root=root.resolve();result=(root/rel).resolve()
+    if result==root or not result.is_relative_to(root):
+        raise RuntimeError('Source path escapes root '+name)
+    return result
+
 def main():
     records=json.loads((ROOT/'source_bindings.json').read_text(encoding='utf-8'))['files']
     expected=set()
     for row in records:
         rel=row['path']
-        if ':' in rel or rel.startswith('/') or '..' in Path(rel).parts:
-            raise RuntimeError('Unsafe source path')
-        if sha256((ROOT/rel).read_bytes()).hexdigest()!=row['sha256']:
+        if sha256(bound(ROOT,rel).read_bytes()).hexdigest()!=row['sha256']:
             raise RuntimeError('Changed source '+rel)
         expected.add(rel)
     actual={p.relative_to(ROOT).as_posix() for p in (ROOT/'source').rglob('*')
@@ -31,7 +38,7 @@ def main():
             'V4_6_archive_audit/dual/fresh_final_residual_checks.py',
             'V4_6_archive_audit/revenue/fresh_exact_gap.py']
     for name in names:
-        path=ROOT/'source'/name
+        path=bound(ROOT/'source',name)
         result=subprocess.run([sys.executable,'-B','-X','utf8',str(path)],cwd=path.parent,
                               text=True,encoding='utf-8',stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         if result.returncode:

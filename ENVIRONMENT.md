@@ -17,27 +17,23 @@ Recorded release environment:
 - a TeX build tool on `PATH`: either both `pdflatex` and `bibtex` from a
   TeX Live-compatible distribution, or Tectonic.
 
-The final V5 manuscript build was verified with `pdflatex` and `bibtex`
-from TinyTeX/TeX Live 2026. Put the current installation's binary directory
-on `PATH` so both tools are found. The V5 audit also
-verified official Tectonic 0.17.0 for Windows as a fallback while those tools
-were absent from `PATH`. The Tectonic executable's SHA-256 was
-`99ffcfdbf1ebf8bdda9e791942e3d06aedb12463fddc33f07de6f5211c8bf08d`;
-the official release ZIP's SHA-256 was
-`f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f`.
-These identify the observed audit runtime; no executable is bundled with
-this source archive.
-
 If `pdflatex` and `bibtex` are not both found, the public runner uses
 `tectonic --keep-logs --keep-intermediates --outdir BUILD manuscript.tex`
 in its clean temporary build directory. Tectonic runs BibTeX and the required
 TeX passes automatically. Its first run may download TeX dependencies;
-`TECTONIC_CACHE_DIR` can select an existing writable cache. The audit used a
-cache outside the publication archive. The final log is checked for
+`TECTONIC_CACHE_DIR` can select an existing writable cache. The final log is checked for
 unresolved references or citations before the generated PDF is accepted.
 
-Python 3.10 or newer is required. Run proof entrypoints with
-`python -B -X utf8`; optimized modes (`-O`, `-OO`, or a nonzero
+Python 3.10 or newer is required. The canonical command from the package root is:
+
+```
+python -E -s -B -X utf8 verification/reproduce_all.py
+```
+
+To save a transcript, add `--transcript verification/generated/reproduction.txt`.
+This optional flag writes a temporary log.
+
+Optimized modes (`-O`, `-OO`, or a nonzero
 `PYTHONOPTIMIZE`) are unsupported because assertions are part of the proof
 checks. The exact checks rely on Python's integer and rational semantics and
 NumPy's checked signed `int64` arithmetic.
@@ -74,3 +70,9 @@ descendants inherit `PYTHONNOUSERSITE=1`. The portable runtime probe records
 of NumPy, its loaded multiarray extension and core arithmetic modules. These
 paths identify the observed trusted runtime and do not turn installed third-party
 code into a source-certified or hermetic dependency.
+
+Release text is stored with LF line endings, as specified by `.gitattributes`.
+The raw console capture explicitly marked binary retains its carriage-return
+control characters. All identity checks still hash literal file bytes.
+`verification/verify_hashes.py` checks the complete stable-file inventory
+against `SHA256SUMS`. Preserve the supplied file bytes when verifying them.

@@ -7,41 +7,41 @@
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_1_1_lower_bound/certificate/refined_revenue.json",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_1_1_lower_bound/certificate/refined_revenue.json",
-    "sha256": "312a1d5d07cb46a0529839ef74ae09ad275fcedc942cc8c10f7e95d4ac5c70f6"
+    "sha256": "17dcac71c6642f66ed273931e03de4af21840a787a2ed86828f2a95c90afccc1"
   },
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/verifier/sparse_cycle.py",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/verifier/sparse_cycle.py",
-    "sha256": "339583d940378f27889444ce7ae22e20ff510b6e99e8bec0e57362898fb4a324"
+    "sha256": "d38af061f319f8b54758d0b022fb434478def623a02cfe51eb543aaac4f2420d"
   },
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/flow_majorant_certificate.json",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/flow_majorant_certificate.json",
-    "sha256": "27a4f3209256ab8208214f8f677197ed562b4a1e02faa84742a42e9938c3d86b"
+    "sha256": "fc09a0d0de3d1ebd00912e92cc7157f13d7e97a61f5475c11d1625b37e9f84cd"
   },
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/certificate/conditional_global_splice.json",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/certificate/conditional_global_splice.json",
-    "sha256": "ee8ed95e8d43035923b40c106067264a110d2dbf1daed02837caee654f6c254c"
+    "sha256": "fee205278dcabdfbd0ca273846e4fd40b17a109bc5e94c464bff68ce93ec3058"
   },
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/certificate/sparse_cycle.json",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/certificate/sparse_cycle.json",
-    "sha256": "602062305701b2abad5f73e16204886b19aabc9eb19f68e8a0f6eecab6ca16e7"
+    "sha256": "4797a412b882dec7d86e39925f8300c6b446e76b1d5604c6928f184c719d39df"
   },
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/certificate/upper_ledger.json",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/certificate/upper_ledger.json",
-    "sha256": "bc0ec1029a75d87609009fb7626bc3749b062c0218c123c00175aef5e16e0426"
+    "sha256": "05656b35cc57bfbc761a829fd264e5b9b50b2f4b5d993206e7b5aebc8bc6f625"
   },
   {
     "path": "certificate/coordinated_primal_dual/source/V4_6_2_upper/research_log/conditional_global_splice.md",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V4_6_2_upper/research_log/conditional_global_splice.md",
-    "sha256": "2f87b728d4beee1308c66547f5b1794a084aef9f8314f59250a630423cb2d5e5"
+    "sha256": "132b799e89696ba1f1cb52ba336f7d1ddd6da3629b1af6332a77292e8c473678"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/joined_threshold.py",
-    "sha256": "286e093c0a600d92a77d4f009e82f573658e8c6c3d75766c85d4607c7a960c43",
+    "sha256": "b8c36f6c342dbc60008873a727dd3bca8012c6030e72db20c323679c43de404f",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/joined_threshold.py"
   },
   {
@@ -51,12 +51,12 @@
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/verifier/stationary_s.py",
-    "sha256": "214a2d8c2cbc13ee2ded64e74d48c6d6f5e2cbf6af9312c7f6e00f333e705cc0",
+    "sha256": "e55464b1bfdf45eb87fe4d85aede622ec23fa160d9669e34e10a5bcf361b7c77",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/verifier/stationary_s.py"
   },
   {
     "path": "certificate/joint_residual_screening_lower_bound/source/V3/certificate/baseline_mechanism.json",
-    "sha256": "a02379b9b323148e7e002c63d8eaa50a30ad147ceedd2afd63ea3b208ad57ff5",
+    "sha256": "98baccdc7fdfc79df31bd0acb0e3b16ae90334e40b5e9e9dc457d7deeb482fdc",
     "stage": "output/output/two_bidder_two_item_full_dsic_exact_auction/V3/certificate/baseline_mechanism.json"
   },
   {

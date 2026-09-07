@@ -419,7 +419,7 @@
     }
   ],
   "independence": "Exact Fraction monomial values, gradients, Hessian bounds and chart unions; no discovery arithmetic imported.",
-  "imported_independent_coefficient_source_sha256": "5cf85c967a2840c8e258c69b0f8aeb8a07fe5883614f6acb7a3de4e7f6ad08a9",
-  "incumbent_menu_classifier_sha256": "e71a388aeb3ec49c829303826f67381cc1ad1eba5daf7b6c5c68067c6e6c8855",
-  "input_sha256": "92383922fd941feeb70b8d356d5acacb429709d6626d134379fefcdf2ae9fe42"
+  "imported_independent_coefficient_source_sha256": "c26e287d522a89d5e0da93b734eb0a27379ee67340f88e95de9ccfc0616bc96c",
+  "incumbent_menu_classifier_sha256": "d994da87071f76db19c409261bd09893c1b76410f0748e5969115761204d23cf",
+  "input_sha256": "2fa2dc7a15a8bcf7e5bd3c22415574585ffa5b06571f3224819067b0e703277b"
 }

@@ -614,8 +614,8 @@
     }
   ],
   "inputs": {
-    "V4_7\\certificate\\psd_local_certificate.json": "2daf5b6de57a9a85ce772fc70a3bd867ad95b77e7bafb299b25e669bcceffc31",
-    "V4_7\\verifier\\independent_psd_first_event.py": "8017ad245f240beeecd592b12515e1cf615b4cc235e1e4798ad54a51570fff79"
+    "V4_7\\certificate\\psd_local_certificate.json": "b0621a0f42d8ab0470c7b8ab34c8945b96e75731585b146859a2070170465200",
+    "V4_7\\verifier\\independent_psd_first_event.py": "8ccf719cccb63117aba9ee43deebb1057080eaf4a4311dd2aafe40a9e15f0c04"
   },
   "stream_sha256": "65040d3569530e81c2c026a351c6b9fab84c4f556ebe95425ec6abf433d287a4",
   "log_enclosure": "16 positive atanh terms; explicit positive geometric tail bounds",
