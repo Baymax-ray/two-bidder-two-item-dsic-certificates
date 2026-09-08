@@ -16,7 +16,7 @@ if sys.flags.optimize:
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 BASE=ROOT/'certificate/v5_primal_dual'
-BASE_HASH='204fe57d5ed28a67030f571b1254cc25135df2cb083c1f8444a45afdd3cc5fce'
+BASE_HASH='a766f5958d13f75768521ee12b525fca7fc60c6870cd975ec5652c7120f1d3ce'
 FACE='source/V5_gap_closure/certificate/primal_face_integrals.json'
 TAU=F(83,10000)
 

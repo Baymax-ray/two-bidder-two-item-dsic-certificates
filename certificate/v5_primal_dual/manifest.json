@@ -99,7 +99,7 @@
     "portable_assembly.py": "91ca209eed4d801fc2635dd2c979f6e0954da92d4bf00ac72a797bffed4d7c66",
     "provenance_adapter.py": "20aa05c6b352149a097fec149c3c80c570b9beba18f1c68082ebc0595eca12c1",
     "README.md": "cf64c5547ec9c745de1afc3c8a0a4de643bdae67e67dd5ec702878d6fecc14b4",
-    "source/V4_6_3_slack_atlas/certificate/atlas_ledger.json": "748b00ec586e503dea0e3085ef11a2f8bd3b4debdc3349fb0fe7eae2e02b9364",
+    "source/V4_6_3_slack_atlas/certificate/atlas_ledger.json": "02d5de03c49c5838fcdf49f6684e0ba06b85f31c44f7811e81ac99703205e952",
     "source/V4_6_3_slack_atlas/certificate/numerical_remainder.json": "29b73101a91327157118e7d3191b099d5b6c8f1030ec158db3a14f09414b01d9",
     "source/V4_6_3_slack_atlas/research_log/numerical_remainder.md": "9d30987f531f2c9ca0385abb97dc8fbf12d97d8f79b952cd26b5a84e5dfeec93",
     "source/V4_6_3_slack_atlas/verifier/independent_lifted_fields.py": "c26e287d522a89d5e0da93b734eb0a27379ee67340f88e95de9ccfc0616bc96c",
@@ -153,7 +153,7 @@
     "source/V5_gap_closure/verifier/primal_global.py": "ddf0fb4d64b860771aa96cb60a39377142f287b54f411cae0e9fde4accf7c6cb",
     "source/V5_gap_closure/verifier/primal_independent.py": "ba30800b8923acbbe4c5ca505b2bff059a87ccfefc570b7fdd7b937d3e792ee1",
     "source/V5_gap_closure/verifier/run_all.py": "445b30fc1c494be7fafd56206325f7e02d9c919f90d511f26ed834a2296a43df",
-    "source_bindings.json": "a687084c70de1836ff6ec805f57398c6e8bea8c2667a2c088354570fefc12586",
+    "source_bindings.json": "964cc5ff3eeffe58aa0543670ffc05b189385685490c85d5250fe932b837fb40",
     "verify_v5.py": "9c49d8e8a0b63b11742c4ad089c88f6fea0569cf1877db4aec737bf8f8d272ac"
   },
   "component_scope": "Inherited unrestricted upper and face moments; intermediate lower at tau=1/100, not the final publication lower.",
